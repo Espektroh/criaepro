@@ -107,8 +107,6 @@ section{padding:7rem 5rem}
 .pillar p{font-size:.82rem;color:var(--gray);line-height:1.6}
 .mentoria-card{background:var(--black3);border:1px solid var(--border-y);border-radius:4px;padding:2.8rem;position:relative}
 .mentoria-card::before{content:'MENTORIA 1:1';position:absolute;top:-1px;left:2rem;background:var(--yellow);color:var(--black);font-family:var(--fd);font-size:.62rem;font-weight:800;letter-spacing:.1em;padding:.25rem .7rem;border-radius:0 0 2px 2px}
-.mc-price{font-family:var(--fd);font-size:3.2rem;font-weight:800;color:var(--white);letter-spacing:-.04em;line-height:1;margin:1.5rem 0 .4rem}
-.mc-price sup{font-size:1.2rem;font-weight:600;vertical-align:super;letter-spacing:0}
 .mc-period{font-size:.82rem;color:var(--gray);margin-bottom:2rem}
 .mc-items{list-style:none;display:flex;flex-direction:column;gap:.9rem;margin-bottom:2rem}
 .mc-items li{font-size:.875rem;color:var(--gray);display:flex;gap:.7rem}
@@ -128,6 +126,8 @@ section{padding:7rem 5rem}
 .svc-card h3{font-family:var(--fd);font-size:.95rem;font-weight:700;color:var(--white);margin-bottom:.6rem}
 .svc-card p{font-size:.8rem;color:var(--gray);line-height:1.7}
 .svc-tag{display:inline-block;margin-top:1rem;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;color:var(--yellow);border:1px solid var(--border-y);padding:.2rem .6rem;border-radius:2px}
+.svc-cta{display:block;margin-top:1.2rem;font-size:.75rem;font-family:var(--fd);font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gray);text-decoration:none;transition:color .2s}
+.svc-cta:hover{color:var(--yellow)}
 
 /* PARA QUEM */
 .audience-section{background:var(--black2)}
@@ -323,8 +323,7 @@ footer p{font-size:.78rem;color:var(--gray2)}
     </div>
 
     <div class="mentoria-card rv d2">
-      <div class="mc-price"><sup>R$</sup>497</div>
-      <div class="mc-period">por sessão · 90 minutos · via Google Meet</div>
+      <div style="font-family:var(--fd);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--yellow);margin-bottom:1rem">O que está incluso</div>
       <ul class="mc-items">
         <li>Diagnóstico completo do seu negócio digital</li>
         <li>Estratégia personalizada (tráfego, conteúdo ou vendas)</li>
@@ -333,8 +332,12 @@ footer p{font-size:.78rem;color:var(--gray2)}
         <li>7 dias de suporte via WhatsApp pós-sessão</li>
         <li>Indicação de ferramentas e recursos</li>
       </ul>
-      <a href="https://wa.me/5515999999999?text=Quero+agendar+uma+mentoria+com+a+Criae" class="mc-cta" target="_blank">Agendar minha mentoria →</a>
-      <div class="mc-note">Vagas limitadas · Sem contratos · Resultado ou devolvemos</div>
+      <div style="margin:1.8rem 0 1.2rem;padding:1rem;background:rgba(245,197,24,.05);border:1px solid rgba(245,197,24,.12);border-radius:2px;font-size:.85rem;color:var(--gray);line-height:1.6;text-align:center">
+        Investimento sob consulta.<br>
+        <span style="color:var(--white)">Fale com a gente e receba uma proposta personalizada.</span>
+      </div>
+      <a href="https://wa.me/5515999999999?text=Quero+saber+mais+sobre+a+mentoria+da+Criae" class="mc-cta" target="_blank">Quero saber o investimento →</a>
+      <div class="mc-note">Vagas limitadas · 90 minutos · 100% online</div>
     </div>
   </div>
 </section>
@@ -352,6 +355,7 @@ footer p{font-size:.78rem;color:var(--gray2)}
       <h3>Tráfego Pago</h3>
       <p>Google Ads e Meta Ads com foco em conversão real. Leads no WhatsApp, não likes no feed.</p>
       <span class="svc-tag">Google · Meta</span>
+      <a href="https://wa.me/5515999999999?text=Quero+saber+sobre+Tráfego+Pago" class="svc-cta" target="_blank">Quero saber mais →</a>
     </div>
     <div class="svc-card">
       <div class="svc-num">02</div>
@@ -359,6 +363,7 @@ footer p{font-size:.78rem;color:var(--gray2)}
       <h3>Social Media</h3>
       <p>Conteúdo estratégico que constrói autoridade e prepara o terreno para as vendas.</p>
       <span class="svc-tag">Instagram · LinkedIn</span>
+      <a href="https://wa.me/5515999999999?text=Quero+saber+sobre+Social+Media" class="svc-cta" target="_blank">Quero saber mais →</a>
     </div>
     <div class="svc-card">
       <div class="svc-num">03</div>
@@ -366,6 +371,7 @@ footer p{font-size:.78rem;color:var(--gray2)}
       <h3>Design</h3>
       <p>Identidade visual, materiais de vendas e peças que representam sua marca do jeito certo.</p>
       <span class="svc-tag">Identidade · Peças</span>
+      <a href="https://wa.me/5515999999999?text=Quero+saber+sobre+Design" class="svc-cta" target="_blank">Quero saber mais →</a>
     </div>
     <div class="svc-card">
       <div class="svc-num">04</div>
@@ -373,6 +379,7 @@ footer p{font-size:.78rem;color:var(--gray2)}
       <h3>Sites</h3>
       <p>Landing pages e sites que convertem visitantes em clientes. Rápidos, bonitos e otimizados.</p>
       <span class="svc-tag">Landing · Institucional</span>
+      <a href="https://wa.me/5515999999999?text=Quero+saber+sobre+Sites" class="svc-cta" target="_blank">Quero saber mais →</a>
     </div>
     <div class="svc-card">
       <div class="svc-num">05</div>
@@ -380,6 +387,7 @@ footer p{font-size:.78rem;color:var(--gray2)}
       <h3>IA & Automação</h3>
       <p>Fluxos automáticos com inteligência artificial para vender e atender enquanto você dorme.</p>
       <span class="svc-tag">IA · Chatbot · Fluxos</span>
+      <a href="https://wa.me/5515999999999?text=Quero+saber+sobre+IA+e+Automação" class="svc-cta" target="_blank">Quero saber mais →</a>
     </div>
   </div>
 </section>
@@ -502,6 +510,7 @@ footer p{font-size:.78rem;color:var(--gray2)}
     <div class="cta-pill">Gravação inclusa</div>
     <div class="cta-pill">7 dias de suporte</div>
     <div class="cta-pill">100% online</div>
+    <div class="cta-pill">Proposta personalizada</div>
   </div>
 </section>
 
