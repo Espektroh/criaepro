@@ -12,10 +12,8 @@
   --black:#090909;
   --black2:#111;
   --black3:#161616;
-  --black4:#1c1c1c;
   --yellow:#F5C518;
   --yellow2:#ffd740;
-  --yellow-glow:rgba(245,197,24,.12);
   --white:#f0ede7;
   --gray:#7a7a72;
   --gray2:#2e2e2c;
@@ -23,7 +21,6 @@
   --border-y:rgba(245,197,24,.18);
   --fd:'Syne',sans-serif;
   --fb:'DM Sans',sans-serif;
-  --ease:cubic-bezier(.22,.68,0,1.2);
 }
 html{scroll-behavior:smooth}
 body{background:var(--black);color:var(--white);font-family:var(--fb);overflow-x:hidden;cursor:none}
@@ -35,7 +32,7 @@ body{background:var(--black);color:var(--white);font-family:var(--fb);overflow-x
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.6rem 5rem;display:flex;align-items:center;justify-content:space-between;transition:all .3s}
-nav.sc{background:rgba(9,9,9,.88);backdrop-filter:blur(20px);padding:1rem 5rem;border-bottom:1px solid var(--border)}
+nav.sc{background:rgba(9,9,9,.92);backdrop-filter:blur(20px);padding:1rem 5rem;border-bottom:1px solid var(--border)}
 .n-logo{font-family:var(--fd);font-size:1.4rem;font-weight:800;letter-spacing:-.03em;color:var(--white);text-decoration:none}
 .n-logo em{color:var(--yellow);font-style:normal}
 .n-links{display:flex;gap:2.5rem;list-style:none}
@@ -51,15 +48,12 @@ nav.sc{background:rgba(9,9,9,.88);backdrop-filter:blur(20px);padding:1rem 5rem;b
 .hero-line2{position:absolute;top:0;right:5rem;width:1px;height:100%;background:linear-gradient(to bottom,transparent,rgba(255,255,255,.05) 40%,transparent);pointer-events:none}
 .hero-glow{position:absolute;width:900px;height:900px;background:radial-gradient(circle,rgba(245,197,24,.055) 0%,transparent 65%);top:-200px;right:-200px;pointer-events:none}
 .hero-glow2{position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(245,197,24,.04) 0%,transparent 70%);bottom:-100px;left:-100px;pointer-events:none}
-
 .hero-eyebrow{display:inline-flex;align-items:center;gap:.6rem;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--yellow);border:1px solid var(--border-y);padding:.35rem .85rem;border-radius:2px;margin-bottom:2.2rem;width:fit-content;opacity:0;animation:fu .6s .15s forwards}
 .hero-eyebrow::before{content:'';width:5px;height:5px;background:var(--yellow);border-radius:50%;animation:blink 2s infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
-
 .hero h1{font-family:var(--fd);font-size:clamp(3.2rem,8vw,7.5rem);font-weight:800;line-height:.92;letter-spacing:-.04em;margin-bottom:2.5rem;opacity:0;animation:fu .75s .3s forwards}
 .hero h1 .y{color:var(--yellow)}
 .hero h1 .outline{-webkit-text-stroke:1px rgba(240,237,231,.2);color:transparent}
-
 .hero-bottom{display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;opacity:0;animation:fu .7s .55s forwards}
 .hero-desc{font-size:1.05rem;color:var(--gray);max-width:460px;line-height:1.75}
 .hero-desc strong{color:var(--white);font-weight:500}
@@ -70,12 +64,11 @@ nav.sc{background:rgba(9,9,9,.88);backdrop-filter:blur(20px);padding:1rem 5rem;b
 .btn-g:hover{border-color:rgba(255,255,255,.2);color:var(--white)}
 .hero-scroll{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gray2);display:flex;align-items:center;gap:.5rem}
 .hero-scroll::before{content:'';width:1px;height:24px;background:var(--gray2)}
-
 @keyframes fu{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
 
 /* MARQUEE */
 .mq-wrap{overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--black2);padding:.95rem 0}
-.mq-track{display:flex;gap:2.5rem;animation:mq 22s linear infinite;white-space:nowrap}
+.mq-track{display:flex;gap:2.5rem;animation:mq 26s linear infinite;white-space:nowrap}
 .mq-track:hover{animation-play-state:paused}
 .mq-item{display:flex;align-items:center;gap:.8rem;font-family:var(--fd);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gray);flex-shrink:0}
 .mq-dot{width:3px;height:3px;background:var(--yellow);border-radius:50%}
@@ -94,12 +87,12 @@ section{padding:7rem 5rem}
 .rv.on{opacity:1;transform:translateY(0)}
 .rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}.rv.d4{transition-delay:.4s}
 
-/* MENTORIA HERO SECTION */
+/* MENTORIA */
 .mentoria-section{background:var(--black2);position:relative;overflow:hidden}
 .mentoria-section::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(245,197,24,.03) 0%,transparent 50%)}
 .mentoria-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;margin-top:4rem}
-.mentoria-text .big-quote{font-family:var(--fd);font-size:clamp(1.3rem,2.5vw,2rem);font-weight:700;line-height:1.3;letter-spacing:-.02em;margin-bottom:2rem;color:var(--white)}
-.mentoria-text .big-quote em{color:var(--yellow);font-style:normal}
+.big-quote{font-family:var(--fd);font-size:clamp(1.3rem,2.5vw,2rem);font-weight:700;line-height:1.3;letter-spacing:-.02em;margin-bottom:2rem;color:var(--white)}
+.big-quote em{color:var(--yellow);font-style:normal}
 .mentoria-pillars{display:flex;flex-direction:column;gap:1.2rem;margin-bottom:2.5rem}
 .pillar{display:flex;gap:1rem;align-items:flex-start}
 .pillar-icon{width:36px;height:36px;background:rgba(245,197,24,.08);border:1px solid var(--border-y);border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.9rem}
@@ -107,7 +100,6 @@ section{padding:7rem 5rem}
 .pillar p{font-size:.82rem;color:var(--gray);line-height:1.6}
 .mentoria-card{background:var(--black3);border:1px solid var(--border-y);border-radius:4px;padding:2.8rem;position:relative}
 .mentoria-card::before{content:'MENTORIA 1:1';position:absolute;top:-1px;left:2rem;background:var(--yellow);color:var(--black);font-family:var(--fd);font-size:.62rem;font-weight:800;letter-spacing:.1em;padding:.25rem .7rem;border-radius:0 0 2px 2px}
-.mc-period{font-size:.82rem;color:var(--gray);margin-bottom:2rem}
 .mc-items{list-style:none;display:flex;flex-direction:column;gap:.9rem;margin-bottom:2rem}
 .mc-items li{font-size:.875rem;color:var(--gray);display:flex;gap:.7rem}
 .mc-items li::before{content:'→';color:var(--yellow);font-weight:700;flex-shrink:0}
@@ -115,19 +107,51 @@ section{padding:7rem 5rem}
 .mc-cta:hover{background:var(--yellow2);transform:translateY(-1px)}
 .mc-note{text-align:center;font-size:.75rem;color:var(--gray2);margin-top:.8rem}
 
-/* SERVIÇOS */
-.services-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:4rem}
-.svc-card{background:var(--black);padding:2.5rem 1.8rem;position:relative;transition:background .2s;overflow:hidden}
-.svc-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--yellow);transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
-.svc-card:hover{background:var(--black2)}
-.svc-card:hover::after{transform:scaleX(1)}
-.svc-num{font-family:var(--fd);font-size:2.8rem;font-weight:800;color:rgba(245,197,24,.08);line-height:1;margin-bottom:1.2rem;letter-spacing:-.04em}
-.svc-icon{font-size:1.5rem;margin-bottom:1rem;display:block}
-.svc-card h3{font-family:var(--fd);font-size:.95rem;font-weight:700;color:var(--white);margin-bottom:.6rem}
-.svc-card p{font-size:.8rem;color:var(--gray);line-height:1.7}
-.svc-tag{display:inline-block;margin-top:1rem;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;color:var(--yellow);border:1px solid var(--border-y);padding:.2rem .6rem;border-radius:2px}
-.svc-cta{display:block;margin-top:1.2rem;font-size:.75rem;font-family:var(--fd);font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gray);text-decoration:none;transition:color .2s}
-.svc-cta:hover{color:var(--yellow)}
+/* PORTFÓLIO — TABS */
+.portfolio-section{background:var(--black)}
+.tier-tabs{display:flex;gap:0;margin-top:3rem;border-bottom:1px solid var(--border)}
+.tier-tab{background:none;border:none;padding:.9rem 2rem;font-family:var(--fd);font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gray);cursor:none;position:relative;transition:color .2s}
+.tier-tab::after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:2px;background:var(--yellow);transform:scaleX(0);transition:transform .25s}
+.tier-tab:hover{color:var(--white)}
+.tier-tab.active{color:var(--white)}
+.tier-tab.active::after{transform:scaleX(1)}
+.tier-tab .tab-dot{display:inline-block;width:6px;height:6px;border-radius:50%;margin-right:.5rem;vertical-align:middle}
+.dot-now{background:#22c55e}
+.dot-mid{background:#f59e0b}
+.dot-later{background:var(--gray2)}
+
+.tier-panel{display:none;margin-top:3rem}
+.tier-panel.active{display:block}
+
+/* SERVICE CARDS */
+.svc-list{display:flex;flex-direction:column;gap:1px;background:var(--border)}
+.svc-item{background:var(--black);display:grid;grid-template-columns:3fr 1fr;gap:0;transition:background .2s;position:relative;overflow:hidden}
+.svc-item::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--yellow);transform:scaleY(0);transform-origin:bottom;transition:transform .3s ease}
+.svc-item:hover{background:var(--black2)}
+.svc-item:hover::before{transform:scaleY(1)}
+.svc-main{padding:2.5rem 3rem}
+.svc-side{padding:2.5rem 2rem;border-left:1px solid var(--border);display:flex;flex-direction:column;justify-content:space-between;gap:1.5rem}
+.svc-header{display:flex;align-items:center;gap:1rem;margin-bottom:1rem}
+.svc-num-badge{font-family:var(--fd);font-size:.68rem;font-weight:800;letter-spacing:.1em;color:var(--yellow);background:rgba(245,197,24,.08);border:1px solid var(--border-y);padding:.25rem .6rem;border-radius:2px}
+.svc-icon-wrap{font-size:1.3rem}
+.svc-name{font-family:var(--fd);font-size:1.2rem;font-weight:800;color:var(--white);letter-spacing:-.02em}
+.svc-desc{font-size:.9rem;color:var(--gray);line-height:1.75;max-width:580px;margin-bottom:1.5rem}
+.svc-badges{display:flex;gap:.5rem;flex-wrap:wrap}
+.svc-badge{font-size:.65rem;letter-spacing:.07em;text-transform:uppercase;padding:.25rem .7rem;border-radius:2px;font-weight:600;border:1px solid transparent}
+.badge-hot{background:rgba(239,68,68,.08);color:#f87171;border-color:rgba(239,68,68,.15)}
+.badge-money{background:rgba(34,197,94,.08);color:#4ade80;border-color:rgba(34,197,94,.15)}
+.badge-easy{background:rgba(59,130,246,.08);color:#60a5fa;border-color:rgba(59,130,246,.15)}
+.badge-ai{background:rgba(245,158,11,.08);color:#fbbf24;border-color:rgba(245,158,11,.15)}
+.badge-local{background:rgba(139,92,246,.08);color:#a78bfa;border-color:rgba(139,92,246,.15)}
+.svc-meta-label{font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gray2);margin-bottom:.3rem}
+.svc-meta-val{font-family:var(--fd);font-size:.88rem;font-weight:700;color:var(--white)}
+.svc-cta-btn{display:block;text-align:center;border:1px solid var(--border-y);color:var(--yellow);padding:.7rem 1rem;font-family:var(--fd);font-weight:700;font-size:.72rem;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:all .2s;margin-top:auto}
+.svc-cta-btn:hover{background:var(--yellow);color:var(--black)}
+
+/* TIER NOTE */
+.tier-note{margin-top:2.5rem;padding:1.5rem 2rem;border-left:3px solid var(--yellow);background:rgba(245,197,24,.04);border-radius:0 4px 4px 0}
+.tier-note p{font-size:.875rem;color:var(--gray);line-height:1.75}
+.tier-note strong{color:var(--white);font-weight:500}
 
 /* PARA QUEM */
 .audience-section{background:var(--black2)}
@@ -140,7 +164,7 @@ section{padding:7rem 5rem}
 .aud-result{margin-top:1.2rem;padding-top:1rem;border-top:1px solid var(--border);font-size:.78rem;color:var(--yellow);display:flex;align-items:center;gap:.4rem}
 .aud-result::before{content:'';width:12px;height:1px;background:var(--yellow)}
 
-/* METODO */
+/* MÉTODO */
 .method-section{position:relative;overflow:hidden}
 .method-section::before{content:'MÉTODO';position:absolute;font-family:var(--fd);font-size:18vw;font-weight:800;color:rgba(245,197,24,.02);top:50%;left:50%;transform:translate(-50%,-50%);white-space:nowrap;pointer-events:none;letter-spacing:-.04em}
 .method-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:4rem;position:relative}
@@ -152,7 +176,7 @@ section{padding:7rem 5rem}
 .mstep p{font-size:.82rem;color:var(--gray);line-height:1.65}
 
 /* MANIFESTO */
-.manifesto-section{background:var(--black2);text-align:center;position:relative;overflow:hidden}
+.manifesto-section{background:var(--black2);text-align:center;position:relative;overflow:hidden;padding:7rem 5rem}
 .manifesto-section::before{content:'';position:absolute;width:800px;height:800px;background:radial-gradient(circle,rgba(245,197,24,.05) 0%,transparent 65%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
 .manifesto-text{font-family:var(--fd);font-size:clamp(1.4rem,3vw,2.4rem);font-weight:700;line-height:1.35;letter-spacing:-.02em;max-width:780px;margin:0 auto;color:var(--white)}
 .manifesto-text .y{color:var(--yellow)}
@@ -202,7 +226,10 @@ footer p{font-size:.78rem;color:var(--gray2)}
   .hero-bottom{flex-direction:column;align-items:flex-start}
   .hero-actions{align-items:flex-start}
   .mentoria-grid{grid-template-columns:1fr;gap:3rem}
-  .services-grid{grid-template-columns:1fr 1fr}
+  .svc-item{grid-template-columns:1fr}
+  .svc-side{border-left:none;border-top:1px solid var(--border)}
+  .tier-tabs{overflow-x:auto;padding-bottom:.5rem}
+  .tier-tab{white-space:nowrap;padding:.9rem 1.2rem}
   .audience-grid{grid-template-columns:1fr}
   .method-steps{grid-template-columns:1fr 1fr}
   .method-steps::before{display:none}
@@ -222,11 +249,11 @@ footer p{font-size:.78rem;color:var(--gray2)}
   <a href="#" class="n-logo">Criae<em>.</em></a>
   <ul class="n-links">
     <li><a href="#mentoria">Mentoria</a></li>
-    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#portfolio">Portfólio</a></li>
     <li><a href="#para-quem">Para quem</a></li>
     <li><a href="#faq">FAQ</a></li>
   </ul>
-  <a href="https://wa.me/5515999999999?text=Ol%C3%A1%2C+quero+saber+mais+sobre+a+mentoria+da+Criae" class="n-btn" target="_blank">Falar com a Criae →</a>
+  <a href="https://wa.me/5515999999999?text=Ol%C3%A1%2C+quero+saber+mais+sobre+a+Criae" class="n-btn" target="_blank">Falar com a Criae →</a>
 </nav>
 
 <!-- HERO -->
@@ -236,15 +263,12 @@ footer p{font-size:.78rem;color:var(--gray2)}
   <div class="hero-line2"></div>
   <div class="hero-glow"></div>
   <div class="hero-glow2"></div>
-
-  <div class="hero-eyebrow">Mentoria · Marketing Digital · Estratégia</div>
-
+  <div class="hero-eyebrow">Mentoria · Marketing Digital · IA & Automação</div>
   <h1>
     Do digital<br>
     para o <span class="y">negócio.</span><br>
     <span class="outline">De verdade.</span>
   </h1>
-
   <div class="hero-bottom">
     <p class="hero-desc">
       Somos a <strong>Criae</strong> — combinamos mentoria individual com execução em tráfego pago, social media, design, sites e automação com IA.<br><br>
@@ -255,7 +279,7 @@ footer p{font-size:.78rem;color:var(--gray2)}
         Quero a mentoria
         <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
-      <a href="#servicos" class="btn-g">Ver serviços</a>
+      <a href="#portfolio" class="btn-g">Ver portfólio completo</a>
       <div class="hero-scroll">Role para baixo</div>
     </div>
   </div>
@@ -268,22 +292,28 @@ footer p{font-size:.78rem;color:var(--gray2)}
     <div class="mq-item"><span class="mq-dot"></span>Tráfego Pago</div>
     <div class="mq-item"><span class="mq-dot"></span>Social Media</div>
     <div class="mq-item"><span class="mq-dot"></span>Design</div>
-    <div class="mq-item"><span class="mq-dot"></span>Sites</div>
+    <div class="mq-item"><span class="mq-dot"></span>Sites & Landing Pages</div>
     <div class="mq-item"><span class="mq-dot"></span>IA & Automação</div>
+    <div class="mq-item"><span class="mq-dot"></span>E-mail Marketing</div>
+    <div class="mq-item"><span class="mq-dot"></span>Funil Completo</div>
+    <div class="mq-item"><span class="mq-dot"></span>Conteúdo com IA</div>
+    <div class="mq-item"><span class="mq-dot"></span>SEO Local</div>
     <div class="mq-item"><span class="mq-dot"></span>Google Ads</div>
     <div class="mq-item"><span class="mq-dot"></span>Meta Ads</div>
     <div class="mq-item"><span class="mq-dot"></span>Estratégia Digital</div>
-    <div class="mq-item"><span class="mq-dot"></span>Resultados Reais</div>
     <div class="mq-item"><span class="mq-dot"></span>Mentoria 1:1</div>
     <div class="mq-item"><span class="mq-dot"></span>Tráfego Pago</div>
     <div class="mq-item"><span class="mq-dot"></span>Social Media</div>
     <div class="mq-item"><span class="mq-dot"></span>Design</div>
-    <div class="mq-item"><span class="mq-dot"></span>Sites</div>
+    <div class="mq-item"><span class="mq-dot"></span>Sites & Landing Pages</div>
     <div class="mq-item"><span class="mq-dot"></span>IA & Automação</div>
+    <div class="mq-item"><span class="mq-dot"></span>E-mail Marketing</div>
+    <div class="mq-item"><span class="mq-dot"></span>Funil Completo</div>
+    <div class="mq-item"><span class="mq-dot"></span>Conteúdo com IA</div>
+    <div class="mq-item"><span class="mq-dot"></span>SEO Local</div>
     <div class="mq-item"><span class="mq-dot"></span>Google Ads</div>
     <div class="mq-item"><span class="mq-dot"></span>Meta Ads</div>
     <div class="mq-item"><span class="mq-dot"></span>Estratégia Digital</div>
-    <div class="mq-item"><span class="mq-dot"></span>Resultados Reais</div>
   </div>
 </div>
 
@@ -291,7 +321,6 @@ footer p{font-size:.78rem;color:var(--gray2)}
 <section id="mentoria" class="mentoria-section">
   <div class="s-label">Oferta principal</div>
   <h2 class="s-title rv">Mentoria individual.<br><span class="y">Resultado personalizado.</span></h2>
-
   <div class="mentoria-grid">
     <div class="mentoria-text rv d1">
       <div class="big-quote">
@@ -321,9 +350,8 @@ footer p{font-size:.78rem;color:var(--gray2)}
         </div>
       </div>
     </div>
-
     <div class="mentoria-card rv d2">
-      <div style="font-family:var(--fd);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--yellow);margin-bottom:1rem">O que está incluso</div>
+      <div style="font-family:var(--fd);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--yellow);margin-bottom:1.2rem">O que está incluso</div>
       <ul class="mc-items">
         <li>Diagnóstico completo do seu negócio digital</li>
         <li>Estratégia personalizada (tráfego, conteúdo ou vendas)</li>
@@ -342,61 +370,243 @@ footer p{font-size:.78rem;color:var(--gray2)}
   </div>
 </section>
 
-<!-- SERVIÇOS -->
-<section id="servicos">
-  <div class="s-label">Execução</div>
-  <h2 class="s-title rv">Você aprende ou <span class="y">a gente executa.</span><br>A escolha é sua.</h2>
-  <p class="s-sub rv d1">Os mesmos pilares que ensinamos na mentoria, disponíveis como serviço completo para quem prefere delegar.</p>
+<!-- PORTFÓLIO COMPLETO -->
+<section id="portfolio" class="portfolio-section">
+  <div class="s-label">Portfólio completo</div>
+  <h2 class="s-title rv">Sete soluções.<br><span class="y">Um só objetivo: resultado.</span></h2>
+  <p class="s-sub rv d1">Cada serviço pode ser contratado individualmente ou combinado em um funil completo. Você aprende na mentoria ou a gente executa por você.</p>
 
-  <div class="services-grid rv d2">
-    <div class="svc-card">
-      <div class="svc-num">01</div>
-      <span class="svc-icon">📣</span>
-      <h3>Tráfego Pago</h3>
-      <p>Google Ads e Meta Ads com foco em conversão real. Leads no WhatsApp, não likes no feed.</p>
-      <span class="svc-tag">Google · Meta</span>
-      <a href="https://wa.me/5515999999999?text=Quero+saber+sobre+Tráfego+Pago" class="svc-cta" target="_blank">Quero saber mais →</a>
+  <div class="tier-tabs rv d2">
+    <button class="tier-tab active" onclick="showTier('agora',this)">
+      <span class="tab-dot dot-now"></span>Implementação imediata
+    </button>
+    <button class="tier-tab" onclick="showTier('medio',this)">
+      <span class="tab-dot dot-mid"></span>Médio prazo
+    </button>
+    <button class="tier-tab" onclick="showTier('futuro',this)">
+      <span class="tab-dot dot-later"></span>Expansão futura
+    </button>
+  </div>
+
+  <!-- TIER 1 -->
+  <div class="tier-panel active" id="tier-agora">
+    <div class="svc-list">
+
+      <div class="svc-item">
+        <div class="svc-main">
+          <div class="svc-header">
+            <span class="svc-num-badge">01</span>
+            <span class="svc-icon-wrap">🤖</span>
+            <h3 class="svc-name">Automação com IA — WhatsApp & Funil</h3>
+          </div>
+          <p class="svc-desc">Chatbots e fluxos automáticos no WhatsApp usando ManyChat, n8n ou Make. Atendimento, qualificação de leads e follow-up sem intervenção manual. PMEs pagam bem por isso porque elimina o gargalo do dono como único atendente — é o serviço com maior percepção de valor no mercado local hoje.</p>
+          <div class="svc-badges">
+            <span class="svc-badge badge-hot">Em alta</span>
+            <span class="svc-badge badge-money">Alta margem</span>
+            <span class="svc-badge badge-ai">IA</span>
+          </div>
+        </div>
+        <div class="svc-side">
+          <div>
+            <div class="svc-meta-label">Recorrência</div>
+            <div class="svc-meta-val">Setup + Mensal</div>
+          </div>
+          <div>
+            <div class="svc-meta-label">Ferramentas</div>
+            <div class="svc-meta-val" style="font-size:.78rem;font-weight:400;color:var(--gray)">ManyChat · n8n · Make</div>
+          </div>
+          <a href="https://wa.me/5515999999999?text=Quero+saber+sobre+Automação+com+IA" class="svc-cta-btn" target="_blank">Quero esse serviço →</a>
+        </div>
+      </div>
+
+      <div class="svc-item">
+        <div class="svc-main">
+          <div class="svc-header">
+            <span class="svc-num-badge">02</span>
+            <span class="svc-icon-wrap">🌐</span>
+            <h3 class="svc-name">Landing Pages de Alta Conversão</h3>
+          </div>
+          <p class="svc-desc">Páginas com um único objetivo: gerar lead ou venda. Complemento natural ao tráfego pago — todo cliente que anuncia precisa de uma boa landing. A Criae já entende o que converte porque trabalha com tráfego, e isso é um diferencial enorme na entrega. Alta margem, entrega rápida.</p>
+          <div class="svc-badges">
+            <span class="svc-badge badge-money">Alta margem</span>
+            <span class="svc-badge badge-easy">Entrega rápida</span>
+          </div>
+        </div>
+        <div class="svc-side">
+          <div>
+            <div class="svc-meta-label">Recorrência</div>
+            <div class="svc-meta-val">Projeto + Otimização</div>
+          </div>
+          <div>
+            <div class="svc-meta-label">Tecnologia</div>
+            <div class="svc-meta-val" style="font-size:.78rem;font-weight:400;color:var(--gray)">HTML · WordPress · Webflow</div>
+          </div>
+          <a href="https://wa.me/5515999999999?text=Quero+saber+sobre+Landing+Pages" class="svc-cta-btn" target="_blank">Quero esse serviço →</a>
+        </div>
+      </div>
+
+      <div class="svc-item">
+        <div class="svc-main">
+          <div class="svc-header">
+            <span class="svc-num-badge">03</span>
+            <span class="svc-icon-wrap">📧</span>
+            <h3 class="svc-name">E-mail Marketing & Nutrição de Leads</h3>
+          </div>
+          <p class="svc-desc">Sequências automáticas para converter leads que ainda não compraram. Fácil de combinar como upsell para clientes de tráfego pago: "você está pagando para trazer leads — vamos garantir que nenhum se perca". Modelo de recorrência mensal com baixo esforço operacional após o setup.</p>
+          <div class="svc-badges">
+            <span class="svc-badge badge-money">Alta margem</span>
+            <span class="svc-badge badge-easy">Fácil de pacotizar</span>
+          </div>
+        </div>
+        <div class="svc-side">
+          <div>
+            <div class="svc-meta-label">Recorrência</div>
+            <div class="svc-meta-val">Mensal</div>
+          </div>
+          <div>
+            <div class="svc-meta-label">Ferramentas</div>
+            <div class="svc-meta-val" style="font-size:.78rem;font-weight:400;color:var(--gray)">Mailchimp · RD Station · ActiveCampaign</div>
+          </div>
+          <a href="https://wa.me/5515999999999?text=Quero+saber+sobre+Email+Marketing" class="svc-cta-btn" target="_blank">Quero esse serviço →</a>
+        </div>
+      </div>
+
     </div>
-    <div class="svc-card">
-      <div class="svc-num">02</div>
-      <span class="svc-icon">📱</span>
-      <h3>Social Media</h3>
-      <p>Conteúdo estratégico que constrói autoridade e prepara o terreno para as vendas.</p>
-      <span class="svc-tag">Instagram · LinkedIn</span>
-      <a href="https://wa.me/5515999999999?text=Quero+saber+sobre+Social+Media" class="svc-cta" target="_blank">Quero saber mais →</a>
-    </div>
-    <div class="svc-card">
-      <div class="svc-num">03</div>
-      <span class="svc-icon">✏️</span>
-      <h3>Design</h3>
-      <p>Identidade visual, materiais de vendas e peças que representam sua marca do jeito certo.</p>
-      <span class="svc-tag">Identidade · Peças</span>
-      <a href="https://wa.me/5515999999999?text=Quero+saber+sobre+Design" class="svc-cta" target="_blank">Quero saber mais →</a>
-    </div>
-    <div class="svc-card">
-      <div class="svc-num">04</div>
-      <span class="svc-icon">🌐</span>
-      <h3>Sites</h3>
-      <p>Landing pages e sites que convertem visitantes em clientes. Rápidos, bonitos e otimizados.</p>
-      <span class="svc-tag">Landing · Institucional</span>
-      <a href="https://wa.me/5515999999999?text=Quero+saber+sobre+Sites" class="svc-cta" target="_blank">Quero saber mais →</a>
-    </div>
-    <div class="svc-card">
-      <div class="svc-num">05</div>
-      <span class="svc-icon">🤖</span>
-      <h3>IA & Automação</h3>
-      <p>Fluxos automáticos com inteligência artificial para vender e atender enquanto você dorme.</p>
-      <span class="svc-tag">IA · Chatbot · Fluxos</span>
-      <a href="https://wa.me/5515999999999?text=Quero+saber+sobre+IA+e+Automação" class="svc-cta" target="_blank">Quero saber mais →</a>
+    <div class="tier-note">
+      <p><strong>Por que começar por aqui?</strong> Estes três serviços têm alta demanda, encaixam no DNA da Criae e podem ser entregues imediatamente. Juntos, formam a base de um funil completo: tráfego → landing page → automação no WhatsApp → nutrição por e-mail.</p>
     </div>
   </div>
+
+  <!-- TIER 2 -->
+  <div class="tier-panel" id="tier-medio">
+    <div class="svc-list">
+
+      <div class="svc-item">
+        <div class="svc-main">
+          <div class="svc-header">
+            <span class="svc-num-badge">04</span>
+            <span class="svc-icon-wrap">📊</span>
+            <h3 class="svc-name">Consultoria de Funil Completo</h3>
+          </div>
+          <p class="svc-desc">Diagnóstico + estratégia + execução integrada: tráfego → landing → automação → e-mail → venda. Posiciona a Criae como consultora de resultado, não como prestadora de serviço isolado. O cliente entra com um problema ("não vendo pelo digital") e sai com um sistema funcionando. Ticket mais alto, menor churn.</p>
+          <div class="svc-badges">
+            <span class="svc-badge badge-hot">Em alta</span>
+            <span class="svc-badge badge-money">Ticket alto</span>
+          </div>
+        </div>
+        <div class="svc-side">
+          <div>
+            <div class="svc-meta-label">Recorrência</div>
+            <div class="svc-meta-val">Projeto + Retainer</div>
+          </div>
+          <div>
+            <div class="svc-meta-label">Pré-requisito</div>
+            <div class="svc-meta-val" style="font-size:.78rem;font-weight:400;color:var(--gray)">Composição dos Tiers anteriores</div>
+          </div>
+          <a href="https://wa.me/5515999999999?text=Quero+saber+sobre+Consultoria+de+Funil" class="svc-cta-btn" target="_blank">Quero esse serviço →</a>
+        </div>
+      </div>
+
+      <div class="svc-item">
+        <div class="svc-main">
+          <div class="svc-header">
+            <span class="svc-num-badge">05</span>
+            <span class="svc-icon-wrap">🎬</span>
+            <h3 class="svc-name">Criação de Conteúdo com IA (Vídeo + Copy)</h3>
+          </div>
+          <p class="svc-desc">Roteiros, thumbnails, legendas e vídeos produzidos com IA. Ideal para clientes que não querem aparecer mas precisam de presença digital ativa. Diferencial da Criae: "conteúdo que vende, não que entretém". Poucos concorrentes locais oferecem isso — vantagem competitiva imediata em Sorocaba.</p>
+          <div class="svc-badges">
+            <span class="svc-badge badge-ai">IA</span>
+            <span class="svc-badge badge-hot">Em alta</span>
+          </div>
+        </div>
+        <div class="svc-side">
+          <div>
+            <div class="svc-meta-label">Recorrência</div>
+            <div class="svc-meta-val">Mensal</div>
+          </div>
+          <div>
+            <div class="svc-meta-label">Ferramentas</div>
+            <div class="svc-meta-val" style="font-size:.78rem;font-weight:400;color:var(--gray)">Runway · CapCut AI · HeyGen</div>
+          </div>
+          <a href="https://wa.me/5515999999999?text=Quero+saber+sobre+Conteúdo+com+IA" class="svc-cta-btn" target="_blank">Quero esse serviço →</a>
+        </div>
+      </div>
+
+      <div class="svc-item">
+        <div class="svc-main">
+          <div class="svc-header">
+            <span class="svc-num-badge">06</span>
+            <span class="svc-icon-wrap">🔍</span>
+            <h3 class="svc-name">SEO Local</h3>
+          </div>
+          <p class="svc-desc">Otimização do Google Meu Negócio + SEO on-page para negócios locais em Sorocaba e região. Poucos gestores de tráfego oferecem SEO — é um diferencial competitivo imediato. Uma vez que o cliente começa a ranquear, não para de pagar. Baixa concorrência local, resultado de médio prazo mas recorrência garantida.</p>
+          <div class="svc-badges">
+            <span class="svc-badge badge-local">Baixa concorrência local</span>
+            <span class="svc-badge badge-money">Recorrente</span>
+          </div>
+        </div>
+        <div class="svc-side">
+          <div>
+            <div class="svc-meta-label">Recorrência</div>
+            <div class="svc-meta-val">Mensal</div>
+          </div>
+          <div>
+            <div class="svc-meta-label">Foco</div>
+            <div class="svc-meta-val" style="font-size:.78rem;font-weight:400;color:var(--gray)">Google Meu Negócio · On-page</div>
+          </div>
+          <a href="https://wa.me/5515999999999?text=Quero+saber+sobre+SEO+Local" class="svc-cta-btn" target="_blank">Quero esse serviço →</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="tier-note">
+      <p><strong>Por que médio prazo?</strong> Estes serviços exigem um pouco mais de estrutura ou aprendizado, mas escalam muito bem. A Consultoria de Funil, especialmente, posiciona a Criae como referência estratégica — não só operacional — e aumenta o ticket médio por cliente.</p>
+    </div>
+  </div>
+
+  <!-- TIER 3 -->
+  <div class="tier-panel" id="tier-futuro">
+    <div class="svc-list">
+
+      <div class="svc-item">
+        <div class="svc-main">
+          <div class="svc-header">
+            <span class="svc-num-badge">07</span>
+            <span class="svc-icon-wrap">🏪</span>
+            <h3 class="svc-name">Loja Virtual / E-commerce</h3>
+          </div>
+          <p class="svc-desc">Shopify, Nuvemshop ou WooCommerce para negócios que querem vender online. Alto ticket e demanda crescente no mercado brasileiro, mas exige mais infraestrutura técnica e suporte pós-entrega. Recomendado para quando houver um parceiro de desenvolvimento ou profissional técnico integrado à equipe.</p>
+          <div class="svc-badges">
+            <span class="svc-badge badge-hot">Alta demanda</span>
+            <span class="svc-badge badge-money">Ticket alto</span>
+          </div>
+        </div>
+        <div class="svc-side">
+          <div>
+            <div class="svc-meta-label">Recorrência</div>
+            <div class="svc-meta-val">Projeto + Manutenção</div>
+          </div>
+          <div>
+            <div class="svc-meta-label">Plataformas</div>
+            <div class="svc-meta-val" style="font-size:.78rem;font-weight:400;color:var(--gray)">Shopify · Nuvemshop · WooCommerce</div>
+          </div>
+          <a href="https://wa.me/5515999999999?text=Quero+saber+sobre+E-commerce" class="svc-cta-btn" target="_blank">Tenho interesse →</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="tier-note">
+      <p><strong>Por que futuro?</strong> E-commerce tem alto potencial, mas o risco operacional supera o benefício financeiro sem uma equipe técnica dedicada. A Criae pode iniciar parcerias estratégicas com desenvolvedores para oferecer esse serviço com qualidade e sem comprometer a operação atual.</p>
+    </div>
+  </div>
+
 </section>
 
 <!-- PARA QUEM -->
 <section id="para-quem" class="audience-section">
   <div class="s-label">Para quem é</div>
   <h2 class="s-title rv">A Criae foi feita<br><span class="y">para você se...</span></h2>
-
   <div class="audience-grid">
     <div class="aud-card rv d1">
       <span class="aud-emoji">🏪</span>
@@ -423,7 +633,6 @@ footer p{font-size:.78rem;color:var(--gray2)}
 <section class="method-section">
   <div class="s-label">Como funciona</div>
   <h2 class="s-title rv" style="text-align:center">Da primeira conversa<br><span class="y">ao resultado.</span></h2>
-
   <div class="method-steps">
     <div class="mstep rv d1">
       <div class="mstep-dot">01</div>
@@ -475,19 +684,23 @@ footer p{font-size:.78rem;color:var(--gray2)}
     </div>
     <div class="faq-item">
       <button class="fq" onclick="tfaq(this)">Posso contratar a mentoria e os serviços juntos?<span class="fq-ico">+</span></button>
-      <div class="fq-ans"><div class="fq-ans-in">Sim. Muitos clientes começam com a mentoria para entender a estratégia e depois contratam a execução (tráfego, site, etc.). Isso garante que o serviço seja executado exatamente do jeito que faz sentido para o seu negócio.</div></div>
+      <div class="fq-ans"><div class="fq-ans-in">Sim. Muitos clientes começam com a mentoria para entender a estratégia e depois contratam a execução. Isso garante que o serviço seja executado exatamente do jeito que faz sentido para o seu negócio.</div></div>
     </div>
     <div class="faq-item">
-      <button class="fq" onclick="tfaq(this)">Como funciona o suporte pós-sessão?<span class="fq-ico">+</span></button>
-      <div class="fq-ans"><div class="fq-ans-in">Por 7 dias após a sessão você tem acesso ao nosso WhatsApp para dúvidas sobre o plano de ação. Respondemos em até 24h em dias úteis.</div></div>
+      <button class="fq" onclick="tfaq(this)">Qual serviço devo contratar primeiro?<span class="fq-ico">+</span></button>
+      <div class="fq-ans"><div class="fq-ans-in">Depende do seu momento. Se você já anuncia mas não converte, Landing Page + Automação no WhatsApp são prioridade. Se ainda não anuncia, começamos com Tráfego Pago. A mentoria individual é o caminho mais rápido para descobrir exatamente por onde começar.</div></div>
     </div>
     <div class="faq-item">
       <button class="fq" onclick="tfaq(this)">Vocês atendem fora de Sorocaba?<span class="fq-ico">+</span></button>
-      <div class="fq-ans"><div class="fq-ans-in">Sim. A mentoria é 100% online via Google Meet e os serviços são prestados de forma remota para todo o Brasil.</div></div>
+      <div class="fq-ans"><div class="fq-ans-in">Sim. A mentoria é 100% online via Google Meet e todos os serviços são prestados remotamente para todo o Brasil.</div></div>
     </div>
     <div class="faq-item">
       <button class="fq" onclick="tfaq(this)">Qual a diferença entre mentoria e curso?<span class="fq-ico">+</span></button>
-      <div class="fq-ans"><div class="fq-ans-in">Curso é genérico — você assiste o conteúdo e tenta aplicar sozinho no seu contexto. Mentoria é personalizada — analisamos o SEU negócio, o SEU momento e traçamos a estratégia certa para você. É a diferença entre um mapa genérico e um GPS configurado para o seu destino.</div></div>
+      <div class="fq-ans"><div class="fq-ans-in">Curso é genérico — você assiste o conteúdo e tenta aplicar sozinho. Mentoria é personalizada — analisamos o SEU negócio e traçamos a estratégia certa para você. É a diferença entre um mapa genérico e um GPS configurado para o seu destino.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="fq" onclick="tfaq(this)">A IA vai substituir os serviços de marketing?<span class="fq-ico">+</span></button>
+      <div class="fq-ans"><div class="fq-ans-in">A IA vai substituir quem não usa IA. A Criae já integra inteligência artificial em automações, criação de conteúdo e análise de dados — isso nos torna mais eficientes, não obsoletos. Nosso diferencial é saber usar as ferramentas com estratégia, não apenas apertar botões.</div></div>
     </div>
   </div>
 </section>
@@ -500,17 +713,16 @@ footer p{font-size:.78rem;color:var(--gray2)}
     tentar sozinho.<br>
     <span class="y">Vamos juntos.</span>
   </h2>
-  <p>Uma sessão de mentoria pode mudar a direção do seu negócio digital. Agende agora.</p>
-  <a href="https://wa.me/5515999999999?text=Ol%C3%A1%2C+quero+agendar+minha+mentoria+com+a+Criae" class="btn-p" target="_blank" style="font-size:.95rem;padding:1.1rem 2.2rem;display:inline-flex">
-    Agendar mentoria
+  <p>Uma conversa pode mudar a direção do seu negócio digital. Sem compromisso.</p>
+  <a href="https://wa.me/5515999999999?text=Ol%C3%A1%2C+quero+conhecer+a+Criae+e+entender+como+vocês+podem+me+ajudar" class="btn-p" target="_blank" style="font-size:.95rem;padding:1.1rem 2.2rem;display:inline-flex">
+    Falar com a Criae
     <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
   </a>
   <div class="cta-pills">
-    <div class="cta-pill">Sessão de 90 minutos</div>
-    <div class="cta-pill">Gravação inclusa</div>
-    <div class="cta-pill">7 dias de suporte</div>
-    <div class="cta-pill">100% online</div>
+    <div class="cta-pill">Mentoria 1:1</div>
+    <div class="cta-pill">7 serviços disponíveis</div>
     <div class="cta-pill">Proposta personalizada</div>
+    <div class="cta-pill">100% online</div>
   </div>
 </section>
 
@@ -536,7 +748,7 @@ document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});
   requestAnimationFrame(loop);
 })();
 document.querySelectorAll('a,button').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{cur2.style.transform+=' scale(1.5)';cur2.style.borderColor='rgba(245,197,24,.6)'});
+  el.addEventListener('mouseenter',()=>{cur2.style.borderColor='rgba(245,197,24,.6)'});
   el.addEventListener('mouseleave',()=>{cur2.style.borderColor='rgba(245,197,24,.3)'});
 });
 
@@ -545,8 +757,18 @@ const nav=document.getElementById('nav');
 window.addEventListener('scroll',()=>nav.classList.toggle('sc',scrollY>50));
 
 // Scroll reveal
-const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}}),{threshold:.1});
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{
+  if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}
+}),{threshold:.1});
 document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
+
+// Tier tabs
+function showTier(id, btn) {
+  document.querySelectorAll('.tier-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tier-tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('tier-'+id).classList.add('active');
+  btn.classList.add('active');
+}
 
 // FAQ
 function tfaq(btn){
