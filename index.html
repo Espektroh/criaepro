@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Criae | Gestão de Tráfego que Vende</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black: #0a0a0a;
+    --black2: #111111;
+    --black3: #181818;
+    --yellow: #F5C518;
+    --yellow-dim: #c49d10;
+    --white: #f0ede8;
+    --gray: #888880;
+    --gray2: #333330;
+    --border: rgba(255,255,255,0.08);
+    --font-display: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+    cursor: none;
+  }
+
+  /* CURSOR */
+  .cursor {
+    width: 10px; height: 10px;
+    background: var(--yellow);
+    border-radius: 50%;
+    position: fixed; top: 0; left: 0;
+    pointer-events: none; z-index: 9999;
+    transition: transform .15s ease;
+  }
+  .cursor-ring {
+    width: 36px; height: 36px;
+    border: 1px solid rgba(245,197,24,.35);
+    border-radius: 50%;
+    position: fixed; top: 0; left: 0;
+    pointer-events: none; z-index: 9998;
+    transition: all .25s ease;
+  }
+  body:hover .cursor-ring { opacity: 1; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 1.5rem 4rem;
+    display: flex; align-items: center; justify-content: space-between;
+    transition: background .3s, padding .3s;
+  }
+  nav.scrolled {
+    background: rgba(10,10,10,.9);
+    backdrop-filter: blur(16px);
+    padding: 1rem 4rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -.02em;
+    color: var(--white);
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--yellow); }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a {
+    font-size: .875rem;
+    color: var(--gray);
+    text-decoration: none;
+    letter-spacing: .04em;
+    transition: color .2s;
+  }
+  .nav-links a:hover { color: var(--white); }
+  .nav-cta {
+    background: var(--yellow);
+    color: var(--black);
+    padding: .6rem 1.4rem;
+    border-radius: 2px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: .8rem;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background .2s, transform .15s;
+  }
+  .nav-cta:hover { background: #ffd700; transform: translateY(-1px); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex; flex-direction: column;
+    justify-content: center;
+    padding: 8rem 4rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-grid-bg {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(245,197,24,.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(245,197,24,.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent);
+  }
+  .hero-glow {
+    position: absolute;
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(245,197,24,.07) 0%, transparent 70%);
+    top: -100px; right: -100px;
+    pointer-events: none;
+  }
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: .5rem;
+    font-size: .75rem; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--yellow);
+    border: 1px solid rgba(245,197,24,.25);
+    padding: .4rem .9rem;
+    border-radius: 2px;
+    margin-bottom: 2rem;
+    width: fit-content;
+    opacity: 0; animation: fadeUp .6s .2s forwards;
+  }
+  .hero-tag::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--yellow);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 7vw, 6.5rem);
+    font-weight: 800;
+    line-height: .95;
+    letter-spacing: -.03em;
+    max-width: 900px;
+    margin-bottom: 2rem;
+    opacity: 0; animation: fadeUp .7s .35s forwards;
+  }
+  .hero h1 .accent { color: var(--yellow); display: inline-block; }
+  .hero h1 .line-strike {
+    position: relative; color: var(--gray2);
+  }
+  .hero h1 .line-strike::after {
+    content: '';
+    position: absolute;
+    left: 0; top: 55%;
+    width: 0; height: 2px;
+    background: var(--yellow);
+    animation: strike 1s 1.2s forwards;
+  }
+  @keyframes strike { to { width: 100%; } }
+
+  .hero-sub {
+    font-size: 1.1rem;
+    color: var(--gray);
+    max-width: 540px;
+    margin-bottom: 3rem;
+    line-height: 1.7;
+    opacity: 0; animation: fadeUp .7s .5s forwards;
+  }
+  .hero-actions {
+    display: flex; gap: 1rem; flex-wrap: wrap;
+    opacity: 0; animation: fadeUp .7s .65s forwards;
+  }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: .6rem;
+    background: var(--yellow);
+    color: var(--black);
+    padding: 1rem 2rem;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: .9rem;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: transform .2s, background .2s;
+  }
+  .btn-primary:hover { transform: translateY(-2px); background: #ffd700; }
+  .btn-primary svg { transition: transform .2s; }
+  .btn-primary:hover svg { transform: translateX(3px); }
+  .btn-ghost {
+    display: inline-flex; align-items: center; gap: .6rem;
+    border: 1px solid var(--border);
+    color: var(--gray);
+    padding: 1rem 2rem;
+    font-size: .9rem;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: border-color .2s, color .2s;
+  }
+  .btn-ghost:hover { border-color: rgba(255,255,255,.3); color: var(--white); }
+
+  .hero-stats {
+    display: flex; gap: 3rem;
+    margin-top: 5rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--border);
+    opacity: 0; animation: fadeUp .7s .8s forwards;
+  }
+  .hero-stat-val {
+    font-family: var(--font-display);
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1;
+  }
+  .hero-stat-val span { color: var(--yellow); }
+  .hero-stat-lbl {
+    font-size: .8rem;
+    color: var(--gray);
+    margin-top: .3rem;
+    letter-spacing: .04em;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* MARQUEE */
+  .marquee-wrap {
+    overflow: hidden;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 1.1rem 0;
+    background: var(--black2);
+  }
+  .marquee-track {
+    display: flex; gap: 3rem;
+    white-space: nowrap;
+    animation: marquee 20s linear infinite;
+  }
+  .marquee-track:hover { animation-play-state: paused; }
+  .marquee-item {
+    font-family: var(--font-display);
+    font-size: .75rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--gray);
+    display: flex; align-items: center; gap: 1rem;
+    flex-shrink: 0;
+  }
+  .marquee-item .dot {
+    width: 4px; height: 4px;
+    background: var(--yellow);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  @keyframes marquee { to { transform: translateX(-50%); } }
+
+  /* SECTION LAYOUT */
+  section { padding: 7rem 4rem; }
+  .section-label {
+    font-size: .7rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--yellow);
+    margin-bottom: 1rem;
+    display: flex; align-items: center; gap: .6rem;
+  }
+  .section-label::before {
+    content: '';
+    width: 24px; height: 1px;
+    background: var(--yellow);
+  }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -.02em;
+    margin-bottom: 1.5rem;
+  }
+  .section-title .accent { color: var(--yellow); }
+  .section-sub {
+    font-size: 1rem;
+    color: var(--gray);
+    max-width: 520px;
+    line-height: 1.75;
+  }
+
+  /* INIMIGOS / PROBLEMA */
+  .problem-section { background: var(--black2); }
+  .problem-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-top: 4rem;
+  }
+  .problem-list { display: flex; flex-direction: column; gap: 1.5rem; }
+  .problem-item {
+    display: flex; gap: 1.2rem; align-items: flex-start;
+    padding: 1.4rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    transition: border-color .2s, background .2s;
+  }
+  .problem-item:hover {
+    border-color: rgba(245,197,24,.2);
+    background: rgba(245,197,24,.03);
+  }
+  .problem-icon {
+    width: 40px; height: 40px;
+    background: rgba(255,80,80,.08);
+    border: 1px solid rgba(255,80,80,.15);
+    border-radius: 2px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    font-size: 1rem;
+  }
+  .problem-item h3 {
+    font-family: var(--font-display);
+    font-size: .95rem;
+    font-weight: 700;
+    margin-bottom: .3rem;
+    color: var(--white);
+  }
+  .problem-item p { font-size: .85rem; color: var(--gray); line-height: 1.6; }
+  .problem-solution {
+    background: var(--black3);
+    border: 1px solid rgba(245,197,24,.15);
+    border-radius: 4px;
+    padding: 2.5rem;
+  }
+  .solution-headline {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+    letter-spacing: -.02em;
+  }
+  .solution-headline .accent { color: var(--yellow); }
+  .solution-points { display: flex; flex-direction: column; gap: .9rem; }
+  .solution-point {
+    display: flex; gap: .8rem; align-items: flex-start;
+    font-size: .9rem; color: var(--gray); line-height: 1.5;
+  }
+  .solution-point::before {
+    content: '→';
+    color: var(--yellow);
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: .05rem;
+  }
+
+  /* COMO FUNCIONA */
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border);
+    margin-top: 4rem;
+    border: 1px solid var(--border);
+  }
+  .process-step {
+    background: var(--black);
+    padding: 2.5rem 2rem;
+    position: relative;
+    transition: background .2s;
+  }
+  .process-step:hover { background: var(--black2); }
+  .process-num {
+    font-family: var(--font-display);
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: rgba(245,197,24,.12);
+    line-height: 1;
+    margin-bottom: 1.2rem;
+    letter-spacing: -.04em;
+  }
+  .process-step h3 {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: .6rem;
+    color: var(--white);
+  }
+  .process-step p { font-size: .85rem; color: var(--gray); line-height: 1.65; }
+  .process-step .step-icon {
+    position: absolute; top: 2rem; right: 2rem;
+    font-size: 1.2rem;
+    opacity: .4;
+  }
+
+  /* PLANOS */
+  .pricing-section { background: var(--black2); }
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.08fr 1fr;
+    gap: 1.5rem;
+    margin-top: 4rem;
+    align-items: start;
+  }
+  .plan-card {
+    background: var(--black3);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2.5rem 2rem;
+    transition: transform .2s, border-color .2s;
+    position: relative;
+  }
+  .plan-card:hover { transform: translateY(-4px); }
+  .plan-card.featured {
+    border-color: var(--yellow);
+    background: var(--black);
+  }
+  .plan-badge {
+    position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
+    background: var(--yellow);
+    color: var(--black);
+    font-family: var(--font-display);
+    font-size: .65rem;
+    font-weight: 800;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    padding: .3rem .9rem;
+    border-radius: 2px;
+    white-space: nowrap;
+  }
+  .plan-name {
+    font-family: var(--font-display);
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 1rem;
+  }
+  .plan-price {
+    font-family: var(--font-display);
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1;
+    letter-spacing: -.03em;
+  }
+  .plan-price sup {
+    font-size: 1.1rem;
+    font-weight: 600;
+    vertical-align: super;
+    letter-spacing: 0;
+  }
+  .plan-price-period {
+    font-size: .8rem;
+    color: var(--gray);
+    margin-top: .4rem;
+    margin-bottom: 1.8rem;
+  }
+  .plan-divider { height: 1px; background: var(--border); margin: 1.5rem 0; }
+  .plan-features { list-style: none; display: flex; flex-direction: column; gap: .85rem; }
+  .plan-features li {
+    font-size: .875rem;
+    color: var(--gray);
+    display: flex; gap: .7rem; align-items: flex-start;
+  }
+  .plan-features li::before {
+    content: '✓';
+    color: var(--yellow);
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .plan-features li.muted::before { color: var(--gray2); }
+  .plan-features li.muted { opacity: .45; }
+  .plan-cta {
+    display: block;
+    text-align: center;
+    margin-top: 2rem;
+    padding: .85rem;
+    font-family: var(--font-display);
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: all .2s;
+  }
+  .plan-cta-outline {
+    border: 1px solid var(--border);
+    color: var(--gray);
+  }
+  .plan-cta-outline:hover {
+    border-color: rgba(245,197,24,.4);
+    color: var(--yellow);
+  }
+  .plan-cta-solid {
+    background: var(--yellow);
+    color: var(--black);
+  }
+  .plan-cta-solid:hover { background: #ffd700; transform: translateY(-1px); }
+
+  /* RESULTADOS */
+  .results-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 4rem;
+  }
+  .result-card {
+    background: var(--black2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2rem;
+    transition: border-color .2s, transform .2s;
+  }
+  .result-card:hover {
+    border-color: rgba(245,197,24,.2);
+    transform: translateY(-3px);
+  }
+  .result-sector {
+    font-size: .7rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--yellow);
+    margin-bottom: 1.2rem;
+    display: flex; align-items: center; gap: .5rem;
+  }
+  .result-sector::before {
+    content: ''; width: 16px; height: 1px; background: var(--yellow);
+  }
+  .result-metric {
+    font-family: var(--font-display);
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1;
+    letter-spacing: -.03em;
+    margin-bottom: .4rem;
+  }
+  .result-metric span { color: var(--yellow); }
+  .result-desc { font-size: .85rem; color: var(--gray); line-height: 1.6; margin-top: .8rem; }
+  .result-footer {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    font-size: .75rem;
+    color: var(--gray2);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .result-period {
+    background: rgba(245,197,24,.08);
+    color: var(--yellow-dim);
+    font-size: .7rem;
+    padding: .25rem .6rem;
+    border-radius: 2px;
+    letter-spacing: .04em;
+  }
+
+  /* FAQ */
+  .faq-section { background: var(--black2); }
+  .faq-wrap {
+    max-width: 720px;
+    margin: 4rem auto 0;
+  }
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+  }
+  .faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 1.6rem 0;
+    display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--white);
+    cursor: none;
+    transition: color .2s;
+  }
+  .faq-question:hover { color: var(--yellow); }
+  .faq-icon {
+    width: 24px; height: 24px;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    transition: background .2s, border-color .2s, transform .3s;
+    font-size: .8rem;
+    color: var(--gray);
+  }
+  .faq-item.open .faq-icon {
+    background: var(--yellow);
+    border-color: var(--yellow);
+    color: var(--black);
+    transform: rotate(45deg);
+  }
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .35s ease, padding .3s;
+  }
+  .faq-answer-inner {
+    padding-bottom: 1.5rem;
+    font-size: .9rem;
+    color: var(--gray);
+    line-height: 1.75;
+  }
+
+  /* CTA FINAL */
+  .cta-section {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(245,197,24,.06) 0%, transparent 70%);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+  .cta-label {
+    font-size: .7rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--yellow);
+    margin-bottom: 1.5rem;
+    display: flex; align-items: center; justify-content: center; gap: .6rem;
+  }
+  .cta-label::before, .cta-label::after {
+    content: ''; flex: 1; max-width: 60px; height: 1px; background: rgba(245,197,24,.3);
+  }
+  .cta-section h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -.03em;
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+  }
+  .cta-section h2 .accent { color: var(--yellow); }
+  .cta-section p {
+    font-size: 1rem;
+    color: var(--gray);
+    max-width: 420px;
+    margin: 0 auto 3rem;
+    line-height: 1.75;
+  }
+  .cta-guarantee {
+    margin-top: 2rem;
+    font-size: .8rem;
+    color: var(--gray2);
+    display: flex; align-items: center; justify-content: center; gap: .5rem;
+  }
+  .cta-guarantee span { color: var(--gray); }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2.5rem 4rem;
+    display: flex; align-items: center; justify-content: space-between;
+    background: var(--black);
+  }
+  .footer-logo {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: -.02em;
+  }
+  .footer-logo span { color: var(--yellow); }
+  footer p { font-size: .8rem; color: var(--gray2); }
+
+  /* SCROLL REVEAL */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity .7s ease, transform .7s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    nav { padding: 1.2rem 1.5rem; }
+    nav.scrolled { padding: .9rem 1.5rem; }
+    .nav-links { display: none; }
+    section { padding: 5rem 1.5rem; }
+    .hero { padding: 7rem 1.5rem 3rem; }
+    .hero-stats { flex-direction: column; gap: 1.5rem; }
+    .problem-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .process-grid { grid-template-columns: 1fr 1fr; }
+    .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin-left: auto; margin-right: auto; }
+    .results-grid { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: .8rem; text-align: center; padding: 2rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="nav-logo">Criae<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#processo">Como funciona</a></li>
+    <li><a href="#planos">Planos</a></li>
+    <li><a href="#resultados">Resultados</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <a href="https://wa.me/5515999999999?text=Ol%C3%A1%2C+quero+saber+mais+sobre+o+Plano+Acelerador" class="nav-cta" target="_blank">Falar agora →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-glow"></div>
+
+  <div class="hero-tag">Gestão de Tráfego Profissional</div>
+
+  <h1>
+    Chega de postar<br>
+    e <span class="line-strike">torcer</span><br>
+    <span class="accent">Hora de vender.</span>
+  </h1>
+
+  <p class="hero-sub">
+    Transformamos seu investimento em anúncios em clientes reais no WhatsApp. Google Ads e Meta Ads com foco total em conversão — não em likes.
+  </p>
+
+  <div class="hero-actions">
+    <a href="https://wa.me/5515999999999?text=Quero+o+Plano+Acelerador" class="btn-primary" target="_blank">
+      Quero vender mais
+      <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+    <a href="#processo" class="btn-ghost">Como funciona</a>
+  </div>
+
+  <div class="hero-stats">
+    <div>
+      <div class="hero-stat-val">R$697<span>/mês</span></div>
+      <div class="hero-stat-lbl">Gestão profissional</div>
+    </div>
+    <div>
+      <div class="hero-stat-val">48<span>h</span></div>
+      <div class="hero-stat-lbl">Para sua campanha ir ao ar</div>
+    </div>
+    <div>
+      <div class="hero-stat-val">0</div>
+      <div class="hero-stat-lbl">Contratos de fidelidade</div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <div class="marquee-item"><span class="dot"></span> Google Ads</div>
+    <div class="marquee-item"><span class="dot"></span> Meta Ads</div>
+    <div class="marquee-item"><span class="dot"></span> Leads Qualificados</div>
+    <div class="marquee-item"><span class="dot"></span> ROI Mensurável</div>
+    <div class="marquee-item"><span class="dot"></span> Setup em 48h</div>
+    <div class="marquee-item"><span class="dot"></span> Sem Fidelidade</div>
+    <div class="marquee-item"><span class="dot"></span> Campanhas de Conversão</div>
+    <div class="marquee-item"><span class="dot"></span> WhatsApp + Direct</div>
+    <div class="marquee-item"><span class="dot"></span> PMEs e Serviços Locais</div>
+    <div class="marquee-item"><span class="dot"></span> Google Ads</div>
+    <div class="marquee-item"><span class="dot"></span> Meta Ads</div>
+    <div class="marquee-item"><span class="dot"></span> Leads Qualificados</div>
+    <div class="marquee-item"><span class="dot"></span> ROI Mensurável</div>
+    <div class="marquee-item"><span class="dot"></span> Setup em 48h</div>
+    <div class="marquee-item"><span class="dot"></span> Sem Fidelidade</div>
+    <div class="marquee-item"><span class="dot"></span> Campanhas de Conversão</div>
+    <div class="marquee-item"><span class="dot"></span> WhatsApp + Direct</div>
+    <div class="marquee-item"><span class="dot"></span> PMEs e Serviços Locais</div>
+  </div>
+</div>
+
+<!-- PROBLEMA -->
+<section class="problem-section">
+  <div class="section-label">O problema</div>
+  <h2 class="section-title">Por que você ainda<br><span class="accent">não está vendendo?</span></h2>
+
+  <div class="problem-grid">
+    <div class="problem-list">
+      <div class="problem-item reveal">
+        <div class="problem-icon">✕</div>
+        <div>
+          <h3>Você posta e reza</h3>
+          <p>Publicar no orgânico sem estratégia de tráfego pago é deixar dinheiro na mesa. Sua concorrência já anuncia.</p>
+        </div>
+      </div>
+      <div class="problem-item reveal">
+        <div class="problem-icon">✕</div>
+        <div>
+          <h3>Tentou "turbinar" e jogou dinheiro fora</h3>
+          <p>O botão azul "Impulsionar" não é gestão de tráfego. É a forma mais cara e menos eficiente de anunciar.</p>
+        </div>
+      </div>
+      <div class="problem-item reveal">
+        <div class="problem-icon">✕</div>
+        <div>
+          <h3>Agências tradicionais cobram caro e entregam pouco</h3>
+          <p>R$2.000+/mês por um "pacote de posts" enquanto o telefone continua mudo. Isso não é marketing — é desperdício.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="problem-solution reveal">
+      <div class="solution-headline">
+        A Criae foi criada<br>
+        para <span class="accent">resolver exatamente isso.</span>
+      </div>
+      <div class="solution-points">
+        <div class="solution-point">Campanhas focadas em conversão — quem chega já quer comprar</div>
+        <div class="solution-point">Preço fixo que cabe no fluxo de caixa de quem está crescendo</div>
+        <div class="solution-point">Relatório mensal com custo por lead e vendas reais</div>
+        <div class="solution-point">Você acompanha cada centavo investido, sem caixa-preta</div>
+        <div class="solution-point">Sem contrato de fidelidade — você fica porque vende</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section id="processo">
+  <div class="section-label">O processo</div>
+  <h2 class="section-title">Do zero à venda<br><span class="accent">em 4 etapas.</span></h2>
+  <p class="section-sub">Sem burocracia. Implementamos rápido, otimizamos sempre e você vê o resultado.</p>
+
+  <div class="process-grid reveal">
+    <div class="process-step">
+      <div class="process-num">01</div>
+      <span class="step-icon">🎯</span>
+      <h3>Diagnóstico</h3>
+      <p>Entendemos seu negócio, público-alvo e onde estão os clientes prontos para comprar.</p>
+    </div>
+    <div class="process-step">
+      <div class="process-num">02</div>
+      <span class="step-icon">⚙️</span>
+      <h3>Setup em 48h</h3>
+      <p>Configuramos pixel, públicos e campanhas. Em dois dias úteis você já está anunciando.</p>
+    </div>
+    <div class="process-step">
+      <div class="process-num">03</div>
+      <span class="step-icon">📊</span>
+      <h3>Otimização semanal</h3>
+      <p>Analisamos os dados toda semana e ajustamos o que não performa. Sem piloto automático.</p>
+    </div>
+    <div class="process-step">
+      <div class="process-num">04</div>
+      <span class="step-icon">📈</span>
+      <h3>Relatório e escala</h3>
+      <p>Todo mês você recebe o resultado em números claros. O que funciona, escalamos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PLANOS -->
+<section id="planos" class="pricing-section">
+  <div class="section-label">Investimento</div>
+  <h2 class="section-title">Preço transparente.<br><span class="accent">Sem surpresas.</span></h2>
+  <p class="section-sub">Taxa de gestão fixa. O investimento em anúncios é pago direto para o Google ou Meta — fica 100% na sua conta.</p>
+
+  <div class="pricing-grid">
+    <!-- Starter -->
+    <div class="plan-card reveal">
+      <div class="plan-name">Starter</div>
+      <div class="plan-price"><sup>R$</sup>497</div>
+      <div class="plan-price-period">por mês · taxa de gestão</div>
+      <div class="plan-divider"></div>
+      <ul class="plan-features">
+        <li>1 canal (Google ou Meta)</li>
+        <li>Campanhas de conversão</li>
+        <li>Otimização semanal</li>
+        <li>Relatório mensal</li>
+        <li class="muted">Gestão dupla de canais</li>
+        <li class="muted">Relatório semanal</li>
+      </ul>
+      <a href="https://wa.me/5515999999999?text=Quero+o+plano+Starter" class="plan-cta plan-cta-outline" target="_blank">Começar →</a>
+    </div>
+
+    <!-- Acelerador -->
+    <div class="plan-card featured reveal">
+      <div class="plan-badge">Mais popular</div>
+      <div class="plan-name">Acelerador Local</div>
+      <div class="plan-price"><sup>R$</sup>697</div>
+      <div class="plan-price-period">por mês · taxa de gestão</div>
+      <div class="plan-divider"></div>
+      <ul class="plan-features">
+        <li>1 canal (Google ou Meta)</li>
+        <li>Campanhas de conversão</li>
+        <li>Otimização semanal</li>
+        <li>Relatório mensal detalhado</li>
+        <li>Setup prioritário (48h)</li>
+        <li>Suporte via WhatsApp</li>
+      </ul>
+      <a href="https://wa.me/5515999999999?text=Quero+o+Plano+Acelerador+Local" class="plan-cta plan-cta-solid" target="_blank">Quero esse →</a>
+    </div>
+
+    <!-- Pro -->
+    <div class="plan-card reveal">
+      <div class="plan-name">Pro — Duplo Canal</div>
+      <div class="plan-price"><sup>R$</sup>997</div>
+      <div class="plan-price-period">por mês · taxa de gestão</div>
+      <div class="plan-divider"></div>
+      <ul class="plan-features">
+        <li>Google Ads + Meta Ads</li>
+        <li>Campanhas de conversão</li>
+        <li>Otimização semanal</li>
+        <li>Relatório semanal</li>
+        <li>Setup prioritário (48h)</li>
+        <li>Suporte via WhatsApp</li>
+      </ul>
+      <a href="https://wa.me/5515999999999?text=Quero+o+plano+Pro" class="plan-cta plan-cta-outline" target="_blank">Começar →</a>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTADOS -->
+<section id="resultados">
+  <div class="section-label">Resultados</div>
+  <h2 class="section-title">Números reais.<br><span class="accent">Sem achismo.</span></h2>
+  <p class="section-sub">Curtida não paga conta. Por isso só falamos de conversão, custo por lead e vendas.</p>
+
+  <div class="results-grid">
+    <div class="result-card reveal">
+      <div class="result-sector">Clínica estética</div>
+      <div class="result-metric"><span>47</span> leads</div>
+      <p class="result-desc">47 mensagens no WhatsApp em 30 dias, com custo médio por lead de R$14,80. Investimento em anúncios: R$700.</p>
+      <div class="result-footer">
+        <span>Meta Ads</span>
+        <span class="result-period">30 dias</span>
+      </div>
+    </div>
+    <div class="result-card reveal">
+      <div class="result-sector">Delivery local</div>
+      <div class="result-metric"><span>3.2x</span> ROI</div>
+      <p class="result-desc">Para cada R$1 investido em anúncios, R$3,20 em pedidos. Campanha no Google com foco em busca local.</p>
+      <div class="result-footer">
+        <span>Google Ads</span>
+        <span class="result-period">45 dias</span>
+      </div>
+    </div>
+    <div class="result-card reveal">
+      <div class="result-sector">Escritório contábil</div>
+      <div class="result-metric"><span>12</span> clientes</div>
+      <p class="result-desc">12 novos contratos fechados em 60 dias com campanha Meta Ads segmentada para MEIs e empresas locais.</p>
+      <div class="result-footer">
+        <span>Meta Ads</span>
+        <span class="result-period">60 dias</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="faq-section">
+  <div class="section-label">Dúvidas</div>
+  <h2 class="section-title" style="text-align:center">Perguntas<br><span class="accent">frequentes.</span></h2>
+
+  <div class="faq-wrap">
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Preciso ter uma verba de anúncios além da gestão?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">Sim. A taxa de gestão (R$697) paga o trabalho estratégico e operacional da Criae. O valor que você investe em anúncios é pago diretamente para o Google ou Meta — fica na sua conta. Recomendamos entre R$500 e R$1.500/mês em anúncios para resultados consistentes.</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Em quanto tempo vejo os primeiros resultados?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">As campanhas entram no ar em até 48h. Os primeiros leads costumam aparecer nos primeiros 7 dias. A otimização real acontece entre a 2ª e 4ª semana, quando o algoritmo aprende e os custos caem.</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Tem contrato de fidelidade?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">Não. Você cancela quando quiser, sem multa. Nossa retenção não é baseada em contrato — é baseada em resultado. Se você estiver vendendo, não vai querer parar.</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Vocês criam os anúncios também?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">Sim. Cuidamos da estrutura, copy e configuração das campanhas. Para anúncios com imagem ou vídeo, orientamos o que produzir ou adaptamos o que você já tem.</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Meu negócio é pequeno, vale a pena?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">Foi exatamente para você que criamos esse serviço. PMEs e negócios locais são nosso foco. Com R$697 de gestão + R$500 em anúncios, você tem uma máquina de captação que antes só grandes empresas podiam ter.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-section">
+  <div class="cta-label">Pronto para crescer</div>
+  <h2>Pare de depender<br>de <span class="accent">sorte.</span></h2>
+  <p>Fale com a gente agora. Em 48h sua campanha já está rodando e captando clientes.</p>
+  <a href="https://wa.me/5515999999999?text=Ol%C3%A1%2C+quero+come%C3%A7ar+com+a+Criae" class="btn-primary" target="_blank" style="font-size:1rem; padding: 1.1rem 2.5rem; display:inline-flex;">
+    Começar agora
+    <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+  <div class="cta-guarantee">
+    <span>Sem contrato</span> · <span>Setup em 48h</span> · <span>Suporte via WhatsApp</span>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Criae<span>.</span></div>
+  <p>© 2025 Criae · Gestão de Tráfego · Sorocaba, SP</p>
+</footer>
+
+<script>
+  // Cursor
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursorRing');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+  function animateCursor() {
+    cursor.style.transform = `translate(${mx-5}px, ${my-5}px)`;
+    rx += (mx - rx) * .12;
+    ry += (my - ry) * .12;
+    ring.style.transform = `translate(${rx-18}px, ${ry-18}px)`;
+    requestAnimationFrame(animateCursor);
+  }
+  animateCursor();
+
+  document.querySelectorAll('a, button').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      cursor.style.transform += ' scale(1.5)';
+      ring.style.transform += ' scale(1.4)';
+      ring.style.borderColor = 'rgba(245,197,24,.6)';
+    });
+    el.addEventListener('mouseleave', () => {
+      ring.style.borderColor = 'rgba(245,197,24,.35)';
+    });
+  });
+
+  // Nav scroll
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(r => observer.observe(r));
+
+  // FAQ
+  function toggleFaq(btn) {
+    const item = btn.parentElement;
+    const answer = item.querySelector('.faq-answer');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-answer').style.maxHeight = '0';
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+    }
+  }
+</script>
+</body>
+</html>
