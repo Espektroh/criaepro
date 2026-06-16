@@ -1,0 +1,95 @@
+.footer {
+  background: var(--ink);
+  color: var(--paper);
+  padding: clamp(3.5rem, 7vw, 5rem) 0 2.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.top {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.1fr;
+  gap: 2.5rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.logo {
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.85rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--paper);
+}
+.logo span {
+  color: var(--criae);
+}
+.tagline {
+  margin-top: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 24ch;
+  line-height: 1.6;
+}
+.linksCol,
+.contactCol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+.colTitle {
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 0.4rem;
+}
+.linksCol a,
+.contactCol a {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  transition: color 0.2s;
+  width: fit-content;
+}
+.linksCol a:hover,
+.contactCol a:hover {
+  color: var(--criae);
+}
+.contactCol a svg {
+  color: var(--criae);
+}
+.loc {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+}
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1.8rem;
+  flex-wrap: wrap;
+}
+.bottom p {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.85rem;
+}
+.bottomCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--paper);
+  font-family: var(--font-display), sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.bottomCta:hover {
+  color: var(--criae);
+}
+
+@media (max-width: 760px) {
+  .top {
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
+  }
+}

@@ -1,0 +1,102 @@
+.hero {
+  min-height: 100svh;
+  display: flex;
+  padding: 7rem 0 2.4rem;
+  position: relative;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.eyebrow {
+  margin-bottom: 1.8rem;
+}
+
+.title {
+  font-size: clamp(2.7rem, 8.6vw, 7.8rem);
+  line-height: 0.94;
+  letter-spacing: -0.045em;
+  max-width: 17ch;
+}
+.hl {
+  color: var(--criae);
+}
+
+.grow {
+  height: 5px;
+  width: clamp(110px, 14vw, 190px);
+  background: var(--criae);
+  border-radius: 3px;
+  transform-origin: left center;
+  margin-top: 2rem;
+}
+
+.sub {
+  margin-top: 2rem;
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+  color: var(--muted);
+  max-width: 540px;
+  line-height: 1.7;
+}
+
+.actions {
+  margin-top: 2.6rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid var(--hair);
+  padding-top: 1.4rem;
+  margin-top: 2.5rem;
+}
+.scroll {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--faint);
+}
+.scroll svg {
+  animation: bob 1.8s ease-in-out infinite;
+}
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+}
+.loc {
+  font-size: 0.85rem;
+  color: var(--faint);
+  text-align: right;
+}
+
+@media (max-width: 560px) {
+  .footerRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+  .loc {
+    text-align: left;
+  }
+}

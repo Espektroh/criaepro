@@ -1,0 +1,51 @@
+.section {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.bigword {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-display), sans-serif;
+  font-weight: 800;
+  font-size: 32vw;
+  letter-spacing: -0.05em;
+  color: var(--ink);
+  opacity: 0.03;
+  pointer-events: none;
+  white-space: nowrap;
+  line-height: 1;
+}
+.inner {
+  position: relative;
+  max-width: 880px;
+  margin: 0 auto;
+}
+.eyebrow {
+  justify-content: center;
+}
+.text {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 3.6vw, 2.8rem);
+  line-height: 1.32;
+  letter-spacing: -0.02em;
+  margin-top: 1.6rem;
+  color: var(--ink);
+}
+.dim {
+  color: var(--faint);
+}
+.mark {
+  background: linear-gradient(var(--criae), var(--criae)) 0 86% / 100% 0.18em
+    no-repeat;
+}
+.attr {
+  margin-top: 2rem;
+  font-family: var(--font-display), sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  color: var(--faint);
+}
