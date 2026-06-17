@@ -1,5 +1,3 @@
-"use client";
-
 import Reveal from "@/components/Reveal";
 import { wa } from "@/lib/site";
 import {

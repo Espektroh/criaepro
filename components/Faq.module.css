@@ -6,10 +6,8 @@
   border-bottom: 1px solid var(--hair);
 }
 .q {
+  list-style: none;
   width: 100%;
-  background: none;
-  border: none;
-  text-align: left;
   padding: 1.5rem 0;
   display: flex;
   justify-content: space-between;
@@ -22,6 +20,12 @@
   letter-spacing: -0.01em;
   color: var(--ink);
   transition: color 0.2s;
+}
+.q::-webkit-details-marker {
+  display: none;
+}
+.q::marker {
+  content: "";
 }
 .q:hover {
   color: #000;
@@ -38,13 +42,26 @@
   flex-shrink: 0;
   transition: transform 0.3s ease, background 0.25s, border-color 0.25s;
 }
-.icoOpen {
+.item[open] .ico {
   transform: rotate(45deg);
   background: var(--criae);
   border-color: var(--criae);
 }
 .a {
   overflow: hidden;
+}
+.item[open] .a {
+  animation: faq-open 0.32s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+@keyframes faq-open {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .a p {
   padding: 0 3rem 1.5rem 0;

@@ -1,55 +1,29 @@
-"use client";
-
-import { motion, useReducedMotion } from "framer-motion";
 import { wa, LOCATION } from "@/lib/site";
 import { WhatsApp, ArrowDown } from "@/components/icons";
 import styles from "./Hero.module.css";
 
-const EASE = [0.2, 0.8, 0.2, 1] as const;
-
 export default function Hero() {
-  const reduce = useReducedMotion();
-
-  const container = {
-    hidden: {},
-    show: { transition: { staggerChildren: 0.12, delayChildren: 0.05 } },
-  };
-  const item = {
-    hidden: { opacity: 0, y: reduce ? 0 : 34 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.85, ease: EASE } },
-  };
-
   return (
     <section id="top" className={styles.hero}>
       <div className={`container ${styles.inner}`}>
-        <motion.div
-          variants={container}
-          initial="hidden"
-          animate="show"
-          className={styles.content}
-        >
-          <motion.span variants={item} className={`eyebrow ${styles.eyebrow}`}>
+        <div className={styles.content}>
+          <span className={`eyebrow ${styles.eyebrow} ${styles.a1}`}>
             Marketing digital para negócios reais
-          </motion.span>
+          </span>
 
-          <motion.h1 variants={item} className={styles.title}>
-            Marketing digital que <span className={styles.hl}>cresce</span> com o
-            seu negócio.
-          </motion.h1>
+          <h1 className={styles.title}>
+            Marketing digital que <span className={styles.hl}>cresce</span> com
+            você.
+          </h1>
 
-          <motion.div
-            className={styles.grow}
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 1, delay: reduce ? 0 : 0.85, ease: EASE }}
-          />
+          <div className={styles.grow} aria-hidden />
 
-          <motion.p variants={item} className={styles.sub}>
+          <p className={`${styles.sub} ${styles.a3}`}>
             Setup de presença, conteúdo, tráfego pago e sites. Você monta o que
             faz sentido pro seu momento — e ajusta conforme cresce.
-          </motion.p>
+          </p>
 
-          <motion.div variants={item} className={styles.actions}>
+          <div className={`${styles.actions} ${styles.a4}`}>
             <a
               className="btn btn--primary btn--lg"
               href={wa(
@@ -58,26 +32,21 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Falar no WhatsApp <WhatsApp width={19} height={19} />
+              Falar no WhatsApp <WhatsApp width={19} height={19} aria-hidden="true" />
             </a>
             <a className="btn btn--ghost btn--lg" href="#servicos">
               Ver o que fazemos
             </a>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
 
-        <motion.div
-          variants={item}
-          initial="hidden"
-          animate="show"
-          className={styles.footerRow}
-        >
+        <div className={`${styles.footerRow} ${styles.a4}`}>
           <a href="#servicos" className={styles.scroll}>
-            <ArrowDown width={16} height={16} />
+            <ArrowDown width={16} height={16} aria-hidden="true" />
             Role para descobrir
           </a>
           <span className={styles.loc}>{LOCATION}</span>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

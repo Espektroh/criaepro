@@ -1,12 +1,3 @@
-"use client";
-
-import { useRef } from "react";
-import {
-  motion,
-  useScroll,
-  useTransform,
-  useReducedMotion,
-} from "framer-motion";
 import Reveal from "@/components/Reveal";
 import { wa } from "@/lib/site";
 import { ArrowRight } from "@/components/icons";
@@ -34,14 +25,6 @@ const STAGES = [
 ];
 
 export default function GrowthTrack() {
-  const reduce = useReducedMotion();
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start 75%", "end 70%"],
-  });
-  const scaleX = useTransform(scrollYProgress, [0, 1], [0, 1]);
-
   return (
     <section id="crescimento" className="section section--alt">
       <div className="container">
@@ -62,12 +45,9 @@ export default function GrowthTrack() {
           </p>
         </Reveal>
 
-        <div className={styles.track} ref={ref}>
+        <div className={styles.track}>
           <div className={styles.line} aria-hidden>
-            <motion.div
-              className={styles.lineFill}
-              style={{ scaleX: reduce ? 1 : scaleX }}
-            />
+            <span className={styles.lineFill} />
           </div>
           <div className={styles.stages}>
             {STAGES.map((s, i) => (
@@ -97,7 +77,7 @@ export default function GrowthTrack() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            A gente te diz <ArrowRight width={18} height={18} />
+            A gente te diz <ArrowRight width={18} height={18} aria-hidden="true" />
           </a>
         </Reveal>
       </div>

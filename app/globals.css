@@ -4,8 +4,6 @@
   --color-paper: #ffffff;
   --color-ink: #111111;
   --color-criae: #f4c400;
-  --font-display: var(--font-syne);
-  --font-body: var(--font-dm);
 }
 
 :root {
@@ -13,13 +11,17 @@
   --paper-2: #f7f6f3;
   --ink: #111111;
   --criae: #f4c400;
-  --criae-soft: rgba(244, 196, 0, 0.14);
-  --muted: #57564f;
-  --faint: #8c8a80;
+  --criae-soft: rgba(244, 196, 0, 0.16);
+  --muted: #54534d;
+  --faint: #6a6960;
   --hair: rgba(17, 17, 17, 0.1);
   --hair-2: rgba(17, 17, 17, 0.16);
   --maxw: 1280px;
   --pad: clamp(1.25rem, 5vw, 5rem);
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  --font-display: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
 }
 
 * {
@@ -31,20 +33,6 @@ html {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   scroll-behavior: smooth;
-}
-
-html.lenis,
-html.lenis body {
-  height: auto;
-}
-.lenis.lenis-smooth {
-  scroll-behavior: auto !important;
-}
-.lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
-}
-.lenis.lenis-stopped {
-  overflow: hidden;
 }
 
 body {
@@ -72,8 +60,8 @@ h2,
 h3,
 h4 {
   font-family: var(--font-display), sans-serif;
-  font-weight: 800;
-  letter-spacing: -0.03em;
+  font-weight: 700;
+  letter-spacing: -0.025em;
   line-height: 0.98;
   margin: 0;
 }
@@ -127,7 +115,9 @@ img {
   margin: 1.1rem 0 0;
 }
 .s-title .hl {
-  color: var(--criae);
+  background: linear-gradient(var(--criae), var(--criae)) 0 84% / 100% 0.22em
+    no-repeat;
+  padding: 0 0.04em;
 }
 .s-sub {
   margin-top: 1.4rem;
@@ -231,6 +221,13 @@ img {
   background: var(--criae);
   transform-origin: top center;
   transform: scaleY(0);
+  animation: growline-grow linear both;
+  animation-timeline: scroll(root block);
+}
+@keyframes growline-grow {
+  to {
+    transform: scaleY(1);
+  }
 }
 
 .sr-only {
@@ -245,6 +242,20 @@ img {
   border: 0;
 }
 
+/* ---------- scroll reveal (JS-enhanced, IntersectionObserver) ---------- */
+html.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.7s cubic-bezier(0.2, 0.8, 0.2, 1),
+    transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition-delay: var(--rd, 0s);
+  will-change: opacity, transform;
+}
+html.js [data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -255,5 +266,10 @@ img {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  html.js [data-reveal] {
+    opacity: 1;
+    transform: none;
   }
 }

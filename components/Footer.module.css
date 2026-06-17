@@ -37,7 +37,7 @@
   font-size: 0.74rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.62);
   margin-bottom: 0.4rem;
 }
 .linksCol a,
@@ -58,7 +58,7 @@
   color: var(--criae);
 }
 .loc {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.62);
   font-size: 0.85rem;
   margin-top: 0.3rem;
 }
@@ -71,7 +71,7 @@
   flex-wrap: wrap;
 }
 .bottom p {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.62);
   font-size: 0.85rem;
 }
 .bottomCta {

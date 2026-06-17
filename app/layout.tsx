@@ -1,22 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import { Syne, DM_Sans } from "next/font/google";
 import "./globals.css";
-import SmoothScroll from "@/components/SmoothScroll";
-import GrowLine from "@/components/GrowLine";
-
-const syne = Syne({
-  subsets: ["latin"],
-  weight: ["600", "700", "800"],
-  variable: "--font-syne",
-  display: "swap",
-});
-
-const dmSans = DM_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-dm",
-  display: "swap",
-});
+import RevealObserver from "@/components/RevealObserver";
 
 const SITE_URL = "https://criae.com.br";
 
@@ -65,10 +49,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" className={`${syne.variable} ${dmSans.variable}`}>
+    <html lang="pt-BR" suppressHydrationWarning>
       <body>
-        <GrowLine />
-        <SmoothScroll>{children}</SmoothScroll>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: "document.documentElement.classList.add('js')",
+          }}
+        />
+        <div className="growline" aria-hidden>
+          <span className="growline__fill" />
+        </div>
+        {children}
+        <RevealObserver />
       </body>
     </html>
   );

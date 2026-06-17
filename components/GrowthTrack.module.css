@@ -17,6 +17,20 @@
   background: var(--criae);
   transform-origin: left center;
   transform: scaleX(0);
+  animation: gt-grow linear both;
+  animation-timeline: view();
+  animation-range: cover 8% cover 55%;
+}
+@keyframes gt-grow {
+  to {
+    transform: scaleX(1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lineFill {
+    transform: scaleX(1);
+    animation: none;
+  }
 }
 
 .stages {

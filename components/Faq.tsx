@@ -1,7 +1,3 @@
-"use client";
-
-import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import Reveal from "@/components/Reveal";
 import { Plus } from "@/components/icons";
 import styles from "./Faq.module.css";
@@ -34,8 +30,6 @@ const FAQS = [
 ];
 
 export default function Faq() {
-  const [open, setOpen] = useState<number | null>(0);
-
   return (
     <section id="faq" className="section section--alt">
       <div className="container">
@@ -49,38 +43,21 @@ export default function Faq() {
         </Reveal>
 
         <div className={styles.wrap}>
-          {FAQS.map((f, i) => {
-            const isOpen = open === i;
-            return (
-              <div key={f.q} className={styles.item}>
-                <button
-                  className={styles.q}
-                  onClick={() => setOpen(isOpen ? null : i)}
-                  aria-expanded={isOpen}
-                >
+          {FAQS.map((f, i) => (
+            <Reveal key={f.q} delay={Math.min(i * 0.05, 0.2)}>
+              <details className={styles.item} open={i === 0}>
+                <summary className={styles.q}>
                   <span>{f.q}</span>
-                  <span
-                    className={`${styles.ico} ${isOpen ? styles.icoOpen : ""}`}
-                  >
-                    <Plus width={18} height={18} />
+                  <span className={styles.ico}>
+                    <Plus width={18} height={18} aria-hidden="true" />
                   </span>
-                </button>
-                <AnimatePresence initial={false}>
-                  {isOpen && (
-                    <motion.div
-                      className={styles.a}
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.32, ease: [0.2, 0.8, 0.2, 1] }}
-                    >
-                      <p>{f.a}</p>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            );
-          })}
+                </summary>
+                <div className={styles.a}>
+                  <p>{f.a}</p>
+                </div>
+              </details>
+            </Reveal>
+          ))}
         </div>
       </div>
     </section>

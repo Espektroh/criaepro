@@ -23,27 +23,35 @@
 }
 
 .title {
-  font-size: clamp(2.7rem, 8.6vw, 7.8rem);
-  line-height: 0.94;
-  letter-spacing: -0.045em;
-  max-width: 17ch;
+  font-size: clamp(2.2rem, 5.5vw, 4.7rem);
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+  font-weight: 700;
+  max-width: 15ch;
 }
 .hl {
-  color: var(--criae);
+  background: linear-gradient(var(--criae), var(--criae)) 0 78% / 100% 0.34em
+    no-repeat;
+  padding: 0 0.04em;
 }
 
 .grow {
   height: 5px;
-  width: clamp(110px, 14vw, 190px);
+  width: 0;
   background: var(--criae);
   border-radius: 3px;
-  transform-origin: left center;
   margin-top: 2rem;
+  animation: grow-w 1s 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+@keyframes grow-w {
+  to {
+    width: clamp(110px, 14vw, 190px);
+  }
 }
 
 .sub {
   margin-top: 2rem;
-  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
   color: var(--muted);
   max-width: 540px;
   line-height: 1.7;
@@ -90,6 +98,33 @@
   text-align: right;
 }
 
+/* entrance */
+.a1,
+.a3,
+.a4 {
+  opacity: 0;
+  animation: fade-up 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+.a1 {
+  animation-delay: 0.05s;
+}
+.a3 {
+  animation-delay: 0.28s;
+}
+.a4 {
+  animation-delay: 0.42s;
+}
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 560px) {
   .footerRow {
     flex-direction: column;
@@ -98,5 +133,21 @@
   }
   .loc {
     text-align: left;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .a1,
+  .a3,
+  .a4 {
+    opacity: 1;
+    animation: none;
+  }
+  .grow {
+    width: clamp(110px, 14vw, 190px);
+    animation: none;
+  }
+  .scroll svg {
+    animation: none;
   }
 }
