@@ -4,9 +4,6 @@ import styles from "./Manifesto.module.css";
 export default function Manifesto() {
   return (
     <section className={`section ${styles.section}`}>
-      <div className={styles.bigword} aria-hidden>
-        criae
-      </div>
       <div className="container">
         <Reveal className={styles.inner}>
           <span className={`eyebrow ${styles.eyebrow}`}>Nossa crença</span>
