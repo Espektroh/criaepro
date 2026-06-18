@@ -376,6 +376,12 @@
   justify-content: center;
 }
 
+.contractNote {
+  margin-top: 1.6rem;
+  font-size: 0.9rem;
+  color: var(--faint);
+}
+
 /* ---------- steps ---------- */
 .steps {
   display: grid;

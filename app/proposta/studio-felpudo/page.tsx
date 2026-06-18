@@ -1,25 +1,18 @@
 import type { Metadata } from "next";
 import Reveal from "@/components/Reveal";
-import { wa, WHATSAPP_DISPLAY, INSTAGRAM_URL } from "@/lib/site";
-import {
-  Check,
-  ArrowRight,
-  WhatsApp,
-  Store,
-  Heart,
-  Sparkle,
-} from "@/components/icons";
+import { wa, INSTAGRAM_URL } from "@/lib/site";
+import { Check, ArrowRight, Store, Heart, Sparkle } from "@/components/icons";
 import styles from "./proposta.module.css";
 
 export const metadata: Metadata = {
-  title: "Proposta · Studio Felpudo — Criae",
+  title: "Proposta · Studio Felpudo · Criae",
   description:
     "Diagnóstico de presença digital e plano recomendado para o Studio Felpudo.",
   robots: { index: false, follow: false },
 };
 
 /* ============================================================
-   Dados da proposta — editar só este bloco para clonar p/ outro lead.
+   Dados da proposta. Editar só este bloco para clonar p/ outro lead.
    ============================================================ */
 const CLIENT = {
   name: "Taciana",
@@ -56,9 +49,9 @@ const PLANS = [
   {
     name: "Presença Organizada",
     badge: null as string | null,
-    forWho: "Arruma o perfil — mas a venda continua dependendo do direct.",
+    forWho: "Arruma o perfil, mas a venda continua dependendo do direct.",
     priceOld: null as string | null,
-    priceNow: "R$ 350",
+    priceNow: "R$ 600",
     unit: "pagamento único",
     monthly: null as string | null,
     featured: false,
@@ -82,7 +75,7 @@ const PLANS = [
     priceOld: "R$ 1.550",
     priceNow: "R$ 1.290",
     unit: "setup único (construção da vitrine)",
-    monthly: "+ R$ 500/mês para manter viva (4 posts + stories) — opcional",
+    monthly: "+ R$ 500/mês para manter viva (4 posts + stories). Opcional.",
     featured: true,
     cta: "Começar pela Vitrine",
     waMsg:
@@ -103,7 +96,7 @@ const PLANS = [
     priceOld: null,
     priceNow: "R$ 2.000",
     unit: "por mês + verba de anúncios",
-    monthly: "Setup da vitrine à parte · evolui para loja completa",
+    monthly: "Setup da vitrine à parte. Evolui para loja completa.",
     featured: false,
     cta: "Falar sobre escalar",
     waMsg:
@@ -174,7 +167,7 @@ export default function PropostaStudioFelpudo() {
             <Reveal delay={0.1}>
               <p className={styles.heroSub}>
                 Olhamos seu Instagram {CLIENT.instagram} e sua presença pública.
-                As peças são lindas, afetivas e presenteáveis — mas hoje quem
+                As peças são lindas, afetivas e presenteáveis, mas hoje quem
                 entra no perfil admira e não entende como comprar. Esta página
                 mostra o que vimos e qual o melhor caminho pra virar essa chave.
               </p>
@@ -220,7 +213,7 @@ export default function PropostaStudioFelpudo() {
                   })}
                   <p className={styles.lowNote}>
                     <b>Conversão</b> e <b>loja digital</b> são as notas mais
-                    baixas — e é exatamente aí que mora o crescimento.
+                    baixas, e é exatamente aí que mora o crescimento.
                   </p>
                 </div>
               </Reveal>
@@ -263,7 +256,7 @@ export default function PropostaStudioFelpudo() {
                   <h3>Hoje: “encomendas pelo direct”</h3>
                   <p>
                     O visitante precisa pensar sozinho o que pedir, quanto custa,
-                    o prazo e como paga. Cada dúvida derruba a venda — e o
+                    o prazo e como paga. Cada dúvida derruba a venda, e o
                     indeciso some.
                   </p>
                 </div>
@@ -301,7 +294,7 @@ export default function PropostaStudioFelpudo() {
                 <p className={styles.recoDesc}>
                   Pro seu momento, o ideal não é contratar tudo de uma vez. É
                   montar a vitrine, organizar as redes e criar conteúdo
-                  recorrente. Anúncios e loja completa entram depois — quando os
+                  recorrente. Anúncios e loja completa entram depois, quando os
                   produtos campeões já estiverem claros.
                 </p>
               </div>
@@ -331,7 +324,7 @@ export default function PropostaStudioFelpudo() {
             <Reveal delay={0.1}>
               <p className="s-sub">
                 Você monta o que faz sentido pro seu momento. A verba de
-                anúncios, quando entrar, é paga direto ao Meta — nunca passa pela
+                anúncios, quando entrar, é paga direto ao Meta, nunca passa pela
                 Criae.
               </p>
             </Reveal>
@@ -386,6 +379,12 @@ export default function PropostaStudioFelpudo() {
                 </Reveal>
               ))}
             </div>
+
+            <Reveal delay={0.1}>
+              <p className={styles.contractNote}>
+                Observação: nossos contratos têm duração de 6 meses.
+              </p>
+            </Reveal>
           </div>
         </section>
 
@@ -422,21 +421,8 @@ export default function PropostaStudioFelpudo() {
                 <span className="hl">pronto pra receber encomendas?</span>
               </h2>
               <p className={styles.finalSub}>
-                Uma conversa rápida e a gente já define por onde começar. Sem
-                compromisso, sem enrolação.
-              </p>
-              <a
-                className="btn btn--accent btn--lg"
-                href={wa(
-                  "Oi! Acabei de ver a proposta do Studio Felpudo e quero conversar sobre os próximos passos."
-                )}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Falar no WhatsApp <WhatsApp width={20} height={20} aria-hidden="true" />
-              </a>
-              <p className={styles.finalNote}>
-                Resposta no mesmo dia · {WHATSAPP_DISPLAY}
+                É só me responder por aqui mesmo que a gente já define por onde
+                começar. Sem compromisso, sem enrolação.
               </p>
             </Reveal>
           </div>
