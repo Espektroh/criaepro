@@ -1,6 +1,9 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import "./globals.css";
 import RevealObserver from "@/components/RevealObserver";
+
+const CLARITY_PROJECT_ID = "x91n2q2207";
 
 const SITE_URL = "https://criae.com.br";
 
@@ -61,6 +64,13 @@ export default function RootLayout({
         </div>
         {children}
         <RevealObserver />
+        <Script id="ms-clarity" strategy="afterInteractive">
+          {`(function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window, document, "clarity", "script", "${CLARITY_PROJECT_ID}");`}
+        </Script>
       </body>
     </html>
   );
