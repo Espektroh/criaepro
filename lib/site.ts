@@ -13,5 +13,6 @@ export const NAV_LINKS = [
   { label: "Crescimento", href: "#crescimento" },
   { label: "Como funciona", href: "#metodo" },
   { label: "Para quem", href: "#para-quem" },
+  { label: "Portfólio", href: "/portfolio" },
   { label: "Dúvidas", href: "#faq" },
 ];

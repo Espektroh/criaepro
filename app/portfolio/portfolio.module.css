@@ -1,0 +1,170 @@
+/* ---------- top bar ---------- */
+.bar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: saturate(140%) blur(10px);
+  border-bottom: 1px solid var(--hair);
+}
+.barInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  gap: 1rem;
+}
+.brand {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 800;
+  font-size: 1.2rem;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
+.brand span {
+  color: var(--criae);
+}
+
+/* ---------- hero ---------- */
+.hero {
+  padding: clamp(3.5rem, 9vh, 6rem) 0 clamp(2rem, 5vh, 3rem);
+}
+.heroTitle {
+  font-size: clamp(2.4rem, 6.5vw, 4.6rem);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  margin-top: 1.4rem;
+  max-width: 15ch;
+}
+.heroTitle .hl {
+  background: linear-gradient(var(--criae), var(--criae)) 0 80% / 100% 0.3em
+    no-repeat;
+  padding: 0 0.04em;
+}
+.heroSub {
+  margin-top: 1.6rem;
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  color: var(--muted);
+  max-width: 560px;
+  line-height: 1.75;
+}
+
+/* ---------- clients ---------- */
+.clientsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-top: clamp(2rem, 4vw, 3rem);
+}
+.clientChip {
+  border: 1px solid var(--hair-2);
+  border-radius: 14px;
+  padding: 1.1rem 1.25rem;
+  background: var(--paper);
+  font-family: var(--font-display), sans-serif;
+  font-weight: 700;
+  font-size: 1.02rem;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.clientChip::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--criae);
+  flex: none;
+}
+.clientsNote {
+  margin-top: 1.2rem;
+  font-size: 0.9rem;
+  color: var(--faint);
+}
+
+/* ---------- gallery ---------- */
+.gallery {
+  column-count: 4;
+  column-gap: 14px;
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+}
+.shot {
+  break-inside: avoid;
+  margin: 0 0 14px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--hair);
+  background: var(--paper-2);
+  position: relative;
+}
+.shot img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.shot:hover img {
+  transform: scale(1.04);
+}
+@media (max-width: 1000px) {
+  .gallery {
+    column-count: 3;
+  }
+}
+@media (max-width: 680px) {
+  .gallery {
+    column-count: 2;
+    column-gap: 10px;
+  }
+  .shot {
+    margin-bottom: 10px;
+  }
+}
+
+/* ---------- final cta ---------- */
+.cta {
+  background: var(--ink);
+  color: var(--paper);
+  padding: clamp(4rem, 11vh, 8rem) 0;
+}
+.ctaInner {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto;
+}
+.ctaTitle {
+  color: var(--paper);
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+}
+.ctaTitle .hl {
+  color: var(--criae);
+}
+.ctaSub {
+  margin: 1.4rem auto 2.2rem;
+  color: rgba(240, 240, 238, 0.7);
+  line-height: 1.7;
+  max-width: 460px;
+}
+
+/* ---------- footer ---------- */
+.foot {
+  border-top: 1px solid var(--hair);
+  padding: 2.5rem 0;
+}
+.footInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+  color: var(--faint);
+}
+.footInner a {
+  color: var(--ink);
+}
