@@ -5,7 +5,7 @@ import { Check, ArrowRight, WhatsApp, Sparkle } from "@/components/icons";
 import styles from "./curso.module.css";
 
 export const metadata: Metadata = {
-  title: "Criae na Prática — Mentoria e curso de marketing",
+  title: "Criae na Prática · Mentoria e curso de marketing",
   description:
     "Aprenda tráfego pago, gestão de redes e criação de sites com IA em módulos curtos e diretos. Compre só o que precisa e evolua no seu ritmo.",
   alternates: { canonical: "/criae-na-pratica" },
