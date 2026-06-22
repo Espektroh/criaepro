@@ -14,5 +14,6 @@ export const NAV_LINKS = [
   { label: "Como funciona", href: "#metodo" },
   { label: "Para quem", href: "#para-quem" },
   { label: "Portfólio", href: "/portfolio" },
+  { label: "Mentoria", href: "/criae-na-pratica" },
   { label: "Dúvidas", href: "#faq" },
 ];

@@ -1,0 +1,424 @@
+/* ---------- top bar ---------- */
+.bar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: saturate(140%) blur(10px);
+  border-bottom: 1px solid var(--hair);
+}
+.barInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  gap: 1rem;
+}
+.brand {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 800;
+  font-size: 1.2rem;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
+.brand span {
+  color: var(--criae);
+}
+
+/* ---------- hero ---------- */
+.hero {
+  padding: clamp(3.5rem, 9vh, 6rem) 0 clamp(2.5rem, 6vh, 4rem);
+}
+.heroTitle {
+  font-size: clamp(2.3rem, 6.2vw, 4.6rem);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  margin-top: 1.4rem;
+  max-width: 17ch;
+}
+.heroTitle .hl {
+  background: linear-gradient(var(--criae), var(--criae)) 0 80% / 100% 0.3em
+    no-repeat;
+  padding: 0 0.04em;
+}
+.heroSub {
+  margin-top: 1.6rem;
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  color: var(--muted);
+  max-width: 580px;
+  line-height: 1.75;
+}
+.heroActions {
+  margin-top: 2.2rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ---------- audience ---------- */
+.audience {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  margin-top: clamp(2rem, 4vw, 3rem);
+}
+.audCard {
+  border: 1px solid var(--hair-2);
+  border-radius: 18px;
+  padding: clamp(1.4rem, 3vw, 1.9rem);
+  background: var(--paper);
+}
+.audCard h3 {
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.9rem;
+}
+.audList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.audList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.96rem;
+  color: var(--ink);
+  line-height: 1.5;
+}
+.audList svg {
+  flex: none;
+  margin-top: 0.15rem;
+  color: var(--criae);
+}
+.audNote {
+  margin-top: 1.3rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+.audNote a {
+  color: var(--ink);
+  background-image: linear-gradient(var(--criae), var(--criae));
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 100% 2px;
+}
+
+/* ---------- fundamento ---------- */
+.startHere {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  background: var(--paper-2);
+  border: 1px solid var(--hair);
+  border-left: 3px solid var(--criae);
+  border-radius: 16px;
+  padding: 1.4rem 1.6rem;
+  margin-top: clamp(2rem, 4vw, 3rem);
+}
+.startHere .info b {
+  font-size: 1.05rem;
+}
+.startHere .info p {
+  margin-top: 0.3rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+.startPrice {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 800;
+  font-size: 1.7rem;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+}
+
+/* ---------- trilhas ---------- */
+.trilhas {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.2rem;
+  align-items: stretch;
+}
+.trilha {
+  border: 1px solid var(--hair-2);
+  border-radius: 22px;
+  padding: clamp(1.5rem, 3vw, 2rem);
+  background: var(--paper);
+  display: flex;
+  flex-direction: column;
+}
+.trilhaFeatured {
+  border: 2px solid var(--ink);
+  box-shadow: 0 24px 60px -28px rgba(17, 17, 17, 0.35);
+}
+.trilhaTag {
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: var(--criae);
+  color: var(--ink);
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  margin-bottom: 0.9rem;
+}
+.trilhaName {
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+}
+.trilhaDesc {
+  margin-top: 0.4rem;
+  font-size: 0.92rem;
+  color: var(--faint);
+  line-height: 1.5;
+}
+.modList {
+  list-style: none;
+  margin: 1.3rem 0 0;
+  padding: 1.3rem 0 0;
+  border-top: 1px solid var(--hair);
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  flex: 1;
+}
+.modRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+.modName {
+  font-size: 0.93rem;
+  color: var(--ink);
+  line-height: 1.4;
+}
+.modName small {
+  color: var(--faint);
+  font-weight: 700;
+  margin-right: 0.3rem;
+}
+.modPrice {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--faint);
+  white-space: nowrap;
+}
+.trilhaFoot {
+  margin-top: 1.4rem;
+  padding-top: 1.3rem;
+  border-top: 1px solid var(--hair);
+}
+.trilhaPrice {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+.trilhaOld {
+  font-size: 0.9rem;
+  color: var(--faint);
+  text-decoration: line-through;
+}
+.trilhaNow {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 800;
+  font-size: 1.7rem;
+  letter-spacing: -0.03em;
+}
+.trilhaCaption {
+  font-size: 0.8rem;
+  color: var(--faint);
+  margin-top: 0.2rem;
+}
+.trilhaCta {
+  width: 100%;
+  justify-content: center;
+  margin-top: 1.1rem;
+}
+
+/* ---------- full course ---------- */
+.full {
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: 26px;
+  padding: clamp(2rem, 5vw, 3.2rem);
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+}
+.fullTag {
+  font-size: 0.8rem;
+  color: var(--criae);
+  letter-spacing: 0.03em;
+}
+.fullTitle {
+  color: var(--paper);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+  margin-top: 0.8rem;
+}
+.fullTitle .hl {
+  color: var(--criae);
+}
+.fullDesc {
+  margin-top: 1.1rem;
+  color: rgba(240, 240, 238, 0.72);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+.fullPriceBox {
+  text-align: center;
+}
+.fullOld {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: line-through;
+}
+.fullNow {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 800;
+  font-size: clamp(2.6rem, 6vw, 3.6rem);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin: 0.2rem 0 1.2rem;
+}
+
+/* ---------- mentoria ---------- */
+.mentoria {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+  align-items: stretch;
+}
+.mCard {
+  border: 1px solid var(--hair-2);
+  border-radius: 20px;
+  padding: clamp(1.5rem, 3vw, 2rem);
+  background: var(--paper);
+  display: flex;
+  flex-direction: column;
+}
+.mCardFeatured {
+  border: 2px solid var(--ink);
+}
+.mName {
+  font-size: 1.2rem;
+  letter-spacing: -0.02em;
+}
+.mDesc {
+  margin-top: 0.5rem;
+  font-size: 0.92rem;
+  color: var(--faint);
+  line-height: 1.5;
+  flex: 1;
+}
+.mPriceBox {
+  margin: 1.3rem 0 1.2rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--hair);
+}
+.mNow {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 800;
+  font-size: 1.9rem;
+  letter-spacing: -0.03em;
+}
+.mUnit {
+  font-size: 0.82rem;
+  color: var(--faint);
+  margin-top: 0.2rem;
+}
+.mCta {
+  width: 100%;
+  justify-content: center;
+}
+
+/* ---------- credit callout ---------- */
+.credit {
+  background: var(--paper-2);
+  border: 1px solid var(--hair);
+  border-left: 3px solid var(--criae);
+  border-radius: 18px;
+  padding: clamp(1.6rem, 3.5vw, 2.4rem);
+  margin-top: clamp(2rem, 4vw, 3rem);
+}
+.credit h3 {
+  font-size: clamp(1.2rem, 2.4vw, 1.6rem);
+  letter-spacing: -0.02em;
+}
+.credit p {
+  margin-top: 0.8rem;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 720px;
+  font-size: 1rem;
+}
+.credit b {
+  color: var(--ink);
+}
+
+/* ---------- final cta ---------- */
+.cta {
+  background: var(--ink);
+  color: var(--paper);
+  padding: clamp(4rem, 11vh, 8rem) 0;
+}
+.ctaInner {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto;
+}
+.ctaTitle {
+  color: var(--paper);
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+}
+.ctaTitle .hl {
+  color: var(--criae);
+}
+.ctaSub {
+  margin: 1.4rem auto 2.2rem;
+  color: rgba(240, 240, 238, 0.7);
+  line-height: 1.7;
+  max-width: 460px;
+}
+
+/* ---------- footer ---------- */
+.foot {
+  border-top: 1px solid var(--hair);
+  padding: 2.5rem 0;
+}
+.footInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+  color: var(--faint);
+}
+.footInner a {
+  color: var(--ink);
+}
+
+/* ---------- responsive ---------- */
+@media (max-width: 900px) {
+  .audience,
+  .trilhas,
+  .mentoria,
+  .full {
+    grid-template-columns: 1fr;
+  }
+}
