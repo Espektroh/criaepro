@@ -382,6 +382,52 @@
   color: var(--faint);
 }
 
+/* ---------- alternative offer (mentoria) ---------- */
+.altOffer {
+  margin-top: clamp(2rem, 4vw, 3rem);
+  background: var(--paper-2);
+  border: 1px solid var(--hair);
+  border-left: 3px solid var(--criae);
+  border-radius: 18px;
+  padding: clamp(1.6rem, 3.5vw, 2.4rem);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem 2rem;
+}
+.altOfferText {
+  flex: 1 1 340px;
+}
+.altOfferText h3 {
+  font-size: clamp(1.2rem, 2.4vw, 1.55rem);
+  letter-spacing: -0.02em;
+}
+.altOfferText p {
+  margin-top: 0.6rem;
+  color: var(--muted);
+  line-height: 1.65;
+  font-size: 0.97rem;
+  max-width: 58ch;
+}
+.altOfferAside {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.9rem;
+}
+.altOfferPrice {
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+.altOfferPrice b {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+}
+
 /* ---------- steps ---------- */
 .steps {
   display: grid;
