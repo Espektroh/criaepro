@@ -428,6 +428,77 @@
   letter-spacing: -0.02em;
 }
 
+/* ---------- individual services grid ---------- */
+.svcGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+}
+.svc {
+  border: 1px solid var(--hair-2);
+  border-radius: 16px;
+  padding: 1.3rem 1.4rem;
+  background: var(--paper);
+  display: flex;
+  flex-direction: column;
+}
+.svcNum {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 800;
+  font-size: 0.78rem;
+  color: var(--criae);
+}
+.svcName {
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+  margin-top: 0.35rem;
+  min-height: 2.6em;
+}
+.svcDiv {
+  border: 0;
+  border-top: 1px solid var(--hair);
+  margin: 0.9rem 0 1rem;
+}
+.svcCap {
+  font-size: 0.72rem;
+  color: var(--faint);
+}
+.svcOld {
+  font-size: 0.9rem;
+  color: var(--faint);
+  text-decoration: line-through;
+  margin-top: 0.1rem;
+}
+.svcNowCap {
+  font-size: 0.72rem;
+  color: var(--faint);
+  margin-top: 0.7rem;
+}
+.svcNow {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 800;
+  font-size: 1.7rem;
+  letter-spacing: -0.03em;
+  margin-top: 0.2rem;
+  display: inline-block;
+  border-bottom: 3px solid var(--criae);
+  padding-bottom: 2px;
+}
+@media (max-width: 900px) {
+  .svcGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 560px) {
+  .svcGrid {
+    grid-template-columns: 1fr;
+  }
+  .svcName {
+    min-height: 0;
+  }
+}
+
 /* ---------- steps ---------- */
 .steps {
   display: grid;

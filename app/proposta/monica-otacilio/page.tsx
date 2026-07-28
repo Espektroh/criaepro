@@ -140,6 +140,19 @@ const STEPS = [
   },
 ];
 
+const SERVICES = [
+  { n: "01", name: "Presença Digital do Zero", old: "R$ 500", now: "R$ 350" },
+  { n: "02", name: "Conteúdo que Converte", old: "R$ 600", now: "R$ 400" },
+  { n: "03", name: "Design com Canva + IA", old: "R$ 600", now: "R$ 400" },
+  { n: "04", name: "Stories & Reels na Prática", old: "R$ 500", now: "R$ 350" },
+  { n: "05", name: "Meta Ads do Zero", old: "R$ 900", now: "R$ 600" },
+  { n: "06", name: "Campanhas que Convertem", old: "R$ 1.000", now: "R$ 600" },
+  { n: "07", name: "WhatsApp Comercial + Funil", old: "R$ 600", now: "R$ 400" },
+  { n: "08", name: "Landing Page com IA", old: "R$ 1.000", now: "R$ 600" },
+  { n: "09", name: "SEO Local + Google Meu Negócio", old: "R$ 600", now: "R$ 400" },
+  { n: "10", name: "IA no Dia a Dia", old: "R$ 900", now: "R$ 600" },
+];
+
 export default function PropostaMonicaOtacilio() {
   return (
     <>
@@ -394,8 +407,42 @@ export default function PropostaMonicaOtacilio() {
           </div>
         </section>
 
-        {/* STEPS */}
+        {/* SERVIÇOS INDIVIDUAIS */}
         <section className="section section--alt">
+          <div className="container">
+            <Reveal>
+              <span className="eyebrow">Serviços individuais</span>
+            </Reveal>
+            <Reveal delay={0.05}>
+              <h2 className="s-title">
+                Prefere contratar <span className="hl">avulso?</span>
+              </h2>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <p className="s-sub">
+                Escolha a solução ideal para acelerar o crescimento, com condição
+                especial Criae.
+              </p>
+            </Reveal>
+
+            <div className={styles.svcGrid}>
+              {SERVICES.map((s, i) => (
+                <Reveal key={s.n} delay={(i % 3) * 0.06} className={styles.svc}>
+                  <span className={styles.svcNum}>{s.n}</span>
+                  <h3 className={styles.svcName}>{s.name}</h3>
+                  <hr className={styles.svcDiv} />
+                  <span className={styles.svcCap}>Valor individual</span>
+                  <span className={styles.svcOld}>{s.old}</span>
+                  <span className={styles.svcNowCap}>Condição especial Criae</span>
+                  <span className={styles.svcNow}>{s.now}</span>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* STEPS */}
+        <section className="section">
           <div className="container">
             <Reveal>
               <span className="eyebrow">Como começamos</span>
