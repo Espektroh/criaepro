@@ -141,16 +141,16 @@ const STEPS = [
 ];
 
 const SERVICES = [
-  { n: "01", name: "Presença Digital do Zero", old: "R$ 500", now: "R$ 500" },
-  { n: "02", name: "Conteúdo que Converte", old: "R$ 600", now: "R$ 700" },
-  { n: "03", name: "Design com Canva + IA", old: "R$ 600", now: "R$ 700" },
-  { n: "04", name: "Stories & Reels na Prática", old: "R$ 500", now: "R$ 500" },
-  { n: "05", name: "Meta Ads do Zero", old: "R$ 900", now: "R$ 900" },
-  { n: "06", name: "Campanhas que Convertem", old: "R$ 1.000", now: "R$ 900" },
-  { n: "07", name: "WhatsApp Comercial + Funil", old: "R$ 600", now: "R$ 700" },
-  { n: "08", name: "Landing Page com IA", old: "R$ 1.000", now: "R$ 900" },
-  { n: "09", name: "SEO Local + Google Meu Negócio", old: "R$ 600", now: "R$ 700" },
-  { n: "10", name: "IA no Dia a Dia", old: "R$ 900", now: "R$ 900" },
+  { n: "01", name: "Presença Digital do Zero", old: "R$ 800", now: "R$ 500" },
+  { n: "02", name: "Conteúdo que Converte", old: "R$ 1.000", now: "R$ 700" },
+  { n: "03", name: "Design com Canva + IA", old: "R$ 1.000", now: "R$ 700" },
+  { n: "04", name: "Stories & Reels na Prática", old: "R$ 800", now: "R$ 500" },
+  { n: "05", name: "Meta Ads do Zero", old: "R$ 1.200", now: "R$ 900" },
+  { n: "06", name: "Campanhas que Convertem", old: "R$ 1.200", now: "R$ 900" },
+  { n: "07", name: "WhatsApp Comercial + Funil", old: "R$ 1.000", now: "R$ 700" },
+  { n: "08", name: "Landing Page com IA", old: "R$ 1.200", now: "R$ 900" },
+  { n: "09", name: "SEO Local + Google Meu Negócio", old: "R$ 1.000", now: "R$ 700" },
+  { n: "10", name: "IA no Dia a Dia", old: "R$ 1.200", now: "R$ 900" },
 ];
 
 export default function PropostaMonicaOtacilio() {
