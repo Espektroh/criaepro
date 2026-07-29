@@ -573,11 +573,63 @@
   color: var(--ink);
 }
 
+/* ---------- fluxo de caixa mes a mes ---------- */
+.cash {
+  margin-top: 2.5rem;
+  border: 1px solid var(--hair);
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--paper);
+}
+.cashRow {
+  display: grid;
+  grid-template-columns: 13rem 9rem 1fr;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.15rem 1.5rem;
+  border-bottom: 1px solid var(--hair);
+}
+.cashRow:last-child {
+  border-bottom: 0;
+}
+.cashRowHl {
+  background: var(--criae-soft);
+}
+.cashMonth {
+  font-weight: 700;
+  color: var(--ink);
+}
+.cashValue {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+}
+.cashDesc {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.cashNote {
+  margin-top: 1.6rem;
+  font-size: 0.9rem;
+  color: var(--faint);
+  max-width: 62ch;
+}
+
 /* ---------- responsive ---------- */
 @media (max-width: 900px) {
   .scoreGrid,
   .recoWrap {
     grid-template-columns: 1fr;
+  }
+  .cashRow {
+    grid-template-columns: 1fr auto;
+    row-gap: 0.35rem;
+  }
+  .cashDesc {
+    grid-column: 1 / -1;
   }
   .plans {
     grid-template-columns: 1fr;
