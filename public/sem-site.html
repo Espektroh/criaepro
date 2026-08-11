@@ -8,12 +8,12 @@ font:16px/1.6 system-ui,sans-serif;padding:24px;text-align:center}
 p{margin:.4rem 0}b{color:#18181b}
 </style></head><body><div class="card">
 <div class="tag">Antes</div>
-<h1 id="n">Este negocio nao tem site</h1>
+<h1 id="n">Este negócio não tem site</h1>
 <p id="o"></p>
-<p style="margin-top:1.2rem;font-size:.9rem">Quem procura no Google encontra so o perfil do Maps: sem cardapio proprio, sem historia da casa, sem pagina que o restaurante controle.</p>
+<p style="margin-top:1.2rem;font-size:.9rem">Quem procura no Google encontra só o perfil do Maps: sem cardápio próprio, sem história da casa, sem página que o restaurante controle.</p>
 </div>
 <script>
 var q=new URLSearchParams(location.search);
-if(q.get('nome')) document.getElementById('n').textContent=q.get('nome')+' nao tem site proprio';
-document.getElementById('o').innerHTML= q.get('onde') ? 'Hoje a presenca on-line da casa e: <b>'+q.get('onde')+'</b>' : '';
+if(q.get('nome')) document.getElementById('n').textContent=q.get('nome')+' não tem site próprio';
+document.getElementById('o').innerHTML= q.get('onde') ? 'Hoje a presença on-line da casa é: <b>'+q.get('onde')+'</b>' : '';
 </script></body></html>
