@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow">
+<title>Santa Vict&oacute;ria &mdash; Restaurante em Sorocaba</title>
+<meta name="description" content="Santa Victoria, restaurante na Av. Sao Paulo, Sorocaba. 4,7 no Google em 2.369 avaliacoes. Buffet por quilo e rodizio de fondue no inverno.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0f1210; --bg2:#171b18; --fg:#f2f1e8; --muted:#a2a598;
+    --accent:#9c7b3f; --accent-fg:#14140d; --line:rgba(156,123,63,.26);
+    --display:'Playfair Display',Georgia,serif; --body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .wrap{width:min(1140px,92vw);margin:0 auto}
+  h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.12;margin:0}
+  h2{font-size:clamp(1.9rem,4.2vw,3rem);letter-spacing:-.01em}
+  h3{font-size:1.18rem}
+  p{margin:0 0 1em}
+  .eyebrow{font-family:var(--body);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:0 0 .6rem;font-weight:600}
+
+  header.top{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .top-in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+  .logo{max-height:52px;width:auto;}
+  .logotipo{font-family:var(--display);font-size:1.35rem;letter-spacing:.16em;text-transform:uppercase}
+  nav.menu{display:flex;gap:26px;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
+  nav.menu a{text-decoration:none;color:var(--muted);transition:color .2s}
+  nav.menu a:hover{color:var(--fg)}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--accent);color:var(--accent-fg);padding:.85rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:600;font-size:.92rem;letter-spacing:.02em;transition:transform .18s,filter .18s;white-space:nowrap}
+  .btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+  .btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--line)}
+  .btn.sm{padding:.6rem 1.1rem;font-size:.82rem}
+
+  .hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;padding:0 0 clamp(48px,7vw,96px);overflow:hidden}
+  .hero-bg{position:absolute;inset:0;background-image:url('https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmBHP477mQaoCyquo2TpTrmIFmqSJNn5iWEqFVdvHVPj4RRoipdfFLr6OO5Ots-27JJ-2vn3mpJrmeQtIAmrdth8RkK_g7KbfAPxi3IO0ESaxEIdQ43bo-7kc9dISL7MmHuZ1n0xQ=w1600-h900-k-no');background-size:cover;background-position:center;transform:scale(1.02)}
+  .hero-bg::after{content:"";position:absolute;inset:0;background:
+     linear-gradient(180deg,color-mix(in srgb,var(--bg) 60%,transparent) 0%,color-mix(in srgb,var(--bg) 22%,transparent) 30%,color-mix(in srgb,var(--bg) 78%,transparent) 76%,var(--bg) 100%),
+     linear-gradient(90deg,color-mix(in srgb,var(--bg) 66%,transparent) 0%,color-mix(in srgb,var(--bg) 16%,transparent) 60%,transparent 100%)}
+  .hero .wrap{position:relative;z-index:2}
+  .hero h1{font-size:clamp(2.6rem,7.4vw,5.1rem);letter-spacing:-.02em;max-width:16ch}
+  .hero .lead{font-size:clamp(1.05rem,2.2vw,1.3rem);color:var(--muted);max-width:52ch;margin-top:1.1rem}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:2rem}
+  .badge{display:inline-flex;align-items:center;gap:.55rem;border:1px solid var(--line);background:color-mix(in srgb,var(--bg) 70%,transparent);padding:.5rem 1rem;border-radius:999px;font-size:.86rem;margin-bottom:1.4rem}
+  .badge b{font-weight:700}
+  .stars{color:#c9a75a;letter-spacing:.08em}
+
+  section{padding:clamp(64px,9vw,120px) 0}
+  .prova{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .prova-top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:2.6rem}
+  .nota-box{display:flex;align-items:center;gap:1.1rem}
+  .nota{font-family:var(--display);font-size:clamp(3rem,7vw,4.4rem);line-height:1}
+  .quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+  .quote{margin:0;background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:1.6rem}
+  .quote p{font-family:var(--display);font-size:1.08rem;margin:0 0 .9rem}
+  .quote figcaption{font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+  .dishes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:2.8rem}
+  .dish{background:var(--bg2);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:transform .25s,border-color .25s}
+  .dish:hover{transform:translateY(-4px);border-color:var(--accent)}
+  .dish-img{aspect-ratio:4/3;overflow:hidden}
+  .dish-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+  .dish:hover .dish-img img{transform:scale(1.06)}
+  .dish-txt{padding:1.3rem 1.4rem 1.6rem}
+  .dish-txt h3{margin-bottom:.4rem}
+  .dish-txt p{color:var(--muted);font-size:.95rem;margin:0}
+
+  .sobre-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,64px);align-items:center}
+  .sobre-txt p{color:var(--muted);font-size:1.05rem}
+  .sobre-foto img{border-radius:20px;width:100%;aspect-ratio:4/5;object-fit:cover}
+  .selos{display:flex;flex-wrap:wrap;gap:10px;margin-top:1.6rem}
+  .selo{border:1px solid var(--line);border-radius:999px;padding:.45rem 1rem;font-size:.82rem;color:var(--muted)}
+
+  .blocos{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:2.6rem}
+  .bloco{background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:1.7rem}
+  .bloco h3{margin-bottom:.55rem}
+  .bloco p{color:var(--muted);font-size:.96rem}
+  .bloco-link{display:inline-block;margin-top:.4rem;color:var(--accent);text-decoration:none;font-weight:600;font-size:.9rem}
+  .bloco-link:hover{text-decoration:underline}
+
+  .galeria-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:6px;margin-top:2.4rem}
+  .galeria-grid img{width:100%;height:100%;aspect-ratio:1/1;object-fit:cover;transition:transform .5s}
+  .galeria-grid img:hover{transform:scale(1.04)}
+
+  .local{background:var(--bg2);border-top:1px solid var(--line)}
+  .local-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,48px);align-items:start;margin-top:2.4rem}
+  .local-info li{list-style:none}
+  .local-info ul{padding:0;margin:0 0 1.6rem;display:grid;gap:.55rem}
+  .local-info a{color:var(--fg);text-decoration:none;border-bottom:1px solid var(--line)}
+  .local-info a:hover{border-color:var(--accent)}
+  .endereco{font-family:var(--display);font-size:1.25rem;margin-bottom:1.2rem}
+  .horarios ul{padding:0;margin:.6rem 0 0;display:grid;gap:.4rem}
+  .horarios li{display:flex;justify-content:space-between;gap:16px;border-bottom:1px dashed var(--line);padding-bottom:.35rem;font-size:.94rem;color:var(--muted)}
+  .mapa{border-radius:18px;overflow:hidden;border:1px solid var(--line);min-height:340px}
+  .mapa iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+
+  .faq-lista{margin-top:2rem;display:grid;gap:12px}
+  details{background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:1.1rem 1.3rem}
+  summary{cursor:pointer;font-family:var(--display);font-size:1.05rem}
+  details p{color:var(--muted);margin:.8rem 0 0}
+
+  .cta-final{text-align:center}
+  .cta-final h2{max-width:18ch;margin:0 auto 1rem}
+  .cta-final p{color:var(--muted);max-width:52ch;margin:0 auto 2rem}
+
+  footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 90px}
+  .foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:32px}
+  .foot-grid h4{font-family:var(--display);font-size:1rem;margin:0 0 .9rem;letter-spacing:.04em}
+  .foot-grid ul{padding:0;margin:0;list-style:none;display:grid;gap:.5rem;font-size:.93rem;color:var(--muted)}
+  .foot-grid a{color:var(--muted);text-decoration:none}
+  .foot-grid a:hover{color:var(--fg)}
+  .creditos{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);font-size:.8rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
+
+  .float{position:fixed;right:18px;bottom:18px;z-index:80;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+
+  @media(max-width:900px){
+    nav.menu{display:none}
+    .sobre-grid,.local-grid{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr;gap:26px}
+    .hero{min-height:88vh}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-in">
+    <span class="logotipo">Santa Vict&oacute;ria</span>
+    <nav class="menu"><a href="#cardapio">A casa</a><a href="#sobre">Sobre</a><a href="#avaliacoes">Avalia&ccedil;&otilde;es</a><a href="#local">Localiza&ccedil;&atilde;o</a></nav>
+    <a class="btn sm" href="tel:+551532370220">Ligar para a casa</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="wrap">
+    <div class="badge"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <b>4,7</b> &middot; 2.369 avalia&ccedil;&otilde;es no Google</div>
+    <p class="eyebrow">Restaurante &middot; Vila S&atilde;o Domingos, Sorocaba</p>
+    <h1>A &aacute;rvore no sal&atilde;o d&aacute; o charme da casa</h1>
+    <p class="lead">Na Av. S&atilde;o Paulo, 3445. Buffet com grande variedade de pratos e doces, e rod&iacute;zio de fondue no inverno.</p>
+    <div class="hero-ctas">
+      <a class="btn" href="tel:+551532370220">Ligar para a casa</a>
+      <a class="btn ghost" href="#cardapio">Ver a casa</a>
+    </div>
+  </div>
+</section>
+
+<section class="prova" id="avaliacoes">
+  <div class="wrap">
+    <div class="prova-top">
+      <div class="nota-box">
+        <div class="nota">4,7</div>
+        <div>
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div style="color:var(--muted);font-size:.92rem">2.369 avalia&ccedil;&otilde;es no Google</div>
+        </div>
+      </div>
+      <p style="color:var(--muted);max-width:44ch;margin:0">2.369 avalia&ccedil;&otilde;es no Google com nota 4,7. Variedade, ambiente e atendimento s&atilde;o os pontos mais citados.</p>
+    </div>
+    <div class="quotes"><figure class="quote"><p>&ldquo;Muito boa a comida, atendimento e ambiente. Vale a pena um almo&ccedil;o em fam&iacute;lia.&rdquo;</p><figcaption>Avalia&ccedil;&atilde;o no Google</figcaption></figure><figure class="quote"><p>&ldquo;Grande variedade de pratos e doces.&rdquo;</p><figcaption>Avalia&ccedil;&atilde;o no Google</figcaption></figure><figure class="quote"><p>&ldquo;No inverno vale a pena a op&ccedil;&atilde;o de rod&iacute;zio de fondue.&rdquo;</p><figcaption>Avalia&ccedil;&atilde;o no Google</figcaption></figure></div>
+  </div>
+</section>
+
+<section id="cardapio">
+  <div class="wrap">
+    <p class="eyebrow">O que servimos</p>
+    <h2>Buffet, doces e fondue</h2>
+    <div class="dishes"><article class="dish"><div class="dish-img"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmsGB1Mv144DbBpsDdgxTcedwf3h9uV0PHIZebkI1d33Eengi4-bxhBrr4_nviADisPBuvvhh1kZjogIBHSSZX0syohni-p7-I3rQqXrFjEt0TXtjmlGzqyXdlnJI3C8T6YAm50=w900-h675-k-no" alt="Buffet por quilo" loading="lazy"></div><div class="dish-txt"><h3>Buffet por quilo</h3><p>Grande variedade de pratos servida no sistema por quilo.</p></div></article><article class="dish"><div class="dish-img"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlOdrs7khGjF3i63R7tnM_6Ek0fK2vr0K75iGHBAZhGmw1J5hs7EXolUvof47DZ3YqHlGL5k8M726YQHF__T4qHSko8hRpevy2frfholK8-_gnf0RJgN-lgpERsYBUrE_XeBPa4=w900-h675-k-no" alt="Mesa de doces" loading="lazy"></div><div class="dish-txt"><h3>Mesa de doces</h3><p>A variedade de doces aparece nos coment&aacute;rios junto com a dos pratos.</p></div></article><article class="dish"><div class="dish-img"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlNUdMTJNJFSZ91_aV9FBnP6Tav0DjVjt7cca_G7j4dmZJ0-hXp_UySQslFz7bTM1IR1naebmiEmOc4F9bxv04V4pSPfyuSVvI_ozO-nC-yJCa622r7Du8L2H0sJrK8lHF2GM64Dw=w900-h675-k-no" alt="Rod&iacute;zio de fondue no inverno" loading="lazy"></div><div class="dish-txt"><h3>Rod&iacute;zio de fondue no inverno</h3><p>Na temporada de frio, a casa oferece rod&iacute;zio de fondue.</p></div></article><article class="dish"><div class="dish-img"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWklVBRTYcjmtC0rTFC3kw5FlTBgsJq5ILfRUAQ90Q4tC8Ah7hDt2rZnJSiZCDyJgAaELq-eXkPvXwvhpXy5ay714ZRQIeDDKLXFivxB-Ht-eSGNhiL56fArX5rZ_FtumNNkF-A=w900-h675-k-no" alt="Almo&ccedil;o em fam&iacute;lia" loading="lazy"></div><div class="dish-txt"><h3>Almo&ccedil;o em fam&iacute;lia</h3><p>O sal&atilde;o, com a &aacute;rvore no centro, &eacute; o cart&atilde;o de visita da casa.</p></div></article></div>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="wrap sobre-grid">
+    <div class="sobre-txt">
+      <p class="eyebrow">A casa</p>
+      <h2>Um sal&atilde;o com &aacute;rvore no meio</h2>
+      <div style="margin-top:1.4rem"><p>O Santa Vict&oacute;ria fica na Av. S&atilde;o Paulo, 3445, na Vila S&atilde;o Domingos, em Sorocaba. A &aacute;rvore no sal&atilde;o d&aacute; charme ao restaurante.</p><p>S&atilde;o 2.369 avalia&ccedil;&otilde;es no Google com nota 4,7, com destaque para a variedade do buffet e para o ambiente.</p></div>
+      <div class="selos"><span class="selo">Buffet por quilo</span><span class="selo">Mesa de doces</span><span class="selo">Fondue no inverno</span><span class="selo">4,7 no Google</span></div>
+    </div>
+    <div class="sobre-foto"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkHcyj8iG1GGb1pzufaZkamGom91nHWL1n7JCzuNxAbQLjG8vI3GO69pUbD2shh-UMPi74a4ZFaLPOH7Vmzn2XqzLmjuk0wAbdKhF1y2ZdBpoiHykYPaBAQ4DG6Siwf76X39bM=w900-h1125-k-no" alt="Santa Vict&oacute;ria" loading="lazy"></div>
+  </div>
+</section>
+
+
+
+<section class="galeria" id="galeria"><div class="wrap"><p class="eyebrow">A casa</p><h2>Sal&atilde;o e mesa</h2></div><div class="galeria-grid"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkHcyj8iG1GGb1pzufaZkamGom91nHWL1n7JCzuNxAbQLjG8vI3GO69pUbD2shh-UMPi74a4ZFaLPOH7Vmzn2XqzLmjuk0wAbdKhF1y2ZdBpoiHykYPaBAQ4DG6Siwf76X39bM=w700-h700-k-no" alt="Santa Vict&oacute;ria" loading="lazy"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWklVBRTYcjmtC0rTFC3kw5FlTBgsJq5ILfRUAQ90Q4tC8Ah7hDt2rZnJSiZCDyJgAaELq-eXkPvXwvhpXy5ay714ZRQIeDDKLXFivxB-Ht-eSGNhiL56fArX5rZ_FtumNNkF-A=w700-h700-k-no" alt="Santa Vict&oacute;ria" loading="lazy"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmBHP477mQaoCyquo2TpTrmIFmqSJNn5iWEqFVdvHVPj4RRoipdfFLr6OO5Ots-27JJ-2vn3mpJrmeQtIAmrdth8RkK_g7KbfAPxi3IO0ESaxEIdQ43bo-7kc9dISL7MmHuZ1n0xQ=w700-h700-k-no" alt="Santa Vict&oacute;ria" loading="lazy"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmsGB1Mv144DbBpsDdgxTcedwf3h9uV0PHIZebkI1d33Eengi4-bxhBrr4_nviADisPBuvvhh1kZjogIBHSSZX0syohni-p7-I3rQqXrFjEt0TXtjmlGzqyXdlnJI3C8T6YAm50=w700-h700-k-no" alt="Santa Vict&oacute;ria" loading="lazy"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlOdrs7khGjF3i63R7tnM_6Ek0fK2vr0K75iGHBAZhGmw1J5hs7EXolUvof47DZ3YqHlGL5k8M726YQHF__T4qHSko8hRpevy2frfholK8-_gnf0RJgN-lgpERsYBUrE_XeBPa4=w700-h700-k-no" alt="Santa Vict&oacute;ria" loading="lazy"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlNUdMTJNJFSZ91_aV9FBnP6Tav0DjVjt7cca_G7j4dmZJ0-hXp_UySQslFz7bTM1IR1naebmiEmOc4F9bxv04V4pSPfyuSVvI_ozO-nC-yJCa622r7Du8L2H0sJrK8lHF2GM64Dw=w700-h700-k-no" alt="Santa Vict&oacute;ria" loading="lazy"></div></section>
+
+<section class="local" id="local">
+  <div class="wrap">
+    <p class="eyebrow">Onde estamos</p>
+    <h2>Av. S&atilde;o Paulo, 3445</h2>
+    <div class="local-grid">
+      <div class="local-info">
+        <p class="endereco">Av. S&atilde;o Paulo, 3445 &mdash; Vila S&atilde;o Domingos, Sorocaba/SP, 18013-004</p>
+        <ul><li><a href="tel:+551532370220">(15) 3237-0220</a></li></ul>
+        
+      </div>
+      <div class="mapa"><iframe src="https://www.google.com/maps?q=Santa%20Victoria%2C%20Av.%20Sao%20Paulo%2C%203445%2C%20Vila%20Sao%20Domingos%2C%20Sorocaba%20-%20SP&output=embed" loading="lazy" title="Mapa - Santa Vict&oacute;ria" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq"><div class="wrap"><p class="eyebrow">D&uacute;vidas frequentes</p><h2>Antes de vir</h2><div class="faq-lista"><details><summary>Como funciona o buffet?</summary><p>O restaurante cobra por quilo, com grande variedade de pratos e doces.</p></details><details><summary>Tem fondue?</summary><p>Sim, no inverno a casa oferece rod&iacute;zio de fondue.</p></details><details><summary>Como falo com voc&ecirc;s?</summary><p>Pelo telefone (15) 3237-0220.</p></details></div></div></section>
+
+<section class="cta-final">
+  <div class="wrap">
+    <p class="eyebrow">Contato</p>
+    <h2>Venha almo&ccedil;ar no Santa Vict&oacute;ria</h2>
+    <p>Ligue para (15) 3237-0220 para reservas de grupo e informa&ccedil;&otilde;es.</p>
+    <a class="btn" href="tel:+551532370220">Ligar para a casa</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <span class="logotipo">Santa Vict&oacute;ria</span>
+        <p style="color:var(--muted);margin-top:1rem;max-width:34ch">Restaurante na Vila S&atilde;o Domingos, Sorocaba.</p>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul><li><a href="tel:+551532370220">(15) 3237-0220</a></li></ul>
+      </div>
+      <div>
+        <h4>Endere&ccedil;o</h4>
+        <ul><li>Av. S&atilde;o Paulo, 3445 &mdash; Vila S&atilde;o Domingos, Sorocaba/SP, 18013-004</li></ul>
+      </div>
+    </div>
+    <div class="creditos">
+      <span>&copy; 2026 Santa Vict&oacute;ria</span>
+      <span>Nota 4,7 com 2.369 avalia&ccedil;&otilde;es no Google</span>
+    </div>
+  </div>
+</footer>
+
+<a class="btn float" href="tel:+551532370220">Ligar</a>
+
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow">
+<title>Saziki&rsquo;s Culin&aacute;ria Oriental &mdash; Culin&aacute;ria oriental em Votorantim</title>
+<meta name="description" content="Saziki's Culinaria Oriental, no centro de Votorantim. 4,9 no Google, a maior nota da cidade em culinaria japonesa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0e0f10; --bg2:#161819; --fg:#f1efea; --muted:#9e9b95;
+    --accent:#a4322e; --accent-fg:#fff5f2; --line:rgba(241,239,234,.14);
+    --display:'Shippori Mincho',Georgia,serif; --body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .wrap{width:min(1140px,92vw);margin:0 auto}
+  h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.12;margin:0}
+  h2{font-size:clamp(1.9rem,4.2vw,3rem);letter-spacing:-.01em}
+  h3{font-size:1.18rem}
+  p{margin:0 0 1em}
+  .eyebrow{font-family:var(--body);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:0 0 .6rem;font-weight:600}
+
+  header.top{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .top-in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+  .logo{max-height:52px;width:auto;}
+  .logotipo{font-family:var(--display);font-size:1.35rem;letter-spacing:.16em;text-transform:uppercase}
+  nav.menu{display:flex;gap:26px;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
+  nav.menu a{text-decoration:none;color:var(--muted);transition:color .2s}
+  nav.menu a:hover{color:var(--fg)}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--accent);color:var(--accent-fg);padding:.85rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:600;font-size:.92rem;letter-spacing:.02em;transition:transform .18s,filter .18s;white-space:nowrap}
+  .btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+  .btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--line)}
+  .btn.sm{padding:.6rem 1.1rem;font-size:.82rem}
+
+  .hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;padding:0 0 clamp(48px,7vw,96px);overflow:hidden}
+  .hero-bg{position:absolute;inset:0;background-image:url('https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk6lObNkoyUqtdUD0HN_Hl0Gf5rvaIb0h7wHAWEkRLY3OERG4qNzB1nrpgJj3A2Wn-_lN1ZaxcnH4ALoPyXBsYne0NdTuj8NZq5pthrZ6FuVj_iz8C1DR_BxWFoqNllelj5Hzkrip_7b4JB=w1600-h900-k-no');background-size:cover;background-position:center;transform:scale(1.02)}
+  .hero-bg::after{content:"";position:absolute;inset:0;background:
+     linear-gradient(180deg,color-mix(in srgb,var(--bg) 60%,transparent) 0%,color-mix(in srgb,var(--bg) 22%,transparent) 30%,color-mix(in srgb,var(--bg) 78%,transparent) 76%,var(--bg) 100%),
+     linear-gradient(90deg,color-mix(in srgb,var(--bg) 66%,transparent) 0%,color-mix(in srgb,var(--bg) 16%,transparent) 60%,transparent 100%)}
+  .hero .wrap{position:relative;z-index:2}
+  .hero h1{font-size:clamp(2.6rem,7.4vw,5.1rem);letter-spacing:-.02em;max-width:16ch}
+  .hero .lead{font-size:clamp(1.05rem,2.2vw,1.3rem);color:var(--muted);max-width:52ch;margin-top:1.1rem}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:2rem}
+  .badge{display:inline-flex;align-items:center;gap:.55rem;border:1px solid var(--line);background:color-mix(in srgb,var(--bg) 70%,transparent);padding:.5rem 1rem;border-radius:999px;font-size:.86rem;margin-bottom:1.4rem}
+  .badge b{font-weight:700}
+  .stars{color:#dfae55;letter-spacing:.08em}
+
+  section{padding:clamp(64px,9vw,120px) 0}
+  .prova{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .prova-top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:2.6rem}
+  .nota-box{display:flex;align-items:center;gap:1.1rem}
+  .nota{font-family:var(--display);font-size:clamp(3rem,7vw,4.4rem);line-height:1}
+  .quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+  .quote{margin:0;background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:1.6rem}
+  .quote p{font-family:var(--display);font-size:1.08rem;margin:0 0 .9rem}
+  .quote figcaption{font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+  .dishes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:2.8rem}
+  .dish{background:var(--bg2);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:transform .25s,border-color .25s}
+  .dish:hover{transform:translateY(-4px);border-color:var(--accent)}
+  .dish-img{aspect-ratio:4/3;overflow:hidden}
+  .dish-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+  .dish:hover .dish-img img{transform:scale(1.06)}
+  .dish-txt{padding:1.3rem 1.4rem 1.6rem}
+  .dish-txt h3{margin-bottom:.4rem}
+  .dish-txt p{color:var(--muted);font-size:.95rem;margin:0}
+
+  .sobre-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,64px);align-items:center}
+  .sobre-txt p{color:var(--muted);font-size:1.05rem}
+  .sobre-foto img{border-radius:20px;width:100%;aspect-ratio:4/5;object-fit:cover}
+  .selos{display:flex;flex-wrap:wrap;gap:10px;margin-top:1.6rem}
+  .selo{border:1px solid var(--line);border-radius:999px;padding:.45rem 1rem;font-size:.82rem;color:var(--muted)}
+
+  .blocos{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:2.6rem}
+  .bloco{background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:1.7rem}
+  .bloco h3{margin-bottom:.55rem}
+  .bloco p{color:var(--muted);font-size:.96rem}
+  .bloco-link{display:inline-block;margin-top:.4rem;color:var(--accent);text-decoration:none;font-weight:600;font-size:.9rem}
+  .bloco-link:hover{text-decoration:underline}
+
+  .galeria-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:6px;margin-top:2.4rem}
+  .galeria-grid img{width:100%;height:100%;aspect-ratio:1/1;object-fit:cover;transition:transform .5s}
+  .galeria-grid img:hover{transform:scale(1.04)}
+
+  .local{background:var(--bg2);border-top:1px solid var(--line)}
+  .local-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,48px);align-items:start;margin-top:2.4rem}
+  .local-info li{list-style:none}
+  .local-info ul{padding:0;margin:0 0 1.6rem;display:grid;gap:.55rem}
+  .local-info a{color:var(--fg);text-decoration:none;border-bottom:1px solid var(--line)}
+  .local-info a:hover{border-color:var(--accent)}
+  .endereco{font-family:var(--display);font-size:1.25rem;margin-bottom:1.2rem}
+  .horarios ul{padding:0;margin:.6rem 0 0;display:grid;gap:.4rem}
+  .horarios li{display:flex;justify-content:space-between;gap:16px;border-bottom:1px dashed var(--line);padding-bottom:.35rem;font-size:.94rem;color:var(--muted)}
+  .mapa{border-radius:18px;overflow:hidden;border:1px solid var(--line);min-height:340px}
+  .mapa iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+
+  .faq-lista{margin-top:2rem;display:grid;gap:12px}
+  details{background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:1.1rem 1.3rem}
+  summary{cursor:pointer;font-family:var(--display);font-size:1.05rem}
+  details p{color:var(--muted);margin:.8rem 0 0}
+
+  .cta-final{text-align:center}
+  .cta-final h2{max-width:18ch;margin:0 auto 1rem}
+  .cta-final p{color:var(--muted);max-width:52ch;margin:0 auto 2rem}
+
+  footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 90px}
+  .foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:32px}
+  .foot-grid h4{font-family:var(--display);font-size:1rem;margin:0 0 .9rem;letter-spacing:.04em}
+  .foot-grid ul{padding:0;margin:0;list-style:none;display:grid;gap:.5rem;font-size:.93rem;color:var(--muted)}
+  .foot-grid a{color:var(--muted);text-decoration:none}
+  .foot-grid a:hover{color:var(--fg)}
+  .creditos{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);font-size:.8rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
+
+  .float{position:fixed;right:18px;bottom:18px;z-index:80;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+
+  @media(max-width:900px){
+    nav.menu{display:none}
+    .sobre-grid,.local-grid{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr;gap:26px}
+    .hero{min-height:88vh}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-in">
+    <span class="logotipo">Saziki&rsquo;s</span>
+    <nav class="menu"><a href="#cardapio">A casa</a><a href="#sobre">Sobre</a><a href="#avaliacoes">Avalia&ccedil;&otilde;es</a><a href="#local">Localiza&ccedil;&atilde;o</a></nav>
+    <a class="btn sm" href="https://wa.me/5515997119530?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20pedido%20no%20Saziki%27s." target="_blank" rel="noopener">Pedir pelo WhatsApp</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="wrap">
+    <div class="badge"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <b>4,9</b> &middot; 66 avalia&ccedil;&otilde;es no Google</div>
+    <p class="eyebrow">Culin&aacute;ria oriental &middot; Centro de Votorantim</p>
+    <h1>Nota 4,9: a melhor avaliada de Votorantim</h1>
+    <p class="lead">Culin&aacute;ria japonesa na Rua Paula Ney, 1100, no centro. Comida de qualidade a pre&ccedil;o justo, para comer aqui ou retirar.</p>
+    <div class="hero-ctas">
+      <a class="btn" href="https://wa.me/5515997119530?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20pedido%20no%20Saziki%27s." target="_blank" rel="noopener">Pedir pelo WhatsApp</a>
+      <a class="btn ghost" href="#cardapio">Ver a casa</a>
+    </div>
+  </div>
+</section>
+
+<section class="prova" id="avaliacoes">
+  <div class="wrap">
+    <div class="prova-top">
+      <div class="nota-box">
+        <div class="nota">4,9</div>
+        <div>
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div style="color:var(--muted);font-size:.92rem">66 avalia&ccedil;&otilde;es no Google</div>
+        </div>
+      </div>
+      <p style="color:var(--muted);max-width:44ch;margin:0">Nota 4,9 no Google. Qualidade da comida e pre&ccedil;o justo aparecem juntos em quase toda avalia&ccedil;&atilde;o.</p>
+    </div>
+    <div class="quotes"><figure class="quote"><p>&ldquo;Pre&ccedil;os &oacute;timos e comida de alta qualidade!&rdquo;</p><figcaption>Avalia&ccedil;&atilde;o no Google</figcaption></figure><figure class="quote"><p>&ldquo;&Oacute;timo para passar um almo&ccedil;o com fam&iacute;lia e amigos no fim de semana.&rdquo;</p><figcaption>Avalia&ccedil;&atilde;o no Google</figcaption></figure><figure class="quote"><p>&ldquo;Todas as vezes que vou retirar meu pedido, &eacute; sempre uma grata experi&ecirc;ncia.&rdquo;</p><figcaption>Avalia&ccedil;&atilde;o no Google</figcaption></figure></div>
+  </div>
+</section>
+
+<section id="cardapio">
+  <div class="wrap">
+    <p class="eyebrow">O que servimos</p>
+    <h2>Oriental para comer aqui ou levar</h2>
+    <div class="dishes"><article class="dish"><div class="dish-img"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkYNccHYZH-8OTjVZDGxsoPIMCTQjpqe7BZV71q6opUiGGagEI70UguluQa6JWOSy_dqkk94y7aUMLltBUDSbrkvp7CRrHyb65dn7DDYJLDpv2tH4yZjOqizWzShJ5gYZ6j9QdTBtV6yRs=w900-h675-k-no" alt="Culin&aacute;ria japonesa" loading="lazy"></div><div class="dish-txt"><h3>Culin&aacute;ria japonesa</h3><p>Pratos da culin&aacute;ria oriental preparados na casa.</p></div></article><article class="dish"><div class="dish-img"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkrUrxqa7kSD9G06bpl5jmd9WFInh-60zl4GunsYGsTxZN17ujlKJl_8fB23HovIv_04SZwzXd_n1s4_YdRy5-mZngJoTFtCk-3mzlkN0bIhnnUpsWXLRRQJ2Yl0egg-hNwwF5p6A=w900-h675-k-no" alt="Almo&ccedil;o de fim de semana" loading="lazy"></div><div class="dish-txt"><h3>Almo&ccedil;o de fim de semana</h3><p>Os clientes citam a casa como op&ccedil;&atilde;o para almo&ccedil;o com fam&iacute;lia e amigos no fim de semana.</p></div></article><article class="dish"><div class="dish-img"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl4zGWbJh2HflodLxKYXCX0-YPDk_MBHX1huCEHMLN_2vgR9AVt2rxShBGc3X4O1BbORVzHwwTZDa73rKNR2TWzTjF4fAMTuW3yvAm47-B3_fmysEAVtNv8CGTOOZy3ED1OpiXj590vPh8=w900-h675-k-no" alt="Retirada de pedidos" loading="lazy"></div><div class="dish-txt"><h3>Retirada de pedidos</h3><p>D&aacute; para pedir e retirar, um dos pontos elogiados nas avalia&ccedil;&otilde;es.</p></div></article><article class="dish"><div class="dish-img"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnQrOZvNUnWsvTMgDW1FzSQnroeriaA_B976_AB9vq3XLNqWLn-CtWHkl2hggUfakE5QOtoEbw0b77vlj3FEqmSdDKJ5hJLrJgh31rDUMsXgk1GqCFuKSCsf0XBjhz9m3mERQLrsSdiPSQ=w900-h675-k-no" alt="Pre&ccedil;o justo" loading="lazy"></div><div class="dish-txt"><h3>Pre&ccedil;o justo</h3><p>Qualidade e pre&ccedil;o aparecem juntos nos coment&aacute;rios dos clientes.</p></div></article></div>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="wrap sobre-grid">
+    <div class="sobre-txt">
+      <p class="eyebrow">A casa</p>
+      <h2>Culin&aacute;ria oriental no centro de Votorantim</h2>
+      <div style="margin-top:1.4rem"><p>O Saziki&rsquo;s fica na Rua Paula Ney, 1100, no centro de Votorantim.</p><p>Com nota 4,9 no Google, &eacute; a casa de culin&aacute;ria oriental mais bem avaliada da cidade.</p></div>
+      <div class="selos"><span class="selo">Culin&aacute;ria japonesa</span><span class="selo">Retirada</span><span class="selo">Centro de Votorantim</span><span class="selo">4,9 no Google</span></div>
+    </div>
+    <div class="sobre-foto"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkYNccHYZH-8OTjVZDGxsoPIMCTQjpqe7BZV71q6opUiGGagEI70UguluQa6JWOSy_dqkk94y7aUMLltBUDSbrkvp7CRrHyb65dn7DDYJLDpv2tH4yZjOqizWzShJ5gYZ6j9QdTBtV6yRs=w900-h1125-k-no" alt="Saziki&rsquo;s Culin&aacute;ria Oriental" loading="lazy"></div>
+  </div>
+</section>
+
+
+
+<section class="galeria" id="galeria"><div class="wrap"><p class="eyebrow">Na mesa</p><h2>O que preparamos</h2></div><div class="galeria-grid"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnQrOZvNUnWsvTMgDW1FzSQnroeriaA_B976_AB9vq3XLNqWLn-CtWHkl2hggUfakE5QOtoEbw0b77vlj3FEqmSdDKJ5hJLrJgh31rDUMsXgk1GqCFuKSCsf0XBjhz9m3mERQLrsSdiPSQ=w700-h700-k-no" alt="Saziki&rsquo;s Culin&aacute;ria Oriental" loading="lazy"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkYNccHYZH-8OTjVZDGxsoPIMCTQjpqe7BZV71q6opUiGGagEI70UguluQa6JWOSy_dqkk94y7aUMLltBUDSbrkvp7CRrHyb65dn7DDYJLDpv2tH4yZjOqizWzShJ5gYZ6j9QdTBtV6yRs=w700-h700-k-no" alt="Saziki&rsquo;s Culin&aacute;ria Oriental" loading="lazy"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk6lObNkoyUqtdUD0HN_Hl0Gf5rvaIb0h7wHAWEkRLY3OERG4qNzB1nrpgJj3A2Wn-_lN1ZaxcnH4ALoPyXBsYne0NdTuj8NZq5pthrZ6FuVj_iz8C1DR_BxWFoqNllelj5Hzkrip_7b4JB=w700-h700-k-no" alt="Saziki&rsquo;s Culin&aacute;ria Oriental" loading="lazy"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkrUrxqa7kSD9G06bpl5jmd9WFInh-60zl4GunsYGsTxZN17ujlKJl_8fB23HovIv_04SZwzXd_n1s4_YdRy5-mZngJoTFtCk-3mzlkN0bIhnnUpsWXLRRQJ2Yl0egg-hNwwF5p6A=w700-h700-k-no" alt="Saziki&rsquo;s Culin&aacute;ria Oriental" loading="lazy"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl4zGWbJh2HflodLxKYXCX0-YPDk_MBHX1huCEHMLN_2vgR9AVt2rxShBGc3X4O1BbORVzHwwTZDa73rKNR2TWzTjF4fAMTuW3yvAm47-B3_fmysEAVtNv8CGTOOZy3ED1OpiXj590vPh8=w700-h700-k-no" alt="Saziki&rsquo;s Culin&aacute;ria Oriental" loading="lazy"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnQrOZvNUnWsvTMgDW1FzSQnroeriaA_B976_AB9vq3XLNqWLn-CtWHkl2hggUfakE5QOtoEbw0b77vlj3FEqmSdDKJ5hJLrJgh31rDUMsXgk1GqCFuKSCsf0XBjhz9m3mERQLrsSdiPSQ=w700-h700-k-no" alt="Saziki&rsquo;s Culin&aacute;ria Oriental" loading="lazy"></div></section>
+
+<section class="local" id="local">
+  <div class="wrap">
+    <p class="eyebrow">Onde estamos</p>
+    <h2>Rua Paula Ney, 1100</h2>
+    <div class="local-grid">
+      <div class="local-info">
+        <p class="endereco">Rua Paula Ney, 1100 &mdash; Centro, Votorantim/SP, 18110-045</p>
+        <ul><li><a href="https://wa.me/5515997119530?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20pedido%20no%20Saziki%27s." target="_blank" rel="noopener">WhatsApp (15) 99711-9530</a></li><li><a href="tel:+5515997119530">Ligar (15) 99711-9530</a></li></ul>
+        
+      </div>
+      <div class="mapa"><iframe src="https://www.google.com/maps?q=Restaurante%20Saziki%27s%20Culinaria%20Oriental%2C%20Rua%20Paula%20Ney%2C%201100%2C%20Centro%2C%20Votorantim%20-%20SP&output=embed" loading="lazy" title="Mapa - Saziki&rsquo;s Culin&aacute;ria Oriental" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq"><div class="wrap"><p class="eyebrow">D&uacute;vidas frequentes</p><h2>Antes de vir</h2><div class="faq-lista"><details><summary>Como fa&ccedil;o um pedido?</summary><p>Pelo WhatsApp (15) 99711-9530.</p></details><details><summary>D&aacute; para retirar?</summary><p>Sim, a retirada de pedidos &eacute; um dos pontos mais elogiados pelos clientes.</p></details></div></div></section>
+
+<section class="cta-final">
+  <div class="wrap">
+    <p class="eyebrow">Pedidos</p>
+    <h2>Fa&ccedil;a seu pedido</h2>
+    <p>Chame no WhatsApp (15) 99711-9530 para pedir ou tirar d&uacute;vidas.</p>
+    <a class="btn" href="https://wa.me/5515997119530?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20pedido%20no%20Saziki%27s." target="_blank" rel="noopener">Pedir pelo WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <span class="logotipo">Saziki&rsquo;s</span>
+        <p style="color:var(--muted);margin-top:1rem;max-width:34ch">Culin&aacute;ria oriental no centro de Votorantim.</p>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul><li><a href="https://wa.me/5515997119530?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20pedido%20no%20Saziki%27s." target="_blank" rel="noopener">WhatsApp (15) 99711-9530</a></li><li><a href="tel:+5515997119530">Ligar (15) 99711-9530</a></li></ul>
+      </div>
+      <div>
+        <h4>Endere&ccedil;o</h4>
+        <ul><li>Rua Paula Ney, 1100 &mdash; Centro, Votorantim/SP, 18110-045</li></ul>
+      </div>
+    </div>
+    <div class="creditos">
+      <span>&copy; 2026 Saziki&rsquo;s Culin&aacute;ria Oriental</span>
+      <span>Nota 4,9 com 66 avalia&ccedil;&otilde;es no Google</span>
+    </div>
+  </div>
+</footer>
+
+<a class="btn float" href="https://wa.me/5515997119530?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20pedido%20no%20Saziki%27s." target="_blank" rel="noopener">WhatsApp</a>
+
+</body>
+</html>

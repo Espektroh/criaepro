@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow">
+<title>Doma Trattoria &mdash; Trattoria italiana em Sorocaba</title>
+<meta name="description" content="Doma Trattoria, cozinha italiana no Jardim Pires de Mello, Sorocaba. 4,9 no Google em 97 avaliacoes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#100f0d; --bg2:#191713; --fg:#f4f0e6; --muted:#a8a091;
+    --accent:#b98b46; --accent-fg:#14110b; --line:rgba(185,139,70,.24);
+    --display:'Cormorant Garamond',Georgia,serif; --body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .wrap{width:min(1140px,92vw);margin:0 auto}
+  h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.12;margin:0}
+  h2{font-size:clamp(1.9rem,4.2vw,3rem);letter-spacing:-.01em}
+  h3{font-size:1.18rem}
+  p{margin:0 0 1em}
+  .eyebrow{font-family:var(--body);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:0 0 .6rem;font-weight:600}
+
+  header.top{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .top-in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+  .logo{max-height:52px;width:auto;}
+  .logotipo{font-family:var(--display);font-size:1.35rem;letter-spacing:.16em;text-transform:uppercase}
+  nav.menu{display:flex;gap:26px;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
+  nav.menu a{text-decoration:none;color:var(--muted);transition:color .2s}
+  nav.menu a:hover{color:var(--fg)}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--accent);color:var(--accent-fg);padding:.85rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:600;font-size:.92rem;letter-spacing:.02em;transition:transform .18s,filter .18s;white-space:nowrap}
+  .btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+  .btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--line)}
+  .btn.sm{padding:.6rem 1.1rem;font-size:.82rem}
+
+  .hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;padding:0 0 clamp(48px,7vw,96px);overflow:hidden}
+  .hero-bg{position:absolute;inset:0;background-image:url('https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnsxqlw62PrpU8cW11tRxQaPoGV1CYx3Ui6DGwxPSOFCxH_c7RFKxYT24g3BqHXeFRmKRGnJ4D7Fg1TrOcKVmTfnoUNIWxWCLZI5R3AsToxFvCe4Y0o1K77WTRYG2QLYuwvC-w=w1600-h900-k-no');background-size:cover;background-position:center;transform:scale(1.02)}
+  .hero-bg::after{content:"";position:absolute;inset:0;background:
+     linear-gradient(180deg,color-mix(in srgb,var(--bg) 60%,transparent) 0%,color-mix(in srgb,var(--bg) 22%,transparent) 30%,color-mix(in srgb,var(--bg) 78%,transparent) 76%,var(--bg) 100%),
+     linear-gradient(90deg,color-mix(in srgb,var(--bg) 66%,transparent) 0%,color-mix(in srgb,var(--bg) 16%,transparent) 60%,transparent 100%)}
+  .hero .wrap{position:relative;z-index:2}
+  .hero h1{font-size:clamp(2.6rem,7.4vw,5.1rem);letter-spacing:-.02em;max-width:16ch}
+  .hero .lead{font-size:clamp(1.05rem,2.2vw,1.3rem);color:var(--muted);max-width:52ch;margin-top:1.1rem}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:2rem}
+  .badge{display:inline-flex;align-items:center;gap:.55rem;border:1px solid var(--line);background:color-mix(in srgb,var(--bg) 70%,transparent);padding:.5rem 1rem;border-radius:999px;font-size:.86rem;margin-bottom:1.4rem}
+  .badge b{font-weight:700}
+  .stars{color:#c9a75a;letter-spacing:.08em}
+
+  section{padding:clamp(64px,9vw,120px) 0}
+  .prova{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .prova-top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:2.6rem}
+  .nota-box{display:flex;align-items:center;gap:1.1rem}
+  .nota{font-family:var(--display);font-size:clamp(3rem,7vw,4.4rem);line-height:1}
+  .quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+  .quote{margin:0;background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:1.6rem}
+  .quote p{font-family:var(--display);font-size:1.08rem;margin:0 0 .9rem}
+  .quote figcaption{font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+  .dishes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:2.8rem}
+  .dish{background:var(--bg2);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:transform .25s,border-color .25s}
+  .dish:hover{transform:translateY(-4px);border-color:var(--accent)}
+  .dish-img{aspect-ratio:4/3;overflow:hidden}
+  .dish-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+  .dish:hover .dish-img img{transform:scale(1.06)}
+  .dish-txt{padding:1.3rem 1.4rem 1.6rem}
+  .dish-txt h3{margin-bottom:.4rem}
+  .dish-txt p{color:var(--muted);font-size:.95rem;margin:0}
+
+  .sobre-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,64px);align-items:center}
+  .sobre-txt p{color:var(--muted);font-size:1.05rem}
+  .sobre-foto img{border-radius:20px;width:100%;aspect-ratio:4/5;object-fit:cover}
+  .selos{display:flex;flex-wrap:wrap;gap:10px;margin-top:1.6rem}
+  .selo{border:1px solid var(--line);border-radius:999px;padding:.45rem 1rem;font-size:.82rem;color:var(--muted)}
+
+  .blocos{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:2.6rem}
+  .bloco{background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:1.7rem}
+  .bloco h3{margin-bottom:.55rem}
+  .bloco p{color:var(--muted);font-size:.96rem}
+  .bloco-link{display:inline-block;margin-top:.4rem;color:var(--accent);text-decoration:none;font-weight:600;font-size:.9rem}
+  .bloco-link:hover{text-decoration:underline}
+
+  .galeria-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:6px;margin-top:2.4rem}
+  .galeria-grid img{width:100%;height:100%;aspect-ratio:1/1;object-fit:cover;transition:transform .5s}
+  .galeria-grid img:hover{transform:scale(1.04)}
+
+  .local{background:var(--bg2);border-top:1px solid var(--line)}
+  .local-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,48px);align-items:start;margin-top:2.4rem}
+  .local-info li{list-style:none}
+  .local-info ul{padding:0;margin:0 0 1.6rem;display:grid;gap:.55rem}
+  .local-info a{color:var(--fg);text-decoration:none;border-bottom:1px solid var(--line)}
+  .local-info a:hover{border-color:var(--accent)}
+  .endereco{font-family:var(--display);font-size:1.25rem;margin-bottom:1.2rem}
+  .horarios ul{padding:0;margin:.6rem 0 0;display:grid;gap:.4rem}
+  .horarios li{display:flex;justify-content:space-between;gap:16px;border-bottom:1px dashed var(--line);padding-bottom:.35rem;font-size:.94rem;color:var(--muted)}
+  .mapa{border-radius:18px;overflow:hidden;border:1px solid var(--line);min-height:340px}
+  .mapa iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+
+  .faq-lista{margin-top:2rem;display:grid;gap:12px}
+  details{background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:1.1rem 1.3rem}
+  summary{cursor:pointer;font-family:var(--display);font-size:1.05rem}
+  details p{color:var(--muted);margin:.8rem 0 0}
+
+  .cta-final{text-align:center}
+  .cta-final h2{max-width:18ch;margin:0 auto 1rem}
+  .cta-final p{color:var(--muted);max-width:52ch;margin:0 auto 2rem}
+
+  footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 90px}
+  .foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:32px}
+  .foot-grid h4{font-family:var(--display);font-size:1rem;margin:0 0 .9rem;letter-spacing:.04em}
+  .foot-grid ul{padding:0;margin:0;list-style:none;display:grid;gap:.5rem;font-size:.93rem;color:var(--muted)}
+  .foot-grid a{color:var(--muted);text-decoration:none}
+  .foot-grid a:hover{color:var(--fg)}
+  .creditos{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);font-size:.8rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
+
+  .float{position:fixed;right:18px;bottom:18px;z-index:80;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+
+  @media(max-width:900px){
+    nav.menu{display:none}
+    .sobre-grid,.local-grid{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr;gap:26px}
+    .hero{min-height:88vh}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-in">
+    <span class="logotipo">Doma <span style='opacity:.55'>Trattoria</span></span>
+    <nav class="menu"><a href="#cardapio">A casa</a><a href="#sobre">Sobre</a><a href="#avaliacoes">Avalia&ccedil;&otilde;es</a><a href="#local">Localiza&ccedil;&atilde;o</a></nav>
+    <a class="btn sm" href="https://www.google.com/maps/place/Doma+Trattoria/@-23.526377,-47.472152,760m" target="_blank" rel="noopener">Como chegar</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="wrap">
+    <div class="badge"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <b>4,9</b> &middot; 97 avalia&ccedil;&otilde;es no Google</div>
+    <p class="eyebrow">Trattoria italiana &middot; Jardim Pires de Mello</p>
+    <h1>A trattoria mais bem avaliada de Sorocaba</h1>
+    <p class="lead">Cozinha italiana no Jardim Pires de Mello, com nota 4,9 no Google. Sal&atilde;o para jantar, retirada na porta e entrega.</p>
+    <div class="hero-ctas">
+      <a class="btn" href="https://www.google.com/maps/place/Doma+Trattoria/@-23.526377,-47.472152,760m" target="_blank" rel="noopener">Como chegar</a>
+      <a class="btn ghost" href="#cardapio">Ver a casa</a>
+    </div>
+  </div>
+</section>
+
+<section class="prova" id="avaliacoes">
+  <div class="wrap">
+    <div class="prova-top">
+      <div class="nota-box">
+        <div class="nota">4,9</div>
+        <div>
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div style="color:var(--muted);font-size:.92rem">97 avalia&ccedil;&otilde;es no Google</div>
+        </div>
+      </div>
+      <p style="color:var(--muted);max-width:44ch;margin:0">Nota 4,9 no Google. O espa&ccedil;o e o atendimento aparecem entre os pontos mais citados pelos clientes.</p>
+    </div>
+    <div class="quotes"><figure class="quote"><p>&ldquo;Gosta de boa comida italiana, um &oacute;timo atendimento e um espa&ccedil;o lindo.&rdquo;</p><figcaption>Avalia&ccedil;&atilde;o no Google</figcaption></figure><figure class="quote"><p>&ldquo;A entrada de frutos do mar foi o que todos da mesa elogiaram.&rdquo;</p><figcaption>Avalia&ccedil;&atilde;o no Google</figcaption></figure><figure class="quote"><p>&ldquo;Comida italiana de verdade, feita com cuidado.&rdquo;</p><figcaption>Avalia&ccedil;&atilde;o no Google</figcaption></figure></div>
+  </div>
+</section>
+
+<section id="cardapio">
+  <div class="wrap">
+    <p class="eyebrow">Como aproveitar</p>
+    <h2>No sal&atilde;o, para levar ou em casa</h2>
+    <div class="dishes"><article class="dish"><div class="dish-img"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnmDZqJDaZ_AiiKXCew4RtYfs0gye0s4n7naMsVX0SEPZotrkraLjz09ClZGjfGwjOHvVg2AlWNFewonTNhxIzGbyXbPkEOOU18zG4UcxsohAC557ffjGuTJKts5be189Eo4uB2VYONZNk=w900-h675-k-no" alt="Jantar no sal&atilde;o" loading="lazy"></div><div class="dish-txt"><h3>Jantar no sal&atilde;o</h3><p>Refei&ccedil;&atilde;o no local, no sal&atilde;o da trattoria.</p></div></article><article class="dish"><div class="dish-img"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkO0DZDjBz6_03z-7DY20VhSMuNG1dLurEvYWbvDQyGoVbVrecv3yQebmn6dPjEBRCf5_F0KH6ADg_CO-RuFR3dGkgCaAjOkYfAY9wbJkGnSvSLK_8PENMXgo0AAqJh401B6C1I=w900-h675-k-no" alt="Entradas da casa" loading="lazy"></div><div class="dish-txt"><h3>Entradas da casa</h3><p>A entrada de frutos do mar &eacute; uma das mais elogiadas pelos clientes nas avalia&ccedil;&otilde;es do Google.</p></div></article><article class="dish"><div class="dish-img"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWljHx54C-XqaGiRxitp46tVI4lPKGYxHKDCp9fMCAcoYQc5sWvHqMu9u7a7zq73HD6-ljEPVQ2lXwYVAed3HgLHKU6SAR8gzOXw5j-NmUqr8eYSsBS4pQAZXUCe9YqACeSzF2Jg0g=w900-h675-k-no" alt="Retirada na porta" loading="lazy"></div><div class="dish-txt"><h3>Retirada na porta</h3><p>D&aacute; para pedir e retirar sem sair do carro.</p></div></article><article class="dish"><div class="dish-img"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWntyYFNNaTUywvMVCWCPadgS6qeRwPysHxCOardqrgcKytHOGo2oeLxSJcJqlIoDr_qWwmkX9m9wOLcbGcS06bRg0TrptmDCoytZ8aH3e3aBc1WaVr7IN9a5VK17HjnqJhm20j_0CGP_CNh=w900-h675-k-no" alt="Entrega" loading="lazy"></div><div class="dish-txt"><h3>Entrega</h3><p>A casa tamb&eacute;m atende com entrega.</p></div></article></div>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="wrap sobre-grid">
+    <div class="sobre-txt">
+      <p class="eyebrow">A casa</p>
+      <h2>Cozinha italiana no Jardim Pires de Mello</h2>
+      <div style="margin-top:1.4rem"><p>A Doma Trattoria fica na R. Mess&iacute;as Pereira de Paula, 187, no Jardim Pires de Mello, em Sorocaba.</p><p>Com nota 4,9 no Google, &eacute; uma das casas italianas mais bem avaliadas da cidade. Nas avalia&ccedil;&otilde;es, o ambiente e o atendimento aparecem lado a lado com a comida.</p></div>
+      <div class="selos"><span class="selo">Cozinha italiana</span><span class="selo">Sal&atilde;o para jantar</span><span class="selo">Retirada e entrega</span><span class="selo">4,9 no Google</span></div>
+    </div>
+    <div class="sobre-foto"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkcYG2j29oad2arCr_lUdTRUdY_WT0lDgZeQFXVhTSvwvPqj1BDyKE4ASCLD28uXbmxitRFKoMdNHI9yyglFeMR5xUmkKjJOPf8EzU463P42InsO7OUjZflf2g3UDrXOYgtihpGWVnEUo5D=w900-h1125-k-no" alt="Doma Trattoria" loading="lazy"></div>
+  </div>
+</section>
+
+
+
+<section class="galeria" id="galeria"><div class="wrap"><p class="eyebrow">Na mesa</p><h2>Pratos e ambiente</h2></div><div class="galeria-grid"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnmDZqJDaZ_AiiKXCew4RtYfs0gye0s4n7naMsVX0SEPZotrkraLjz09ClZGjfGwjOHvVg2AlWNFewonTNhxIzGbyXbPkEOOU18zG4UcxsohAC557ffjGuTJKts5be189Eo4uB2VYONZNk=w700-h700-k-no" alt="Doma Trattoria" loading="lazy"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkO0DZDjBz6_03z-7DY20VhSMuNG1dLurEvYWbvDQyGoVbVrecv3yQebmn6dPjEBRCf5_F0KH6ADg_CO-RuFR3dGkgCaAjOkYfAY9wbJkGnSvSLK_8PENMXgo0AAqJh401B6C1I=w700-h700-k-no" alt="Doma Trattoria" loading="lazy"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWljHx54C-XqaGiRxitp46tVI4lPKGYxHKDCp9fMCAcoYQc5sWvHqMu9u7a7zq73HD6-ljEPVQ2lXwYVAed3HgLHKU6SAR8gzOXw5j-NmUqr8eYSsBS4pQAZXUCe9YqACeSzF2Jg0g=w700-h700-k-no" alt="Doma Trattoria" loading="lazy"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWloErsH_tD6rmJKBq9IpNMVRSdfDJIGIuvnrtjQKuMpBu8QdQ6FKTkp6b8Zlha_t4eqewCICnkCCr-uZlshvj0I10B8Xf2zFL4JMoWdHncGjOmqbqlzMLre5jZaHZaVWm3IgO2GneBv-mzb=w700-h700-k-no" alt="Doma Trattoria" loading="lazy"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWljFRgy83Hbh47SXlxa1sAcYyGR8s-lhd-XByTIl707xU0nT2dYyRWOSxdny1e-5miOki4zY85uQSAmm7PIGhXGOtNDPueYGFThOOJDnsSyVDJ3plqRAB5i6hT1pj3oTQhpCJ62WpdQ0XTS=w700-h700-k-no" alt="Doma Trattoria" loading="lazy"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWntyYFNNaTUywvMVCWCPadgS6qeRwPysHxCOardqrgcKytHOGo2oeLxSJcJqlIoDr_qWwmkX9m9wOLcbGcS06bRg0TrptmDCoytZ8aH3e3aBc1WaVr7IN9a5VK17HjnqJhm20j_0CGP_CNh=w700-h700-k-no" alt="Doma Trattoria" loading="lazy"></div></section>
+
+<section class="local" id="local">
+  <div class="wrap">
+    <p class="eyebrow">Onde estamos</p>
+    <h2>R. Mess&iacute;as Pereira de Paula, 187</h2>
+    <div class="local-grid">
+      <div class="local-info">
+        <p class="endereco">R. Mess&iacute;as Pereira de Paula, 187 &mdash; Jardim Pires de Mello, Sorocaba/SP, 18046-640</p>
+        <ul><li><a href="https://www.google.com/maps/place/Doma+Trattoria/@-23.526377,-47.472152,760m" target="_blank" rel="noopener">Ver no Google Maps</a></li></ul>
+        
+      </div>
+      <div class="mapa"><iframe src="https://www.google.com/maps?q=Doma%20Trattoria%2C%20R.%20Messias%20Pereira%20de%20Paula%2C%20187%2C%20Jardim%20Pires%20de%20Mello%2C%20Sorocaba%20-%20SP&output=embed" loading="lazy" title="Mapa - Doma Trattoria" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq"><div class="wrap"><p class="eyebrow">D&uacute;vidas frequentes</p><h2>Antes de vir</h2><div class="faq-lista"><details><summary>Voc&ecirc;s fazem entrega?</summary><p>Sim. A casa atende no sal&atilde;o, com retirada na porta e com entrega.</p></details><details><summary>Onde fica?</summary><p>R. Mess&iacute;as Pereira de Paula, 187, Jardim Pires de Mello, Sorocaba.</p></details></div></div></section>
+
+<section class="cta-final">
+  <div class="wrap">
+    <p class="eyebrow">Visite</p>
+    <h2>Venha jantar na Doma</h2>
+    <p>Estamos na R. Mess&iacute;as Pereira de Paula, 187, no Jardim Pires de Mello.</p>
+    <a class="btn" href="https://www.google.com/maps/place/Doma+Trattoria/@-23.526377,-47.472152,760m" target="_blank" rel="noopener">Como chegar</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <span class="logotipo">Doma <span style='opacity:.55'>Trattoria</span></span>
+        <p style="color:var(--muted);margin-top:1rem;max-width:34ch">Trattoria italiana no Jardim Pires de Mello, Sorocaba.</p>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul><li><a href="https://www.google.com/maps/place/Doma+Trattoria/@-23.526377,-47.472152,760m" target="_blank" rel="noopener">Ver no Google Maps</a></li></ul>
+      </div>
+      <div>
+        <h4>Endere&ccedil;o</h4>
+        <ul><li>R. Mess&iacute;as Pereira de Paula, 187 &mdash; Jardim Pires de Mello, Sorocaba/SP, 18046-640</li></ul>
+      </div>
+    </div>
+    <div class="creditos">
+      <span>&copy; 2026 Doma Trattoria</span>
+      <span>Nota 4,9 com 97 avalia&ccedil;&otilde;es no Google</span>
+    </div>
+  </div>
+</footer>
+
+<a class="btn float" href="https://www.google.com/maps/place/Doma+Trattoria/@-23.526377,-47.472152,760m" target="_blank" rel="noopener">Como chegar</a>
+
+</body>
+</html>

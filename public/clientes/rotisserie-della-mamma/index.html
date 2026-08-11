@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow">
+<title>Rotisserie Della Mamma &mdash; Rotisseria em Salto</title>
+<meta name="description" content="Rotisserie Della Mamma, na Vila Teixeira, Salto. Massas, paes caseiros, doces e salgados. 273 avaliacoes no Google.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fbf7ef; --bg2:#f1eade; --fg:#181410; --muted:#6e6558;
+    --accent:#a3562f; --accent-fg:#fff9f3; --line:rgba(24,20,16,.14);
+    --display:'Cormorant Garamond',Georgia,serif; --body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .wrap{width:min(1140px,92vw);margin:0 auto}
+  h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.12;margin:0}
+  h2{font-size:clamp(1.9rem,4.2vw,3rem);letter-spacing:-.01em}
+  h3{font-size:1.18rem}
+  p{margin:0 0 1em}
+  .eyebrow{font-family:var(--body);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:0 0 .6rem;font-weight:600}
+
+  header.top{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .top-in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+  .logo{max-height:52px;width:auto;}
+  .logotipo{font-family:var(--display);font-size:1.35rem;letter-spacing:.16em;text-transform:uppercase}
+  nav.menu{display:flex;gap:26px;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
+  nav.menu a{text-decoration:none;color:var(--muted);transition:color .2s}
+  nav.menu a:hover{color:var(--fg)}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--accent);color:var(--accent-fg);padding:.85rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:600;font-size:.92rem;letter-spacing:.02em;transition:transform .18s,filter .18s;white-space:nowrap}
+  .btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+  .btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--line)}
+  .btn.sm{padding:.6rem 1.1rem;font-size:.82rem}
+
+  .hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;padding:0 0 clamp(48px,7vw,96px);overflow:hidden}
+  .hero-bg{position:absolute;inset:0;background-image:url('https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnUtynjrh59PyEa6MBUkGVb188Vh2n7qpbhVh-DtK7bOOroCjAT3z860UmVPexcDhEzFg8Rd43VGDMKFuLz8lTbb_b62Wk-Pq3iKq84GJ-JpaI_MlMZ2gzH1L3iYYuxYqNSv6hu=w1600-h900-k-no');background-size:cover;background-position:center;transform:scale(1.02)}
+  .hero-bg::after{content:"";position:absolute;inset:0;background:
+     linear-gradient(180deg,color-mix(in srgb,var(--bg) 60%,transparent) 0%,color-mix(in srgb,var(--bg) 22%,transparent) 30%,color-mix(in srgb,var(--bg) 78%,transparent) 76%,var(--bg) 100%),
+     linear-gradient(90deg,color-mix(in srgb,var(--bg) 66%,transparent) 0%,color-mix(in srgb,var(--bg) 16%,transparent) 60%,transparent 100%)}
+  .hero .wrap{position:relative;z-index:2}
+  .hero h1{font-size:clamp(2.6rem,7.4vw,5.1rem);letter-spacing:-.02em;max-width:16ch}
+  .hero .lead{font-size:clamp(1.05rem,2.2vw,1.3rem);color:var(--muted);max-width:52ch;margin-top:1.1rem}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:2rem}
+  .badge{display:inline-flex;align-items:center;gap:.55rem;border:1px solid var(--line);background:color-mix(in srgb,var(--bg) 70%,transparent);padding:.5rem 1rem;border-radius:999px;font-size:.86rem;margin-bottom:1.4rem}
+  .badge b{font-weight:700}
+  .stars{color:#c4711f;letter-spacing:.08em}
+
+  section{padding:clamp(64px,9vw,120px) 0}
+  .prova{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .prova-top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:2.6rem}
+  .nota-box{display:flex;align-items:center;gap:1.1rem}
+  .nota{font-family:var(--display);font-size:clamp(3rem,7vw,4.4rem);line-height:1}
+  .quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+  .quote{margin:0;background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:1.6rem}
+  .quote p{font-family:var(--display);font-size:1.08rem;margin:0 0 .9rem}
+  .quote figcaption{font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+  .dishes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:2.8rem}
+  .dish{background:var(--bg2);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:transform .25s,border-color .25s}
+  .dish:hover{transform:translateY(-4px);border-color:var(--accent)}
+  .dish-img{aspect-ratio:4/3;overflow:hidden}
+  .dish-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+  .dish:hover .dish-img img{transform:scale(1.06)}
+  .dish-txt{padding:1.3rem 1.4rem 1.6rem}
+  .dish-txt h3{margin-bottom:.4rem}
+  .dish-txt p{color:var(--muted);font-size:.95rem;margin:0}
+
+  .sobre-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,64px);align-items:center}
+  .sobre-txt p{color:var(--muted);font-size:1.05rem}
+  .sobre-foto img{border-radius:20px;width:100%;aspect-ratio:4/5;object-fit:cover}
+  .selos{display:flex;flex-wrap:wrap;gap:10px;margin-top:1.6rem}
+  .selo{border:1px solid var(--line);border-radius:999px;padding:.45rem 1rem;font-size:.82rem;color:var(--muted)}
+
+  .blocos{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:2.6rem}
+  .bloco{background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:1.7rem}
+  .bloco h3{margin-bottom:.55rem}
+  .bloco p{color:var(--muted);font-size:.96rem}
+  .bloco-link{display:inline-block;margin-top:.4rem;color:var(--accent);text-decoration:none;font-weight:600;font-size:.9rem}
+  .bloco-link:hover{text-decoration:underline}
+
+  .galeria-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:6px;margin-top:2.4rem}
+  .galeria-grid img{width:100%;height:100%;aspect-ratio:1/1;object-fit:cover;transition:transform .5s}
+  .galeria-grid img:hover{transform:scale(1.04)}
+
+  .local{background:var(--bg2);border-top:1px solid var(--line)}
+  .local-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,48px);align-items:start;margin-top:2.4rem}
+  .local-info li{list-style:none}
+  .local-info ul{padding:0;margin:0 0 1.6rem;display:grid;gap:.55rem}
+  .local-info a{color:var(--fg);text-decoration:none;border-bottom:1px solid var(--line)}
+  .local-info a:hover{border-color:var(--accent)}
+  .endereco{font-family:var(--display);font-size:1.25rem;margin-bottom:1.2rem}
+  .horarios ul{padding:0;margin:.6rem 0 0;display:grid;gap:.4rem}
+  .horarios li{display:flex;justify-content:space-between;gap:16px;border-bottom:1px dashed var(--line);padding-bottom:.35rem;font-size:.94rem;color:var(--muted)}
+  .mapa{border-radius:18px;overflow:hidden;border:1px solid var(--line);min-height:340px}
+  .mapa iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+
+  .faq-lista{margin-top:2rem;display:grid;gap:12px}
+  details{background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:1.1rem 1.3rem}
+  summary{cursor:pointer;font-family:var(--display);font-size:1.05rem}
+  details p{color:var(--muted);margin:.8rem 0 0}
+
+  .cta-final{text-align:center}
+  .cta-final h2{max-width:18ch;margin:0 auto 1rem}
+  .cta-final p{color:var(--muted);max-width:52ch;margin:0 auto 2rem}
+
+  footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 90px}
+  .foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:32px}
+  .foot-grid h4{font-family:var(--display);font-size:1rem;margin:0 0 .9rem;letter-spacing:.04em}
+  .foot-grid ul{padding:0;margin:0;list-style:none;display:grid;gap:.5rem;font-size:.93rem;color:var(--muted)}
+  .foot-grid a{color:var(--muted);text-decoration:none}
+  .foot-grid a:hover{color:var(--fg)}
+  .creditos{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);font-size:.8rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
+
+  .float{position:fixed;right:18px;bottom:18px;z-index:80;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+
+  @media(max-width:900px){
+    nav.menu{display:none}
+    .sobre-grid,.local-grid{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr;gap:26px}
+    .hero{min-height:88vh}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-in">
+    <span class="logotipo">Della Mamma</span>
+    <nav class="menu"><a href="#cardapio">A casa</a><a href="#sobre">Sobre</a><a href="#avaliacoes">Avalia&ccedil;&otilde;es</a><a href="#local">Localiza&ccedil;&atilde;o</a></nav>
+    <a class="btn sm" href="tel:+551140213395">Ligar e encomendar</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="wrap">
+    <div class="badge"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <b>4,5</b> &middot; 273 avalia&ccedil;&otilde;es no Google</div>
+    <p class="eyebrow">Rotisseria &middot; Vila Teixeira, Salto</p>
+    <h1>Comida de casa, pronta para levar</h1>
+    <p class="lead">Na R. Albuquerque Lins, 446. Massas, p&atilde;o caseiro, pratos doces e salgados, com muita variedade.</p>
+    <div class="hero-ctas">
+      <a class="btn" href="tel:+551140213395">Ligar e encomendar</a>
+      <a class="btn ghost" href="#cardapio">Ver a casa</a>
+    </div>
+  </div>
+</section>
+
+<section class="prova" id="avaliacoes">
+  <div class="wrap">
+    <div class="prova-top">
+      <div class="nota-box">
+        <div class="nota">4,5</div>
+        <div>
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div style="color:var(--muted);font-size:.92rem">273 avalia&ccedil;&otilde;es no Google</div>
+        </div>
+      </div>
+      <p style="color:var(--muted);max-width:44ch;margin:0">273 avalia&ccedil;&otilde;es no Google. Variedade, pre&ccedil;o e as massas s&atilde;o os pontos mais citados.</p>
+    </div>
+    <div class="quotes"><figure class="quote"><p>&ldquo;Os pre&ccedil;os s&atilde;o bons e tem muita variedade de pratos doces e salgados.&rdquo;</p><figcaption>Avalia&ccedil;&atilde;o no Google</figcaption></figure><figure class="quote"><p>&ldquo;P&atilde;o caseiro, massas excelentes, tudo gostoso.&rdquo;</p><figcaption>Avalia&ccedil;&atilde;o no Google</figcaption></figure><figure class="quote"><p>&ldquo;Sempre h&aacute; produtos para degusta&ccedil;&atilde;o enquanto se espera.&rdquo;</p><figcaption>Avalia&ccedil;&atilde;o no Google</figcaption></figure></div>
+  </div>
+</section>
+
+<section id="cardapio">
+  <div class="wrap">
+    <p class="eyebrow">O que preparamos</p>
+    <h2>Massas, p&atilde;es e a vitrine</h2>
+    <div class="dishes"><article class="dish"><div class="dish-img"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmd1oZsij-tgDHngbZYLvdUC7t-QmmR_uAyVGMG7Q2z6MbeUGC-OechVGlZtw0rSsM9lbWAO75On1ok0EXUiUOxEJLvlwXWau7BlI4W7Jysg8cqAG2uXEzksSf1aSZKKtExa8xj=w900-h675-k-no" alt="Massas" loading="lazy"></div><div class="dish-txt"><h3>Massas</h3><p>Massas elogiadas nominalmente nas avalia&ccedil;&otilde;es do Google.</p></div></article><article class="dish"><div class="dish-img"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmcCn40hR99MaYcuB-BlX9_1R-wb8nc6ZiIHiMiTZN_mOVZrapiYurwOFRbq6HITxomyIERPlTjMh5bieYzbgO8LMLfDyJR3KGLUTh2si1nyKtiPZWcgrlJcGKHBTdVnofvtPT6=w900-h675-k-no" alt="P&atilde;o caseiro" loading="lazy"></div><div class="dish-txt"><h3>P&atilde;o caseiro</h3><p>P&atilde;o feito na casa, citado pelos clientes.</p></div></article><article class="dish"><div class="dish-img"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlQKZah8NIabV2ycv00cvuMqLUja4_ljN6zv2PyYGoalh48r6d3gUF0IubscbHwTEWVOPO7BuSOLCstzX8O9aUu0lTNkUNBa4KnHSD7chPKR2MWOt4YhK0ra5dPZc768ayOlzrx=w900-h675-k-no" alt="Doces e salgados" loading="lazy"></div><div class="dish-txt"><h3>Doces e salgados</h3><p>Grande variedade de pratos doces e salgados na vitrine.</p></div></article><article class="dish"><div class="dish-img"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnUtynjrh59PyEa6MBUkGVb188Vh2n7qpbhVh-DtK7bOOroCjAT3z860UmVPexcDhEzFg8Rd43VGDMKFuLz8lTbb_b62Wk-Pq3iKq84GJ-JpaI_MlMZ2gzH1L3iYYuxYqNSv6hu=w900-h675-k-no" alt="Para viagem" loading="lazy"></div><div class="dish-txt"><h3>Para viagem</h3><p>Comida pronta para levar, al&eacute;m do atendimento no local.</p></div></article></div>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="wrap sobre-grid">
+    <div class="sobre-txt">
+      <p class="eyebrow">A casa</p>
+      <h2>Rotisseria na Vila Teixeira</h2>
+      <div style="margin-top:1.4rem"><p>A Rotisserie Della Mamma fica na R. Albuquerque Lins, 446, na Vila Teixeira, em Salto.</p><p>S&atilde;o 273 avalia&ccedil;&otilde;es no Google, com destaque para as massas, o p&atilde;o caseiro e a variedade da vitrine.</p></div>
+      <div class="selos"><span class="selo">Massas</span><span class="selo">P&atilde;o caseiro</span><span class="selo">Doces e salgados</span><span class="selo">Para viagem</span></div>
+    </div>
+    <div class="sobre-foto"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlQKZah8NIabV2ycv00cvuMqLUja4_ljN6zv2PyYGoalh48r6d3gUF0IubscbHwTEWVOPO7BuSOLCstzX8O9aUu0lTNkUNBa4KnHSD7chPKR2MWOt4YhK0ra5dPZc768ayOlzrx=w900-h1125-k-no" alt="Rotisserie Della Mamma" loading="lazy"></div>
+  </div>
+</section>
+
+
+
+<section class="galeria" id="galeria"><div class="wrap"><p class="eyebrow">Na vitrine</p><h2>O que sai da cozinha</h2></div><div class="galeria-grid"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmd1oZsij-tgDHngbZYLvdUC7t-QmmR_uAyVGMG7Q2z6MbeUGC-OechVGlZtw0rSsM9lbWAO75On1ok0EXUiUOxEJLvlwXWau7BlI4W7Jysg8cqAG2uXEzksSf1aSZKKtExa8xj=w700-h700-k-no" alt="Rotisserie Della Mamma" loading="lazy"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmcCn40hR99MaYcuB-BlX9_1R-wb8nc6ZiIHiMiTZN_mOVZrapiYurwOFRbq6HITxomyIERPlTjMh5bieYzbgO8LMLfDyJR3KGLUTh2si1nyKtiPZWcgrlJcGKHBTdVnofvtPT6=w700-h700-k-no" alt="Rotisserie Della Mamma" loading="lazy"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlQKZah8NIabV2ycv00cvuMqLUja4_ljN6zv2PyYGoalh48r6d3gUF0IubscbHwTEWVOPO7BuSOLCstzX8O9aUu0lTNkUNBa4KnHSD7chPKR2MWOt4YhK0ra5dPZc768ayOlzrx=w700-h700-k-no" alt="Rotisserie Della Mamma" loading="lazy"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnUtynjrh59PyEa6MBUkGVb188Vh2n7qpbhVh-DtK7bOOroCjAT3z860UmVPexcDhEzFg8Rd43VGDMKFuLz8lTbb_b62Wk-Pq3iKq84GJ-JpaI_MlMZ2gzH1L3iYYuxYqNSv6hu=w700-h700-k-no" alt="Rotisserie Della Mamma" loading="lazy"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmd1oZsij-tgDHngbZYLvdUC7t-QmmR_uAyVGMG7Q2z6MbeUGC-OechVGlZtw0rSsM9lbWAO75On1ok0EXUiUOxEJLvlwXWau7BlI4W7Jysg8cqAG2uXEzksSf1aSZKKtExa8xj=w700-h700-k-no" alt="Rotisserie Della Mamma" loading="lazy"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmcCn40hR99MaYcuB-BlX9_1R-wb8nc6ZiIHiMiTZN_mOVZrapiYurwOFRbq6HITxomyIERPlTjMh5bieYzbgO8LMLfDyJR3KGLUTh2si1nyKtiPZWcgrlJcGKHBTdVnofvtPT6=w700-h700-k-no" alt="Rotisserie Della Mamma" loading="lazy"></div></section>
+
+<section class="local" id="local">
+  <div class="wrap">
+    <p class="eyebrow">Onde estamos</p>
+    <h2>R. Albuquerque Lins, 446</h2>
+    <div class="local-grid">
+      <div class="local-info">
+        <p class="endereco">R. Albuquerque Lins, 446 &mdash; Vila Teixeira, Salto/SP, 13320-340</p>
+        <ul><li><a href="tel:+551140213395">(11) 4021-3395</a></li></ul>
+        
+      </div>
+      <div class="mapa"><iframe src="https://www.google.com/maps?q=Rotisserie%20Della%20Mamma%2C%20R.%20Albuquerque%20Lins%2C%20446%2C%20Vila%20Teixeira%2C%20Salto%20-%20SP&output=embed" loading="lazy" title="Mapa - Rotisserie Della Mamma" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq"><div class="wrap"><p class="eyebrow">D&uacute;vidas frequentes</p><h2>Antes de vir</h2><div class="faq-lista"><details><summary>Voc&ecirc;s fazem encomenda?</summary><p>Fale pelo telefone (11) 4021-3395 para encomendas e informa&ccedil;&otilde;es.</p></details><details><summary>D&aacute; para levar pronto?</summary><p>Sim, a casa &eacute; uma rotisseria: a comida sai pronta para levar.</p></details></div></div></section>
+
+<section class="cta-final">
+  <div class="wrap">
+    <p class="eyebrow">Encomendas</p>
+    <h2>Fale com a Della Mamma</h2>
+    <p>Ligue para (11) 4021-3395 para encomendar ou tirar d&uacute;vidas.</p>
+    <a class="btn" href="tel:+551140213395">Ligar e encomendar</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <span class="logotipo">Della Mamma</span>
+        <p style="color:var(--muted);margin-top:1rem;max-width:34ch">Rotisseria na Vila Teixeira, Salto.</p>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul><li><a href="tel:+551140213395">(11) 4021-3395</a></li></ul>
+      </div>
+      <div>
+        <h4>Endere&ccedil;o</h4>
+        <ul><li>R. Albuquerque Lins, 446 &mdash; Vila Teixeira, Salto/SP, 13320-340</li></ul>
+      </div>
+    </div>
+    <div class="creditos">
+      <span>&copy; 2026 Rotisserie Della Mamma</span>
+      <span>Nota 4,5 com 273 avalia&ccedil;&otilde;es no Google</span>
+    </div>
+  </div>
+</footer>
+
+<a class="btn float" href="tel:+551140213395">Ligar</a>
+
+</body>
+</html>

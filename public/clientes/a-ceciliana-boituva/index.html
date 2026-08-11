@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow">
+<title>A Ceciliana &mdash; Restaurante e rotisseria em Boituva</title>
+<meta name="description" content="A Ceciliana, na Praca Santa Cruz, centro de Boituva. Pratos salgados, doces e a torta de morango elogiada pelos clientes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#faf6ef; --bg2:#f0e9df; --fg:#17140f; --muted:#6d6458;
+    --accent:#a4562c; --accent-fg:#fff8f3; --line:rgba(23,20,15,.14);
+    --display:'Playfair Display',Georgia,serif; --body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .wrap{width:min(1140px,92vw);margin:0 auto}
+  h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.12;margin:0}
+  h2{font-size:clamp(1.9rem,4.2vw,3rem);letter-spacing:-.01em}
+  h3{font-size:1.18rem}
+  p{margin:0 0 1em}
+  .eyebrow{font-family:var(--body);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:0 0 .6rem;font-weight:600}
+
+  header.top{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .top-in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+  .logo{max-height:52px;width:auto;}
+  .logotipo{font-family:var(--display);font-size:1.35rem;letter-spacing:.16em;text-transform:uppercase}
+  nav.menu{display:flex;gap:26px;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
+  nav.menu a{text-decoration:none;color:var(--muted);transition:color .2s}
+  nav.menu a:hover{color:var(--fg)}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--accent);color:var(--accent-fg);padding:.85rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:600;font-size:.92rem;letter-spacing:.02em;transition:transform .18s,filter .18s;white-space:nowrap}
+  .btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+  .btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--line)}
+  .btn.sm{padding:.6rem 1.1rem;font-size:.82rem}
+
+  .hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;padding:0 0 clamp(48px,7vw,96px);overflow:hidden}
+  .hero-bg{position:absolute;inset:0;background-image:url('https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm0wipkfSNPfPIrHqXvBezVKr2EjIG0rlcR7SPu0UaSl9Y-g73gKrDR9Fdy0sZ6GxT52jrf-QJJgp2YgIplN49UKzd7cwBKxaI4ZOYuFS1Y_txkLXON9Uv2zWLUK6U88Bi8H2XJ=w1600-h900-k-no');background-size:cover;background-position:center;transform:scale(1.02)}
+  .hero-bg::after{content:"";position:absolute;inset:0;background:
+     linear-gradient(180deg,color-mix(in srgb,var(--bg) 60%,transparent) 0%,color-mix(in srgb,var(--bg) 22%,transparent) 30%,color-mix(in srgb,var(--bg) 78%,transparent) 76%,var(--bg) 100%),
+     linear-gradient(90deg,color-mix(in srgb,var(--bg) 66%,transparent) 0%,color-mix(in srgb,var(--bg) 16%,transparent) 60%,transparent 100%)}
+  .hero .wrap{position:relative;z-index:2}
+  .hero h1{font-size:clamp(2.6rem,7.4vw,5.1rem);letter-spacing:-.02em;max-width:16ch}
+  .hero .lead{font-size:clamp(1.05rem,2.2vw,1.3rem);color:var(--muted);max-width:52ch;margin-top:1.1rem}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:2rem}
+  .badge{display:inline-flex;align-items:center;gap:.55rem;border:1px solid var(--line);background:color-mix(in srgb,var(--bg) 70%,transparent);padding:.5rem 1rem;border-radius:999px;font-size:.86rem;margin-bottom:1.4rem}
+  .badge b{font-weight:700}
+  .stars{color:#c4711f;letter-spacing:.08em}
+
+  section{padding:clamp(64px,9vw,120px) 0}
+  .prova{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .prova-top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:2.6rem}
+  .nota-box{display:flex;align-items:center;gap:1.1rem}
+  .nota{font-family:var(--display);font-size:clamp(3rem,7vw,4.4rem);line-height:1}
+  .quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+  .quote{margin:0;background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:1.6rem}
+  .quote p{font-family:var(--display);font-size:1.08rem;margin:0 0 .9rem}
+  .quote figcaption{font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+  .dishes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:2.8rem}
+  .dish{background:var(--bg2);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:transform .25s,border-color .25s}
+  .dish:hover{transform:translateY(-4px);border-color:var(--accent)}
+  .dish-img{aspect-ratio:4/3;overflow:hidden}
+  .dish-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+  .dish:hover .dish-img img{transform:scale(1.06)}
+  .dish-txt{padding:1.3rem 1.4rem 1.6rem}
+  .dish-txt h3{margin-bottom:.4rem}
+  .dish-txt p{color:var(--muted);font-size:.95rem;margin:0}
+
+  .sobre-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,64px);align-items:center}
+  .sobre-txt p{color:var(--muted);font-size:1.05rem}
+  .sobre-foto img{border-radius:20px;width:100%;aspect-ratio:4/5;object-fit:cover}
+  .selos{display:flex;flex-wrap:wrap;gap:10px;margin-top:1.6rem}
+  .selo{border:1px solid var(--line);border-radius:999px;padding:.45rem 1rem;font-size:.82rem;color:var(--muted)}
+
+  .blocos{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:2.6rem}
+  .bloco{background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:1.7rem}
+  .bloco h3{margin-bottom:.55rem}
+  .bloco p{color:var(--muted);font-size:.96rem}
+  .bloco-link{display:inline-block;margin-top:.4rem;color:var(--accent);text-decoration:none;font-weight:600;font-size:.9rem}
+  .bloco-link:hover{text-decoration:underline}
+
+  .galeria-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:6px;margin-top:2.4rem}
+  .galeria-grid img{width:100%;height:100%;aspect-ratio:1/1;object-fit:cover;transition:transform .5s}
+  .galeria-grid img:hover{transform:scale(1.04)}
+
+  .local{background:var(--bg2);border-top:1px solid var(--line)}
+  .local-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,48px);align-items:start;margin-top:2.4rem}
+  .local-info li{list-style:none}
+  .local-info ul{padding:0;margin:0 0 1.6rem;display:grid;gap:.55rem}
+  .local-info a{color:var(--fg);text-decoration:none;border-bottom:1px solid var(--line)}
+  .local-info a:hover{border-color:var(--accent)}
+  .endereco{font-family:var(--display);font-size:1.25rem;margin-bottom:1.2rem}
+  .horarios ul{padding:0;margin:.6rem 0 0;display:grid;gap:.4rem}
+  .horarios li{display:flex;justify-content:space-between;gap:16px;border-bottom:1px dashed var(--line);padding-bottom:.35rem;font-size:.94rem;color:var(--muted)}
+  .mapa{border-radius:18px;overflow:hidden;border:1px solid var(--line);min-height:340px}
+  .mapa iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+
+  .faq-lista{margin-top:2rem;display:grid;gap:12px}
+  details{background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:1.1rem 1.3rem}
+  summary{cursor:pointer;font-family:var(--display);font-size:1.05rem}
+  details p{color:var(--muted);margin:.8rem 0 0}
+
+  .cta-final{text-align:center}
+  .cta-final h2{max-width:18ch;margin:0 auto 1rem}
+  .cta-final p{color:var(--muted);max-width:52ch;margin:0 auto 2rem}
+
+  footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 90px}
+  .foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:32px}
+  .foot-grid h4{font-family:var(--display);font-size:1rem;margin:0 0 .9rem;letter-spacing:.04em}
+  .foot-grid ul{padding:0;margin:0;list-style:none;display:grid;gap:.5rem;font-size:.93rem;color:var(--muted)}
+  .foot-grid a{color:var(--muted);text-decoration:none}
+  .foot-grid a:hover{color:var(--fg)}
+  .creditos{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);font-size:.8rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
+
+  .float{position:fixed;right:18px;bottom:18px;z-index:80;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+
+  @media(max-width:900px){
+    nav.menu{display:none}
+    .sobre-grid,.local-grid{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr;gap:26px}
+    .hero{min-height:88vh}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-in">
+    <span class="logotipo">A Ceciliana</span>
+    <nav class="menu"><a href="#cardapio">A casa</a><a href="#sobre">Sobre</a><a href="#avaliacoes">Avalia&ccedil;&otilde;es</a><a href="#local">Localiza&ccedil;&atilde;o</a></nav>
+    <a class="btn sm" href="tel:+551532635257">Ligar e pedir</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="wrap">
+    <div class="badge"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <b>4,6</b> &middot; 180 avalia&ccedil;&otilde;es no Google</div>
+    <p class="eyebrow">Restaurante &middot; Centro de Boituva</p>
+    <h1>Comida de casa na Pra&ccedil;a Santa Cruz</h1>
+    <p class="lead">No centro de Boituva, com uma variedade grande de pratos salgados e doces. Para comer aqui, levar ou receber em casa.</p>
+    <div class="hero-ctas">
+      <a class="btn" href="tel:+551532635257">Ligar e pedir</a>
+      <a class="btn ghost" href="#cardapio">Ver a casa</a>
+    </div>
+  </div>
+</section>
+
+<section class="prova" id="avaliacoes">
+  <div class="wrap">
+    <div class="prova-top">
+      <div class="nota-box">
+        <div class="nota">4,6</div>
+        <div>
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div style="color:var(--muted);font-size:.92rem">180 avalia&ccedil;&otilde;es no Google</div>
+        </div>
+      </div>
+      <p style="color:var(--muted);max-width:44ch;margin:0">180 avalia&ccedil;&otilde;es no Google. A variedade e o atendimento aparecem citados junto com a famosa torta de morango.</p>
+    </div>
+    <div class="quotes"><figure class="quote"><p>&ldquo;&Oacute;tima comida, &oacute;timo frango, a melhor torta de morango e um atendimento excelente.&rdquo;</p><figcaption>Avalia&ccedil;&atilde;o no Google</figcaption></figure><figure class="quote"><p>&ldquo;Uma variedade incr&iacute;vel de pratos salgados e doces.&rdquo;</p><figcaption>Avalia&ccedil;&atilde;o no Google</figcaption></figure><figure class="quote"><p>&ldquo;Comida caseira bem feita, no centro de Boituva.&rdquo;</p><figcaption>Avalia&ccedil;&atilde;o no Google</figcaption></figure></div>
+  </div>
+</section>
+
+<section id="cardapio">
+  <div class="wrap">
+    <p class="eyebrow">O que servimos</p>
+    <h2>Salgados, doces e a torta</h2>
+    <div class="dishes"><article class="dish"><div class="dish-img"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk91NR-ei9quhNAFsYbXvMYUnRxM3x4pUMy5VRyikWgNSQaclMv69L46vhTDlXuPtDWK8VP9LbuFJcWdvfeCjcmz-vmMhvRNfFGxeEHOtGAWaoNqxcSAeW9mLaa9a-QSZLbt7ufog7c_1Be=w900-h675-k-no" alt="Pratos salgados" loading="lazy"></div><div class="dish-txt"><h3>Pratos salgados</h3><p>Variedade de pratos, com o frango entre os mais elogiados pelos clientes.</p></div></article><article class="dish"><div class="dish-img"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnyNR6Lxe8r9gEoA612zjXmJvfpJcuvBGJyb0tu9YI1XeTkkTgtjY3-fNVF1SxmwYWVGnriNfsKd5WCU_QE-K_pexVznH27mTF_cJBW6VI26wKQJhHd_aVS9OgC-BDzHxGh_qo9Pg=w900-h675-k-no" alt="Doces e a torta de morango" loading="lazy"></div><div class="dish-txt"><h3>Doces e a torta de morango</h3><p>A torta de morango &eacute; citada nominalmente nas avalia&ccedil;&otilde;es do Google.</p></div></article><article class="dish"><div class="dish-img"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmIRhu8yC7Eh0yTFWrLBwNEWAUzVdm2eHmGpgaijTF_EYu6wJbPU6K0HBpk_JGa2Z4iG7ZQkPXnK5cEWvoYWOKuxR22Oy4WauMBxX5gB1B3tZUFAgG26govgGYSZAfPtkjyqcfVSG4xxptV=w900-h675-k-no" alt="Para viagem" loading="lazy"></div><div class="dish-txt"><h3>Para viagem</h3><p>D&aacute; para levar, al&eacute;m de comer no sal&atilde;o.</p></div></article><article class="dish"><div class="dish-img"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlb45g55HmfytcZSe7a1eSy9KjXqisDBSlgEdOGchhNNgwzOiX1SW7u3wpIGML8UfcFuTVi2a6RvS5dFGbdCX8rPrZPm8px3-ZiBHDE58uaA7Z2FDNHsP4W6ZT0VpRPS6e55sE1=w900-h675-k-no" alt="Entrega" loading="lazy"></div><div class="dish-txt"><h3>Entrega</h3><p>A casa tamb&eacute;m atende com entrega.</p></div></article></div>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="wrap sobre-grid">
+    <div class="sobre-txt">
+      <p class="eyebrow">A casa</p>
+      <h2>No centro de Boituva</h2>
+      <div style="margin-top:1.4rem"><p>A Ceciliana fica na Pra&ccedil;a Santa Cruz, 35A, no centro de Boituva.</p><p>A casa atende no sal&atilde;o, para viagem e com entrega, e tem nota 4,6 no Google.</p></div>
+      <div class="selos"><span class="selo">Pratos salgados e doces</span><span class="selo">Para viagem</span><span class="selo">Entrega</span><span class="selo">Centro de Boituva</span></div>
+    </div>
+    <div class="sobre-foto"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnyNR6Lxe8r9gEoA612zjXmJvfpJcuvBGJyb0tu9YI1XeTkkTgtjY3-fNVF1SxmwYWVGnriNfsKd5WCU_QE-K_pexVznH27mTF_cJBW6VI26wKQJhHd_aVS9OgC-BDzHxGh_qo9Pg=w900-h1125-k-no" alt="A Ceciliana" loading="lazy"></div>
+  </div>
+</section>
+
+
+
+<section class="galeria" id="galeria"><div class="wrap"><p class="eyebrow">Na vitrine</p><h2>O que preparamos</h2></div><div class="galeria-grid"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlb45g55HmfytcZSe7a1eSy9KjXqisDBSlgEdOGchhNNgwzOiX1SW7u3wpIGML8UfcFuTVi2a6RvS5dFGbdCX8rPrZPm8px3-ZiBHDE58uaA7Z2FDNHsP4W6ZT0VpRPS6e55sE1=w700-h700-k-no" alt="A Ceciliana" loading="lazy"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk91NR-ei9quhNAFsYbXvMYUnRxM3x4pUMy5VRyikWgNSQaclMv69L46vhTDlXuPtDWK8VP9LbuFJcWdvfeCjcmz-vmMhvRNfFGxeEHOtGAWaoNqxcSAeW9mLaa9a-QSZLbt7ufog7c_1Be=w700-h700-k-no" alt="A Ceciliana" loading="lazy"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnyNR6Lxe8r9gEoA612zjXmJvfpJcuvBGJyb0tu9YI1XeTkkTgtjY3-fNVF1SxmwYWVGnriNfsKd5WCU_QE-K_pexVznH27mTF_cJBW6VI26wKQJhHd_aVS9OgC-BDzHxGh_qo9Pg=w700-h700-k-no" alt="A Ceciliana" loading="lazy"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmIRhu8yC7Eh0yTFWrLBwNEWAUzVdm2eHmGpgaijTF_EYu6wJbPU6K0HBpk_JGa2Z4iG7ZQkPXnK5cEWvoYWOKuxR22Oy4WauMBxX5gB1B3tZUFAgG26govgGYSZAfPtkjyqcfVSG4xxptV=w700-h700-k-no" alt="A Ceciliana" loading="lazy"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm0wipkfSNPfPIrHqXvBezVKr2EjIG0rlcR7SPu0UaSl9Y-g73gKrDR9Fdy0sZ6GxT52jrf-QJJgp2YgIplN49UKzd7cwBKxaI4ZOYuFS1Y_txkLXON9Uv2zWLUK6U88Bi8H2XJ=w700-h700-k-no" alt="A Ceciliana" loading="lazy"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk91NR-ei9quhNAFsYbXvMYUnRxM3x4pUMy5VRyikWgNSQaclMv69L46vhTDlXuPtDWK8VP9LbuFJcWdvfeCjcmz-vmMhvRNfFGxeEHOtGAWaoNqxcSAeW9mLaa9a-QSZLbt7ufog7c_1Be=w700-h700-k-no" alt="A Ceciliana" loading="lazy"></div></section>
+
+<section class="local" id="local">
+  <div class="wrap">
+    <p class="eyebrow">Onde estamos</p>
+    <h2>Pra&ccedil;a Santa Cruz, 35A</h2>
+    <div class="local-grid">
+      <div class="local-info">
+        <p class="endereco">Pra&ccedil;a Santa Cruz, 35A &mdash; Centro, Boituva/SP, 18550-000</p>
+        <ul><li><a href="tel:+551532635257">(15) 3263-5257</a></li></ul>
+        
+      </div>
+      <div class="mapa"><iframe src="https://www.google.com/maps?q=A%20Ceciliana%2C%20Praca%20Santa%20Cruz%2C%2035A%2C%20Centro%2C%20Boituva%20-%20SP&output=embed" loading="lazy" title="Mapa - A Ceciliana" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq"><div class="wrap"><p class="eyebrow">D&uacute;vidas frequentes</p><h2>Antes de vir</h2><div class="faq-lista"><details><summary>Voc&ecirc;s entregam?</summary><p>Sim. A casa atende no sal&atilde;o, para viagem e com entrega.</p></details><details><summary>Como fa&ccedil;o um pedido?</summary><p>Pelo telefone (15) 3263-5257.</p></details></div></div></section>
+
+<section class="cta-final">
+  <div class="wrap">
+    <p class="eyebrow">Pedidos</p>
+    <h2>Fa&ccedil;a seu pedido</h2>
+    <p>Ligue para (15) 3263-5257 para pedir ou encomendar.</p>
+    <a class="btn" href="tel:+551532635257">Ligar e pedir</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <span class="logotipo">A Ceciliana</span>
+        <p style="color:var(--muted);margin-top:1rem;max-width:34ch">Restaurante e rotisseria no centro de Boituva.</p>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul><li><a href="tel:+551532635257">(15) 3263-5257</a></li></ul>
+      </div>
+      <div>
+        <h4>Endere&ccedil;o</h4>
+        <ul><li>Pra&ccedil;a Santa Cruz, 35A &mdash; Centro, Boituva/SP, 18550-000</li></ul>
+      </div>
+    </div>
+    <div class="creditos">
+      <span>&copy; 2026 A Ceciliana</span>
+      <span>Nota 4,6 com 180 avalia&ccedil;&otilde;es no Google</span>
+    </div>
+  </div>
+</footer>
+
+<a class="btn float" href="tel:+551532635257">Ligar</a>
+
+</body>
+</html>

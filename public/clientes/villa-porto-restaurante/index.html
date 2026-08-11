@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow">
+<title>Villa Porto Restaurante &mdash; Restaurante em Porto Feliz</title>
+<meta name="description" content="Villa Porto Restaurante, na R. Ademar de Barros, Porto Feliz. Pratos quentes e frios com boa variedade. 205 avaliacoes no Google.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#faf7f1; --bg2:#f0eae0; --fg:#17140f; --muted:#6d6558;
+    --accent:#8a6a2f; --accent-fg:#fff9f3; --line:rgba(23,20,15,.14);
+    --display:'Playfair Display',Georgia,serif; --body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .wrap{width:min(1140px,92vw);margin:0 auto}
+  h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.12;margin:0}
+  h2{font-size:clamp(1.9rem,4.2vw,3rem);letter-spacing:-.01em}
+  h3{font-size:1.18rem}
+  p{margin:0 0 1em}
+  .eyebrow{font-family:var(--body);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:0 0 .6rem;font-weight:600}
+
+  header.top{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .top-in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+  .logo{max-height:52px;width:auto;}
+  .logotipo{font-family:var(--display);font-size:1.35rem;letter-spacing:.16em;text-transform:uppercase}
+  nav.menu{display:flex;gap:26px;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
+  nav.menu a{text-decoration:none;color:var(--muted);transition:color .2s}
+  nav.menu a:hover{color:var(--fg)}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--accent);color:var(--accent-fg);padding:.85rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:600;font-size:.92rem;letter-spacing:.02em;transition:transform .18s,filter .18s;white-space:nowrap}
+  .btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+  .btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--line)}
+  .btn.sm{padding:.6rem 1.1rem;font-size:.82rem}
+
+  .hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;padding:0 0 clamp(48px,7vw,96px);overflow:hidden}
+  .hero-bg{position:absolute;inset:0;background-image:url('https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmSIRjtWRhNMW4KLbcbpA1aH7QOGptx4e3iMAnnN4swAxH9iD3fAEfZdFn6T9td_XSPvfi3nWCcpigUhM2jYILWmU8ed_UJXRbxaojlCUymOPskAZ6FhL-agkQYIKxk015ZqmPY=w1600-h900-k-no');background-size:cover;background-position:center;transform:scale(1.02)}
+  .hero-bg::after{content:"";position:absolute;inset:0;background:
+     linear-gradient(180deg,color-mix(in srgb,var(--bg) 60%,transparent) 0%,color-mix(in srgb,var(--bg) 22%,transparent) 30%,color-mix(in srgb,var(--bg) 78%,transparent) 76%,var(--bg) 100%),
+     linear-gradient(90deg,color-mix(in srgb,var(--bg) 66%,transparent) 0%,color-mix(in srgb,var(--bg) 16%,transparent) 60%,transparent 100%)}
+  .hero .wrap{position:relative;z-index:2}
+  .hero h1{font-size:clamp(2.6rem,7.4vw,5.1rem);letter-spacing:-.02em;max-width:16ch}
+  .hero .lead{font-size:clamp(1.05rem,2.2vw,1.3rem);color:var(--muted);max-width:52ch;margin-top:1.1rem}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:2rem}
+  .badge{display:inline-flex;align-items:center;gap:.55rem;border:1px solid var(--line);background:color-mix(in srgb,var(--bg) 70%,transparent);padding:.5rem 1rem;border-radius:999px;font-size:.86rem;margin-bottom:1.4rem}
+  .badge b{font-weight:700}
+  .stars{color:#c4711f;letter-spacing:.08em}
+
+  section{padding:clamp(64px,9vw,120px) 0}
+  .prova{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .prova-top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:2.6rem}
+  .nota-box{display:flex;align-items:center;gap:1.1rem}
+  .nota{font-family:var(--display);font-size:clamp(3rem,7vw,4.4rem);line-height:1}
+  .quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+  .quote{margin:0;background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:1.6rem}
+  .quote p{font-family:var(--display);font-size:1.08rem;margin:0 0 .9rem}
+  .quote figcaption{font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+  .dishes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:2.8rem}
+  .dish{background:var(--bg2);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:transform .25s,border-color .25s}
+  .dish:hover{transform:translateY(-4px);border-color:var(--accent)}
+  .dish-img{aspect-ratio:4/3;overflow:hidden}
+  .dish-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+  .dish:hover .dish-img img{transform:scale(1.06)}
+  .dish-txt{padding:1.3rem 1.4rem 1.6rem}
+  .dish-txt h3{margin-bottom:.4rem}
+  .dish-txt p{color:var(--muted);font-size:.95rem;margin:0}
+
+  .sobre-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,64px);align-items:center}
+  .sobre-txt p{color:var(--muted);font-size:1.05rem}
+  .sobre-foto img{border-radius:20px;width:100%;aspect-ratio:4/5;object-fit:cover}
+  .selos{display:flex;flex-wrap:wrap;gap:10px;margin-top:1.6rem}
+  .selo{border:1px solid var(--line);border-radius:999px;padding:.45rem 1rem;font-size:.82rem;color:var(--muted)}
+
+  .blocos{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:2.6rem}
+  .bloco{background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:1.7rem}
+  .bloco h3{margin-bottom:.55rem}
+  .bloco p{color:var(--muted);font-size:.96rem}
+  .bloco-link{display:inline-block;margin-top:.4rem;color:var(--accent);text-decoration:none;font-weight:600;font-size:.9rem}
+  .bloco-link:hover{text-decoration:underline}
+
+  .galeria-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:6px;margin-top:2.4rem}
+  .galeria-grid img{width:100%;height:100%;aspect-ratio:1/1;object-fit:cover;transition:transform .5s}
+  .galeria-grid img:hover{transform:scale(1.04)}
+
+  .local{background:var(--bg2);border-top:1px solid var(--line)}
+  .local-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,48px);align-items:start;margin-top:2.4rem}
+  .local-info li{list-style:none}
+  .local-info ul{padding:0;margin:0 0 1.6rem;display:grid;gap:.55rem}
+  .local-info a{color:var(--fg);text-decoration:none;border-bottom:1px solid var(--line)}
+  .local-info a:hover{border-color:var(--accent)}
+  .endereco{font-family:var(--display);font-size:1.25rem;margin-bottom:1.2rem}
+  .horarios ul{padding:0;margin:.6rem 0 0;display:grid;gap:.4rem}
+  .horarios li{display:flex;justify-content:space-between;gap:16px;border-bottom:1px dashed var(--line);padding-bottom:.35rem;font-size:.94rem;color:var(--muted)}
+  .mapa{border-radius:18px;overflow:hidden;border:1px solid var(--line);min-height:340px}
+  .mapa iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+
+  .faq-lista{margin-top:2rem;display:grid;gap:12px}
+  details{background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:1.1rem 1.3rem}
+  summary{cursor:pointer;font-family:var(--display);font-size:1.05rem}
+  details p{color:var(--muted);margin:.8rem 0 0}
+
+  .cta-final{text-align:center}
+  .cta-final h2{max-width:18ch;margin:0 auto 1rem}
+  .cta-final p{color:var(--muted);max-width:52ch;margin:0 auto 2rem}
+
+  footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 90px}
+  .foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:32px}
+  .foot-grid h4{font-family:var(--display);font-size:1rem;margin:0 0 .9rem;letter-spacing:.04em}
+  .foot-grid ul{padding:0;margin:0;list-style:none;display:grid;gap:.5rem;font-size:.93rem;color:var(--muted)}
+  .foot-grid a{color:var(--muted);text-decoration:none}
+  .foot-grid a:hover{color:var(--fg)}
+  .creditos{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);font-size:.8rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
+
+  .float{position:fixed;right:18px;bottom:18px;z-index:80;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+
+  @media(max-width:900px){
+    nav.menu{display:none}
+    .sobre-grid,.local-grid{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr;gap:26px}
+    .hero{min-height:88vh}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-in">
+    <span class="logotipo">Villa Porto</span>
+    <nav class="menu"><a href="#cardapio">A casa</a><a href="#sobre">Sobre</a><a href="#avaliacoes">Avalia&ccedil;&otilde;es</a><a href="#local">Localiza&ccedil;&atilde;o</a></nav>
+    <a class="btn sm" href="tel:+551532616289">Ligar para a casa</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="wrap">
+    <div class="badge"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <b>4,5</b> &middot; 205 avalia&ccedil;&otilde;es no Google</div>
+    <p class="eyebrow">Restaurante &middot; Porto Feliz</p>
+    <h1>Almo&ccedil;o com variedade, em Porto Feliz</h1>
+    <p class="lead">Na R. Ademar de Barros, 345. Pratos quentes e frios com boa variedade, servi&ccedil;o atencioso e pre&ccedil;o adequado.</p>
+    <div class="hero-ctas">
+      <a class="btn" href="tel:+551532616289">Ligar para a casa</a>
+      <a class="btn ghost" href="#cardapio">Ver a casa</a>
+    </div>
+  </div>
+</section>
+
+<section class="prova" id="avaliacoes">
+  <div class="wrap">
+    <div class="prova-top">
+      <div class="nota-box">
+        <div class="nota">4,5</div>
+        <div>
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div style="color:var(--muted);font-size:.92rem">205 avalia&ccedil;&otilde;es no Google</div>
+        </div>
+      </div>
+      <p style="color:var(--muted);max-width:44ch;margin:0">205 avalia&ccedil;&otilde;es no Google. Variedade, sabor e pre&ccedil;o adequado s&atilde;o os pontos que mais se repetem.</p>
+    </div>
+    <div class="quotes"><figure class="quote"><p>&ldquo;Comida boa, ambiente bom e com bom servi&ccedil;o, pre&ccedil;o adequado, v&aacute;rias op&ccedil;&otilde;es.&rdquo;</p><figcaption>Avalia&ccedil;&atilde;o no Google</figcaption></figure><figure class="quote"><p>&ldquo;Comida muito saborosa, com variedades de pratos quentes e frios.&rdquo;</p><figcaption>Avalia&ccedil;&atilde;o no Google</figcaption></figure><figure class="quote"><p>&ldquo;Almo&ccedil;o maravilhoso, muitas op&ccedil;&otilde;es.&rdquo;</p><figcaption>Avalia&ccedil;&atilde;o no Google</figcaption></figure></div>
+  </div>
+</section>
+
+<section id="cardapio">
+  <div class="wrap">
+    <p class="eyebrow">O que servimos</p>
+    <h2>Pratos quentes, frios e sobremesa</h2>
+    <div class="dishes"><article class="dish"><div class="dish-img"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWloKf0MWgO7BUVODEuF6EPUO3EfHwhLqxjcljTCRIjtROHwHRJ6I9fcjArcmj9wj2dyMDCSlUyNL3JcuxcsSh80nx8KBRKu96zjSsDQ_JO-mwYc1sObQnBX7rC4s0myokXwS9vO8Q=w900-h675-k-no" alt="Pratos quentes" loading="lazy"></div><div class="dish-txt"><h3>Pratos quentes</h3><p>Variedade de pratos quentes no buffet do dia.</p></div></article><article class="dish"><div class="dish-img"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmxWa_uBzrA0sn9GF2zbHUvbGO4hhyPKjKgdwLeHxSWxktIG-LN6MW3X_BwiXMnEBERlQOYZViND4y-aenzrP4RpR2sqA0jJsVpq_VcI0p4l00zvN4ncFxLudI9ypTU-wwlDq49JQ=w900-h675-k-no" alt="Saladas e frios" loading="lazy"></div><div class="dish-txt"><h3>Saladas e frios</h3><p>Op&ccedil;&otilde;es frias e saladas, citadas junto com os pratos quentes.</p></div></article><article class="dish"><div class="dish-img"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkl00SKIIKTQNGG5MxcMaHJpYp7x60tNZxFaoR5V2A5ccC9GH6Pjx0UT08DtSipzK7-3aRlqY_U3TsVph4O7mlLKca8YndUi4Vwn5StDq96Oyv_ejH1wack1VgVhikwPwHqR150=w900-h675-k-no" alt="Almo&ccedil;o do dia a dia" loading="lazy"></div><div class="dish-txt"><h3>Almo&ccedil;o do dia a dia</h3><p>Casa pensada para quem almo&ccedil;a fora durante a semana.</p></div></article><article class="dish"><div class="dish-img"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmSIRjtWRhNMW4KLbcbpA1aH7QOGptx4e3iMAnnN4swAxH9iD3fAEfZdFn6T9td_XSPvfi3nWCcpigUhM2jYILWmU8ed_UJXRbxaojlCUymOPskAZ6FhL-agkQYIKxk015ZqmPY=w900-h675-k-no" alt="Sal&atilde;o" loading="lazy"></div><div class="dish-txt"><h3>Sal&atilde;o</h3><p>Ambiente elogiado pelos clientes junto com o servi&ccedil;o.</p></div></article></div>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="wrap sobre-grid">
+    <div class="sobre-txt">
+      <p class="eyebrow">A casa</p>
+      <h2>No centro de Porto Feliz</h2>
+      <div style="margin-top:1.4rem"><p>O Villa Porto fica na R. Ademar de Barros, 345, em Porto Feliz.</p><p>S&atilde;o 205 avalia&ccedil;&otilde;es no Google, com destaque para a variedade de pratos e o atendimento.</p></div>
+      <div class="selos"><span class="selo">Pratos quentes e frios</span><span class="selo">Almo&ccedil;o</span><span class="selo">Porto Feliz</span><span class="selo">205 avalia&ccedil;&otilde;es</span></div>
+    </div>
+    <div class="sobre-foto"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkl00SKIIKTQNGG5MxcMaHJpYp7x60tNZxFaoR5V2A5ccC9GH6Pjx0UT08DtSipzK7-3aRlqY_U3TsVph4O7mlLKca8YndUi4Vwn5StDq96Oyv_ejH1wack1VgVhikwPwHqR150=w900-h1125-k-no" alt="Villa Porto Restaurante" loading="lazy"></div>
+  </div>
+</section>
+
+
+
+<section class="galeria" id="galeria"><div class="wrap"><p class="eyebrow">No buffet</p><h2>O que servimos</h2></div><div class="galeria-grid"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkl00SKIIKTQNGG5MxcMaHJpYp7x60tNZxFaoR5V2A5ccC9GH6Pjx0UT08DtSipzK7-3aRlqY_U3TsVph4O7mlLKca8YndUi4Vwn5StDq96Oyv_ejH1wack1VgVhikwPwHqR150=w700-h700-k-no" alt="Villa Porto Restaurante" loading="lazy"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWloKf0MWgO7BUVODEuF6EPUO3EfHwhLqxjcljTCRIjtROHwHRJ6I9fcjArcmj9wj2dyMDCSlUyNL3JcuxcsSh80nx8KBRKu96zjSsDQ_JO-mwYc1sObQnBX7rC4s0myokXwS9vO8Q=w700-h700-k-no" alt="Villa Porto Restaurante" loading="lazy"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmxWa_uBzrA0sn9GF2zbHUvbGO4hhyPKjKgdwLeHxSWxktIG-LN6MW3X_BwiXMnEBERlQOYZViND4y-aenzrP4RpR2sqA0jJsVpq_VcI0p4l00zvN4ncFxLudI9ypTU-wwlDq49JQ=w700-h700-k-no" alt="Villa Porto Restaurante" loading="lazy"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmSIRjtWRhNMW4KLbcbpA1aH7QOGptx4e3iMAnnN4swAxH9iD3fAEfZdFn6T9td_XSPvfi3nWCcpigUhM2jYILWmU8ed_UJXRbxaojlCUymOPskAZ6FhL-agkQYIKxk015ZqmPY=w700-h700-k-no" alt="Villa Porto Restaurante" loading="lazy"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWloKf0MWgO7BUVODEuF6EPUO3EfHwhLqxjcljTCRIjtROHwHRJ6I9fcjArcmj9wj2dyMDCSlUyNL3JcuxcsSh80nx8KBRKu96zjSsDQ_JO-mwYc1sObQnBX7rC4s0myokXwS9vO8Q=w700-h700-k-no" alt="Villa Porto Restaurante" loading="lazy"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmxWa_uBzrA0sn9GF2zbHUvbGO4hhyPKjKgdwLeHxSWxktIG-LN6MW3X_BwiXMnEBERlQOYZViND4y-aenzrP4RpR2sqA0jJsVpq_VcI0p4l00zvN4ncFxLudI9ypTU-wwlDq49JQ=w700-h700-k-no" alt="Villa Porto Restaurante" loading="lazy"></div></section>
+
+<section class="local" id="local">
+  <div class="wrap">
+    <p class="eyebrow">Onde estamos</p>
+    <h2>R. Ademar de Barros, 345</h2>
+    <div class="local-grid">
+      <div class="local-info">
+        <p class="endereco">R. Ademar de Barros, 345 &mdash; Porto Feliz/SP, 18540-000</p>
+        <ul><li><a href="tel:+551532616289">(15) 3261-6289</a></li></ul>
+        
+      </div>
+      <div class="mapa"><iframe src="https://www.google.com/maps?q=VILLA%20PORTO%20RESTAURANTE%2C%20R.%20Ademar%20de%20Barros%2C%20345%2C%20Porto%20Feliz%20-%20SP&output=embed" loading="lazy" title="Mapa - Villa Porto Restaurante" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq"><div class="wrap"><p class="eyebrow">D&uacute;vidas frequentes</p><h2>Antes de vir</h2><div class="faq-lista"><details><summary>Como falo com voc&ecirc;s?</summary><p>Pelo telefone (15) 3261-6289.</p></details><details><summary>Onde fica?</summary><p>R. Ademar de Barros, 345, em Porto Feliz.</p></details></div></div></section>
+
+<section class="cta-final">
+  <div class="wrap">
+    <p class="eyebrow">Contato</p>
+    <h2>Venha almo&ccedil;ar no Villa Porto</h2>
+    <p>Ligue para (15) 3261-6289 para reservas de grupo e informa&ccedil;&otilde;es.</p>
+    <a class="btn" href="tel:+551532616289">Ligar para a casa</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <span class="logotipo">Villa Porto</span>
+        <p style="color:var(--muted);margin-top:1rem;max-width:34ch">Restaurante em Porto Feliz.</p>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul><li><a href="tel:+551532616289">(15) 3261-6289</a></li></ul>
+      </div>
+      <div>
+        <h4>Endere&ccedil;o</h4>
+        <ul><li>R. Ademar de Barros, 345 &mdash; Porto Feliz/SP, 18540-000</li></ul>
+      </div>
+    </div>
+    <div class="creditos">
+      <span>&copy; 2026 Villa Porto Restaurante</span>
+      <span>Nota 4,5 com 205 avalia&ccedil;&otilde;es no Google</span>
+    </div>
+  </div>
+</footer>
+
+<a class="btn float" href="tel:+551532616289">Ligar</a>
+
+</body>
+</html>

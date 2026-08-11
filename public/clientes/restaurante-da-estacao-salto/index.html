@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow">
+<title>Restaurante da Esta&ccedil;&atilde;o &mdash; Na Esta&ccedil;&atilde;o Ferrovi&aacute;ria de Salto</title>
+<meta name="description" content="Restaurante da Estacao, dentro da Estacao Ferroviaria de Salto. Cardapio variado, porcoes e lanches.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#12100e; --bg2:#1a1714; --fg:#f5f0e8; --muted:#a99e91;
+    --accent:#9a6b34; --accent-fg:#fff8f0; --line:rgba(245,240,232,.15);
+    --display:'Playfair Display',Georgia,serif; --body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .wrap{width:min(1140px,92vw);margin:0 auto}
+  h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.12;margin:0}
+  h2{font-size:clamp(1.9rem,4.2vw,3rem);letter-spacing:-.01em}
+  h3{font-size:1.18rem}
+  p{margin:0 0 1em}
+  .eyebrow{font-family:var(--body);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:0 0 .6rem;font-weight:600}
+
+  header.top{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .top-in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+  .logo{max-height:52px;width:auto;}
+  .logotipo{font-family:var(--display);font-size:1.35rem;letter-spacing:.16em;text-transform:uppercase}
+  nav.menu{display:flex;gap:26px;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
+  nav.menu a{text-decoration:none;color:var(--muted);transition:color .2s}
+  nav.menu a:hover{color:var(--fg)}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--accent);color:var(--accent-fg);padding:.85rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:600;font-size:.92rem;letter-spacing:.02em;transition:transform .18s,filter .18s;white-space:nowrap}
+  .btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+  .btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--line)}
+  .btn.sm{padding:.6rem 1.1rem;font-size:.82rem}
+
+  .hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;padding:0 0 clamp(48px,7vw,96px);overflow:hidden}
+  .hero-bg{position:absolute;inset:0;background-image:url('https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmjICWcrWjEAxeFp1P_IlNLDzs-GbVBHUBUZpo8vX0dkoelhfoq6SaBu-9H8e8mx0Ytqoe06iZFlxQ4oFpH80MufDvzgakWEdNIqks3VvQreo-i7OD0MZg-12PVHIAS7QaqvkzF5dxse18j=w1600-h900-k-no');background-size:cover;background-position:center;transform:scale(1.02)}
+  .hero-bg::after{content:"";position:absolute;inset:0;background:
+     linear-gradient(180deg,color-mix(in srgb,var(--bg) 60%,transparent) 0%,color-mix(in srgb,var(--bg) 22%,transparent) 30%,color-mix(in srgb,var(--bg) 78%,transparent) 76%,var(--bg) 100%),
+     linear-gradient(90deg,color-mix(in srgb,var(--bg) 66%,transparent) 0%,color-mix(in srgb,var(--bg) 16%,transparent) 60%,transparent 100%)}
+  .hero .wrap{position:relative;z-index:2}
+  .hero h1{font-size:clamp(2.6rem,7.4vw,5.1rem);letter-spacing:-.02em;max-width:16ch}
+  .hero .lead{font-size:clamp(1.05rem,2.2vw,1.3rem);color:var(--muted);max-width:52ch;margin-top:1.1rem}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:2rem}
+  .badge{display:inline-flex;align-items:center;gap:.55rem;border:1px solid var(--line);background:color-mix(in srgb,var(--bg) 70%,transparent);padding:.5rem 1rem;border-radius:999px;font-size:.86rem;margin-bottom:1.4rem}
+  .badge b{font-weight:700}
+  .stars{color:#dfae55;letter-spacing:.08em}
+
+  section{padding:clamp(64px,9vw,120px) 0}
+  .prova{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .prova-top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:2.6rem}
+  .nota-box{display:flex;align-items:center;gap:1.1rem}
+  .nota{font-family:var(--display);font-size:clamp(3rem,7vw,4.4rem);line-height:1}
+  .quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+  .quote{margin:0;background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:1.6rem}
+  .quote p{font-family:var(--display);font-size:1.08rem;margin:0 0 .9rem}
+  .quote figcaption{font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+  .dishes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:2.8rem}
+  .dish{background:var(--bg2);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:transform .25s,border-color .25s}
+  .dish:hover{transform:translateY(-4px);border-color:var(--accent)}
+  .dish-img{aspect-ratio:4/3;overflow:hidden}
+  .dish-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+  .dish:hover .dish-img img{transform:scale(1.06)}
+  .dish-txt{padding:1.3rem 1.4rem 1.6rem}
+  .dish-txt h3{margin-bottom:.4rem}
+  .dish-txt p{color:var(--muted);font-size:.95rem;margin:0}
+
+  .sobre-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,64px);align-items:center}
+  .sobre-txt p{color:var(--muted);font-size:1.05rem}
+  .sobre-foto img{border-radius:20px;width:100%;aspect-ratio:4/5;object-fit:cover}
+  .selos{display:flex;flex-wrap:wrap;gap:10px;margin-top:1.6rem}
+  .selo{border:1px solid var(--line);border-radius:999px;padding:.45rem 1rem;font-size:.82rem;color:var(--muted)}
+
+  .blocos{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:2.6rem}
+  .bloco{background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:1.7rem}
+  .bloco h3{margin-bottom:.55rem}
+  .bloco p{color:var(--muted);font-size:.96rem}
+  .bloco-link{display:inline-block;margin-top:.4rem;color:var(--accent);text-decoration:none;font-weight:600;font-size:.9rem}
+  .bloco-link:hover{text-decoration:underline}
+
+  .galeria-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:6px;margin-top:2.4rem}
+  .galeria-grid img{width:100%;height:100%;aspect-ratio:1/1;object-fit:cover;transition:transform .5s}
+  .galeria-grid img:hover{transform:scale(1.04)}
+
+  .local{background:var(--bg2);border-top:1px solid var(--line)}
+  .local-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,48px);align-items:start;margin-top:2.4rem}
+  .local-info li{list-style:none}
+  .local-info ul{padding:0;margin:0 0 1.6rem;display:grid;gap:.55rem}
+  .local-info a{color:var(--fg);text-decoration:none;border-bottom:1px solid var(--line)}
+  .local-info a:hover{border-color:var(--accent)}
+  .endereco{font-family:var(--display);font-size:1.25rem;margin-bottom:1.2rem}
+  .horarios ul{padding:0;margin:.6rem 0 0;display:grid;gap:.4rem}
+  .horarios li{display:flex;justify-content:space-between;gap:16px;border-bottom:1px dashed var(--line);padding-bottom:.35rem;font-size:.94rem;color:var(--muted)}
+  .mapa{border-radius:18px;overflow:hidden;border:1px solid var(--line);min-height:340px}
+  .mapa iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+
+  .faq-lista{margin-top:2rem;display:grid;gap:12px}
+  details{background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:1.1rem 1.3rem}
+  summary{cursor:pointer;font-family:var(--display);font-size:1.05rem}
+  details p{color:var(--muted);margin:.8rem 0 0}
+
+  .cta-final{text-align:center}
+  .cta-final h2{max-width:18ch;margin:0 auto 1rem}
+  .cta-final p{color:var(--muted);max-width:52ch;margin:0 auto 2rem}
+
+  footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 90px}
+  .foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:32px}
+  .foot-grid h4{font-family:var(--display);font-size:1rem;margin:0 0 .9rem;letter-spacing:.04em}
+  .foot-grid ul{padding:0;margin:0;list-style:none;display:grid;gap:.5rem;font-size:.93rem;color:var(--muted)}
+  .foot-grid a{color:var(--muted);text-decoration:none}
+  .foot-grid a:hover{color:var(--fg)}
+  .creditos{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);font-size:.8rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
+
+  .float{position:fixed;right:18px;bottom:18px;z-index:80;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+
+  @media(max-width:900px){
+    nav.menu{display:none}
+    .sobre-grid,.local-grid{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr;gap:26px}
+    .hero{min-height:88vh}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-in">
+    <span class="logotipo">Restaurante <span style='opacity:.55'>da Esta&ccedil;&atilde;o</span></span>
+    <nav class="menu"><a href="#cardapio">A casa</a><a href="#sobre">Sobre</a><a href="#avaliacoes">Avalia&ccedil;&otilde;es</a><a href="#local">Localiza&ccedil;&atilde;o</a></nav>
+    <a class="btn sm" href="https://wa.me/5511936209712?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20reservar%20uma%20mesa%20no%20Restaurante%20da%20Esta%C3%A7%C3%A3o." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="wrap">
+    <div class="badge"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <b>4,3</b> &middot; 125 avalia&ccedil;&otilde;es no Google</div>
+    <p class="eyebrow">Restaurante &middot; Esta&ccedil;&atilde;o Ferrovi&aacute;ria de Salto</p>
+    <h1>Comer dentro da Esta&ccedil;&atilde;o Ferrovi&aacute;ria de Salto</h1>
+    <p class="lead">Na Av. Aimor&eacute;s, 2, dentro da antiga esta&ccedil;&atilde;o. Card&aacute;pio variado de pratos, lanches, por&ccedil;&otilde;es e bebidas.</p>
+    <div class="hero-ctas">
+      <a class="btn" href="https://wa.me/5511936209712?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20reservar%20uma%20mesa%20no%20Restaurante%20da%20Esta%C3%A7%C3%A3o." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+      <a class="btn ghost" href="#cardapio">Ver a casa</a>
+    </div>
+  </div>
+</section>
+
+<section class="prova" id="avaliacoes">
+  <div class="wrap">
+    <div class="prova-top">
+      <div class="nota-box">
+        <div class="nota">4,3</div>
+        <div>
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div style="color:var(--muted);font-size:.92rem">125 avalia&ccedil;&otilde;es no Google</div>
+        </div>
+      </div>
+      <p style="color:var(--muted);max-width:44ch;margin:0">125 avalia&ccedil;&otilde;es no Google. A parmegiana de frango e o atendimento dos gar&ccedil;ons s&atilde;o citados nominalmente.</p>
+    </div>
+    <div class="quotes"><figure class="quote"><p>&ldquo;Card&aacute;pio variado de comida, lanches, por&ccedil;&otilde;es e bebidas.&rdquo;</p><figcaption>Avalia&ccedil;&atilde;o no Google</figcaption></figure><figure class="quote"><p>&ldquo;O prato de parmegiana de frango &eacute; sensacional, &oacute;timo sabor e temperatura.&rdquo;</p><figcaption>Avalia&ccedil;&atilde;o no Google</figcaption></figure><figure class="quote"><p>&ldquo;Comida boa, gar&ccedil;ons muito prestativos.&rdquo;</p><figcaption>Avalia&ccedil;&atilde;o no Google</figcaption></figure></div>
+  </div>
+</section>
+
+<section id="cardapio">
+  <div class="wrap">
+    <p class="eyebrow">O que servimos</p>
+    <h2>Pratos, por&ccedil;&otilde;es e lanches</h2>
+    <div class="dishes"><article class="dish"><div class="dish-img"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnGajCiN7zcB2BKvXE5S1vQDbUkg1bZQSwunKdxMWmiqVrnK5o0ewAfBTl9lRhAGwl_ziQJg-aPMjNqUwEdq5Asb2RuhZJJUFS4TCcfzLfLmJMvQ9bDJTM7D8ngktWFoFmwYW-EyVAYxo0=w900-h675-k-no" alt="Pratos do card&aacute;pio" loading="lazy"></div><div class="dish-txt"><h3>Pratos do card&aacute;pio</h3><p>A parmegiana de frango aparece como destaque nas avalia&ccedil;&otilde;es dos clientes.</p></div></article><article class="dish"><div class="dish-img"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmGLI8Na-P2z5Skp828qTBORtgQxpGGiY6-qmAteC8CLNTz_PHPsV_d0zvoKonU079uBfYO4FA3CzDVWOkx1-uTTfN24UBftl5rsaoC9ACrVkAEokliKNN9qQBTA6tr3dR_FGO5=w900-h675-k-no" alt="Por&ccedil;&otilde;es e lanches" loading="lazy"></div><div class="dish-txt"><h3>Por&ccedil;&otilde;es e lanches</h3><p>Op&ccedil;&otilde;es para dividir na mesa, junto com as bebidas.</p></div></article><article class="dish"><div class="dish-img"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlkPfAVIyJwQHlIvR7b5oSOYqux5OsuqwmoTgWRn8zsTNe8DlvcYEWkytJmwqIZB1mwW1_NdEFXQ-o9_Rq1EqTYl5I8tmdFWKQpPSAiCITbr-LhCGHKhN3yEynJBEsFITUS4wAKKLIHQpY=w900-h675-k-no" alt="Sal&atilde;o na esta&ccedil;&atilde;o" loading="lazy"></div><div class="dish-txt"><h3>Sal&atilde;o na esta&ccedil;&atilde;o</h3><p>A casa funciona dentro da Esta&ccedil;&atilde;o Ferrovi&aacute;ria de Salto.</p></div></article><article class="dish"><div class="dish-img"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmjICWcrWjEAxeFp1P_IlNLDzs-GbVBHUBUZpo8vX0dkoelhfoq6SaBu-9H8e8mx0Ytqoe06iZFlxQ4oFpH80MufDvzgakWEdNIqks3VvQreo-i7OD0MZg-12PVHIAS7QaqvkzF5dxse18j=w900-h675-k-no" alt="Atendimento" loading="lazy"></div><div class="dish-txt"><h3>Atendimento</h3><p>Gar&ccedil;ons descritos pelos clientes como prestativos.</p></div></article></div>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="wrap sobre-grid">
+    <div class="sobre-txt">
+      <p class="eyebrow">A casa</p>
+      <h2>Dentro da antiga esta&ccedil;&atilde;o</h2>
+      <div style="margin-top:1.4rem"><p>O Restaurante da Esta&ccedil;&atilde;o funciona na Esta&ccedil;&atilde;o Ferrovi&aacute;ria de Salto, na Av. Aimor&eacute;s, 2.</p><p>O card&aacute;pio &eacute; variado, com pratos, lanches, por&ccedil;&otilde;es e bebidas, e a casa soma 125 avalia&ccedil;&otilde;es no Google.</p></div>
+      <div class="selos"><span class="selo">Card&aacute;pio variado</span><span class="selo">Por&ccedil;&otilde;es e lanches</span><span class="selo">Esta&ccedil;&atilde;o Ferrovi&aacute;ria</span><span class="selo">125 avalia&ccedil;&otilde;es</span></div>
+    </div>
+    <div class="sobre-foto"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmGLI8Na-P2z5Skp828qTBORtgQxpGGiY6-qmAteC8CLNTz_PHPsV_d0zvoKonU079uBfYO4FA3CzDVWOkx1-uTTfN24UBftl5rsaoC9ACrVkAEokliKNN9qQBTA6tr3dR_FGO5=w900-h1125-k-no" alt="Restaurante da Esta&ccedil;&atilde;o" loading="lazy"></div>
+  </div>
+</section>
+
+
+
+<section class="galeria" id="galeria"><div class="wrap"><p class="eyebrow">Na mesa</p><h2>O que sai da cozinha</h2></div><div class="galeria-grid"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmjICWcrWjEAxeFp1P_IlNLDzs-GbVBHUBUZpo8vX0dkoelhfoq6SaBu-9H8e8mx0Ytqoe06iZFlxQ4oFpH80MufDvzgakWEdNIqks3VvQreo-i7OD0MZg-12PVHIAS7QaqvkzF5dxse18j=w700-h700-k-no" alt="Restaurante da Esta&ccedil;&atilde;o" loading="lazy"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnGajCiN7zcB2BKvXE5S1vQDbUkg1bZQSwunKdxMWmiqVrnK5o0ewAfBTl9lRhAGwl_ziQJg-aPMjNqUwEdq5Asb2RuhZJJUFS4TCcfzLfLmJMvQ9bDJTM7D8ngktWFoFmwYW-EyVAYxo0=w700-h700-k-no" alt="Restaurante da Esta&ccedil;&atilde;o" loading="lazy"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmGLI8Na-P2z5Skp828qTBORtgQxpGGiY6-qmAteC8CLNTz_PHPsV_d0zvoKonU079uBfYO4FA3CzDVWOkx1-uTTfN24UBftl5rsaoC9ACrVkAEokliKNN9qQBTA6tr3dR_FGO5=w700-h700-k-no" alt="Restaurante da Esta&ccedil;&atilde;o" loading="lazy"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlkPfAVIyJwQHlIvR7b5oSOYqux5OsuqwmoTgWRn8zsTNe8DlvcYEWkytJmwqIZB1mwW1_NdEFXQ-o9_Rq1EqTYl5I8tmdFWKQpPSAiCITbr-LhCGHKhN3yEynJBEsFITUS4wAKKLIHQpY=w700-h700-k-no" alt="Restaurante da Esta&ccedil;&atilde;o" loading="lazy"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnGajCiN7zcB2BKvXE5S1vQDbUkg1bZQSwunKdxMWmiqVrnK5o0ewAfBTl9lRhAGwl_ziQJg-aPMjNqUwEdq5Asb2RuhZJJUFS4TCcfzLfLmJMvQ9bDJTM7D8ngktWFoFmwYW-EyVAYxo0=w700-h700-k-no" alt="Restaurante da Esta&ccedil;&atilde;o" loading="lazy"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmjICWcrWjEAxeFp1P_IlNLDzs-GbVBHUBUZpo8vX0dkoelhfoq6SaBu-9H8e8mx0Ytqoe06iZFlxQ4oFpH80MufDvzgakWEdNIqks3VvQreo-i7OD0MZg-12PVHIAS7QaqvkzF5dxse18j=w700-h700-k-no" alt="Restaurante da Esta&ccedil;&atilde;o" loading="lazy"></div></section>
+
+<section class="local" id="local">
+  <div class="wrap">
+    <p class="eyebrow">Onde estamos</p>
+    <h2>Av. Aimor&eacute;s, 2</h2>
+    <div class="local-grid">
+      <div class="local-info">
+        <p class="endereco">Esta&ccedil;&atilde;o Ferrovi&aacute;ria de Salto &mdash; Av. Aimor&eacute;s, 2, Salto/SP, 13323-165</p>
+        <ul><li><a href="https://wa.me/5511936209712?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20reservar%20uma%20mesa%20no%20Restaurante%20da%20Esta%C3%A7%C3%A3o." target="_blank" rel="noopener">WhatsApp (11) 93620-9712</a></li><li><a href="tel:+5511936209712">Ligar (11) 93620-9712</a></li></ul>
+        
+      </div>
+      <div class="mapa"><iframe src="https://www.google.com/maps?q=Restaurante%20da%20Estacao%2C%20Av.%20Aimores%2C%202%2C%20Estacao%2C%20Salto%20-%20SP&output=embed" loading="lazy" title="Mapa - Restaurante da Esta&ccedil;&atilde;o" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq"><div class="wrap"><p class="eyebrow">D&uacute;vidas frequentes</p><h2>Antes de vir</h2><div class="faq-lista"><details><summary>Como reservo?</summary><p>Pelo WhatsApp (11) 93620-9712.</p></details><details><summary>Onde fica exatamente?</summary><p>Dentro da Esta&ccedil;&atilde;o Ferrovi&aacute;ria de Salto, na Av. Aimor&eacute;s, 2.</p></details></div></div></section>
+
+<section class="cta-final">
+  <div class="wrap">
+    <p class="eyebrow">Reservas</p>
+    <h2>Sua mesa na Esta&ccedil;&atilde;o</h2>
+    <p>Chame no WhatsApp (11) 93620-9712 e reserve sua mesa.</p>
+    <a class="btn" href="https://wa.me/5511936209712?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20reservar%20uma%20mesa%20no%20Restaurante%20da%20Esta%C3%A7%C3%A3o." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <span class="logotipo">Restaurante <span style='opacity:.55'>da Esta&ccedil;&atilde;o</span></span>
+        <p style="color:var(--muted);margin-top:1rem;max-width:34ch">Restaurante na Esta&ccedil;&atilde;o Ferrovi&aacute;ria de Salto.</p>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul><li><a href="https://wa.me/5511936209712?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20reservar%20uma%20mesa%20no%20Restaurante%20da%20Esta%C3%A7%C3%A3o." target="_blank" rel="noopener">WhatsApp (11) 93620-9712</a></li><li><a href="tel:+5511936209712">Ligar (11) 93620-9712</a></li></ul>
+      </div>
+      <div>
+        <h4>Endere&ccedil;o</h4>
+        <ul><li>Esta&ccedil;&atilde;o Ferrovi&aacute;ria de Salto &mdash; Av. Aimor&eacute;s, 2, Salto/SP, 13323-165</li></ul>
+      </div>
+    </div>
+    <div class="creditos">
+      <span>&copy; 2026 Restaurante da Esta&ccedil;&atilde;o</span>
+      <span>Nota 4,3 com 125 avalia&ccedil;&otilde;es no Google</span>
+    </div>
+  </div>
+</footer>
+
+<a class="btn float" href="https://wa.me/5511936209712?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20reservar%20uma%20mesa%20no%20Restaurante%20da%20Esta%C3%A7%C3%A3o." target="_blank" rel="noopener">WhatsApp</a>
+
+</body>
+</html>
