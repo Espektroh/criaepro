@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow">
+<title>Villa Napolitana Campolim &mdash; Pizzaria no Parque Campolim, Sorocaba</title>
+<meta name="description" content="Villa Napolitana Campolim: pizzas de longa fermenta&ccedil;&atilde;o e borda gratinada de parmes&atilde;o, h&aacute; 11 anos em Sorocaba. 4,9 no Google em 623 avalia&ccedil;&otilde;es.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0f0e0e; --bg2:#191616; --fg:#f8f3ea; --muted:#a89f95;
+    --accent:#d4232a; --accent-fg:#fff6f2; --line:rgba(248,243,234,.14);
+    --display:'Archivo Black',Impact,sans-serif; --body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .wrap{width:min(1140px,92vw);margin:0 auto}
+  h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.12;margin:0}
+  h2{font-size:clamp(1.9rem,4.2vw,3rem);letter-spacing:-.01em}
+  h3{font-size:1.18rem}
+  p{margin:0 0 1em}
+  .eyebrow{font-family:var(--body);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:0 0 .6rem;font-weight:600}
+
+  header.top{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .top-in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+  .logo{max-height:76px;width:auto;background:#fff;padding:6px 10px;border-radius:14px}
+  .logotipo{font-family:var(--display);font-size:1.35rem;letter-spacing:.16em;text-transform:uppercase}
+  nav.menu{display:flex;gap:26px;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
+  nav.menu a{text-decoration:none;color:var(--muted);transition:color .2s}
+  nav.menu a:hover{color:var(--fg)}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--accent);color:var(--accent-fg);padding:.85rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:600;font-size:.92rem;letter-spacing:.02em;transition:transform .18s,filter .18s;white-space:nowrap}
+  .btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+  .btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--line)}
+  .btn.sm{padding:.6rem 1.1rem;font-size:.82rem}
+
+  .hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;padding:0 0 clamp(48px,7vw,96px);overflow:hidden}
+  .hero-bg{position:absolute;inset:0;background-image:url('https://files.greatpages.com.br/arquivos/paginas_editor/32525-619910b94ea9a0d5f6a442c0f408288b.webp');background-size:cover;background-position:center;transform:scale(1.02)}
+  .hero-bg::after{content:"";position:absolute;inset:0;background:
+     linear-gradient(180deg,color-mix(in srgb,var(--bg) 60%,transparent) 0%,color-mix(in srgb,var(--bg) 22%,transparent) 30%,color-mix(in srgb,var(--bg) 78%,transparent) 76%,var(--bg) 100%),
+     linear-gradient(90deg,color-mix(in srgb,var(--bg) 66%,transparent) 0%,color-mix(in srgb,var(--bg) 16%,transparent) 60%,transparent 100%)}
+  .hero .wrap{position:relative;z-index:2}
+  .hero h1{font-size:clamp(2.6rem,7.4vw,5.1rem);letter-spacing:-.02em;max-width:16ch}
+  .hero .lead{font-size:clamp(1.05rem,2.2vw,1.3rem);color:var(--muted);max-width:52ch;margin-top:1.1rem}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:2rem}
+  .badge{display:inline-flex;align-items:center;gap:.55rem;border:1px solid var(--line);background:color-mix(in srgb,var(--bg) 70%,transparent);padding:.5rem 1rem;border-radius:999px;font-size:.86rem;margin-bottom:1.4rem}
+  .badge b{font-weight:700}
+  .stars{color:#f0b429;letter-spacing:.08em}
+
+  section{padding:clamp(64px,9vw,120px) 0}
+  .prova{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .prova-top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:2.6rem}
+  .nota-box{display:flex;align-items:center;gap:1.1rem}
+  .nota{font-family:var(--display);font-size:clamp(3rem,7vw,4.4rem);line-height:1}
+  .quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+  .quote{margin:0;background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:1.6rem}
+  .quote p{font-family:var(--display);font-size:1.08rem;margin:0 0 .9rem}
+  .quote figcaption{font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+  .dishes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:2.8rem}
+  .dish{background:var(--bg2);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:transform .25s,border-color .25s}
+  .dish:hover{transform:translateY(-4px);border-color:var(--accent)}
+  .dish-img{aspect-ratio:4/3;overflow:hidden}
+  .dish-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+  .dish:hover .dish-img img{transform:scale(1.06)}
+  .dish-txt{padding:1.3rem 1.4rem 1.6rem}
+  .dish-txt h3{margin-bottom:.4rem}
+  .dish-txt p{color:var(--muted);font-size:.95rem;margin:0}
+
+  .sobre-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,64px);align-items:center}
+  .sobre-txt p{color:var(--muted);font-size:1.05rem}
+  .sobre-foto img{border-radius:20px;width:100%;aspect-ratio:4/5;object-fit:cover}
+  .selos{display:flex;flex-wrap:wrap;gap:10px;margin-top:1.6rem}
+  .selo{border:1px solid var(--line);border-radius:999px;padding:.45rem 1rem;font-size:.82rem;color:var(--muted)}
+
+  .blocos{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:2.6rem}
+  .bloco{background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:1.7rem}
+  .bloco h3{margin-bottom:.55rem}
+  .bloco p{color:var(--muted);font-size:.96rem}
+  .bloco-link{display:inline-block;margin-top:.4rem;color:var(--accent);text-decoration:none;font-weight:600;font-size:.9rem}
+  .bloco-link:hover{text-decoration:underline}
+
+  .galeria-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:6px;margin-top:2.4rem}
+  .galeria-grid img{width:100%;height:100%;aspect-ratio:1/1;object-fit:cover;transition:transform .5s}
+  .galeria-grid img:hover{transform:scale(1.04)}
+
+  .local{background:var(--bg2);border-top:1px solid var(--line)}
+  .local-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,48px);align-items:start;margin-top:2.4rem}
+  .local-info li{list-style:none}
+  .local-info ul{padding:0;margin:0 0 1.6rem;display:grid;gap:.55rem}
+  .local-info a{color:var(--fg);text-decoration:none;border-bottom:1px solid var(--line)}
+  .local-info a:hover{border-color:var(--accent)}
+  .endereco{font-family:var(--display);font-size:1.25rem;margin-bottom:1.2rem}
+  .horarios ul{padding:0;margin:.6rem 0 0;display:grid;gap:.4rem}
+  .horarios li{display:flex;justify-content:space-between;gap:16px;border-bottom:1px dashed var(--line);padding-bottom:.35rem;font-size:.94rem;color:var(--muted)}
+  .mapa{border-radius:18px;overflow:hidden;border:1px solid var(--line);min-height:340px}
+  .mapa iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+
+  .faq-lista{margin-top:2rem;display:grid;gap:12px}
+  details{background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:1.1rem 1.3rem}
+  summary{cursor:pointer;font-family:var(--display);font-size:1.05rem}
+  details p{color:var(--muted);margin:.8rem 0 0}
+
+  .cta-final{text-align:center}
+  .cta-final h2{max-width:18ch;margin:0 auto 1rem}
+  .cta-final p{color:var(--muted);max-width:52ch;margin:0 auto 2rem}
+
+  footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 90px}
+  .foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:32px}
+  .foot-grid h4{font-family:var(--display);font-size:1rem;margin:0 0 .9rem;letter-spacing:.04em}
+  .foot-grid ul{padding:0;margin:0;list-style:none;display:grid;gap:.5rem;font-size:.93rem;color:var(--muted)}
+  .foot-grid a{color:var(--muted);text-decoration:none}
+  .foot-grid a:hover{color:var(--fg)}
+  .creditos{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);font-size:.8rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
+
+  .float{position:fixed;right:18px;bottom:18px;z-index:80;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+
+  @media(max-width:900px){
+    nav.menu{display:none}
+    .sobre-grid,.local-grid{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr;gap:26px}
+    .hero{min-height:88vh}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-in">
+    <img class="logo" src="https://pages.greatpages.com.br/www.villanapolitana.com.br/1785378590/imagens/desktop/32525-c964b81ef5c830041e31ed859ecdebe2.png" alt="Villa Napolitana Campolim">
+    <nav class="menu"><a href="#cardapio">A pizza</a><a href="#sobre">Sobre</a><a href="#avaliacoes">Avalia&ccedil;&otilde;es</a><a href="#local">Localiza&ccedil;&atilde;o</a></nav>
+    <a class="btn sm" href="https://wa.me/5515988259147?text=Ol%C3%A1,%20gostaria%20de%20reservar%20uma%20mesa." target="_blank" rel="noopener">Reservar no WhatsApp</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="wrap">
+    <div class="badge"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <b>4,9</b> &middot; 623 avalia&ccedil;&otilde;es no Google</div>
+    <p class="eyebrow">Pizzaria &middot; Parque Campolim, Sorocaba</p>
+    <h1>Irresist&iacute;vel: voc&ecirc; n&atilde;o deixa nem a borda</h1>
+    <p class="lead">H&aacute; 11 anos levando a verdadeira arte da pizza para a mesa dos nossos clientes, com massa de longa fermenta&ccedil;&atilde;o e a borda gratinada de parmes&atilde;o que virou marca da casa.</p>
+    <div class="hero-ctas">
+      <a class="btn" href="https://wa.me/5515988259147?text=Ol%C3%A1,%20gostaria%20de%20reservar%20uma%20mesa." target="_blank" rel="noopener">Reservar no WhatsApp</a>
+      <a class="btn ghost" href="https://shop.beetech.com.br/villanapolitana/" target="_blank" rel="noopener">Pe&ccedil;a online</a>
+    </div>
+  </div>
+</section>
+
+<section class="prova" id="avaliacoes">
+  <div class="wrap">
+    <div class="prova-top">
+      <div class="nota-box">
+        <div class="nota">4,9</div>
+        <div>
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div style="color:var(--muted);font-size:.92rem">623 avalia&ccedil;&otilde;es no Google</div>
+        </div>
+      </div>
+      <p style="color:var(--muted);max-width:44ch;margin:0">4,9 no Google em 623 avalia&ccedil;&otilde;es &mdash; uma das notas mais altas entre as pizzarias de Sorocaba.</p>
+    </div>
+    <div class="quotes"><figure class="quote"><p>&ldquo;Comida muito boa, &oacute;timo atendimento, lugar agrad&aacute;vel, boa m&uacute;sica!&rdquo;</p><figcaption>Avalia&ccedil;&atilde;o no Google</figcaption></figure><figure class="quote"><p>&ldquo;Salvador no atendimento &eacute; nota dez em todos os quesitos, simpatia e aten&ccedil;&atilde;o.&rdquo;</p><figcaption>Avalia&ccedil;&atilde;o no Google</figcaption></figure><figure class="quote"><p>&ldquo;Ambiente espetacular, pizza excelente.&rdquo;</p><figcaption>Avalia&ccedil;&atilde;o no Google</figcaption></figure></div>
+  </div>
+</section>
+
+<section id="cardapio">
+  <div class="wrap">
+    <p class="eyebrow">Nossa pizza</p>
+    <h2>Longa fermenta&ccedil;&atilde;o, forno e a borda</h2>
+    <div class="dishes"><article class="dish"><div class="dish-img"><img src="https://files.greatpages.com.br/arquivos/paginas_editor/32525-d8a6160fb12f4d7bf10aafecc6aba604.webp" alt="Massa de longa fermenta&ccedil;&atilde;o" loading="lazy"></div><div class="dish-txt"><h3>Massa de longa fermenta&ccedil;&atilde;o</h3><p>Feita com todo carinho e ingredientes selecionados, para garantir aquele sabor especial que voc&ecirc;s tanto amam.</p></div></article><article class="dish"><div class="dish-img"><img src="https://files.greatpages.com.br/arquivos/paginas_editor/32525-642ba569e5f575392e0a0f5c7064e861.webp" alt="Borda gratinada de parmes&atilde;o" loading="lazy"></div><div class="dish-txt"><h3>Borda gratinada de parmes&atilde;o</h3><p>Um show &agrave; parte: uma explos&atilde;o de sabor que voc&ecirc; precisa provar.</p></div></article><article class="dish"><div class="dish-img"><img src="https://files.greatpages.com.br/arquivos/paginas_editor/32525-56b5c456e238898f1e63d6547b0c6410.webp" alt="Direto do forno pra sua mesa" loading="lazy"></div><div class="dish-txt"><h3>Direto do forno pra sua mesa</h3><p>Aqui, tudo &eacute; feito na hora e vai direto do forno para a sua mesa, quentinho e irresist&iacute;vel.</p></div></article><article class="dish"><div class="dish-img"><img src="https://files.greatpages.com.br/arquivos/paginas_editor/32525-f46181bb4caa64f36f78291208438cb3.webp" alt="Quarta &eacute; dia de m&uacute;sica ao vivo" loading="lazy"></div><div class="dish-txt"><h3>Quarta &eacute; dia de m&uacute;sica ao vivo</h3><p>M&uacute;sica ao vivo nas quartas-feiras, no nosso sal&atilde;o do Campolim.</p></div></article><article class="dish"><div class="dish-img"><img src="https://files.greatpages.com.br/arquivos/paginas_editor/32525-f97a0106739cc480e6c42cdf435bf9e2.webp" alt="Delivery" loading="lazy"></div><div class="dish-txt"><h3>Delivery</h3><p>A unidade de delivery entrega r&aacute;pido no seu endere&ccedil;o: a pizza chega quentinha e intacta.</p></div></article><article class="dish"><div class="dish-img"><img src="https://files.greatpages.com.br/arquivos/paginas_editor/32525-5f85c4b9a0387ee7774bfd81c77098fc.webp" alt="Reservas" loading="lazy"></div><div class="dish-txt"><h3>Reservas</h3><p>Aceitamos reservas de domingo a quinta-feira. Nas sextas e s&aacute;bados o atendimento &eacute; por lista de espera.</p></div></article></div>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="wrap sobre-grid">
+    <div class="sobre-txt">
+      <p class="eyebrow">A casa</p>
+      <h2>Fala, meus amigos da Villa!</h2>
+      <div style="margin-top:1.4rem"><p>Aqui na Villa Napolitana, n&oacute;s adoramos receber voc&ecirc;s para uma experi&ecirc;ncia &uacute;nica. Nossa pizzaria, localizada no cora&ccedil;&atilde;o do Campolim em Sorocaba, est&aacute; h&aacute; 11 anos levando a verdadeira arte da pizza para a mesa dos nossos clientes.</p><p>Nossas pizzas de longa fermenta&ccedil;&atilde;o s&atilde;o feitas com todo carinho e ingredientes selecionados. E tem mais: nossa borda gratinada de parmes&atilde;o &eacute; um show &agrave; parte.</p><p>Convido voc&ecirc; a vir at&eacute; o nosso sal&atilde;o e aproveitar esse ambiente aconchegante que preparamos para receb&ecirc;-los. Estamos esperando por voc&ecirc; para um jantar inesquec&iacute;vel!</p></div>
+      <div class="selos"><span class="selo">11 anos no Campolim</span><span class="selo">Longa fermenta&ccedil;&atilde;o</span><span class="selo">M&uacute;sica ao vivo &agrave;s quartas</span><span class="selo">4,9 no Google</span></div>
+    </div>
+    <div class="sobre-foto"><img src="https://files.greatpages.com.br/arquivos/paginas_editor/32525-7c2067ddcd0aca2428e06b0a7d491fcc.webp" alt="Villa Napolitana Campolim" loading="lazy"></div>
+  </div>
+</section>
+
+
+
+<section class="galeria" id="galeria"><div class="wrap"><p class="eyebrow">Galeria</p><h2>Algumas das nossas pizzas</h2></div><div class="galeria-grid"><img src="https://files.greatpages.com.br/arquivos/paginas_editor/32525-5e195016ad0c5e29cd01f3ecff900446.webp" alt="Villa Napolitana Campolim" loading="lazy"><img src="https://files.greatpages.com.br/arquivos/paginas_editor/32525-c83c71f4bc5c543c97bda5b5bb6e757d.webp" alt="Villa Napolitana Campolim" loading="lazy"><img src="https://files.greatpages.com.br/arquivos/paginas_editor/32525-46117ee62612f01ce776f3c80056b5b3.webp" alt="Villa Napolitana Campolim" loading="lazy"><img src="https://files.greatpages.com.br/arquivos/paginas_editor/32525-98f3dd7be976d3b49ff5d801a4936e91.webp" alt="Villa Napolitana Campolim" loading="lazy"><img src="https://files.greatpages.com.br/arquivos/paginas_editor/32525-2d1370569b87e5aa014dd35b45a4df8b.webp" alt="Villa Napolitana Campolim" loading="lazy"><img src="https://files.greatpages.com.br/arquivos/paginas_editor/32525-402da59b6429805dc79fff1ea68622e7.webp" alt="Villa Napolitana Campolim" loading="lazy"></div></section>
+
+<section class="local" id="local">
+  <div class="wrap">
+    <p class="eyebrow">Onde estamos</p>
+    <h2>Rua Francisco Neves, 93</h2>
+    <div class="local-grid">
+      <div class="local-info">
+        <p class="endereco">Rua Francisco Neves, 93 &mdash; Parque Campolim, Sorocaba/SP, 18047-637</p>
+        <ul><li><a href="https://wa.me/5515988259147?text=Ol%C3%A1,%20gostaria%20de%20reservar%20uma%20mesa." target="_blank" rel="noopener">WhatsApp sal&atilde;o (15) 98825-9147</a></li><li><a href="tel:+551532112722">Delivery (15) 3211-2722</a></li><li><a href="https://shop.beetech.com.br/villanapolitana/" target="_blank" rel="noopener">Pedir on-line</a></li><li><a href="https://www.instagram.com/villanapolitana/" target="_blank" rel="noopener">@villanapolitana</a></li></ul>
+        <div class="horarios"><h3>Hor&aacute;rios</h3><ul><li><span>Todos os dias &middot; sal&atilde;o</span><span>18h&ndash;23h</span></li><li><span>Todos os dias &middot; delivery</span><span>18h30&ndash;23h</span></li></ul></div>
+      </div>
+      <div class="mapa"><iframe src="https://www.google.com/maps?q=Villa%20Napolitana%20Campolim%2C%20Rua%20Francisco%20Neves%2C%2093%2C%20Parque%20Campolim%2C%20Sorocaba%20-%20SP&output=embed" loading="lazy" title="Mapa - Villa Napolitana Campolim" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq"><div class="wrap"><p class="eyebrow">D&uacute;vidas frequentes</p><h2>Antes de vir</h2><div class="faq-lista"><details><summary>Voc&ecirc;s aceitam reserva?</summary><p>Aceitamos reservas de domingo a quinta-feira. Nas sextas e s&aacute;bados o atendimento &eacute; feito por lista de espera.</p></details><details><summary>Qual o hor&aacute;rio?</summary><p>O sal&atilde;o abre todos os dias das 18h &agrave;s 23h. O delivery atende das 18h30 &agrave;s 23h.</p></details><details><summary>Como pe&ccedil;o para entrega?</summary><p>Pelo telefone (15) 3211-2722 ou pelo pedido on-line.</p></details><details><summary>Tem m&uacute;sica ao vivo?</summary><p>Sim, nas quartas-feiras.</p></details></div></div></section>
+
+<section class="cta-final">
+  <div class="wrap">
+    <p class="eyebrow">Reservas e delivery</p>
+    <h2>Estamos esperando por voc&ecirc;</h2>
+    <p>Reserve pelo WhatsApp (15) 98825-9147 de domingo a quinta, ou pe&ccedil;a delivery pelo (15) 3211-2722.</p>
+    <a class="btn" href="https://wa.me/5515988259147?text=Ol%C3%A1,%20gostaria%20de%20reservar%20uma%20mesa." target="_blank" rel="noopener">Reservar no WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img class="logo" src="https://pages.greatpages.com.br/www.villanapolitana.com.br/1785378590/imagens/desktop/32525-c964b81ef5c830041e31ed859ecdebe2.png" alt="Villa Napolitana Campolim">
+        <p style="color:var(--muted);margin-top:1rem;max-width:34ch">Pizzaria no Parque Campolim, Sorocaba. H&aacute; 11 anos fazendo pizza de longa fermenta&ccedil;&atilde;o.</p>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul><li><a href="https://wa.me/5515988259147?text=Ol%C3%A1,%20gostaria%20de%20reservar%20uma%20mesa." target="_blank" rel="noopener">WhatsApp sal&atilde;o (15) 98825-9147</a></li><li><a href="tel:+551532112722">Delivery (15) 3211-2722</a></li><li><a href="https://shop.beetech.com.br/villanapolitana/" target="_blank" rel="noopener">Pedir on-line</a></li><li><a href="https://www.instagram.com/villanapolitana/" target="_blank" rel="noopener">@villanapolitana</a></li></ul>
+      </div>
+      <div>
+        <h4>Endere&ccedil;o</h4>
+        <ul><li>Rua Francisco Neves, 93 &mdash; Parque Campolim, Sorocaba/SP, 18047-637</li></ul>
+      </div>
+    </div>
+    <div class="creditos">
+      <span>&copy; 2026 Villa Napolitana Campolim</span>
+      <span>Nota 4,9 com 623 avalia&ccedil;&otilde;es no Google</span>
+    </div>
+  </div>
+</footer>
+
+<a class="btn float" href="https://wa.me/5515988259147?text=Ol%C3%A1,%20gostaria%20de%20reservar%20uma%20mesa." target="_blank" rel="noopener">WhatsApp</a>
+
+</body>
+</html>

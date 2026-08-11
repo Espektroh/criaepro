@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow">
+<title>Rural Pizzeria Napoletana &mdash; Pizza napoletana moderna em Sorocaba</title>
+<meta name="description" content="Rural Pizzeria e Casa Rural, pizza napoletana moderna em Sorocaba. Selo Pizza DOC 2025 e ranking das 10 melhores margheritas de S&atilde;o Paulo. Duas unidades.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f7f3ec; --bg2:#efe8dd; --fg:#161310; --muted:#6c6156;
+    --accent:#b34a2b; --accent-fg:#fff8f3; --line:rgba(22,19,16,.14);
+    --display:'Archivo Black',Impact,sans-serif; --body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .wrap{width:min(1140px,92vw);margin:0 auto}
+  h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.12;margin:0}
+  h2{font-size:clamp(1.9rem,4.2vw,3rem);letter-spacing:-.01em}
+  h3{font-size:1.18rem}
+  p{margin:0 0 1em}
+  .eyebrow{font-family:var(--body);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:0 0 .6rem;font-weight:600}
+
+  header.top{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .top-in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+  .logo{max-height:50px;width:auto;}
+  .logotipo{font-family:var(--display);font-size:1.35rem;letter-spacing:.16em;text-transform:uppercase}
+  nav.menu{display:flex;gap:26px;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
+  nav.menu a{text-decoration:none;color:var(--muted);transition:color .2s}
+  nav.menu a:hover{color:var(--fg)}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--accent);color:var(--accent-fg);padding:.85rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:600;font-size:.92rem;letter-spacing:.02em;transition:transform .18s,filter .18s;white-space:nowrap}
+  .btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+  .btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--line)}
+  .btn.sm{padding:.6rem 1.1rem;font-size:.82rem}
+
+  .hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;padding:0 0 clamp(48px,7vw,96px);overflow:hidden}
+  .hero-bg{position:absolute;inset:0;background-image:url('https://static.wixstatic.com/media/f81b58_b8f8d99571ab494293361b1c551b231d~mv2.jpg/v1/fill/w_1800,h_1000,al_c,q_85/f81b58_b8f8d99571ab494293361b1c551b231d~mv2.jpg');background-size:cover;background-position:center;transform:scale(1.02)}
+  .hero-bg::after{content:"";position:absolute;inset:0;background:
+     linear-gradient(180deg,color-mix(in srgb,var(--bg) 60%,transparent) 0%,color-mix(in srgb,var(--bg) 22%,transparent) 30%,color-mix(in srgb,var(--bg) 78%,transparent) 76%,var(--bg) 100%),
+     linear-gradient(90deg,color-mix(in srgb,var(--bg) 66%,transparent) 0%,color-mix(in srgb,var(--bg) 16%,transparent) 60%,transparent 100%)}
+  .hero .wrap{position:relative;z-index:2}
+  .hero h1{font-size:clamp(2.6rem,7.4vw,5.1rem);letter-spacing:-.02em;max-width:16ch}
+  .hero .lead{font-size:clamp(1.05rem,2.2vw,1.3rem);color:var(--muted);max-width:52ch;margin-top:1.1rem}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:2rem}
+  .badge{display:inline-flex;align-items:center;gap:.55rem;border:1px solid var(--line);background:color-mix(in srgb,var(--bg) 70%,transparent);padding:.5rem 1rem;border-radius:999px;font-size:.86rem;margin-bottom:1.4rem}
+  .badge b{font-weight:700}
+  .stars{color:#c4711f;letter-spacing:.08em}
+
+  section{padding:clamp(64px,9vw,120px) 0}
+  .prova{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .prova-top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:2.6rem}
+  .nota-box{display:flex;align-items:center;gap:1.1rem}
+  .nota{font-family:var(--display);font-size:clamp(3rem,7vw,4.4rem);line-height:1}
+  .quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+  .quote{margin:0;background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:1.6rem}
+  .quote p{font-family:var(--display);font-size:1.08rem;margin:0 0 .9rem}
+  .quote figcaption{font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+  .dishes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:2.8rem}
+  .dish{background:var(--bg2);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:transform .25s,border-color .25s}
+  .dish:hover{transform:translateY(-4px);border-color:var(--accent)}
+  .dish-img{aspect-ratio:4/3;overflow:hidden}
+  .dish-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+  .dish:hover .dish-img img{transform:scale(1.06)}
+  .dish-txt{padding:1.3rem 1.4rem 1.6rem}
+  .dish-txt h3{margin-bottom:.4rem}
+  .dish-txt p{color:var(--muted);font-size:.95rem;margin:0}
+
+  .sobre-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,64px);align-items:center}
+  .sobre-txt p{color:var(--muted);font-size:1.05rem}
+  .sobre-foto img{border-radius:20px;width:100%;aspect-ratio:4/5;object-fit:cover}
+  .selos{display:flex;flex-wrap:wrap;gap:10px;margin-top:1.6rem}
+  .selo{border:1px solid var(--line);border-radius:999px;padding:.45rem 1rem;font-size:.82rem;color:var(--muted)}
+
+  .blocos{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:2.6rem}
+  .bloco{background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:1.7rem}
+  .bloco h3{margin-bottom:.55rem}
+  .bloco p{color:var(--muted);font-size:.96rem}
+  .bloco-link{display:inline-block;margin-top:.4rem;color:var(--accent);text-decoration:none;font-weight:600;font-size:.9rem}
+  .bloco-link:hover{text-decoration:underline}
+
+  .galeria-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:6px;margin-top:2.4rem}
+  .galeria-grid img{width:100%;height:100%;aspect-ratio:1/1;object-fit:cover;transition:transform .5s}
+  .galeria-grid img:hover{transform:scale(1.04)}
+
+  .local{background:var(--bg2);border-top:1px solid var(--line)}
+  .local-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,48px);align-items:start;margin-top:2.4rem}
+  .local-info li{list-style:none}
+  .local-info ul{padding:0;margin:0 0 1.6rem;display:grid;gap:.55rem}
+  .local-info a{color:var(--fg);text-decoration:none;border-bottom:1px solid var(--line)}
+  .local-info a:hover{border-color:var(--accent)}
+  .endereco{font-family:var(--display);font-size:1.25rem;margin-bottom:1.2rem}
+  .horarios ul{padding:0;margin:.6rem 0 0;display:grid;gap:.4rem}
+  .horarios li{display:flex;justify-content:space-between;gap:16px;border-bottom:1px dashed var(--line);padding-bottom:.35rem;font-size:.94rem;color:var(--muted)}
+  .mapa{border-radius:18px;overflow:hidden;border:1px solid var(--line);min-height:340px}
+  .mapa iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+
+  .faq-lista{margin-top:2rem;display:grid;gap:12px}
+  details{background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:1.1rem 1.3rem}
+  summary{cursor:pointer;font-family:var(--display);font-size:1.05rem}
+  details p{color:var(--muted);margin:.8rem 0 0}
+
+  .cta-final{text-align:center}
+  .cta-final h2{max-width:18ch;margin:0 auto 1rem}
+  .cta-final p{color:var(--muted);max-width:52ch;margin:0 auto 2rem}
+
+  footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 90px}
+  .foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:32px}
+  .foot-grid h4{font-family:var(--display);font-size:1rem;margin:0 0 .9rem;letter-spacing:.04em}
+  .foot-grid ul{padding:0;margin:0;list-style:none;display:grid;gap:.5rem;font-size:.93rem;color:var(--muted)}
+  .foot-grid a{color:var(--muted);text-decoration:none}
+  .foot-grid a:hover{color:var(--fg)}
+  .creditos{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);font-size:.8rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
+
+  .float{position:fixed;right:18px;bottom:18px;z-index:80;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+
+  @media(max-width:900px){
+    nav.menu{display:none}
+    .sobre-grid,.local-grid{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr;gap:26px}
+    .hero{min-height:88vh}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-in">
+    <img class="logo" src="https://static.wixstatic.com/media/f81b58_0cf287b457824f1b82e26faab7d9e333~mv2.png" alt="Rural Pizzeria Napoletana">
+    <nav class="menu"><a href="#cardapio">A pizza</a><a href="#sobre">Sobre</a><a href="#avaliacoes">Avalia&ccedil;&otilde;es</a><a href="#local">Unidades</a></nav>
+    <a class="btn sm" href="tel:+551531422387">Ligar e pedir</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="wrap">
+    <div class="badge"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <b>4,8</b> &middot; 1.158 avalia&ccedil;&otilde;es no Google</div>
+    <p class="eyebrow">Pizzeria napoletana moderna &middot; Sorocaba</p>
+    <h1>Pizza napoletana moderna, do jeito Rural</h1>
+    <p class="lead">Massa de longa fermenta&ccedil;&atilde;o, forno a lenha e produtos vindos da It&aacute;lia e do interior. Duas casas em Sorocaba: Rural Pizzeria e Casa Rural.</p>
+    <div class="hero-ctas">
+      <a class="btn" href="tel:+551531422387">Ligar e pedir</a>
+      <a class="btn ghost" href="#experiencias">Ver as unidades</a>
+    </div>
+  </div>
+</section>
+
+<section class="prova" id="avaliacoes">
+  <div class="wrap">
+    <div class="prova-top">
+      <div class="nota-box">
+        <div class="nota">4,8</div>
+        <div>
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div style="color:var(--muted);font-size:.92rem">1.158 avalia&ccedil;&otilde;es no Google</div>
+        </div>
+      </div>
+      <p style="color:var(--muted);max-width:44ch;margin:0">Nota 4,8 na Rural Pizzeria (1.158 avalia&ccedil;&otilde;es) e 4,9 na Casa Rural (347 avalia&ccedil;&otilde;es) &mdash; duas das melhores notas de pizza da cidade.</p>
+    </div>
+    <div class="quotes"><figure class="quote"><p>&ldquo;Ambiente aconchegante, despojado, m&uacute;sica boa, comidas que d&atilde;o saudades depois.&rdquo;</p><figcaption>Avalia&ccedil;&atilde;o no Google</figcaption></figure><figure class="quote"><p>&ldquo;Ingredientes da mais alta qualidade e &oacute;timo servi&ccedil;o de entrega.&rdquo;</p><figcaption>Avalia&ccedil;&atilde;o no Google</figcaption></figure><figure class="quote"><p>&ldquo;Pizza excelente, borda crocante e ingredientes de primeira.&rdquo;</p><figcaption>Avalia&ccedil;&atilde;o no Google</figcaption></figure></div>
+  </div>
+</section>
+
+<section id="cardapio">
+  <div class="wrap">
+    <p class="eyebrow">O que fazemos</p>
+    <h2>O simples bem feito</h2>
+    <div class="dishes"><article class="dish"><div class="dish-img"><img src="https://static.wixstatic.com/media/f81b58_c692217463c14ed68da6ea02ec453b68~mv2.jpg/v1/fill/w_900,h_675,al_c,q_85/f81b58_c692217463c14ed68da6ea02ec453b68~mv2.jpg" alt="Pizza napoletana moderna" loading="lazy"></div><div class="dish-txt"><h3>Pizza napoletana moderna</h3><p>Uma pizza de cerca de 30 cm, com o processo cl&aacute;ssico italiano respeitado e detalhes que d&atilde;o identidade &agrave; casa.</p></div></article><article class="dish"><div class="dish-img"><img src="https://static.wixstatic.com/media/f81b58_7e51923e9d8846ddbc51f782178e8049~mv2.jpg/v1/fill/w_900,h_675,al_c,q_85/f81b58_7e51923e9d8846ddbc51f782178e8049~mv2.jpg" alt="Selo Pizza DOC 2025" loading="lazy"></div><div class="dish-txt"><h3>Selo Pizza DOC 2025</h3><p>Em 2025 conquistamos o selo Pizza DOC (Denomina&ccedil;&atilde;o de Origem Controlada), certificado internacional que atesta a autenticidade da pizza napoletana.</p></div></article><article class="dish"><div class="dish-img"><img src="https://static.wixstatic.com/media/f81b58_3c0390eb088c4c75b70907e8e589fe98~mv2.jpg/v1/fill/w_900,h_675,al_c,q_85/f81b58_3c0390eb088c4c75b70907e8e589fe98~mv2.jpg" alt="Entre as 10 melhores margheritas de SP" loading="lazy"></div><div class="dish-txt"><h3>Entre as 10 melhores margheritas de SP</h3><p>A margherita da casa entrou no ranking das 10 melhores de S&atilde;o Paulo.</p></div></article><article class="dish"><div class="dish-img"><img src="https://static.wixstatic.com/media/f81b58_840bd46581d4413bb13563eb7dc91ad1~mv2.jpg/v1/fill/w_900,h_675,al_c,q_85/f81b58_840bd46581d4413bb13563eb7dc91ad1~mv2.jpg" alt="Para comer com as m&atilde;os" loading="lazy"></div><div class="dish-txt"><h3>Para comer com as m&atilde;os</h3><p>Aqui se come com as m&atilde;os, assim como em muitos lugares em N&aacute;poles. Pizza para compartilhar sem cerim&ocirc;nia.</p></div></article></div>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="wrap sobre-grid">
+    <div class="sobre-txt">
+      <p class="eyebrow">Quem somos</p>
+      <h2>Paix&atilde;o. &Eacute; disso que se trata</h2>
+      <div style="margin-top:1.4rem"><p>Fazer as pessoas felizes proporcionando experi&ecirc;ncias memor&aacute;veis atrav&eacute;s da boa comida e da hospitalidade. A Rural tem como proposta fazer o simples bem feito, com produtos vindos da It&aacute;lia e do interior. Uma pizzaria napoletana que busca inspira&ccedil;&atilde;o nos produtores regionais.</p><p>Fazemos pizza napoletana, mas do nosso jeito: respeitamos o processo cl&aacute;ssico italiano e inclu&iacute;mos detalhes neste trabalho para dar identidade &agrave;s pizzas. Gostamos da tradi&ccedil;&atilde;o, mas tamb&eacute;m do novo, de experimentar.</p><p>Vis&atilde;o, olfato, paladar e tato. Usar todos os sentidos torna o ato de comer uma experi&ecirc;ncia despojada, saborosa, afetiva e &uacute;nica.</p></div>
+      <div class="selos"><span class="selo">Selo Pizza DOC 2025</span><span class="selo">10 melhores margheritas de SP</span><span class="selo">Duas unidades em Sorocaba</span><span class="selo">4,8 e 4,9 no Google</span></div>
+    </div>
+    <div class="sobre-foto"><img src="https://static.wixstatic.com/media/f81b58_c692217463c14ed68da6ea02ec453b68~mv2.jpg/v1/fill/w_900,h_1125,al_c,q_85/f81b58_c692217463c14ed68da6ea02ec453b68~mv2.jpg" alt="Rural Pizzeria Napoletana" loading="lazy"></div>
+  </div>
+</section>
+
+<section id="experiencias"><div class="wrap"><p class="eyebrow">Duas casas</p><h2>Onde nos encontrar</h2><div class="blocos"><article class="bloco"><h3>Rural Pizzeria &mdash; Vila Hort&ecirc;ncia</h3><p>Rua Comandante Salgado, 899. De ter&ccedil;a a domingo, das 18h &agrave;s 22h.</p><a class="bloco-link" href="https://www.google.com/maps?q=Rua+Comandante+Salgado,+899,+Vila+Hortencia,+Sorocaba" target="_blank" rel="noopener">Ver no mapa</a></article><article class="bloco"><h3>Casa Rural &mdash; Jardim Vergueiro</h3><p>Rua Jos&eacute; Mesquita Sobrinho, 87. Quarta, quinta e domingo, das 18h &agrave;s 22h; sexta e s&aacute;bado, das 18h &agrave;s 22h30.</p><a class="bloco-link" href="https://www.google.com/maps?q=Rua+Jose+Mesquita+Sobrinho,+87,+Jardim+Vergueiro,+Sorocaba" target="_blank" rel="noopener">Ver no mapa</a></article><article class="bloco"><h3>Delivery</h3><p>Entrega feita pela casa, com os mesmos ingredientes do sal&atilde;o. Pedidos pelo telefone (15) 3142-2387.</p><a class="bloco-link" href="tel:+551531422387">Ligar e pedir</a></article></div></div></section>
+
+<section class="galeria" id="galeria"><div class="wrap"><p class="eyebrow">Da nossa casa</p><h2>Forno, sal&atilde;o e mesa</h2></div><div class="galeria-grid"><img src="https://static.wixstatic.com/media/f81b58_b8f8d99571ab494293361b1c551b231d~mv2.jpg/v1/fill/w_700,h_700,al_c,q_85/f81b58_b8f8d99571ab494293361b1c551b231d~mv2.jpg" alt="Rural Pizzeria Napoletana" loading="lazy"><img src="https://static.wixstatic.com/media/f81b58_840bd46581d4413bb13563eb7dc91ad1~mv2.jpg/v1/fill/w_700,h_700,al_c,q_85/f81b58_840bd46581d4413bb13563eb7dc91ad1~mv2.jpg" alt="Rural Pizzeria Napoletana" loading="lazy"><img src="https://static.wixstatic.com/media/f81b58_c692217463c14ed68da6ea02ec453b68~mv2.jpg/v1/fill/w_700,h_700,al_c,q_85/f81b58_c692217463c14ed68da6ea02ec453b68~mv2.jpg" alt="Rural Pizzeria Napoletana" loading="lazy"><img src="https://static.wixstatic.com/media/f81b58_7e51923e9d8846ddbc51f782178e8049~mv2.jpg/v1/fill/w_700,h_700,al_c,q_85/f81b58_7e51923e9d8846ddbc51f782178e8049~mv2.jpg" alt="Rural Pizzeria Napoletana" loading="lazy"><img src="https://static.wixstatic.com/media/f81b58_3c0390eb088c4c75b70907e8e589fe98~mv2.jpg/v1/fill/w_700,h_700,al_c,q_85/f81b58_3c0390eb088c4c75b70907e8e589fe98~mv2.jpg" alt="Rural Pizzeria Napoletana" loading="lazy"><img src="https://static.wixstatic.com/media/f81b58_b8f8d99571ab494293361b1c551b231d~mv2.jpg/v1/fill/w_701,h_700,al_c,q_85/f81b58_b8f8d99571ab494293361b1c551b231d~mv2.jpg" alt="Rural Pizzeria Napoletana" loading="lazy"></div></section>
+
+<section class="local" id="local">
+  <div class="wrap">
+    <p class="eyebrow">Onde estamos</p>
+    <h2>Rua Comandante Salgado, 899</h2>
+    <div class="local-grid">
+      <div class="local-info">
+        <p class="endereco">Rua Comandante Salgado, 899 &mdash; Vila Hort&ecirc;ncia, Sorocaba/SP, 18020-264</p>
+        <ul><li><a href="tel:+551531422387">(15) 3142-2387</a></li><li><a href="mailto:contato@ruralpizzeria.com.br">contato@ruralpizzeria.com.br</a></li></ul>
+        <div class="horarios"><h3>Hor&aacute;rios</h3><ul><li><span>Rural Pizzeria &middot; ter&ccedil;a a domingo</span><span>18h&ndash;22h</span></li><li><span>Casa Rural &middot; quarta, quinta e domingo</span><span>18h&ndash;22h</span></li><li><span>Casa Rural &middot; sexta e s&aacute;bado</span><span>18h&ndash;22h30</span></li></ul></div>
+      </div>
+      <div class="mapa"><iframe src="https://www.google.com/maps?q=Rural%20Pizzeria%20Napoletana%2C%20Rua%20Comandante%20Salgado%2C%20899%2C%20Vila%20Hortencia%2C%20Sorocaba%20-%20SP&output=embed" loading="lazy" title="Mapa - Rural Pizzeria Napoletana" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq"><div class="wrap"><p class="eyebrow">D&uacute;vidas frequentes</p><h2>Antes de vir</h2><div class="faq-lista"><details><summary>Voc&ecirc;s aceitam reserva?</summary><p>N&atilde;o trabalhamos com sistema de reserva. O atendimento &eacute; por ordem de chegada.</p></details><details><summary>Qual a diferen&ccedil;a entre Rural Pizzeria e Casa Rural?</summary><p>S&atilde;o as duas casas da marca em Sorocaba: a Rural Pizzeria fica na Vila Hort&ecirc;ncia e a Casa Rural no Jardim Vergueiro, cada uma com seus hor&aacute;rios.</p></details><details><summary>O que &eacute; o selo Pizza DOC?</summary><p>Um certificado internacional que atesta a autenticidade da pizza napoletana, com crit&eacute;rios r&iacute;gidos: da escolha da farinha &agrave; fermenta&ccedil;&atilde;o longa, do forno a lenha &agrave; forma de preparo. Conquistamos o selo em 2025.</p></details><details><summary>Como fa&ccedil;o um pedido para entrega?</summary><p>Pelo telefone (15) 3142-2387.</p></details></div></div></section>
+
+<section class="cta-final">
+  <div class="wrap">
+    <p class="eyebrow">Pedidos e delivery</p>
+    <h2>Pizza quentinha, do forno pra sua mesa</h2>
+    <p>Ligue para (15) 3142-2387 para pedir delivery, ou venha at&eacute; uma das duas casas.</p>
+    <a class="btn" href="tel:+551531422387">Ligar e pedir</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img class="logo" src="https://static.wixstatic.com/media/f81b58_0cf287b457824f1b82e26faab7d9e333~mv2.png" alt="Rural Pizzeria Napoletana">
+        <p style="color:var(--muted);margin-top:1rem;max-width:34ch">Pizzeria napoletana moderna em Sorocaba. Selo Pizza DOC 2025.</p>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul><li><a href="tel:+551531422387">(15) 3142-2387</a></li><li><a href="mailto:contato@ruralpizzeria.com.br">contato@ruralpizzeria.com.br</a></li></ul>
+      </div>
+      <div>
+        <h4>Endere&ccedil;o</h4>
+        <ul><li>Rua Comandante Salgado, 899 &mdash; Vila Hort&ecirc;ncia, Sorocaba/SP, 18020-264</li></ul>
+      </div>
+    </div>
+    <div class="creditos">
+      <span>&copy; 2026 Rural Pizzeria Napoletana</span>
+      <span>Nota 4,8 com 1.158 avalia&ccedil;&otilde;es no Google</span>
+    </div>
+  </div>
+</footer>
+
+<a class="btn float" href="tel:+551531422387">Ligar</a>
+
+</body>
+</html>
