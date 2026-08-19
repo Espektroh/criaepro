@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Battaglia & Pedrosa Advogados — Vila Olímpia, São Paulo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--bronze:#9c7a3f;--bronze-d:#6e5527;--dark:#221f1a;--cream:#f7f3ea;--paper:#fffdf9;--line:#e6dfcd;--ink:#2b2620}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--paper);line-height:1.65}
+  h1,h2,h3{font-family:'Playfair Display',serif;color:var(--dark);line-height:1.2}
+  a{text-decoration:none;color:inherit}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+  .btn{display:inline-flex;align-items:center;gap:10px;background:var(--bronze);color:#fff;padding:15px 30px;font-weight:700;font-size:14.5px;border-radius:2px;transition:background .2s}
+  .btn:hover{background:var(--bronze-d)}
+  .btn-line{border:1.5px solid rgba(255,255,255,.4);color:#fff;background:transparent}
+  .btn-line:hover{border-color:var(--bronze);color:var(--bronze)}
+  .eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:11.5px;color:var(--bronze);font-weight:700;margin-bottom:14px;display:block}
+
+  header{background:var(--dark);border-bottom:1px solid rgba(255,255,255,.08)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+  .brand img{height:42px}
+  .nav-links{display:none;gap:28px;font-size:13.5px;color:#d9d3c4;font-weight:500}
+  @media(min-width:920px){.nav-links{display:flex}}
+  .nav-links a:hover{color:var(--bronze)}
+
+  .hero{position:relative;color:#fff;min-height:580px;display:flex;align-items:center}
+  .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.32}
+  .hero::before{content:'';position:absolute;inset:0;background:linear-gradient(120deg,var(--dark) 45%,rgba(34,31,26,.7))}
+  .hero-inner{position:relative;z-index:2;padding:90px 0}
+  .hero h1{color:#fff;font-size:clamp(30px,4.6vw,50px);max-width:680px;margin-bottom:20px}
+  .hero p{max-width:540px;color:#d9d3c4;font-size:16px;margin-bottom:30px}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px}
+  .award-badge{margin-top:48px;display:inline-flex;align-items:center;gap:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18);padding:12px 20px;border-radius:2px;font-size:13.5px;color:#e7dfca;max-width:480px}
+
+  section{padding:88px 0}
+  .section-head{max-width:660px;margin:0 auto 52px;text-align:center}
+  .section-head h2{font-size:clamp(26px,3.6vw,36px)}
+  .section-head p{color:#5c564a;margin-top:12px}
+
+  .areas-grid{display:grid;grid-template-columns:1fr;gap:20px}
+  @media(min-width:720px){.areas-grid{grid-template-columns:1fr 1fr}}
+  .area{display:flex;gap:20px;align-items:flex-start;background:var(--cream);border:1px solid var(--line);border-radius:4px;padding:24px}
+  .area img{width:64px;height:64px;object-fit:cover;border-radius:50%;flex-shrink:0}
+  .area h3{font-size:19px;margin-bottom:6px}
+  .area p{font-size:14px;color:#5c564a}
+
+  .team{background:var(--dark);color:#dcd6c9}
+  .team h2{color:#fff}
+  .team-grid{display:grid;grid-template-columns:1fr;gap:26px;margin-top:44px}
+  @media(min-width:720px){.team-grid{grid-template-columns:repeat(3,1fr)}}
+  .member{text-align:center}
+  .member img{width:130px;height:130px;border-radius:50%;object-fit:cover;margin:0 auto 16px;border:3px solid var(--bronze)}
+  .member h4{font-family:'Playfair Display',serif;font-size:20px;color:#fff;margin-bottom:4px}
+  .member span{font-size:13px;color:var(--bronze);text-transform:uppercase;letter-spacing:.05em}
+
+  .recognitions{background:var(--cream)}
+  .rec-list{display:grid;grid-template-columns:1fr;gap:18px;margin-top:10px}
+  @media(min-width:780px){.rec-list{grid-template-columns:1fr 1fr 1fr}}
+  .rec{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:26px;font-size:14.5px}
+  .rec b{display:block;font-family:'Playfair Display',serif;font-size:18px;color:var(--dark);margin-bottom:8px}
+
+  .testimonials{background:var(--paper)}
+  .t-grid{display:grid;grid-template-columns:1fr;gap:22px}
+  @media(min-width:820px){.t-grid{grid-template-columns:1fr 1fr 1fr}}
+  .t-card{background:var(--cream);border:1px solid var(--line);border-radius:4px;padding:26px}
+  .t-card p{font-size:14px;color:#4a453c;margin-bottom:16px;font-style:italic}
+  .t-name{font-weight:700;font-size:13.5px;color:var(--dark)}
+  .t-role{font-size:12px;color:#8a8172}
+
+  .contact{background:#fff;border-top:1px solid var(--line)}
+  .contact-grid{display:grid;grid-template-columns:1fr;gap:36px}
+  @media(min-width:860px){.contact-grid{grid-template-columns:1fr 1fr}}
+  .contact-card{background:var(--cream);border:1px solid var(--line);padding:36px;border-radius:4px}
+  .contact-card h3{font-size:21px;margin-bottom:22px}
+  .cline{margin-bottom:16px;font-size:15px}
+  .cline b{display:block;font-size:11.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--bronze);margin-bottom:3px;font-family:'Inter',sans-serif}
+  .map-frame{border-radius:4px;overflow:hidden;border:1px solid var(--line);min-height:320px}
+  .map-frame iframe{width:100%;height:100%;min-height:320px;border:0}
+
+  footer{background:var(--dark);color:#a49c8a;padding:44px 0 22px}
+  .footer-grid{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,.1)}
+  .footer-brand img{height:30px}
+  .footer-links{display:flex;gap:22px;font-size:13.5px}
+  .footer-links a:hover{color:var(--bronze)}
+  .copyright{padding-top:18px;font-size:12px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+
+  .wa-float{position:fixed;bottom:22px;right:22px;background:#25D366;color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(0,0,0,.3);z-index:60}
+  .wa-float svg{width:28px;height:28px;fill:#fff}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="brand"><img src="https://bpadvogados.com.br/wp-content/uploads/2024/11/logo-bpadvogados-branco-transparente.png" alt="Battaglia & Pedrosa Advogados"></a>
+    <nav class="nav-links">
+      <a href="#areas">Atuação</a>
+      <a href="#equipe">Equipe</a>
+      <a href="#reconhecimentos">Reconhecimentos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="btn" href="https://wa.me/5511995049829?text=Ol%C3%A1!%20Encontrei%20o%20site%20da%20Battaglia%20%26%20Pedrosa%20e%20gostaria%20de%20falar%20com%20a%20equipe." target="_blank" rel="noopener">Fale conosco</a>
+  </div>
+</header>
+
+<section class="hero">
+  <img class="hero-bg" src="https://bpadvogados.com.br/wp-content/uploads/2024/12/paulo-andre-moreira-pedrosa.jpg" alt="Battaglia & Pedrosa Advogados">
+  <div class="wrap hero-inner">
+    <span class="eyebrow">Vila Olímpia, São Paulo · desde 2001</span>
+    <h1>Expertise que transforma. Mais de 25 anos de advocacia estratégica.</h1>
+    <p>Soluções jurídicas sob medida para empresas e pessoas, sempre à frente do seu tempo — do societário ao Italian Desk, do contencioso à sucessão familiar.</p>
+    <div class="hero-actions">
+      <a class="btn" href="https://wa.me/5511995049829?text=Ol%C3%A1!%20Encontrei%20o%20site%20da%20Battaglia%20%26%20Pedrosa%20e%20gostaria%20de%20falar%20com%20a%20equipe." target="_blank" rel="noopener">Falar com a equipe</a>
+      <a class="btn btn-line" href="#areas">Ver áreas de atuação</a>
+    </div>
+    <div class="award-badge">🏆 Reconhecido pelo 2º ano consecutivo no Prêmio Análise DNA+Fenalaw — categoria Prata, case em Marketing Jurídico</div>
+  </div>
+</section>
+
+<section id="areas">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Áreas de atuação</span>
+      <h2>Soluções jurídicas sob medida</h2>
+      <p>Reconhecidos por atuação estratégica em áreas específicas do Direito — sempre à frente do seu tempo.</p>
+    </div>
+    <div class="areas-grid">
+      <div class="area">
+        <img src="https://bpadvogados.com.br/wp-content/uploads/elementor/thumbs/societario-contratos-empresariais-r0ngbwkn109ec0os4gcyr8xn8x9gvecun4x9wk6kyo.jpg" alt="Societário e Contratos Empresariais">
+        <div><h3>Societário e Contratos Empresariais</h3><p>Estruturação societária e contratos que protegem o seu negócio em cada etapa.</p></div>
+      </div>
+      <div class="area">
+        <img src="https://bpadvogados.com.br/wp-content/uploads/elementor/thumbs/italian-desk-assessoria-r0nekfizirdcbyvxrimwvrk3584637ddkyzw8wan4w.jpg" alt="Italian Desk">
+        <div><h3>Italian Desk</h3><p>Assessoria jurídica especializada para negócios entre Brasil e Itália.</p></div>
+      </div>
+      <div class="area">
+        <img src="https://bpadvogados.com.br/wp-content/uploads/elementor/thumbs/cobrancas-indenizacoes-r0ngv857iepkzgmfat0w0dequ2133f27yrol1bj928.jpg" alt="Indenizações e Cobranças">
+        <div><h3>Indenizações e Cobranças</h3><p>Recuperação de crédito e defesa em processos de indenização.</p></div>
+      </div>
+      <div class="area">
+        <img src="https://bpadvogados.com.br/wp-content/uploads/elementor/thumbs/familia-e-sucessoes-r0nery8i71nx7nypurngtv8u871vo182m6vqgl59cw.jpg" alt="Família e Sucessão">
+        <div><h3>Família e Sucessão</h3><p>Condução cuidadosa de inventários, partilhas e planejamento sucessório.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="team" id="equipe">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Equipe líder em inovação jurídica</span>
+      <h2>Sua causa nas melhores mãos do mercado</h2>
+    </div>
+    <div class="team-grid">
+      <div class="member"><img src="https://bpadvogados.com.br/wp-content/uploads/2024/12/thumb-socio-remo-battaglia.jpg" alt="Remo Battaglia"><h4>Remo Battaglia</h4><span>Sócio-Fundador</span></div>
+      <div class="member"><img src="https://bpadvogados.com.br/wp-content/uploads/2024/12/paulo-andre-moreira-pedrosa.jpg" alt="Paulo André M. Pedrosa"><h4>Paulo André M. Pedrosa</h4><span>Sócio</span></div>
+      <div class="member"><img src="https://bpadvogados.com.br/wp-content/uploads/2024/12/thumb-socia-marcela-de-brito.jpg" alt="Marcela de Brito"><h4>Marcela de Brito</h4><span>Sócia</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="recognitions" id="reconhecimentos">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Excelência recompensada</span>
+      <h2>Reconhecimentos e conquistas</h2>
+      <p>25 anos de dedicação e inovação no mercado jurídico.</p>
+    </div>
+    <div class="rec-list">
+      <div class="rec"><b>Prêmio Análise DNA Fenalaw 2025</b>Reconhecimento pelo case de Marketing Jurídico, pelo 2º ano consecutivo.</div>
+      <div class="rec"><b>Profissional Liberal de Destaque</b>Prêmio Melhores do Ano — Associação Comercial de Sorocaba.</div>
+      <div class="rec"><b>Responsabilidade Social</b>Reconhecimento da Associação Brasileira da The Rotary Foundation (ABTRF).</div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Confiança que inspira</span>
+      <h2>O que nossos clientes dizem</h2>
+    </div>
+    <div class="t-grid">
+      <div class="t-card">
+        <p>"Juntos há quase duas décadas. Destaco a reversão em nosso favor em uma complexa disputa. Sempre nos atenderam como verdadeiros parceiros."</p>
+        <div class="t-name">Seilly Heumann</div><div class="t-role">C-Level, Canaã Patrimonial Participações e Administração Ltda</div>
+      </div>
+      <div class="t-card">
+        <p>"O Battaglia & Pedrosa Advogados nos apoia com soluções ágeis e eficientes, auxiliando na tomada de decisões com clareza e excelência."</p>
+        <div class="t-name">Dr. Gustavo Ribeiro Neves</div><div class="t-role">Presidente, Unimed Sorocaba</div>
+      </div>
+      <div class="t-card">
+        <p>"Muitíssimo obrigado! Vocês foram verdadeiros parceiros e grandes profissionais."</p>
+        <div class="t-name">Roberto Fernández Gómez</div><div class="t-role">COO, D.med Health Care — Alemanha</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contato">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Contato</span>
+      <h2>Vamos falar sobre o seu caso</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Unidade São Paulo</h3>
+        <div class="cline"><b>WhatsApp</b>(11) 99504-9829</div>
+        <div class="cline"><b>E-mail</b>saopaulo1@bpadvogados.com.br</div>
+        <div class="cline"><b>Endereço</b>Rua Funchal, 573 — sala 51/52, Vila Olímpia, São Paulo/SP, 04551-060</div>
+        <div class="cline"><b>Também em</b>Sorocaba/SP</div>
+        <a class="btn" style="width:100%;justify-content:center;margin-top:8px" href="https://wa.me/5511995049829?text=Ol%C3%A1!%20Encontrei%20o%20site%20da%20Battaglia%20%26%20Pedrosa%20e%20gostaria%20de%20falar%20com%20a%20equipe." target="_blank" rel="noopener">Falar no WhatsApp</a>
+      </div>
+      <div class="map-frame">
+        <iframe src="https://www.google.com/maps?q=Rua+Funchal+573+Vila+Olimpia+Sao+Paulo&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="https://bpadvogados.com.br/wp-content/uploads/2024/11/logo-bpadvogados-branco-transparente.png" alt="Battaglia & Pedrosa"></div>
+      <div class="footer-links">
+        <a href="#areas">Atuação</a>
+        <a href="#equipe">Equipe</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>© 2026 Battaglia & Pedrosa Advogados.</span>
+      <span>Rua Funchal, 573 — Vila Olímpia, São Paulo/SP</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5511995049829?text=Ol%C3%A1!%20Encontrei%20o%20site%20da%20Battaglia%20%26%20Pedrosa%20e%20gostaria%20de%20falar%20com%20a%20equipe." target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.48 1.34 5L2 22l5.2-1.37a9.9 9.9 0 0 0 4.84 1.24h.01c5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2zm5.83 14.24c-.24.68-1.4 1.3-1.93 1.35-.5.05-1.03.24-3.46-.72-2.9-1.15-4.79-4.1-4.94-4.3-.14-.2-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.4.26-.29.57-.36.76-.36h.55c.18 0 .42-.07.65.5.24.58.82 2 .9 2.14.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.31.38-.44.5-.15.15-.3.3-.13.6.17.29.76 1.26 1.64 2.04 1.12.99 2.07 1.3 2.37 1.45.29.15.46.12.63-.07.17-.2.73-.85.93-1.14.2-.29.4-.24.66-.15.27.1 1.7.8 1.99.95.29.14.48.22.55.34.07.13.07.72-.17 1.4z"/></svg>
+</a>
+
+</body>
+</html>

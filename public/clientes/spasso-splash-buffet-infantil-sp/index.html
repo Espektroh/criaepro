@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Spasso Splash — Buffet Infantil | Moema, São Paulo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--purple:#7b2d8e;--purple-d:#521e5f;--teal:#2fb5a6;--cream:#faf7fb;--paper:#fff;--line:#ece0f0;--ink:#2b2530}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--cream);line-height:1.65}
+  h1,h2,h3{font-family:'Baloo 2',sans-serif;color:var(--purple-d);line-height:1.2;font-weight:700}
+  a{text-decoration:none;color:inherit}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+  .btn{display:inline-flex;align-items:center;gap:10px;background:var(--teal);color:#fff;padding:15px 30px;font-weight:700;font-size:14.5px;border-radius:999px;transition:background .2s}
+  .btn:hover{background:#268e82}
+  .btn-line{border:1.5px solid rgba(255,255,255,.5);color:#fff;background:transparent}
+  .btn-line:hover{background:rgba(255,255,255,.1)}
+  .eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:12px;color:var(--teal);font-weight:700;margin-bottom:14px;display:block}
+
+  .topbar{background:var(--purple-d);color:#e8d4ee;font-size:13px;padding:9px 0}
+  .topbar .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  .topbar a{color:#e8d4ee}
+  header{background:var(--paper);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+  .brand img{height:50px}
+  .nav-links{display:none;gap:26px;font-size:14px;font-weight:600;color:var(--purple-d)}
+  @media(min-width:900px){.nav-links{display:flex}}
+  .nav-links a:hover{color:var(--teal)}
+
+  .hero{background:var(--paper)}
+  .hero-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:center;padding:70px 0}
+  @media(min-width:900px){.hero-grid{grid-template-columns:1fr 1fr}}
+  .hero h1{font-size:clamp(30px,4.4vw,46px);margin-bottom:18px}
+  .hero p{color:#5c5563;font-size:16px;margin-bottom:28px;max-width:480px}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px}
+  .hero .btn{background:var(--purple);}
+  .hero .btn:hover{background:var(--purple-d)}
+  .hero-photo{border-radius:16px;overflow:hidden;box-shadow:0 30px 60px rgba(123,45,142,.18)}
+  .hero-badge{margin-top:36px;display:inline-flex;align-items:center;gap:10px;background:var(--cream);border:1px solid var(--line);padding:10px 18px;border-radius:999px;font-size:14px;color:var(--purple-d);font-weight:600}
+  .stars{color:#f5a623;letter-spacing:2px}
+
+  section{padding:88px 0}
+  .section-head{max-width:640px;margin:0 auto 50px;text-align:center}
+  .section-head h2{font-size:clamp(27px,3.8vw,38px)}
+  .section-head p{color:#5c5563;margin-top:12px}
+
+  .attractions{background:var(--purple-d);color:#e8d4ee}
+  .attractions h2{color:#fff}
+  .attr-grid{display:grid;grid-template-columns:1fr;gap:20px;margin-top:40px}
+  @media(min-width:720px){.attr-grid{grid-template-columns:1fr 1fr 1fr}}
+  .attr-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:28px}
+  .attr-card h3{color:#fff;font-size:20px;margin-bottom:10px}
+  .attr-card p{font-size:14px;color:#d9c2df}
+
+  .gallery{background:var(--paper)}
+  .g-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+  @media(min-width:700px){.g-grid{grid-template-columns:repeat(4,1fr)}}
+  .g-grid img{width:100%;height:190px;object-fit:cover;border-radius:12px}
+
+  .spaces{background:var(--cream);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .space-grid{display:grid;grid-template-columns:1fr;gap:16px}
+  @media(min-width:720px){.space-grid{grid-template-columns:repeat(4,1fr)}}
+  .space{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:24px;text-align:center}
+  .space h4{font-family:'Baloo 2',sans-serif;color:var(--purple-d);font-size:17px}
+
+  .testimonials{background:var(--paper)}
+  .t-grid{display:grid;grid-template-columns:1fr;gap:22px}
+  @media(min-width:820px){.t-grid{grid-template-columns:1fr 1fr 1fr}}
+  .t-card{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:26px}
+  .t-stars{color:#f5a623;letter-spacing:2px;margin-bottom:12px}
+  .t-card p{font-size:14px;color:#4a4550;font-style:italic}
+  .t-name{margin-top:14px;font-weight:700;font-size:13.5px;color:var(--purple-d)}
+
+  .contact{background:var(--cream)}
+  .contact-grid{display:grid;grid-template-columns:1fr;gap:36px}
+  @media(min-width:860px){.contact-grid{grid-template-columns:1fr 1fr}}
+  .contact-card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:36px}
+  .contact-card h3{font-size:21px;margin-bottom:20px}
+  .cline{margin-bottom:16px;font-size:15px}
+  .cline b{display:block;font-size:11.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--teal);margin-bottom:3px;font-family:'Inter',sans-serif}
+  .map-frame{border-radius:14px;overflow:hidden;border:1px solid var(--line);min-height:320px}
+  .map-frame iframe{width:100%;height:100%;min-height:320px;border:0}
+
+  footer{background:var(--purple-d);color:#d9c2df;padding:42px 0 22px}
+  .footer-grid{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,.15)}
+  .footer-brand img{height:36px}
+  .footer-links{display:flex;gap:22px;font-size:13.5px}
+  .footer-links a:hover{color:var(--teal)}
+  .copyright{padding-top:18px;font-size:12px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+
+  .wa-float{position:fixed;bottom:22px;right:22px;background:#25D366;color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(0,0,0,.3);z-index:60}
+  .wa-float svg{width:28px;height:28px;fill:#fff}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>💜 Moema, São Paulo</span>
+    <a href="mailto:contato@spassosplash.com.br">contato@spassosplash.com.br</a>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="brand"><img src="https://spassosplash.com.br/assets/img/logo.png" alt="Spasso Splash"></a>
+    <nav class="nav-links">
+      <a href="#atracoes">Atrações</a>
+      <a href="#espaco">Espaço</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="btn" style="background:var(--purple);padding:11px 22px" href="https://wa.me/5511973981356?text=Ol%C3%A1!%20Encontrei%20o%20site%20do%20Spasso%20Splash%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Buffet infantil em Moema</span>
+      <h1>Um mundo de alegria espera por você!</h1>
+      <p>Diversão, segurança e sofisticação em um só lugar — estrutura completa, profissionais altamente qualificados e recreação personalizada em todas as festas.</p>
+      <div class="hero-actions">
+        <a class="btn" href="https://wa.me/5511973981356?text=Ol%C3%A1!%20Encontrei%20o%20site%20do%20Spasso%20Splash%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener">Pedir orçamento</a>
+        <a class="btn btn-line" style="border-color:var(--purple);color:var(--purple)" href="#atracoes">Ver atrações</a>
+      </div>
+      <div class="hero-badge"><span class="stars">★★★★★</span> 4,7 · 409 avaliações no Google</div>
+    </div>
+    <div class="hero-photo"><img src="https://spassosplash.com.br/assets/img/sobre.webp" alt="Fachada Spasso Splash"></div>
+  </div>
+</section>
+
+<section class="attractions" id="atracoes">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Nossas atrações</span>
+      <h2>Diversão garantida para todas as idades!</h2>
+    </div>
+    <div class="attr-grid">
+      <div class="attr-card"><h3>Brinquedão</h3><p>O incrível Brinquedão com escorregador gigante, túneis e obstáculos para aventuras sem fim.</p></div>
+      <div class="attr-card"><h3>Montanha Russa</h3><p>Uma montanha-russa emocionante que contorna o lado externo do buffet, com muita adrenalina e diversão.</p></div>
+      <div class="attr-card"><h3>La Bamba</h3><p>Com movimentos giratórios e mudanças de direção inesperadas — faz todo mundo rir e se segurar firme.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="espaco">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Nosso espaço encantado</span>
+      <h2>Conheça o universo de diversão</h2>
+    </div>
+    <div class="g-grid">
+      <img src="https://spassosplash.com.br/assets/img/gallery/1.jpg" alt="Espaço Spasso Splash">
+      <img src="https://spassosplash.com.br/assets/img/gallery/3.jpg" alt="Atração Spasso Splash">
+      <img src="https://spassosplash.com.br/assets/img/gallery/7.jpg" alt="Ambiente Spasso Splash">
+      <img src="https://spassosplash.com.br/assets/img/atracoes/brinquedao.jpg" alt="Brinquedão Spasso Splash">
+    </div>
+  </div>
+</section>
+
+<section class="spaces">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Ambientes confortáveis</span>
+      <h2>Enquanto as crianças se divertem, os adultos também têm seu espaço</h2>
+    </div>
+    <div class="space-grid">
+      <div class="space"><h4>Sala de Adultos</h4></div>
+      <div class="space"><h4>Spasso Baby</h4></div>
+      <div class="space"><h4>Berçário</h4></div>
+      <div class="space"><h4>Sala VIP</h4></div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials" id="depoimentos">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Depoimentos</span>
+      <h2>A alegria da festa que fica na memória</h2>
+    </div>
+    <div class="t-grid">
+      <div class="t-card">
+        <div class="t-stars">★★★★★</div>
+        <p>"Eu amei esse buffet. Um lugar maravilhoso, repleto de atrações, brinquedos como montanha russa, elevador, piscina de bolinhas, quadra de futebol — parecia um parque de diversões."</p>
+        <div class="t-name">Ana Paula Moura</div>
+      </div>
+      <div class="t-card">
+        <div class="t-stars">★★★★★</div>
+        <p>"Maravilhoso, da chegada até a saída. Espaço agradável, bonito e espaçoso. Excelente atendimento, tudo feito com muito cuidado e capricho. Limpeza, organização e climatização impecáveis."</p>
+        <div class="t-name">Luciana Lima</div>
+      </div>
+      <div class="t-card">
+        <div class="t-stars">★★★★★</div>
+        <p>"Fiz a festa de aniversário dos meus filhos lá, com aproximadamente 100 pessoas, e o serviço estava impecável! Espaço grande, cheio de atrações — as crianças amaram."</p>
+        <div class="t-name">Alberto Sartorelli</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contato">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Contato</span>
+      <h2>Vem se divertir com a gente!</h2>
+      <p>Deixe tudo por nossa conta.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Solicite um orçamento</h3>
+        <div class="cline"><b>WhatsApp</b>(11) 97398-1356</div>
+        <div class="cline"><b>E-mail</b>contato@spassosplash.com.br</div>
+        <div class="cline"><b>Endereço</b>Rua Canário, 1270 — Moema, São Paulo/SP, 04521-005</div>
+        <a class="btn" style="background:var(--purple);width:100%;justify-content:center;margin-top:8px" href="https://wa.me/5511973981356?text=Ol%C3%A1!%20Encontrei%20o%20site%20do%20Spasso%20Splash%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener">Falar no WhatsApp</a>
+      </div>
+      <div class="map-frame">
+        <iframe src="https://www.google.com/maps?q=Rua+Canario+1270+Moema+Sao+Paulo&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="https://spassosplash.com.br/assets/img/logo.png" alt="Spasso Splash"></div>
+      <div class="footer-links">
+        <a href="#atracoes">Atrações</a>
+        <a href="#espaco">Espaço</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>© 2026 Spasso Splash Buffet Infantil.</span>
+      <span>Rua Canário, 1270 — Moema, São Paulo/SP</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5511973981356?text=Ol%C3%A1!%20Encontrei%20o%20site%20do%20Spasso%20Splash%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.48 1.34 5L2 22l5.2-1.37a9.9 9.9 0 0 0 4.84 1.24h.01c5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2zm5.83 14.24c-.24.68-1.4 1.3-1.93 1.35-.5.05-1.03.24-3.46-.72-2.9-1.15-4.79-4.1-4.94-4.3-.14-.2-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.4.26-.29.57-.36.76-.36h.55c.18 0 .42-.07.65.5.24.58.82 2 .9 2.14.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.31.38-.44.5-.15.15-.3.3-.13.6.17.29.76 1.26 1.64 2.04 1.12.99 2.07 1.3 2.37 1.45.29.15.46.12.63-.07.17-.2.73-.85.93-1.14.2-.29.4-.24.66-.15.27.1 1.7.8 1.99.95.29.14.48.22.55.34.07.13.07.72-.17 1.4z"/></svg>
+</a>
+
+</body>
+</html>

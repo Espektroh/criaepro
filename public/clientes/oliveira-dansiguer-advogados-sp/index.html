@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Oliveira & Dansiguer Advogados — Pinheiros, São Paulo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#242832;--navy2:#171a21;--gold:#c9a24b;--gold-l:#e6c777;--paper:#f7f6f3;--line:#2f3440;--ink:#2a2a2a}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+  h1,h2,h3{font-family:'Playfair Display',serif;color:var(--navy);line-height:1.2}
+  a{text-decoration:none;color:inherit}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+  .btn{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--navy2);padding:15px 30px;font-weight:700;font-size:14.5px;letter-spacing:.02em;border-radius:2px;transition:background .2s}
+  .btn:hover{background:var(--gold-l)}
+  .btn-line{border:1.5px solid rgba(255,255,255,.4);color:#fff;background:transparent}
+  .btn-line:hover{border-color:var(--gold);color:var(--gold)}
+  .eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:11.5px;color:var(--gold);font-weight:700;margin-bottom:14px;display:block}
+
+  .topbar{background:var(--navy2);color:#cfd3da;font-size:13px;padding:9px 0}
+  .topbar .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  .topbar a{color:#cfd3da}
+  header{background:var(--navy);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand img{height:44px}
+  .brand-text{font-family:'Playfair Display',serif;color:#fff;font-size:19px;line-height:1.2}
+  .brand-text small{display:block;font-family:'Inter',sans-serif;font-size:9.5px;letter-spacing:.2em;color:var(--gold);font-weight:600}
+  .nav-links{display:none;gap:30px;font-size:14px;color:#dcdee3;font-weight:500}
+  @media(min-width:860px){.nav-links{display:flex}}
+  .nav-links a:hover{color:var(--gold)}
+
+  .hero{position:relative;color:#fff;min-height:600px;display:flex;align-items:center}
+  .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1)}
+  .hero::before{content:'';position:absolute;inset:0;background:linear-gradient(100deg,rgba(23,26,33,.94) 32%,rgba(23,26,33,.75) 60%,rgba(23,26,33,.4));}
+  .hero-inner{position:relative;z-index:2;padding:100px 0}
+  .hero h1{color:#fff;font-size:clamp(32px,4.8vw,52px);max-width:680px;margin-bottom:20px}
+  .hero p{max-width:540px;color:#d6d9df;font-size:16.5px;margin-bottom:30px}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px}
+  .stats{display:flex;gap:40px;margin-top:52px;flex-wrap:wrap}
+  .stat b{font-family:'Playfair Display',serif;font-size:30px;color:var(--gold);display:block}
+  .stat span{font-size:12.5px;color:#b8bcc4;text-transform:uppercase;letter-spacing:.08em}
+
+  section{padding:88px 0}
+  .section-head{max-width:640px;margin:0 auto 52px;text-align:center}
+  .section-head h2{font-size:clamp(27px,3.8vw,38px)}
+  .section-head p{color:#5c5c5c;margin-top:12px}
+
+  .areas-grid{display:grid;grid-template-columns:1fr;gap:16px}
+  @media(min-width:720px){.areas-grid{grid-template-columns:1fr 1fr}}
+  @media(min-width:1040px){.areas-grid{grid-template-columns:1fr 1fr 1fr}}
+  .area{background:#fff;border:1px solid #e7e4dd;border-radius:4px;padding:30px 26px;transition:transform .2s,box-shadow .2s}
+  .area:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(36,40,50,.1)}
+  .area .num{font-family:'Playfair Display',serif;color:var(--gold);font-size:26px;margin-bottom:10px;display:block}
+  .area h3{font-size:19px;margin-bottom:10px}
+  .area p{font-size:14px;color:#585858}
+
+  .about{background:var(--navy);color:#dfe1e6}
+  .about-grid{display:grid;grid-template-columns:1fr;gap:44px;align-items:center}
+  @media(min-width:880px){.about-grid{grid-template-columns:1fr 1.1fr}}
+  .about-photo{border-radius:4px;overflow:hidden}
+  .about h2{color:#fff}
+  .about p{margin-bottom:16px;color:#c4c7ce;font-size:15px}
+  .partner-quote{border-left:3px solid var(--gold);padding-left:18px;margin:24px 0;font-family:'Playfair Display',serif;font-size:19px;color:#fff;font-style:italic}
+  .partner-quote cite{display:block;margin-top:10px;font-family:'Inter',sans-serif;font-style:normal;font-size:13px;color:var(--gold);letter-spacing:.05em}
+
+  .partners{padding:50px 0;background:var(--paper);border-top:1px solid #e7e4dd;border-bottom:1px solid #e7e4dd}
+  .partners .eyebrow{text-align:center;display:block}
+  .partner-logos{display:flex;justify-content:center;align-items:center;gap:56px;margin-top:26px;flex-wrap:wrap;opacity:.85}
+  .partner-logos img{height:34px;filter:grayscale(1)}
+
+  .testimonials{background:#fff}
+  .t-grid{display:grid;grid-template-columns:1fr;gap:22px}
+  @media(min-width:820px){.t-grid{grid-template-columns:1fr 1fr 1fr}}
+  .t-card{background:var(--paper);border:1px solid #e7e4dd;border-radius:4px;padding:28px}
+  .t-stars{color:var(--gold);letter-spacing:2px;margin-bottom:12px}
+  .t-card p{font-size:14.5px;color:#4a4a4a;margin-bottom:16px}
+  .t-name{font-weight:700;font-size:14px;color:var(--navy)}
+
+  .contact{background:var(--paper)}
+  .contact-grid{display:grid;grid-template-columns:1fr;gap:36px}
+  @media(min-width:860px){.contact-grid{grid-template-columns:1fr 1fr}}
+  .contact-card{background:#fff;border:1px solid #e7e4dd;border-radius:4px;padding:36px}
+  .contact-card h3{font-size:21px;margin-bottom:22px}
+  .cline{margin-bottom:16px;font-size:15px}
+  .cline b{display:block;font-size:11.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);margin-bottom:3px;font-family:'Inter',sans-serif}
+  .map-frame{border-radius:4px;overflow:hidden;border:1px solid #e7e4dd;min-height:320px}
+  .map-frame iframe{width:100%;height:100%;min-height:320px;border:0}
+
+  footer{background:var(--navy2);color:#9aa0ab;padding:44px 0 22px}
+  .footer-grid{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;padding-bottom:26px;border-bottom:1px solid var(--line)}
+  .footer-brand{color:#fff;font-family:'Playfair Display',serif;font-size:20px}
+  .footer-links{display:flex;gap:24px;font-size:14px}
+  .footer-links a:hover{color:var(--gold)}
+  .copyright{padding-top:20px;font-size:12px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+
+  .wa-float{position:fixed;bottom:22px;right:22px;background:#25D366;color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(0,0,0,.3);z-index:60}
+  .wa-float svg{width:28px;height:28px;fill:#fff}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>📍 Pinheiros, São Paulo · <a href="mailto:contato@oliveiraedansiguer.adv.br">contato@oliveiraedansiguer.adv.br</a></span>
+    <a href="tel:+551135093996">(11) 3509-3996</a>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="brand">
+      <img src="https://oliveiraedansiguer.adv.br/wp-content/uploads/2021/08/logo-od-normal90.png" alt="Oliveira & Dansiguer">
+      <span class="brand-text">Oliveira & Dansiguer<small>ADVOGADOS E ASSOCIADOS</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#areas">Áreas de Atuação</a>
+      <a href="#sobre">Escritório</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="btn" href="https://wa.me/5511994099627?text=Ol%C3%A1!%20Encontrei%20o%20site%20da%20Oliveira%20%26%20Dansiguer%20e%20gostaria%20de%20agendar%20um%20atendimento." target="_blank" rel="noopener">Agendamento</a>
+  </div>
+</header>
+
+<section class="hero">
+  <img class="hero-bg" src="https://oliveiraedansiguer.adv.br/wp-content/uploads/2021/08/IMG_9634PB-scaled.jpg" alt="Escritório Oliveira & Dansiguer Advogados">
+  <div class="wrap hero-inner">
+    <span class="eyebrow">Advocacia empresarial em Pinheiros</span>
+    <h1>Uma visão moderna do Direito, a serviço do seu negócio.</h1>
+    <p>Assessoria jurídica full service para pequenas e médias empresas e pessoas físicas — do consultivo ao contencioso, com foco em resultado e comunicação clara.</p>
+    <div class="hero-actions">
+      <a class="btn" href="https://wa.me/5511994099627?text=Ol%C3%A1!%20Encontrei%20o%20site%20da%20Oliveira%20%26%20Dansiguer%20e%20gostaria%20de%20agendar%20um%20atendimento." target="_blank" rel="noopener">Agendar atendimento</a>
+      <a class="btn btn-line" href="#areas">Ver áreas de atuação</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>5,0 ★</b><span>90 avaliações no Google</span></div>
+      <div class="stat"><b>Full Service</b><span>consultivo + contencioso</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="areas">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Áreas de atuação</span>
+      <h2>Especialistas em diversas frentes do Direito</h2>
+      <p>Uma equipe multidisciplinar, preparada para demandas simples e complexas de pessoas físicas e jurídicas.</p>
+    </div>
+    <div class="areas-grid">
+      <div class="area"><span class="num">01</span><h3>Direito Empresarial</h3><p>Assessoria full service para pequenas e médias empresas em todas as frentes do negócio.</p></div>
+      <div class="area"><span class="num">02</span><h3>Direito Tributário</h3><p>Resolução, orientação e prevenção de conflitos nas relações tributárias e empresariais.</p></div>
+      <div class="area"><span class="num">03</span><h3>Direito Imobiliário</h3><p>Especialistas em demandas imobiliárias, com serviços jurídicos de alto nível na área.</p></div>
+      <div class="area"><span class="num">04</span><h3>Direito do Trabalho</h3><p>Defesa dos direitos e obrigações nas relações entre empregadores e colaboradores.</p></div>
+      <div class="area"><span class="num">05</span><h3>Direito do Consumidor</h3><p>Orientação e defesa técnica em conflitos e relações de consumo.</p></div>
+      <div class="area"><span class="num">06</span><h3>Família e Sucessões</h3><p>Condução responsável de inventários, partilhas e questões familiares.</p></div>
+      <div class="area"><span class="num">07</span><h3>Direito Previdenciário</h3><p>Orientação estratégica em benefícios e questões junto ao INSS.</p></div>
+      <div class="area"><span class="num">08</span><h3>Consultoria Jurídica</h3><p>Compliance, aconselhamento jurídico e defesa técnica preventiva para negócios.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="sobre">
+  <div class="wrap about-grid">
+    <div class="about-photo">
+      <img src="https://oliveiraedansiguer.adv.br/wp-content/uploads/2021/08/IMG_9634PB-scaled.jpg" alt="Escritório Oliveira & Dansiguer">
+    </div>
+    <div>
+      <span class="eyebrow">O escritório</span>
+      <h2>Uma visão moderna do Direito</h2>
+      <p>O escritório de advocacia Oliveira & Dansiguer conta com advogados especialistas em diversas áreas do Direito, preparados para atuar em demandas simples e complexas, de pessoas físicas e jurídicas.</p>
+      <p>Para o escritório, exercer o Direito é garantir que os clientes sejam representados perante a justiça ou terceiros com o objetivo de contribuir positivamente para a vida deles — sempre com observação de todos os ângulos para a melhor resolução de cada caso.</p>
+      <div class="partner-quote">
+        "Muitas pessoas tratam o Direito apenas pelo dinheiro, mas isso não é uma verdade para nós — e não é verdade para ninguém que realmente ama o que faz."
+        <cite>Fernanda Dansiguer, Advogada — Sócia</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="partners">
+  <div class="wrap">
+    <span class="eyebrow">Empresas parceiras</span>
+    <div class="partner-logos">
+      <img src="https://oliveiraedansiguer.adv.br/wp-content/uploads/2025/06/quinto-andar.png" alt="QuintoAndar">
+      <img src="https://oliveiraedansiguer.adv.br/wp-content/uploads/2023/10/engemais-construtora-4.png" alt="Engemais Construtora">
+    </div>
+  </div>
+</div>
+
+<section class="testimonials" id="depoimentos">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Depoimentos</span>
+      <h2>O que dizem nossos clientes</h2>
+    </div>
+    <div class="t-grid">
+      <div class="t-card">
+        <div class="t-stars">★★★★★</div>
+        <p>"Os serviços de advocacia prestados foram de excelente qualidade. Posso recomendar eles sem a menor dúvida!! Parabéns pelo trabalho realizado de forma muito eficiente!!"</p>
+        <div class="t-name">José Maria Comparini</div>
+      </div>
+      <div class="t-card">
+        <div class="t-stars">★★★★★</div>
+        <p>"Avaliação positiva: Atendimento, Profissionalismo, Qualidade, Valor. Excelentes profissionais, comprometidos com o trabalho e estabelecem uma linguagem muito clara junto aos clientes."</p>
+        <div class="t-name">Rodgers de Camargo Rodgers</div>
+      </div>
+      <div class="t-card">
+        <div class="t-stars">★★★★★</div>
+        <p>"Fui muito bem recebido e acolhido. Eles ouviram minhas demandas, informaram os caminhos possíveis e propuseram as melhores soluções — focaram não apenas nos meus interesses, mas também em meu bem estar."</p>
+        <div class="t-name">Ivan Marques</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contato">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Contato</span>
+      <h2>Consulte nossos especialistas</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Fale com a equipe</h3>
+        <div class="cline"><b>Telefone</b>(11) 3509-3996</div>
+        <div class="cline"><b>WhatsApp</b>(11) 99409-9627</div>
+        <div class="cline"><b>E-mail</b>contato@oliveiraedansiguer.adv.br</div>
+        <div class="cline"><b>Endereço</b>Rua Pais Leme, 215 — Pinheiros, São Paulo/SP</div>
+        <a class="btn" style="width:100%;justify-content:center;margin-top:8px" href="https://wa.me/5511994099627?text=Ol%C3%A1!%20Encontrei%20o%20site%20da%20Oliveira%20%26%20Dansiguer%20e%20gostaria%20de%20agendar%20um%20atendimento." target="_blank" rel="noopener">Falar no WhatsApp</a>
+      </div>
+      <div class="map-frame">
+        <iframe src="https://www.google.com/maps?q=Rua+Pais+Leme+215+Pinheiros+Sao+Paulo&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">Oliveira & Dansiguer</div>
+      <div class="footer-links">
+        <a href="#areas">Áreas de Atuação</a>
+        <a href="#sobre">Escritório</a>
+        <a href="#contato">Contato</a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>© 2026 Oliveira & Dansiguer Advogados Associados.</span>
+      <span>Rua Pais Leme, 215 — Pinheiros, São Paulo/SP</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5511994099627?text=Ol%C3%A1!%20Encontrei%20o%20site%20da%20Oliveira%20%26%20Dansiguer%20e%20gostaria%20de%20agendar%20um%20atendimento." target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.48 1.34 5L2 22l5.2-1.37a9.9 9.9 0 0 0 4.84 1.24h.01c5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2zm5.83 14.24c-.24.68-1.4 1.3-1.93 1.35-.5.05-1.03.24-3.46-.72-2.9-1.15-4.79-4.1-4.94-4.3-.14-.2-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.4.26-.29.57-.36.76-.36h.55c.18 0 .42-.07.65.5.24.58.82 2 .9 2.14.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.31.38-.44.5-.15.15-.3.3-.13.6.17.29.76 1.26 1.64 2.04 1.12.99 2.07 1.3 2.37 1.45.29.15.46.12.63-.07.17-.2.73-.85.93-1.14.2-.29.4-.24.66-.15.27.1 1.7.8 1.99.95.29.14.48.22.55.34.07.13.07.72-.17 1.4z"/></svg>
+</a>
+
+</body>
+</html>

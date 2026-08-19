@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Viviane Santos Alves — Advogada de Família | São Paulo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--wine:#7a2e3a;--wine-d:#551f27;--gold:#bd9a5f;--cream:#faf6f1;--paper:#fff;--line:#ece3d8;--ink:#2c2622}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--cream);line-height:1.65}
+  h1,h2,h3{font-family:'Cormorant Garamond',serif;color:var(--wine-d);line-height:1.2;font-weight:600}
+  a{text-decoration:none;color:inherit}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+  .btn{display:inline-flex;align-items:center;gap:10px;background:var(--wine);color:#fff;padding:15px 30px;font-weight:600;font-size:14.5px;border-radius:2px;transition:background .2s}
+  .btn:hover{background:var(--wine-d)}
+  .btn-line{border:1.5px solid rgba(255,255,255,.4);color:#fff;background:transparent}
+  .btn-line:hover{border-color:var(--gold);color:var(--gold)}
+  .eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:11.5px;color:var(--gold);font-weight:700;margin-bottom:14px;display:block}
+
+  header{background:var(--paper);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+  .brand img{height:46px}
+  .nav-links{display:none;gap:28px;font-size:14px;font-weight:500}
+  @media(min-width:880px){.nav-links{display:flex}}
+  .nav-links a:hover{color:var(--wine)}
+
+  .hero{background:linear-gradient(120deg,var(--wine-d),var(--wine));color:#fff;position:relative;overflow:hidden}
+  .hero::after{content:'';position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;border:60px solid rgba(255,255,255,.06)}
+  .hero-inner{position:relative;z-index:2;padding:90px 0;max-width:680px}
+  .hero h1{color:#fff;font-size:clamp(32px,4.8vw,52px);margin-bottom:20px}
+  .hero p{color:#f0dfe1;font-size:16.5px;margin-bottom:32px;max-width:540px}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px}
+  .hero-badge{margin-top:44px;display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);padding:10px 18px;border-radius:999px;font-size:14px}
+  .stars{color:var(--gold);letter-spacing:2px}
+
+  section{padding:88px 0}
+  .section-head{max-width:640px;margin:0 auto 50px;text-align:center}
+  .section-head h2{font-size:clamp(27px,3.8vw,38px)}
+  .section-head p{color:#5c554e;margin-top:12px}
+
+  .areas-grid{display:grid;grid-template-columns:1fr;gap:16px}
+  @media(min-width:720px){.areas-grid{grid-template-columns:1fr 1fr}}
+  .area{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:28px}
+  .area h3{font-size:20px;margin-bottom:10px}
+  .area p{font-size:14px;color:#5c554e}
+
+  .sucessoes{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .succ-grid{display:grid;grid-template-columns:1fr;gap:14px}
+  @media(min-width:680px){.succ-grid{grid-template-columns:1fr 1fr}}
+  .succ-item{padding:16px 0 16px 22px;border-left:2px solid var(--gold);font-size:14.5px;color:#4a433c}
+  .succ-item b{display:block;color:var(--wine-d);font-family:'Cormorant Garamond',serif;font-size:18px;margin-bottom:3px}
+
+  .quote{background:var(--cream);text-align:center}
+  .quote blockquote{font-family:'Cormorant Garamond',serif;font-size:clamp(20px,3vw,27px);max-width:760px;margin:0 auto;color:var(--wine-d);font-style:italic;line-height:1.5}
+  .quote cite{display:block;margin-top:18px;font-style:normal;font-size:13px;color:var(--gold);text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+
+  .testimonials{background:var(--paper)}
+  .t-grid{display:grid;grid-template-columns:1fr;gap:22px}
+  @media(min-width:820px){.t-grid{grid-template-columns:1fr 1fr 1fr}}
+  .t-card{background:var(--cream);border:1px solid var(--line);border-radius:4px;padding:26px}
+  .t-stars{color:var(--gold);letter-spacing:2px;margin-bottom:10px}
+  .t-card p{font-size:13.5px;color:#4a433c;margin-bottom:14px}
+  .t-name{font-weight:700;font-size:13.5px;color:var(--wine-d);text-transform:uppercase;letter-spacing:.04em}
+
+  .contact{background:var(--cream)}
+  .contact-grid{display:grid;grid-template-columns:1fr;gap:36px}
+  @media(min-width:860px){.contact-grid{grid-template-columns:1fr 1fr}}
+  .contact-card{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:36px}
+  .contact-card h3{font-size:21px;margin-bottom:20px}
+  .cline{margin-bottom:15px;font-size:14.5px}
+  .cline b{display:block;font-size:11.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);margin-bottom:3px;font-family:'Inter',sans-serif}
+  .units{display:grid;grid-template-columns:1fr 1fr;gap:6px 16px;font-size:12.5px;color:#6b6259;margin-top:4px}
+  .map-frame{border-radius:4px;overflow:hidden;border:1px solid var(--line);min-height:320px}
+  .map-frame iframe{width:100%;height:100%;min-height:320px;border:0}
+
+  footer{background:var(--wine-d);color:#e2c9cc;padding:42px 0 22px}
+  .footer-grid{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,.15)}
+  .footer-brand{color:#fff;font-family:'Cormorant Garamond',serif;font-size:20px}
+  .footer-links{display:flex;gap:22px;font-size:13.5px}
+  .footer-links a:hover{color:var(--gold)}
+  .copyright{padding-top:18px;font-size:12px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+
+  .wa-float{position:fixed;bottom:22px;right:22px;background:#25D366;color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(0,0,0,.3);z-index:60}
+  .wa-float svg{width:28px;height:28px;fill:#fff}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="brand"><img src="https://vsalves.adv.br/wp-content/uploads/2019/10/logo.png" alt="Viviane Santos Alves Advogada"></a>
+    <nav class="nav-links">
+      <a href="#areas">Áreas de Atuação</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="btn" style="padding:11px 22px;font-size:13.5px" href="https://wa.me/5511983822127?text=Ol%C3%A1%2C%20Dra.%20Viviane!%20Encontrei%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <span class="eyebrow" style="color:#e8c9ce">Advocacia de família em São Paulo</span>
+    <h1>Ao seu lado nos momentos que mais importam.</h1>
+    <p>Mais de 15 anos cuidando de divórcios, guarda, inventários e planejamento sucessório com empatia, transparência e resultado — quatro unidades para atender você.</p>
+    <div class="hero-actions">
+      <a class="btn" style="background:#fff;color:var(--wine)" href="https://wa.me/5511983822127?text=Ol%C3%A1%2C%20Dra.%20Viviane!%20Encontrei%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">Agendar uma consulta</a>
+      <a class="btn btn-line" href="#areas">Ver áreas de atuação</a>
+    </div>
+    <div class="hero-badge"><span class="stars">★★★★★</span> 5,0 · 105 avaliações no Google</div>
+  </div>
+</section>
+
+<section id="areas">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Áreas de atuação</span>
+      <h2>Direito de Família e Sucessões</h2>
+      <p>Cada história é única — o atendimento também é.</p>
+    </div>
+    <div class="areas-grid">
+      <div class="area"><h3>Divórcio</h3><p>Rompimento legal do casamento, consensual ou litigioso, incluindo pensão de alimentos e partilha de bens.</p></div>
+      <div class="area"><h3>Guarda de Menores</h3><p>Regularização judicial da guarda dos filhos menores após a ruptura do relacionamento do casal.</p></div>
+      <div class="area"><h3>Inventário</h3><p>Levantamento e divisão dos bens deixados pelo falecido entre os herdeiros, judicial ou extrajudicial.</p></div>
+      <div class="area"><h3>Partilha de Bens</h3><p>Divisão do patrimônio comum do casal conforme o regime de bens escolhido no casamento.</p></div>
+      <div class="area"><h3>Pensão Alimentícia</h3><p>Assessoria em ações de fixação, revisão e exoneração de pensão alimentícia.</p></div>
+      <div class="area"><h3>União Estável</h3><p>Reconhecimento formal da convivência pública, contínua e duradoura com objetivo familiar.</p></div>
+      <div class="area"><h3>Testamento</h3><p>Elaboração de testamentos, definindo o destino do patrimônio conforme a vontade do titular.</p></div>
+      <div class="area"><h3>Mediação Familiar</h3><p>Resolução colaborativa de conflitos, com soluções duradouras construídas pelas próprias partes.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sucessoes">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Outras frentes</span>
+      <h2>Direito das Sucessões e áreas correlatas</h2>
+    </div>
+    <div class="succ-grid">
+      <div class="succ-item"><b>Planejamento Sucessório</b>Organização antecipada do patrimônio para evitar conflitos futuros.</div>
+      <div class="succ-item"><b>Inventário Judicial e Extrajudicial</b>Condução completa do processo, na via mais adequada a cada caso.</div>
+      <div class="succ-item"><b>Direito Trabalhista e Previdenciário</b>Ações contra o INSS, reclamações trabalhistas e dano moral.</div>
+      <div class="succ-item"><b>Direito Imobiliário</b>Assessoria em questões patrimoniais ligadas a imóveis da família.</div>
+    </div>
+  </div>
+</section>
+
+<div class="quote">
+  <div class="wrap">
+    <blockquote>"A Dra. Viviane além de ser uma excelente profissional advogada, também é um lindo ser humano — isso é o que torna os processos da vida ainda mais tranquilos para se superar."</blockquote>
+    <cite>Fran & Lipe — clientes</cite>
+  </div>
+</div>
+
+<section class="testimonials" id="depoimentos">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Depoimentos</span>
+      <h2>O que dizem os clientes</h2>
+    </div>
+    <div class="t-grid">
+      <div class="t-card">
+        <div class="t-stars">★★★★★</div>
+        <p>"Obtivemos sucesso em dois casos: guarda unilateral e um pedido de viagem e moradia no exterior. Empatia, transparência e prestatividade — Viviane é nossa referência número 1 em direito da família."</p>
+        <div class="t-name">Adriana e Israel Richter</div>
+      </div>
+      <div class="t-card">
+        <div class="t-stars">★★★★★</div>
+        <p>"Gostaria de agradecer por toda prestatividade e parceria nesses anos. Não foi fácil, mas sabia que minha causa estava em boas mãos."</p>
+        <div class="t-name">Luiz Fernando</div>
+      </div>
+      <div class="t-card">
+        <div class="t-stars">★★★★★</div>
+        <p>"Cuidou do processo de guarda que envolvia meu filho, e demonstra cuidado e carinho por nossa família mesmo com a correria do dia a dia."</p>
+        <div class="t-name">Fran & Lipe</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contato">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Contato</span>
+      <h2>Agende sua consulta</h2>
+      <p>Será um prazer atendê-lo.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Fale com a Dra. Viviane</h3>
+        <div class="cline"><b>Celular / WhatsApp</b>(11) 98382-2127</div>
+        <div class="cline"><b>E-mail</b>contato@vsalves.adv.br</div>
+        <div class="cline">
+          <b>Unidades</b>
+          <div class="units">
+            <span>Campo Belo — R. Pascal, 1353</span>
+            <span>Jardim Paulista — Al. Santos, 2159</span>
+            <span>Vila Guarani — Av. do Café, 238</span>
+            <span>Rudge Ramos — R. Jacquey, 41</span>
+          </div>
+        </div>
+        <a class="btn" style="width:100%;justify-content:center;margin-top:8px" href="https://wa.me/5511983822127?text=Ol%C3%A1%2C%20Dra.%20Viviane!%20Encontrei%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">Falar no WhatsApp</a>
+      </div>
+      <div class="map-frame">
+        <iframe src="https://www.google.com/maps?q=Rua+Pascal+1353+Campo+Belo+Sao+Paulo&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">Viviane Santos Alves — Advogada</div>
+      <div class="footer-links">
+        <a href="#areas">Áreas de Atuação</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>© 2026 Viviane Alves Advogada. Todos os direitos reservados.</span>
+      <span>Campo Belo · Jardim Paulista · Vila Guarani · Rudge Ramos</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5511983822127?text=Ol%C3%A1%2C%20Dra.%20Viviane!%20Encontrei%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.48 1.34 5L2 22l5.2-1.37a9.9 9.9 0 0 0 4.84 1.24h.01c5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2zm5.83 14.24c-.24.68-1.4 1.3-1.93 1.35-.5.05-1.03.24-3.46-.72-2.9-1.15-4.79-4.1-4.94-4.3-.14-.2-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.4.26-.29.57-.36.76-.36h.55c.18 0 .42-.07.65.5.24.58.82 2 .9 2.14.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.31.38-.44.5-.15.15-.3.3-.13.6.17.29.76 1.26 1.64 2.04 1.12.99 2.07 1.3 2.37 1.45.29.15.46.12.63-.07.17-.2.73-.85.93-1.14.2-.29.4-.24.66-.15.27.1 1.7.8 1.99.95.29.14.48.22.55.34.07.13.07.72-.17 1.4z"/></svg>
+</a>
+
+</body>
+</html>
