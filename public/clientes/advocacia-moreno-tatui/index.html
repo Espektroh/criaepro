@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Advocacia Moreno — Direito Trabalhista em Tatuí e Sorocaba</title>
+<meta name="description" content="Advocacia Moreno: atendimento jurídico trabalhista em três unidades — Tatuí, Sorocaba Centro e Sorocaba Itavuvu. Nota 4,9 no Google com 31 avaliações.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{ --verde:#1F3D2B; --verde-esc:#132A1C; --carvao:#20201D; --branco:#F4F1EA; --terra:#B5651D; }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:'Work Sans',sans-serif; color:var(--carvao); background:var(--branco); line-height:1.68;}
+  h1,h2,h3{font-family:'Libre Baskerville',serif; font-weight:700; line-height:1.25; color:var(--verde-esc);}
+  a{text-decoration:none; color:inherit;}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 24px;}
+  .btn{display:inline-flex; align-items:center; gap:10px; background:var(--verde); color:#fff; font-weight:600; padding:15px 30px; border-radius:3px; font-size:14.5px;}
+  .btn:hover{background:var(--verde-esc);}
+  .btn-alt{background:transparent; border:1.5px solid var(--verde); color:var(--verde);}
+
+  header{position:sticky; top:0; background:var(--branco); border-bottom:2px solid var(--verde); z-index:50;}
+  header .wrap{display:flex; align-items:center; justify-content:space-between; padding:16px 24px;}
+  .brand{font-family:'Libre Baskerville',serif; font-weight:700; font-size:19px; color:var(--verde-esc);}
+  header nav{display:none;}
+  @media(min-width:860px){ header nav{display:flex; gap:28px;} header nav a{color:var(--carvao); font-weight:500; font-size:13.5px;} }
+  header .btn{padding:9px 18px; font-size:13px; display:none;}
+  @media(min-width:600px){ header .btn{display:inline-flex;} }
+
+  .hero{background:var(--verde-esc); color:#eee7d9;}
+  .hero .wrap{padding:64px 24px 60px;}
+  .kicker{color:var(--terra); font-weight:600; letter-spacing:.16em; font-size:12px; text-transform:uppercase;}
+  .hero h1{color:#fff; font-size:36px; margin:16px 0 18px; max-width:640px;}
+  @media(min-width:640px){ .hero h1{font-size:46px;} }
+  .hero p.lead{font-size:16px; color:#cdd8ca; max-width:560px; margin-bottom:30px;}
+  .hero .ctas{display:flex; flex-wrap:wrap; gap:14px; margin-bottom:26px;}
+  .rating-line{display:flex; align-items:center; gap:10px; font-size:14px; color:#cdd8ca;}
+  .rating-line .stars{color:var(--terra); letter-spacing:2px;}
+
+  /* triptico de unidades - fato real: 3 enderecos */
+  .unidades{background:var(--verde); border-top:1px solid rgba(255,255,255,.15);}
+  .unidades .wrap{padding:0;}
+  .uni-grid{display:grid;}
+  @media(min-width:820px){ .uni-grid{grid-template-columns:repeat(3,1fr);} }
+  .uni{padding:28px 26px; border-right:1px solid rgba(255,255,255,.14); border-bottom:1px solid rgba(255,255,255,.14);}
+  @media(min-width:820px){ .uni:last-child{border-right:none;} }
+  .uni .tag{font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--terra); font-weight:600; display:block; margin-bottom:8px;}
+  .uni h3{color:#fff; font-size:18px; margin-bottom:6px;}
+  .uni p{color:#cdd8ca; font-size:13.5px;}
+
+  section{padding:72px 0;}
+  .section-title{margin-bottom:44px; text-align:center;}
+  .section-title h2{font-size:30px; max-width:640px; margin:12px auto 0;}
+
+  .areas-grid{display:grid; gap:2px; background:rgba(31,61,43,.18); border:1px solid rgba(31,61,43,.18); margin-top:10px;}
+  @media(min-width:760px){ .areas-grid{grid-template-columns:repeat(2,1fr);} }
+  .area{background:#fff; padding:30px 28px;}
+  .area h3{font-size:19px; margin-bottom:10px; color:var(--verde-esc);}
+  .area p{font-size:14px; color:#41403a;}
+
+  .sobre{background:#fff;}
+  .sobre-grid{display:grid; gap:40px; align-items:center;}
+  @media(min-width:900px){ .sobre-grid{grid-template-columns:1fr 1fr;} }
+  .sobre p{font-size:15.5px; color:#41403a; margin-bottom:16px;}
+  .sobre-box{background:var(--branco); border-left:4px solid var(--terra); padding:26px 28px; font-size:14.5px; color:#41403a;}
+
+  .contato{background:var(--branco); border-top:1px solid rgba(31,61,43,.18);}
+  .contato-grid{display:grid; gap:30px; align-items:start;}
+  @media(min-width:900px){ .contato-grid{grid-template-columns:1fr 1fr;} }
+  .contato h2{font-size:28px; margin-bottom:14px;}
+  .contato-lista{list-style:none;}
+  .contato-lista li{padding:16px 0; border-bottom:1px solid rgba(31,61,43,.15); font-size:14.5px;}
+  .contato-lista strong{display:block; color:var(--verde-esc); font-family:'Libre Baskerville',serif; font-size:15.5px; margin-bottom:4px;}
+  .contato iframe{width:100%; height:320px; border:0; filter:grayscale(.2);}
+
+  footer{background:var(--verde-esc); color:#a9b8a4; padding:28px 0; text-align:center; font-size:12.5px;}
+  .whats-float{position:fixed; bottom:22px; right:22px; background:#25D366; color:#fff; width:58px; height:58px; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 10px 24px rgba(0,0,0,.3); z-index:60; font-size:27px;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand">Advocacia Moreno</div>
+    <nav>
+      <a href="#unidades">Unidades</a>
+      <a href="#areas">Atuação</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="btn" href="https://wa.me/551533342703?text=Ol%C3%A1%2C%20Advocacia%20Moreno%21%20Gostaria%20de%20agendar%20uma%20an%C3%A1lise%20gratuita%20do%20meu%20caso%20trabalhista.">Falar no WhatsApp</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="kicker">Tatuí · Sorocaba — SP</div>
+    <h1>Defendendo a sua causa trabalhista com atendimento personalizado.</h1>
+    <p class="lead">Corpo jurídico qualificado, suporte contábil e equipe de apoio próprios, com atuação pautada em profissionalismo, ética e atendimento humanizado.</p>
+    <div class="ctas">
+      <a class="btn" href="https://wa.me/551533342703?text=Ol%C3%A1%2C%20Advocacia%20Moreno%21%20Gostaria%20de%20agendar%20uma%20an%C3%A1lise%20gratuita%20do%20meu%20caso%20trabalhista.">Agendar análise gratuita</a>
+      <a class="btn btn-alt" href="tel:+551533342703" style="color:#fff; border-color:#fff;">Ligar agora</a>
+    </div>
+    <div class="rating-line"><span class="stars">★★★★★</span> 4,9 no Google — 31 avaliações</div>
+  </div>
+</section>
+
+<section class="unidades" id="unidades">
+  <div class="wrap">
+    <div class="uni-grid">
+      <div class="uni"><span class="tag">Unidade 01</span><h3>Sorocaba — Centro</h3><p>R. Cesário Mota, 130</p></div>
+      <div class="uni"><span class="tag">Unidade 02</span><h3>Sorocaba — Itavuvu</h3><p>Av. Itavuvu, 2670</p></div>
+      <div class="uni"><span class="tag">Unidade 03</span><h3>Tatuí</h3><p>R. Quinze de Novembro, 579</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="areas">
+  <div class="wrap">
+    <div class="section-title">
+      <span class="kicker" style="color:var(--verde);">Atuação trabalhista</span>
+      <h2>Assessoria jurídica para empregados e empregadores</h2>
+    </div>
+    <div class="areas-grid">
+      <div class="area"><h3>Reclamações trabalhistas</h3><p>Defesa de direitos de trabalhadores em processos junto à Justiça do Trabalho.</p></div>
+      <div class="area"><h3>Verbas rescisórias</h3><p>Cálculo e cobrança de valores devidos em rescisões de contrato de trabalho.</p></div>
+      <div class="area"><h3>Assessoria a empresas</h3><p>Orientação preventiva e defesa de empregadores em ações trabalhistas.</p></div>
+      <div class="area"><h3>Acordos e negociações</h3><p>Condução de acordos trabalhistas buscando agilidade e o melhor resultado.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sobre">
+  <div class="wrap sobre-grid">
+    <div>
+      <span class="kicker" style="color:var(--verde);">Sobre o escritório</span>
+      <h2 style="font-size:27px; margin:12px 0 18px;">Estrutura própria para atender pessoas físicas e jurídicas</h2>
+      <p>Nosso escritório atua em diversas cidades do interior de São Paulo, com corpo jurídico qualificado composto por advogados especialistas em diversas áreas do Direito.</p>
+      <p>Contamos com o suporte de contadores experientes e capacitados, além de uma equipe de apoio, para que o cliente tenha uma visão completa do seu caso.</p>
+    </div>
+    <div class="sobre-box">
+      "Nosso foco principal é o atendimento das expectativas dos nossos clientes, pautando a nossa atuação no profissionalismo e na ética, sem perder o atendimento humanizado."
+    </div>
+  </div>
+</section>
+
+<section class="contato" id="contato">
+  <div class="wrap contato-grid">
+    <div>
+      <h2>Fale com a Advocacia Moreno</h2>
+      <ul class="contato-lista">
+        <li><strong>Sorocaba — Centro</strong>R. Cesário Mota, 130 · (15) 3232-4962</li>
+        <li><strong>Sorocaba — Itavuvu</strong>Av. Itavuvu, 2670 · (15) 3231-7148</li>
+        <li><strong>Tatuí</strong>R. Quinze de Novembro, 579 · (15) 3334-2703</li>
+      </ul>
+      <div style="margin-top:22px;">
+        <a class="btn" href="https://wa.me/551533342703?text=Ol%C3%A1%2C%20Advocacia%20Moreno%21%20Gostaria%20de%20agendar%20uma%20an%C3%A1lise%20gratuita%20do%20meu%20caso%20trabalhista.">Falar no WhatsApp</a>
+      </div>
+    </div>
+    <iframe src="https://www.google.com/maps?q=Rua+Quinze+de+Novembro,+579,+Tatu%C3%AD+SP&output=embed" loading="lazy"></iframe>
+  </div>
+</section>
+
+<footer>© Advocacia Moreno — Tatuí · Sorocaba/SP</footer>
+
+<a class="whats-float" href="https://wa.me/551533342703?text=Ol%C3%A1%2C%20Advocacia%20Moreno%21%20Gostaria%20de%20agendar%20uma%20an%C3%A1lise%20gratuita%20do%20meu%20caso%20trabalhista." aria-label="WhatsApp">💬</a>
+
+</body>
+</html>

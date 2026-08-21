@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Ananda Fernandes — Advocacia Trabalhista e Previdenciária em Salto/SP</title>
+<meta name="description" content="Ananda Fernandes — Advocacia e Consultoria Jurídica em Salto/SP. Nota 5,0 no Google com 26 avaliações. Atendimento humanizado em causas trabalhistas e previdenciárias.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --burgundy:#6E1423; --burgundy2:#4C0D18; --gold:#B8860B; --gold-l:#D9A73B;
+    --bg:#FBF8F3; --linha:#E9DFC9; --texto:#3E332A;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:'Nunito Sans',sans-serif; color:var(--texto); background:var(--bg); line-height:1.65;}
+  h1,h2,h3{font-family:'Cinzel',serif; line-height:1.3; color:var(--burgundy2); font-weight:600;}
+  a{text-decoration:none; color:inherit;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 24px;}
+  .btn{display:inline-flex; align-items:center; gap:10px; background:var(--gold); color:#fff; font-weight:700; padding:15px 30px; border-radius:2px; font-size:14.5px; letter-spacing:.02em;}
+  .btn:hover{background:var(--gold-l);}
+  .btn-outline{background:transparent; border:1.5px solid #fff; color:#fff;}
+
+  header{position:sticky; top:0; background:var(--burgundy2); z-index:60;}
+  header .wrap{display:flex; align-items:center; justify-content:space-between; padding:12px 24px;}
+  .brand{display:flex; align-items:center; gap:10px;}
+  .brand img{height:38px;}
+  header .btn{padding:9px 18px; font-size:12.5px; display:none;}
+  @media(min-width:640px){ header .btn{display:inline-flex;} }
+
+  .hero{background:var(--burgundy); color:#fff; position:relative; overflow:hidden;}
+  .hero::before{content:"";position:absolute; inset:0; background:radial-gradient(circle at 88% 12%, rgba(216,167,59,.18), transparent 50%);}
+  .hero .wrap{display:grid; gap:20px; align-items:center; padding:54px 24px 0; position:relative; z-index:2;}
+  @media(min-width:960px){ .hero .wrap{grid-template-columns:1.05fr .95fr; padding-top:0;} }
+  .kicker{color:var(--gold-l); font-weight:600; letter-spacing:.14em; font-size:11.5px; text-transform:uppercase;}
+  .hero h1{font-size:29px; margin:16px 0 18px; max-width:480px; font-weight:600; color:#fff;}
+  @media(min-width:640px){ .hero h1{font-size:38px;} }
+  .hero p{font-size:15.5px; color:#E9C9CE; max-width:440px; margin-bottom:26px;}
+  .ctas{display:flex; flex-wrap:wrap; gap:14px; padding-bottom:0;}
+  .hero-foto{display:flex; justify-content:center; align-items:flex-end; height:100%;}
+  .hero-foto img{max-height:460px; width:auto; object-fit:contain;}
+  .hero-txt{padding-bottom:50px;}
+
+  section{padding:64px 0;}
+  .section-title{margin-bottom:36px; text-align:center;}
+  .section-title .kicker{color:var(--gold);}
+  .section-title h2{font-size:26px; margin-top:10px;}
+
+  /* Triangulos ascendentes - eco do logo */
+  .triangulos{display:flex; justify-content:center; align-items:flex-end; gap:18px; margin:10px auto 0; max-width:640px;}
+  .tri{position:relative; text-align:center;}
+  .tri .shape{width:0; height:0; margin:0 auto 12px; border-left:44px solid transparent; border-right:44px solid transparent;}
+  .tri.t1 .shape{border-bottom:70px solid var(--gold);}
+  .tri.t2 .shape{border-bottom:96px solid var(--burgundy);}
+  .tri.t3 .shape{border-bottom:56px solid var(--gold-l);}
+  .tri h3{font-size:15px; margin-bottom:4px;}
+  .tri p{font-size:12px; color:#7A6A5E; max-width:150px; margin:0 auto;}
+
+  .areas-grid{display:grid; gap:20px;}
+  @media(min-width:640px){ .areas-grid{grid-template-columns:repeat(2,1fr);} }
+  .area-card{background:#fff; border:1px solid var(--linha); padding:28px 24px; border-top:3px solid var(--gold);}
+  .area-card h3{font-size:18px; margin-bottom:10px;}
+  .area-card p{font-size:13.5px; color:#6B5C50;}
+
+  .prova{background:var(--burgundy2); color:#fff;}
+  .prova-grid{display:grid; gap:34px; align-items:center;}
+  @media(min-width:960px){ .prova-grid{grid-template-columns:.7fr 1.3fr;} }
+  .nota-grande{text-align:center;}
+  .nota-grande .num{font-family:'Cinzel',serif; font-weight:700; font-size:64px; color:var(--gold-l); line-height:1;}
+  .nota-grande .estrelas{color:var(--gold-l); font-size:18px; margin:10px 0;}
+  .nota-grande .fonte{font-size:12px; color:#D8B9BE; letter-spacing:.04em;}
+  .dep-grid{display:grid; gap:18px;}
+  @media(min-width:640px){ .dep-grid{grid-template-columns:repeat(2,1fr);} }
+  .dep-card{background:rgba(255,255,255,.05); border:1px solid rgba(216,167,59,.3); border-radius:2px; padding:24px;}
+  .dep-card p{font-size:14px; color:#EEDDE1;}
+
+  .sobre{background:#fff;}
+  .sobre-grid{display:grid; gap:30px; align-items:center;}
+  @media(min-width:960px){ .sobre-grid{grid-template-columns:.85fr 1.15fr;} }
+  .sobre img{border-radius:4px; width:100%; object-fit:cover; max-height:420px;}
+  .sobre p{font-size:15px; margin-bottom:14px; color:#4A3D33;}
+
+  .contato{background:var(--burgundy); color:#fff;}
+  .contato-grid{display:grid; gap:28px;}
+  @media(min-width:860px){ .contato-grid{grid-template-columns:1fr 1fr;} }
+  .contato h2{font-size:25px; margin-bottom:14px; color:#fff;}
+  .contato .info{font-size:15px; color:#E9C9CE; margin-bottom:22px;}
+  .contato .info strong{color:#fff; display:block; margin-bottom:2px; font-size:12.5px; text-transform:uppercase; letter-spacing:.05em;}
+  .contato .linha{margin-bottom:16px;}
+  .contato iframe{width:100%; height:270px; border:0; border-radius:2px;}
+
+  footer{background:var(--burgundy2); color:#C7A6AC; padding:28px 0; text-align:center; font-size:12.5px;}
+  footer strong{color:#fff;}
+  .whats-float{position:fixed; bottom:20px; right:20px; background:#25D366; color:#fff; width:58px; height:58px; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 10px 26px rgba(0,0,0,.35); z-index:70; font-size:28px;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand"><img src="https://anandafernandes.adv.br/wp-content/uploads/2026/05/logo-1.png" alt="Ananda Fernandes - Advocacia e Consultoria Jurídica"></div>
+    <a class="btn" href="https://wa.me/5511942094227?text=Ol%C3%A1%2C%20Dra.%20Ananda!%20Gostaria%20de%20saber%20mais%20sobre%20como%20voc%C3%AAs%20podem%20me%20ajudar.">Falar no WhatsApp</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-txt">
+      <div class="kicker">Advocacia Trabalhista e Previdenciária · Salto/SP</div>
+      <h1>Advocacia feita com dedicação, responsabilidade e proximidade.</h1>
+      <p>Defesa dos direitos de trabalhadores, aposentados e segurados da Previdência, com atendimento humanizado e estratégico em cada etapa do processo.</p>
+      <div class="ctas">
+        <a class="btn" href="https://wa.me/5511942094227?text=Ol%C3%A1%2C%20Dra.%20Ananda!%20Gostaria%20de%20saber%20mais%20sobre%20como%20voc%C3%AAs%20podem%20me%20ajudar.">Falar com a Dra. Ananda</a>
+        <a class="btn btn-outline" href="tel:+5511942094227">Ligar (11) 94209-4227</a>
+      </div>
+    </div>
+    <div class="hero-foto">
+      <img src="https://anandafernandes.adv.br/wp-content/uploads/2026/05/ananda-1.png" alt="Ananda Fernandes, advogada">
+    </div>
+  </div>
+</section>
+
+<section id="areas">
+  <div class="wrap">
+    <div class="section-title">
+      <div class="kicker">Áreas de atuação</div>
+      <h2>Foco em quem precisa de segurança jurídica</h2>
+    </div>
+    <div class="triangulos">
+      <div class="tri t1"><div class="shape"></div><h3>Previdenciário</h3><p>Aposentados e segurados do INSS</p></div>
+      <div class="tri t2"><div class="shape"></div><h3>Trabalhista</h3><p>Direitos dos trabalhadores</p></div>
+      <div class="tri t3"><div class="shape"></div><h3>Consultoria</h3><p>Orientação jurídica humanizada</p></div>
+    </div>
+    <div class="areas-grid" style="margin-top:44px;">
+      <a class="area-card" href="https://wa.me/5511942094227?text=Ol%C3%A1!%20Gostaria%20de%20falar%20sobre%20Direito%20Trabalhista.">
+        <h3>Direito Trabalhista</h3>
+        <p>Atuação com foco na defesa dos direitos dos trabalhadores, com acompanhamento próximo em cada etapa do processo.</p>
+      </a>
+      <a class="area-card" href="https://wa.me/5511942094227?text=Ol%C3%A1!%20Gostaria%20de%20falar%20sobre%20Direito%20Previdenci%C3%A1rio.">
+        <h3>Direito Previdenciário</h3>
+        <p>Defesa dos direitos de aposentados e segurados da Previdência Social junto ao INSS.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="prova">
+  <div class="wrap prova-grid">
+    <div class="nota-grande">
+      <div class="num">5,0</div>
+      <div class="estrelas">★★★★★</div>
+      <div class="fonte">26 avaliações no Google</div>
+    </div>
+    <div class="dep-grid">
+      <div class="dep-card"><p>Escritório reconhecido em Salto/SP por atendimento humanizado e estratégico, com nota máxima acumulada junto a clientes reais atendidos em causas trabalhistas e previdenciárias.</p></div>
+      <div class="dep-card"><p>Equipe formada por advogadas colaboradoras, bacharel em Direito e estagiária jurídica, atuando de forma integrada para garantir suporte completo e atenção individualizada.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sobre">
+  <div class="wrap sobre-grid">
+    <img src="https://anandafernandes.adv.br/wp-content/uploads/2026/05/12-1-682x1024.jpeg" alt="Ananda Fernandes em atendimento">
+    <div>
+      <div class="kicker" style="color:var(--gold)">Quem somos</div>
+      <h2 style="font-size:24px; margin:10px 0 16px;">Advocacia que vai além dos processos</h2>
+      <p>A Ananda Fernandes – Advocacia e Consultoria Jurídica atua com foco na defesa dos direitos dos trabalhadores, aposentados e segurados da Previdência Social, oferecendo um atendimento humanizado e estratégico em cada etapa do processo.</p>
+      <p>Nosso compromisso é proporcionar segurança jurídica, clareza nas informações e acompanhamento próximo, sempre buscando soluções eficientes e alinhadas às necessidades de cada cliente. Acreditamos que a advocacia envolve acolhimento, confiança e respeito à história de cada pessoa.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contato" id="contato">
+  <div class="wrap contato-grid">
+    <div>
+      <h2>Fale com a Dra. Ananda Fernandes</h2>
+      <div class="info">
+        <div class="linha"><strong>Endereço</strong>Rua Prudente de Moraes, 545 — Centro, Salto/SP</div>
+        <div class="linha"><strong>Telefone</strong>(11) 94209-4227</div>
+        <div class="linha"><strong>E-mail</strong>anandafernandes.adv@gmail.com</div>
+      </div>
+      <a class="btn" href="https://wa.me/5511942094227?text=Ol%C3%A1%2C%20Dra.%20Ananda!%20Gostaria%20de%20saber%20mais%20sobre%20como%20voc%C3%AAs%20podem%20me%20ajudar.">Falar no WhatsApp agora</a>
+    </div>
+    <iframe src="https://www.google.com/maps?q=Rua+Prudente+de+Moraes,+545,+Centro,+Salto+SP&output=embed" loading="lazy"></iframe>
+  </div>
+</section>
+
+<footer>
+  <strong>Ananda Fernandes — Advocacia e Consultoria Jurídica</strong> — Salto/SP<br>
+  Rua Prudente de Moraes, 545 · (11) 94209-4227
+</footer>
+
+<a class="whats-float" href="https://wa.me/5511942094227?text=Ol%C3%A1%2C%20Dra.%20Ananda!%20Gostaria%20de%20saber%20mais%20sobre%20como%20voc%C3%AAs%20podem%20me%20ajudar." aria-label="WhatsApp">💬</a>
+
+</body>
+</html>

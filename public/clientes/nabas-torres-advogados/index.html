@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Nabas e Torres Advogados — Advocacia Trabalhista em Porto Feliz/SP</title>
+<meta name="description" content="Nabas e Torres Advogados — Porto Feliz/SP. Nota 5,0 no Google com 11 avaliações. Atendimento claro, objetivo e organizado.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0B2545; --navy2:#081A33; --teal:#4FB3A9; --teal-d:#357F78;
+    --cream:#F7F5F0; --linha:#E3E0D6; --texto:#39424D;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:'Work Sans',sans-serif; color:var(--texto); background:var(--cream); line-height:1.65;}
+  h1,h2,h3{font-family:'Playfair Display',serif; line-height:1.2; color:var(--navy);}
+  a{text-decoration:none; color:inherit;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 24px;}
+  .btn{display:inline-flex; align-items:center; gap:10px; background:var(--teal); color:#fff; font-weight:600; padding:15px 30px; border-radius:6px; font-size:15px;}
+  .btn:hover{background:var(--teal-d);}
+  .btn-outline{background:transparent; border:1.5px solid #fff; color:#fff;}
+
+  header{position:sticky; top:0; background:var(--navy2); z-index:60;}
+  header .wrap{display:flex; align-items:center; justify-content:space-between; padding:15px 24px;}
+  .brand{display:flex; align-items:center; gap:10px; color:#fff; font-family:'Playfair Display',serif; font-weight:700; font-size:18px;}
+  .brand .ico{width:34px; height:34px; border-radius:50%; border:1.5px solid var(--teal); display:flex; align-items:center; justify-content:center; font-size:15px; color:var(--teal); font-weight:800;}
+  header .btn{padding:9px 18px; font-size:13px; display:none;}
+  @media(min-width:640px){ header .btn{display:inline-flex;} }
+
+  .hero{background:var(--navy); color:#fff; position:relative; overflow:hidden;}
+  .hero .wrap{display:grid; gap:44px; align-items:center; padding:58px 24px 64px;}
+  @media(min-width:960px){ .hero .wrap{grid-template-columns:1.05fr .95fr;} }
+  .kicker{color:var(--teal); font-weight:600; letter-spacing:.14em; font-size:12px; text-transform:uppercase;}
+  .hero h1{font-size:32px; margin:16px 0 18px; max-width:520px; color:#fff;}
+  @media(min-width:640px){ .hero h1{font-size:42px;} }
+  .hero p{font-size:15.5px; color:#C7D3DE; max-width:460px; margin-bottom:28px;}
+  .ctas{display:flex; flex-wrap:wrap; gap:14px;}
+
+  .foto-real{position:relative; border-radius:8px; overflow:hidden; border:1px solid rgba(79,179,169,.35); box-shadow:0 20px 50px rgba(0,0,0,.35);}
+  .foto-real img{width:100%; height:100%; object-fit:cover; object-position:50% 22%; aspect-ratio:4/5; display:block;}
+  .selo-real{position:absolute; bottom:0; left:0; right:0; background:linear-gradient(0deg, rgba(8,26,51,.92), transparent); padding:34px 18px 16px; font-size:12px; color:#C7D3DE; letter-spacing:.02em;}
+  .selo-real strong{color:#fff; display:block; font-size:13px; margin-bottom:2px;}
+
+  section{padding:62px 0;}
+  .section-title{margin-bottom:36px;}
+  .section-title .kicker{color:var(--teal-d);}
+  .section-title h2{font-size:28px; margin-top:10px; max-width:600px;}
+
+  .areas-grid{display:grid; gap:20px;}
+  @media(min-width:640px){ .areas-grid{grid-template-columns:repeat(2,1fr);} }
+  @media(min-width:960px){ .areas-grid{grid-template-columns:repeat(3,1fr);} }
+  .area-card{background:#fff; border:1px solid var(--linha); padding:26px 22px; border-radius:8px;}
+  .area-card h3{font-size:17px; margin-bottom:10px;}
+  .area-card p{font-size:13.5px; color:#5C6773;}
+
+  .prova{background:var(--navy2); color:#fff;}
+  .prova .wrap{display:grid; gap:16px;}
+  .selo-nota{display:flex; align-items:center; gap:22px; margin-bottom:36px; flex-wrap:wrap;}
+  .selo-carimbo{width:110px; height:110px; border:2px solid var(--teal); border-radius:50%; display:flex; flex-direction:column; align-items:center; justify-content:center; transform:rotate(-8deg); flex-shrink:0;}
+  .selo-carimbo .num{font-family:'Playfair Display',serif; font-weight:800; font-size:26px; color:var(--teal); line-height:1;}
+  .selo-carimbo small{font-size:9px; letter-spacing:.1em; color:#C7D3DE; text-align:center; margin-top:4px;}
+  .selo-nota .texto{font-size:15px; color:#C7D3DE; max-width:440px;}
+  .selo-nota .texto strong{color:#fff;}
+  .dep-grid{display:grid; gap:18px;}
+  @media(min-width:820px){ .dep-grid{grid-template-columns:repeat(3,1fr);} }
+  .dep-card{background:rgba(255,255,255,.04); border:1px solid rgba(79,179,169,.25); border-radius:8px; padding:24px;}
+  .dep-card .estrelas{color:var(--teal); font-size:13px; margin-bottom:10px;}
+  .dep-card p{font-size:13.5px; color:#D5DEE6; font-style:italic;}
+  .dep-card .autor{margin-top:14px; font-weight:600; color:#fff; font-size:12.5px;}
+
+  .sobre-grid{display:grid; gap:30px;}
+  @media(min-width:960px){ .sobre-grid{grid-template-columns:1fr 1fr;} }
+  .sobre p{font-size:15px; margin-bottom:14px; color:#4A5460;}
+
+  .contato{background:#fff; border-top:1px solid var(--linha);}
+  .contato-grid{display:grid; gap:28px;}
+  @media(min-width:860px){ .contato-grid{grid-template-columns:1fr 1fr;} }
+  .contato h2{font-size:27px; margin-bottom:14px; color:var(--navy);}
+  .contato .info{font-size:15px; color:#4A5460; margin-bottom:22px;}
+  .contato .info strong{color:var(--navy); display:block; margin-bottom:2px; font-size:13px; text-transform:uppercase; letter-spacing:.04em;}
+  .contato .linha{margin-bottom:16px;}
+  .contato .btn{background:var(--navy);}
+  .contato iframe{width:100%; height:270px; border:0; border-radius:8px;}
+
+  footer{background:var(--navy2); color:#8FA2B3; padding:28px 0; text-align:center; font-size:12.5px;}
+  footer strong{color:#fff;}
+  .whats-float{position:fixed; bottom:20px; right:20px; background:#25D366; color:#fff; width:58px; height:58px; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 10px 26px rgba(0,0,0,.3); z-index:70; font-size:28px;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand"><span class="ico">N</span> Nabas e Torres Advogados</div>
+    <a class="btn" href="https://wa.me/5515998617473?text=Ol%C3%A1%2C%20Nabas%20e%20Torres%20Advogados!%20Encontrei%20o%20escrit%C3%B3rio%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida%20jur%C3%ADdica.">Falar no WhatsApp</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="kicker">Advocacia Trabalhista · Porto Feliz/SP</div>
+      <h1>Orientação jurídica clara, objetiva e organizada.</h1>
+      <p>Escritório de advocacia no centro de Porto Feliz, com nota 5,0 no Google em 11 avaliações. Atendimento humanizado, com respostas transparentes desde a primeira conversa.</p>
+      <div class="ctas">
+        <a class="btn" href="https://wa.me/5515998617473?text=Ol%C3%A1%2C%20Nabas%20e%20Torres%20Advogados!%20Encontrei%20o%20escrit%C3%B3rio%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida%20jur%C3%ADdica.">Tirar minha dúvida agora</a>
+        <a class="btn btn-outline" href="tel:+5515998617473">Ligar (15) 99861-7473</a>
+      </div>
+    </div>
+    <div class="foto-real">
+      <img src="nabas-fachada.png" alt="Fachada do escritório Nabas e Torres Advogados em Porto Feliz">
+      <div class="selo-real"><strong>Fachada real do escritório</strong>Foto do perfil da empresa no Google</div>
+    </div>
+  </div>
+</section>
+
+<section id="areas">
+  <div class="wrap">
+    <div class="section-title">
+      <div class="kicker">Áreas de atuação</div>
+      <h2>Suporte jurídico trabalhista do início ao fim do processo</h2>
+    </div>
+    <div class="areas-grid">
+      <a class="area-card" href="https://wa.me/5515998617473?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20direitos%20trabalhistas.">
+        <h3>Direitos trabalhistas</h3>
+        <p>Verbas rescisórias, horas extras, FGTS e demais direitos do trabalhador.</p>
+      </a>
+      <a class="area-card" href="https://wa.me/5515998617473?text=Ol%C3%A1!%20Gostaria%20de%20orienta%C3%A7%C3%A3o%20jur%C3%ADdica.">
+        <h3>Orientação jurídica</h3>
+        <p>Explicações claras e objetivas sobre seus direitos, sem juridiquês.</p>
+      </a>
+      <a class="area-card" href="https://wa.me/5515998617473?text=Ol%C3%A1!%20Gostaria%20de%20falar%20sobre%20um%20acompanhamento%20de%20processo.">
+        <h3>Acompanhamento de processo</h3>
+        <p>Condução organizada de cada etapa, com retorno frequente ao cliente.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="prova">
+  <div class="wrap">
+    <div class="selo-nota">
+      <div class="selo-carimbo">
+        <div class="num">5,0</div>
+        <small>11 AVAL.</small>
+      </div>
+      <div class="texto"><strong>Nota máxima no Google</strong> — 11 avaliações reais de clientes atendidos em Porto Feliz.</div>
+    </div>
+    <div class="dep-grid">
+      <div class="dep-card">
+        <div class="estrelas">★★★★★</div>
+        <p>"Excelentes advogados! Prezam sempre pela verdade e oferecem orientações com clareza e paciência. Recomendo!"</p>
+        <div class="autor">Camila Kaneichi — Avaliação no Google</div>
+      </div>
+      <div class="dep-card">
+        <div class="estrelas">★★★★★</div>
+        <p>"Profissionais extremamente competentes, atenciosos e comprometidos, sempre dispostos a esclarecer dúvidas."</p>
+        <div class="autor">Sérgio Augusto Dalmazo — Avaliação no Google</div>
+      </div>
+      <div class="dep-card">
+        <div class="estrelas">★★★★★</div>
+        <p>"Profissionais de alta competência, a clareza nas informações é impecável, atendimento humanizado."</p>
+        <div class="autor">Fabricio Jacque — Avaliação no Google</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sobre">
+  <div class="wrap sobre-grid">
+    <div>
+      <div class="kicker" style="color:var(--teal-d)">Como funciona</div>
+      <h2 style="font-size:26px; margin:10px 0 16px;">Atendimento presencial no centro de Porto Feliz</h2>
+      <p>O escritório Nabas e Torres Advogados fica no centro de Porto Feliz, com atendimento próximo e organizado — cada caso é acompanhado com informações claras em todas as etapas.</p>
+      <p>Entre em contato pelo WhatsApp para explicar sua situação e agendar uma conversa.</p>
+    </div>
+    <div>
+      <ul style="list-style:none;">
+        <li style="padding:10px 0; border-bottom:1px solid var(--linha); font-size:14.5px;">📍 Sala comercial no centro de Porto Feliz</li>
+        <li style="padding:10px 0; border-bottom:1px solid var(--linha); font-size:14.5px;">🗣️ Atendimento claro, sem enrolação</li>
+        <li style="padding:10px 0; border-bottom:1px solid var(--linha); font-size:14.5px;">📱 Contato direto pelo WhatsApp</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="contato" id="contato">
+  <div class="wrap contato-grid">
+    <div>
+      <h2>Fale com a Nabas e Torres</h2>
+      <div class="info">
+        <div class="linha"><strong>Endereço</strong>Rua Altino Arantes, 175 — Sala 11, Centro, Porto Feliz/SP, CEP 18540-147</div>
+        <div class="linha"><strong>Telefone</strong>(15) 99861-7473</div>
+      </div>
+      <a class="btn" href="https://wa.me/5515998617473?text=Ol%C3%A1%2C%20Nabas%20e%20Torres%20Advogados!%20Encontrei%20o%20escrit%C3%B3rio%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida%20jur%C3%ADdica.">Falar no WhatsApp agora</a>
+    </div>
+    <iframe src="https://www.google.com/maps?q=Rua+Altino+Arantes,+175,+Centro,+Porto+Feliz+SP&output=embed" loading="lazy"></iframe>
+  </div>
+</section>
+
+<footer>
+  <strong>Nabas e Torres Advogados</strong> — Porto Feliz/SP<br>
+  Rua Altino Arantes, 175, Sala 11 · (15) 99861-7473
+</footer>
+
+<a class="whats-float" href="https://wa.me/5515998617473?text=Ol%C3%A1%2C%20Nabas%20e%20Torres%20Advogados!%20Encontrei%20o%20escrit%C3%B3rio%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida%20jur%C3%ADdica." aria-label="WhatsApp">💬</a>
+
+</body>
+</html>

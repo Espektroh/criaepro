@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Thiago Perusse — Advogado Trabalhista em Boituva e Iperó</title>
+<meta name="description" content="Thiago Perusse & Associados — Advocacia Trabalhista em Boituva/SP e região. Mais de 20 anos de experiência. Nota 5,0 com 70 avaliações no Google.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --azul:#1c3a52;
+    --azul2:#122839;
+    --laranja:#d9622b;
+    --laranja-lt:#f08a52;
+    --cinza:#f2efe9;
+    --cinza2:#e2ddd0;
+    --texto:#211f1b;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:'Barlow',sans-serif; color:var(--texto); background:var(--cinza); line-height:1.65;}
+  h1,h2,h3{font-family:'Barlow Condensed',sans-serif; text-transform:uppercase; letter-spacing:.01em;}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  a{text-decoration:none; color:inherit;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1140px; margin:0 auto; padding:0 24px;}
+  .btn{display:inline-flex; align-items:center; gap:10px; background:var(--laranja); color:#fff; font-weight:700; padding:15px 30px; font-size:14.5px; border-radius:2px; text-transform:uppercase; letter-spacing:.03em;}
+  .btn:hover{background:#c1531f;}
+  .btn-outline{background:transparent; border:1.5px solid #fff; color:#fff;}
+
+  header{position:sticky; top:0; background:var(--azul2); z-index:60; border-bottom:3px solid var(--laranja);}
+  header .wrap{display:flex; align-items:center; justify-content:space-between; padding:14px 24px;}
+  .brand{font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:19px; color:#fff; text-transform:uppercase; line-height:1.2;}
+  .brand small{display:block; font-family:'Barlow',sans-serif; font-weight:600; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--laranja-lt);}
+  header .btn{padding:10px 20px; font-size:12.5px; display:none;}
+  @media(min-width:640px){ header .btn{display:inline-flex;} }
+
+  .hero{position:relative; color:#fff; overflow:hidden;}
+  .hero .bgimg{position:absolute; inset:0; background:linear-gradient(90deg, rgba(18,40,57,.94) 30%, rgba(18,40,57,.55)), url('thiago-fachada.jpg') center/cover no-repeat;}
+  .hero .wrap{position:relative; z-index:2; padding:70px 24px 76px; max-width:640px;}
+  .hero .kicker{color:var(--laranja-lt); font-weight:700; letter-spacing:.14em; font-size:12.5px; text-transform:uppercase; font-family:'Barlow',sans-serif;}
+  .hero h1{font-size:40px; margin:14px 0 20px; font-weight:800; line-height:1.05;}
+  @media(min-width:640px){ .hero h1{font-size:52px;} }
+  .hero p{font-size:15.5px; color:#d7dee3; max-width:460px; margin-bottom:30px; font-family:'Barlow',sans-serif;}
+  .hero .ctas{display:flex; flex-wrap:wrap; gap:14px;}
+  .hero .selo-lgbt{display:inline-block; margin-top:26px; font-size:11.5px; color:#b8c2ca; font-family:'Barlow',sans-serif;}
+
+  section{padding:70px 0;}
+  .section-title{max-width:640px; margin:0 auto 40px;}
+  .section-title .kicker{color:var(--laranja); font-weight:700; letter-spacing:.1em; font-size:12.5px; text-transform:uppercase; font-family:'Barlow',sans-serif;}
+  .section-title h2{font-size:34px; margin-top:8px; color:var(--azul);}
+  .center{text-align:center; margin-left:auto; margin-right:auto;}
+
+  /* SIGNATURE DEVICE: holerite / contracheque de direitos */
+  .holerite{background:#fff; border:1px solid var(--cinza2); max-width:640px; margin:0 auto; box-shadow:0 6px 24px rgba(0,0,0,.06);}
+  .holerite-head{background:var(--azul); color:#fff; padding:16px 24px; display:flex; justify-content:space-between; align-items:center;}
+  .holerite-head .t1{font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:17px; text-transform:uppercase;}
+  .holerite-head .t2{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--laranja-lt);}
+  .holerite-body{padding:10px 24px;}
+  .holerite-row{display:flex; justify-content:space-between; gap:16px; padding:13px 0; border-bottom:1px dashed var(--cinza2); font-family:'IBM Plex Mono',monospace; font-size:12.5px;}
+  .holerite-row:last-child{border-bottom:none;}
+  .holerite-row .desc{color:#3a362e;}
+  .holerite-row .flag{color:var(--laranja); font-weight:600; white-space:nowrap;}
+  .holerite-foot{padding:16px 24px; background:var(--cinza); font-family:'Barlow',sans-serif; font-size:12.5px; color:#5c5648; text-align:center;}
+
+  .areas-grid{display:grid; gap:18px; margin-top:10px;}
+  @media(min-width:760px){ .areas-grid{grid-template-columns:repeat(3,1fr);} }
+  .area-card{background:#fff; border-top:4px solid var(--laranja); padding:26px 22px; box-shadow:0 2px 10px rgba(0,0,0,.04);}
+  .area-card h3{font-size:19px; margin-bottom:8px; color:var(--azul); text-transform:none; font-family:'Barlow',sans-serif; font-weight:700;}
+  .area-card p{font-size:13.5px; color:#5c5648;}
+
+  .prova{background:var(--azul2); color:#fff;}
+  .prova .section-title h2{color:#fff;}
+  .prova-grid{display:grid; gap:22px; margin-top:36px;}
+  @media(min-width:800px){ .prova-grid{grid-template-columns:repeat(2,1fr);} }
+  .prova-card{background:#1c3448; border-radius:4px; padding:26px; border:1px solid rgba(255,255,255,.08);}
+  .prova-card .estrelas{color:var(--laranja-lt); font-size:14px; margin-bottom:10px;}
+  .prova-card p{font-size:14.5px; color:#d7dee3; font-style:italic; font-family:'Barlow',sans-serif;}
+  .prova-card .autor{margin-top:14px; font-weight:700; color:#fff; font-size:12.5px; font-family:'Barlow',sans-serif;}
+  .prova-card .fonte{font-size:11px; color:#8fa0ac;}
+
+  .stat-band{background:var(--laranja); color:#fff; text-align:center;}
+  .stat-band .wrap{display:grid; gap:24px; padding:40px 24px;}
+  @media(min-width:700px){ .stat-band .wrap{grid-template-columns:repeat(3,1fr);} }
+  .stat-band .num{font-family:'Barlow Condensed',sans-serif; font-size:38px; font-weight:800;}
+  .stat-band .lbl{font-size:12px; letter-spacing:.06em; text-transform:uppercase; margin-top:4px; font-family:'Barlow',sans-serif;}
+
+  .contato-grid{display:grid; gap:30px; align-items:start;}
+  @media(min-width:900px){ .contato-grid{grid-template-columns:1fr 1fr;} }
+  .contato h2{font-size:32px; color:var(--azul); margin-bottom:16px;}
+  .contato .item{display:flex; gap:14px; margin-bottom:18px; font-size:14.5px; font-family:'Barlow',sans-serif;}
+  .contato .item .ico{color:var(--laranja); font-size:18px; flex:0 0 22px;}
+  .contato iframe{width:100%; height:280px; border:0; border:1px solid var(--cinza2);}
+
+  footer{background:var(--azul2); color:#8fa0ac; padding:28px 0; text-align:center; font-size:12.5px; font-family:'Barlow',sans-serif;}
+  footer .name{color:#fff; font-weight:700; font-family:'Barlow Condensed',sans-serif; text-transform:uppercase; letter-spacing:.03em;}
+
+  .whats-float{position:fixed; bottom:22px; right:22px; background:#25D366; color:#fff; width:58px; height:58px; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 10px 26px rgba(0,0,0,.3); z-index:70; font-size:28px;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand">Thiago Perusse<small>Advocacia Trabalhista</small></div>
+    <a class="btn" href="https://wa.me/551533470530?text=Ol%C3%A1%2C%20Dr.%20Thiago%21%20Preciso%20de%20orienta%C3%A7%C3%A3o%20sobre%20meus%20direitos%20trabalhistas.">Falar no WhatsApp</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="bgimg"></div>
+  <div class="wrap">
+    <div class="kicker">Advocacia Trabalhista · Boituva e Iperó/SP</div>
+    <h1>Seus direitos trabalhistas, defendidos por quem entende do assunto.</h1>
+    <p>Mais de 20 anos de experiência na defesa dos direitos dos trabalhadores de Boituva e região, com atendimento voltado às necessidades de cada cliente.</p>
+    <div class="ctas">
+      <a class="btn" href="https://wa.me/551533470530?text=Ol%C3%A1%2C%20Dr.%20Thiago%21%20Preciso%20de%20orienta%C3%A7%C3%A3o%20sobre%20meus%20direitos%20trabalhistas.">Análise gratuita do meu caso</a>
+      <a class="btn btn-outline" href="tel:+551533470530">Ligar agora</a>
+    </div>
+    <div class="selo-lgbt">🏳️‍🌈 Empresa que acolhe a comunidade LGBTQ+</div>
+  </div>
+</section>
+
+<section id="direitos">
+  <div class="wrap">
+    <div class="section-title center">
+      <div class="kicker">Verifique agora</div>
+      <h2>Direitos que podem estar sendo negados a você</h2>
+    </div>
+    <div class="holerite">
+      <div class="holerite-head">
+        <div class="t1">Ficha de Direitos Trabalhistas</div>
+        <div class="t2">verificação gratuita</div>
+      </div>
+      <div class="holerite-body">
+        <div class="holerite-row"><span class="desc">Horas extras não pagas</span><span class="flag">verificar →</span></div>
+        <div class="holerite-row"><span class="desc">Verbas rescisórias</span><span class="flag">verificar →</span></div>
+        <div class="holerite-row"><span class="desc">Igualdade salarial</span><span class="flag">verificar →</span></div>
+        <div class="holerite-row"><span class="desc">Insalubridade e periculosidade</span><span class="flag">verificar →</span></div>
+        <div class="holerite-row"><span class="desc">Assédio moral</span><span class="flag">verificar →</span></div>
+        <div class="holerite-row"><span class="desc">Rescisão indireta</span><span class="flag">verificar →</span></div>
+        <div class="holerite-row"><span class="desc">Trabalho sem registro</span><span class="flag">verificar →</span></div>
+        <div class="holerite-row"><span class="desc">Recolhimento de INSS</span><span class="flag">verificar →</span></div>
+      </div>
+      <div class="holerite-foot">Reconhece algum item acima? Fale agora pelo WhatsApp e faça uma análise gratuita.</div>
+    </div>
+  </div>
+</section>
+
+<section id="areas" style="background:var(--cinza2)">
+  <div class="wrap">
+    <div class="section-title center">
+      <div class="kicker">Áreas de atuação</div>
+      <h2>Trabalhista e Previdenciário</h2>
+    </div>
+    <div class="areas-grid">
+      <div class="area-card"><h3>Doença e acidente de trabalho</h3><p>Defesa em casos de doença profissional e acidentes ocorridos no ambiente de trabalho.</p></div>
+      <div class="area-card"><h3>Aposentadoria e tempo especial</h3><p>Orientação previdenciária para trabalhadores expostos a condições especiais.</p></div>
+      <div class="area-card"><h3>Verbas e rescisão</h3><p>Cálculo e cobrança de verbas rescisórias e reversão de rescisões indevidas.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="prova">
+  <div class="wrap">
+    <div class="section-title center">
+      <div class="kicker">Reputação</div>
+      <h2>O que dizem no Google</h2>
+    </div>
+    <div class="prova-grid">
+      <div class="prova-card">
+        <div class="estrelas">★★★★★</div>
+        <p>Estava passando por assédio moral e outras irregularidades na empresa e me ajudaram em tudo, sempre dando o suporte. Graças ao Dr. Thiago conseguimos todos os meus direitos, podem confiar de olhos fechados.</p>
+        <div class="autor">Jehovanna Barros</div>
+        <div class="fonte">Avaliação no Google</div>
+      </div>
+      <div class="prova-card">
+        <div class="estrelas">★★★★★</div>
+        <p>Ótimo advogado, Dr. Thiago e a equipe estão de parabéns, me auxiliaram em tudo, ganhei meu processo, ótimo advogado, indico.</p>
+        <div class="autor">Eduarda Melaré</div>
+        <div class="fonte">Avaliação no Google</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stat-band">
+  <div class="wrap">
+    <div><div class="num">5,0</div><div class="lbl">Nota média no Google</div></div>
+    <div><div class="num">70</div><div class="lbl">Avaliações de clientes</div></div>
+    <div><div class="num">+20</div><div class="lbl">Anos de experiência</div></div>
+  </div>
+</div>
+
+<section class="contato" id="contato">
+  <div class="wrap contato-grid">
+    <div>
+      <h2>Fale com o escritório</h2>
+      <div class="item"><span class="ico">📍</span> Rua Benedita Sanson Labronici, 82 — Chácara Labronici, Boituva/SP, CEP 18556-048</div>
+      <div class="item"><span class="ico">📞</span> (15) 3347-0530</div>
+      <div class="item"><span class="ico">✉️</span> perusse@adv.oabsp.org.br</div>
+      <a class="btn" href="https://wa.me/551533470530?text=Ol%C3%A1%2C%20Dr.%20Thiago%21%20Preciso%20de%20orienta%C3%A7%C3%A3o%20sobre%20meus%20direitos%20trabalhistas.">Falar no WhatsApp</a>
+    </div>
+    <iframe src="https://www.google.com/maps?q=Rua+Benedita+Sanson+Labronici,+82,+Boituva+SP&output=embed" loading="lazy"></iframe>
+  </div>
+</section>
+
+<footer>
+  <div class="name">Thiago Perusse &amp; Associados</div>
+  Advocacia Trabalhista — Boituva/SP
+</footer>
+
+<a class="whats-float" href="https://wa.me/551533470530?text=Ol%C3%A1%2C%20Dr.%20Thiago%21%20Preciso%20de%20orienta%C3%A7%C3%A3o%20sobre%20meus%20direitos%20trabalhistas." aria-label="WhatsApp">💬</a>
+
+</body>
+</html>
