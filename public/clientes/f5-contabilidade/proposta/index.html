@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow">
+<title>F5 Contabilidade, nova versão do site</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+ *{box-sizing:border-box}
+ body{margin:0;background:#0b0c0f;color:#e8e6e1;font-family:Inter,system-ui,sans-serif;line-height:1.6}
+ .wrap{width:min(1180px,92vw);margin:0 auto}
+ header{padding:44px 0 28px;border-bottom:1px solid #23262e}
+ .tag{display:inline-block;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:#c3a15a;margin-bottom:.7rem}
+ h1{font-size:clamp(1.8rem,4vw,2.8rem);margin:0 0 .5rem;letter-spacing:-.02em}
+ .sub{color:#9a9790;max-width:64ch;margin:0}
+ .nota{display:inline-flex;gap:.5rem;align-items:center;border:1px solid #2c3039;border-radius:999px;padding:.4rem 1rem;font-size:.85rem;margin-top:1.1rem}
+ .stars{color:#e0b45a}
+ .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:28px 0 8px}
+ @media(max-width:940px){.grid{grid-template-columns:1fr}}
+ .card{background:#14161b;border:1px solid #23262e;border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+ .card h2{margin:0;padding:14px 18px;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:#9a9790;border-bottom:1px solid #23262e}
+ .card.novo h2{color:#7fd39b}
+ .card iframe{width:100%;height:74vh;min-height:520px;border:0;background:#fff}
+ .meta{padding:14px 18px;font-size:.9rem;color:#9a9790;border-top:1px solid #23262e}
+ .meta a{color:#c3a15a}
+ .pontos{padding:34px 0 60px;border-top:1px solid #23262e;margin-top:28px}
+ .pontos h3{font-size:1.05rem;margin:0 0 1rem}
+ .pontos ul{margin:0;padding-left:1.1rem;color:#b9b6af;display:grid;gap:.55rem;max-width:70ch}
+ .cta{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
+ .btn{display:inline-block;background:#c3a15a;color:#15130e;text-decoration:none;font-weight:600;padding:.85rem 1.5rem;border-radius:999px}
+ .btn.ghost{background:transparent;color:#e8e6e1;border:1px solid #2c3039}
+ footer{padding:26px 0 60px;color:#6f6d68;font-size:.85rem;border-top:1px solid #23262e}
+ footer a{color:#9a9790}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <span class="tag">Proposta de nova versão do site</span>
+  <h1>F5 Contabilidade</h1>
+  <p class="sub">Uma versão nova da página de vocês, com as fotos, os textos e os contatos reais da casa, no padrão que a nota de vocês no Google merece.</p>
+  <div class="nota"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <b>5,0</b> &middot; 42 avaliações no Google</div>
+</div></header>
+
+<div class="wrap grid">
+  <div class="card">
+    <h2>Hoje</h2>
+    <iframe src="https://f5contabilidade.com.br/" loading="lazy" title="Site atual"></iframe>
+    <div class="meta">f5contabilidade.com.br: Titulo da aba ainda no padrao do WordPress ('Site Institucional')</div>
+  </div>
+  <div class="card novo">
+    <h2>Nova versão</h2>
+    <iframe src="/clientes/f5-contabilidade" loading="lazy" title="Nova versão"></iframe>
+    <div class="meta"><a href="/clientes/f5-contabilidade" target="_blank" rel="noopener">Abrir a nova versão em tela cheia</a></div>
+  </div>
+</div>
+
+<section class="pontos"><div class="wrap">
+  <h3>O que muda nesta versão</h3>
+  <ul>
+    <li>Primeira dobra com o nome da casa, a promessa em uma linha e o botão de contato visível sem rolar a página.</li>
+    <li>A nota 5,0 e as 42 avaliações do Google em destaque, um ativo que hoje não aparece em lugar nenhum do site.</li>
+    <li>Fotos, serviços, endereço e mapa organizados em seções, com o contato sempre visível.</li>
+    <li>Feita para o celular primeiro, que é de onde vem quase todo mundo que procura no Google.</li>
+  </ul>
+  <div class="cta">
+    <a class="btn" href="/clientes/f5-contabilidade" target="_blank" rel="noopener">Ver a página completa</a>
+    <a class="btn ghost" href="https://f5contabilidade.com.br/" target="_blank" rel="noopener">Ver o site atual</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">Vinicius Sales &middot; <a href="https://criaepro.com.br">Criae</a>, designer de páginas de alta conversão &middot; (15) 99277-9988</div></footer>
+</body>
+</html>
