@@ -8,129 +8,224 @@
 <meta name="description" content="Corretora de seguros em Jundiaí há mais de 20 anos. 4,9 no Google com 210 avaliações. Auto, vida, residencial, empresarial e consórcios com 10 seguradoras parceiras.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
- --tinta:#22323D; --azul:#007991; --azul-esc:#00596B; --zap:#1faa54;
- --suave:#5d6b75; --linha:#e3e8ea; --papel:#fff; --creme:#f5f8f9;
- --raio:16px; --max:1160px;
+ --tinta:#1B2A34; --tinta2:#22323D; --azul:#007991; --azul-cl:#0596B4; --azul-esc:#004C5C;
+ --zap:#1faa54; --zap-esc:#178c44;
+ --suave:#5d6b75; --linha:#e4e9eb; --papel:#fff; --creme:#f6f9fa; --nevoa:#eef4f6;
+ --raio:18px; --max:1160px;
+ --sombra-s:0 1px 2px rgba(16,32,40,.04),0 4px 12px rgba(16,32,40,.05);
+ --sombra-m:0 4px 10px rgba(16,32,40,.06),0 18px 40px rgba(16,32,40,.09);
+ --sombra-g:0 10px 24px rgba(16,32,40,.10),0 30px 70px rgba(16,32,40,.14);
+ --nav-h:74px;
 }
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{font-family:'Inter',system-ui,sans-serif;color:var(--tinta);background:var(--papel);
- line-height:1.65;overflow-x:hidden;font-size:17px}
+ line-height:1.65;overflow-x:hidden;font-size:17px;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 a{color:inherit}
+::selection{background:var(--azul);color:#fff}
 .w{width:min(var(--max),92vw);margin-inline:auto}
-h1,h2{font-family:'Fraunces',Georgia,serif;line-height:1.12;letter-spacing:-.02em;font-weight:600}
-h1{font-size:clamp(2rem,5vw,3.5rem)}
-h2{font-size:clamp(1.65rem,3.4vw,2.5rem)}
-h3{font-size:1.12rem;font-weight:650;letter-spacing:-.01em}
+h1,h2{font-family:'Fraunces',Georgia,serif;line-height:1.1;letter-spacing:-.025em;font-weight:600}
+h1{font-size:clamp(2.05rem,5vw,3.6rem)}
+h2{font-size:clamp(1.7rem,3.5vw,2.6rem)}
+h3{font-size:1.13rem;font-weight:650;letter-spacing:-.012em}
 p{color:var(--suave)}
-.sec{padding:clamp(54px,7.5vw,96px) 0}
-.olho{font-size:.74rem;letter-spacing:.19em;text-transform:uppercase;font-weight:700;color:var(--azul);margin-bottom:.8rem}
-.lead{font-size:clamp(1.02rem,1.7vw,1.18rem);max-width:64ch}
+.sec{padding:clamp(58px,8vw,108px) 0;scroll-margin-top:calc(var(--nav-h) + 18px)}
+.sec.creme{background:var(--creme)}
+.olho{font-size:.73rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--azul);
+ margin-bottom:.85rem;display:flex;align-items:center;gap:.6rem}
+.olho::before{content:"";width:26px;height:2px;background:var(--azul);border-radius:2px;flex:none}
+.lead{font-size:clamp(1.02rem,1.7vw,1.19rem);max-width:64ch}
 
-/* nav */
-.nav{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--linha)}
-.nav .w{display:flex;align-items:center;gap:20px;padding:12px 0}
-.nav img{height:42px;width:auto;object-fit:contain}
-.nav nav{margin-left:auto;display:flex;gap:24px;font-size:.93rem;font-weight:500}
-.nav nav a{text-decoration:none;color:var(--suave)}
-.nav nav a:hover{color:var(--azul)}
-@media(max-width:900px){.nav nav{display:none}}
-.btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--azul);color:#fff;text-decoration:none;
- padding:.85rem 1.6rem;border-radius:999px;font-weight:650;font-size:.95rem;white-space:nowrap;border:none;cursor:pointer;
- transition:transform .15s ease,box-shadow .15s ease}
-.btn:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(0,0,0,.15)}
+/* ---------- movimento ---------- */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .75s cubic-bezier(.16,1,.3,1),transform .75s cubic-bezier(.16,1,.3,1)}
+.rv.on{opacity:1;transform:none}
+.rv[data-d="1"]{transition-delay:.08s}
+.rv[data-d="2"]{transition-delay:.16s}
+.rv[data-d="3"]{transition-delay:.24s}
+.rv[data-d="4"]{transition-delay:.32s}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none;transition:none}
+  .marquee__faixa{animation:none!important}
+}
+
+/* ---------- nav ---------- */
+.nav{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.82);backdrop-filter:blur(16px) saturate(1.4);
+ border-bottom:1px solid transparent;transition:box-shadow .3s ease,border-color .3s ease,background .3s ease}
+.nav.fix{border-bottom-color:var(--linha);box-shadow:0 4px 24px rgba(16,32,40,.06);background:rgba(255,255,255,.94)}
+.nav .w{display:flex;align-items:center;gap:20px;height:var(--nav-h)}
+.nav img{height:42px;width:auto;object-fit:contain;transition:height .3s ease}
+.nav.fix img{height:36px}
+.nav nav{margin-left:auto;display:flex;gap:26px;font-size:.93rem;font-weight:500}
+.nav nav a{text-decoration:none;color:var(--suave);position:relative;padding:.2rem 0}
+.nav nav a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--azul);
+ border-radius:2px;transition:width .28s cubic-bezier(.16,1,.3,1)}
+.nav nav a:hover{color:var(--tinta)}
+.nav nav a:hover::after{width:100%}
+@media(max-width:940px){.nav nav{display:none}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;background:var(--azul);color:#fff;
+ text-decoration:none;padding:.88rem 1.7rem;border-radius:999px;font-weight:650;font-size:.95rem;white-space:nowrap;
+ border:none;cursor:pointer;font-family:inherit;position:relative;overflow:hidden;
+ transition:transform .22s cubic-bezier(.16,1,.3,1),box-shadow .22s ease,background .22s ease}
+.btn::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.28),transparent 70%);
+ transform:translateX(-120%);transition:transform .6s cubic-bezier(.16,1,.3,1)}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--sombra-m)}
+.btn:hover::after{transform:translateX(120%)}
+.btn:active{transform:translateY(0)}
+.btn:focus-visible{outline:3px solid var(--azul-cl);outline-offset:3px}
 .btn.zap{background:var(--zap)}
-.btn.ghost{background:transparent;border:1.5px solid currentColor;color:var(--azul)}
+.btn.zap:hover{background:var(--zap-esc)}
+.btn.ghost{background:transparent;border:1.5px solid var(--linha);color:var(--tinta)}
+.btn.ghost:hover{border-color:var(--azul);color:var(--azul)}
+.btn svg{width:18px;height:18px;flex:none}
 
-/* hero */
-.hero{background:linear-gradient(160deg,var(--creme) 0%,#fff 70%);padding:clamp(46px,6vw,88px) 0 clamp(44px,5vw,76px)}
-.hero .grid{display:grid;grid-template-columns:1.06fr .94fr;gap:clamp(28px,4vw,56px);align-items:center}
-@media(max-width:940px){.hero .grid{grid-template-columns:1fr}}
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(1100px 520px at 12% -10%, #e8f4f7 0%, transparent 62%),
+  radial-gradient(900px 460px at 96% 8%, #eaf6f8 0%, transparent 58%),
+  linear-gradient(178deg,#fbfdfd 0%,#fff 62%);
+  padding:clamp(48px,6vw,92px) 0 clamp(48px,6vw,86px)}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,var(--linha),transparent)}
+.hero .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,4.5vw,60px);align-items:center}
+@media(max-width:960px){.hero .grid{grid-template-columns:1fr}}
 .selo{display:inline-flex;align-items:center;gap:.6rem;background:#fff;border:1px solid var(--linha);
- border-radius:999px;padding:.5rem 1.1rem;font-size:.9rem;font-weight:650;margin-bottom:1.2rem;box-shadow:0 2px 10px rgba(0,0,0,.05)}
-.estrelas{color:#e8a51c;letter-spacing:.05em}
-.ctas{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.9rem}
-.hero .foto{border-radius:var(--raio);overflow:hidden;aspect-ratio:4/3;background:#dde}
-.hero .foto img{width:100%;height:100%;object-fit:cover}
-.confia{display:flex;gap:1.6rem;flex-wrap:wrap;margin-top:2.1rem;padding-top:1.5rem;border-top:1px solid var(--linha)}
-.confia div b{display:block;font-family:'Fraunces',serif;font-size:1.75rem;color:var(--azul);line-height:1}
-.confia div span{font-size:.86rem;color:var(--suave)}
+ border-radius:999px;padding:.5rem 1.15rem;font-size:.9rem;font-weight:650;margin-bottom:1.25rem;box-shadow:var(--sombra-s)}
+.estrelas{color:#e8a51c;letter-spacing:.06em;font-size:.95rem}
+h1 .destaque{color:var(--azul);font-style:italic;font-weight:500}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:2rem}
+.hero .moldura{position:relative}
+.hero .moldura::before{content:"";position:absolute;inset:-14px -14px 14px 14px;border-radius:26px;
+ background:linear-gradient(150deg,var(--azul) 0%,transparent 55%);opacity:.14}
+.hero .foto{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:4/3;background:#dde;box-shadow:var(--sombra-g)}
+.hero .foto img{width:100%;height:100%;object-fit:cover;transform:scale(1.06);transition:transform 1.4s cubic-bezier(.16,1,.3,1)}
+.hero .foto.on img{transform:scale(1)}
 
-/* prova */
-.provas{display:grid;grid-template-columns:repeat(auto-fit,minmax(272px,1fr));gap:18px;margin-top:2.4rem}
-.prova{background:var(--creme);border:1px solid var(--linha);border-radius:var(--raio);padding:26px}
+/* numeros */
+.confia{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:2.3rem;padding-top:1.9rem;border-top:1px solid var(--linha)}
+@media(max-width:640px){.confia{grid-template-columns:repeat(2,1fr);gap:18px}}
+.confia div b{display:block;font-family:'Fraunces',serif;font-size:clamp(1.7rem,2.6vw,2.1rem);color:var(--azul);
+ line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.confia div span{font-size:.85rem;color:var(--suave);display:block;margin-top:.35rem;line-height:1.35}
+
+/* ---------- provas ---------- */
+.provas{display:grid;grid-template-columns:repeat(auto-fit,minmax(272px,1fr));gap:18px;margin-top:2.6rem}
+.prova{background:#fff;border:1px solid var(--linha);border-radius:var(--raio);padding:28px;position:relative;
+ box-shadow:var(--sombra-s);transition:transform .3s cubic-bezier(.16,1,.3,1),box-shadow .3s ease}
+.prova:hover{transform:translateY(-4px);box-shadow:var(--sombra-m)}
+.prova::before{content:"\201C";position:absolute;top:6px;right:20px;font-family:'Fraunces',serif;font-size:4.6rem;
+ color:var(--azul);opacity:.13;line-height:1}
+.prova .est{color:#e8a51c;font-size:.9rem;letter-spacing:.06em;margin-bottom:.7rem}
 .prova p{color:var(--tinta);font-size:1rem}
-.prova .fonte{margin-top:.9rem;font-size:.78rem;color:var(--suave);font-weight:650;letter-spacing:.05em;text-transform:uppercase}
+.prova .fonte{margin-top:1rem;font-size:.76rem;color:var(--suave);font-weight:650;letter-spacing:.06em;text-transform:uppercase;
+ display:flex;align-items:center;gap:.4rem}
 
-/* form */
-.cotacao{background:var(--tinta);color:#fff;border-radius:22px;padding:clamp(30px,4.5vw,54px);margin-top:2.2rem}
+/* ---------- cotacao ---------- */
+.cotacao{position:relative;overflow:hidden;background:linear-gradient(150deg,var(--tinta) 0%,#16242D 100%);
+ color:#fff;border-radius:26px;padding:clamp(32px,4.8vw,58px);box-shadow:var(--sombra-g)}
+.cotacao::before{content:"";position:absolute;width:460px;height:460px;right:-160px;top:-190px;border-radius:50%;
+ background:radial-gradient(circle,var(--azul) 0%,transparent 68%);opacity:.4}
+.cotacao > *{position:relative}
 .cotacao h2{color:#fff}
-.cotacao p{color:rgba(255,255,255,.72)}
-.campos{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:1.9rem}
+.cotacao p{color:rgba(255,255,255,.74)}
+.cotacao .olho{color:#6fd0e4}
+.cotacao .olho::before{background:#6fd0e4}
+.campos{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:2rem}
 @media(max-width:720px){.campos{grid-template-columns:1fr}}
-.campo{display:flex;flex-direction:column;gap:.4rem}
+.campo{display:flex;flex-direction:column;gap:.42rem}
 .campo.full{grid-column:1/-1}
-.campo label{font-size:.84rem;font-weight:600;color:rgba(255,255,255,.85)}
-.campo input,.campo select{padding:.85rem 1rem;border-radius:11px;border:1px solid rgba(255,255,255,.2);
- background:rgba(255,255,255,.07);color:#fff;font:inherit;font-size:.97rem}
-.campo select option{color:#22323D}
-.campo input::placeholder{color:rgba(255,255,255,.45)}
-.campo input:focus,.campo select:focus{outline:2px solid var(--azul);border-color:transparent}
-.aviso{font-size:.83rem;color:rgba(255,255,255,.6);margin-top:1rem}
+.campo label{font-size:.83rem;font-weight:600;color:rgba(255,255,255,.86)}
+.campo input,.campo select{padding:.92rem 1.05rem;border-radius:12px;border:1px solid rgba(255,255,255,.18);
+ background:rgba(255,255,255,.06);color:#fff;font:inherit;font-size:.97rem;transition:border-color .2s,background .2s,box-shadow .2s}
+.campo select option{color:#1B2A34}
+.campo input::placeholder{color:rgba(255,255,255,.42)}
+.campo input:focus,.campo select:focus{outline:none;border-color:var(--azul-cl);background:rgba(255,255,255,.1);
+ box-shadow:0 0 0 4px rgba(5,150,180,.18)}
+.aviso{font-size:.82rem;color:rgba(255,255,255,.58);margin-top:1.05rem}
 
-/* cards */
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:16px;margin-top:2.4rem}
-.card{border:1px solid var(--linha);border-radius:var(--raio);padding:26px;text-decoration:none;display:block;
- background:#fff;transition:border-color .18s ease,transform .18s ease}
-.card:hover{border-color:var(--azul);transform:translateY(-3px)}
+/* ---------- cards ---------- */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(252px,1fr));gap:16px;margin-top:2.6rem}
+.card{border:1px solid var(--linha);border-radius:var(--raio);padding:28px;text-decoration:none;display:flex;
+ flex-direction:column;background:#fff;position:relative;overflow:hidden;
+ transition:transform .3s cubic-bezier(.16,1,.3,1),box-shadow .3s ease,border-color .3s ease}
+.card::before{content:"";position:absolute;left:0;top:0;height:3px;width:0;background:var(--azul);transition:width .4s cubic-bezier(.16,1,.3,1)}
+.card:hover{transform:translateY(-5px);box-shadow:var(--sombra-m);border-color:#d3dee2}
+.card:hover::before{width:100%}
+.card .ic{width:42px;height:42px;border-radius:11px;background:var(--nevoa);color:var(--azul);
+ display:flex;align-items:center;justify-content:center;margin-bottom:1.1rem;transition:background .3s,color .3s}
+.card:hover .ic{background:var(--azul);color:#fff}
+.card .ic svg{width:21px;height:21px}
 .card h3{margin-bottom:.5rem}
-.card p{font-size:.95rem}
-.card .mais{display:inline-block;margin-top:.9rem;font-size:.85rem;font-weight:650;color:var(--azul)}
+.card p{font-size:.95rem;flex:1}
+.card .mais{display:inline-flex;align-items:center;gap:.35rem;margin-top:1.1rem;font-size:.86rem;font-weight:650;color:var(--azul)}
+.card .mais span{transition:transform .3s cubic-bezier(.16,1,.3,1)}
+.card:hover .mais span{transform:translateX(4px)}
 
-/* seguradoras */
-.segs{display:grid;grid-template-columns:repeat(auto-fit,minmax(128px,1fr));gap:12px;margin-top:2.2rem;align-items:center}
-.segs figure{border:1px solid var(--linha);border-radius:12px;padding:16px;display:flex;align-items:center;justify-content:center;background:#fff;min-height:86px}
-.segs img{max-height:46px;width:auto;object-fit:contain;filter:grayscale(1);opacity:.72;transition:.2s}
-.segs figure:hover img{filter:none;opacity:1}
+/* ---------- seguradoras: marquee resolve a linha orfa ---------- */
+.marquee{position:relative;margin-top:2.4rem;overflow:hidden;
+ -webkit-mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent);
+ mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent)}
+.marquee__faixa{display:flex;gap:14px;width:max-content;animation:desliza 42s linear infinite}
+.marquee:hover .marquee__faixa{animation-play-state:paused}
+@keyframes desliza{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.marquee figure{flex:none;width:172px;height:96px;border:1px solid var(--linha);border-radius:14px;background:#fff;
+ display:flex;align-items:center;justify-content:center;padding:16px;box-shadow:var(--sombra-s)}
+.marquee img{max-height:44px;width:auto;object-fit:contain;filter:grayscale(1);opacity:.62;transition:filter .3s,opacity .3s}
+.marquee figure:hover img{filter:none;opacity:1}
 
-/* galeria */
-.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:2.2rem}
-.gal figure{border-radius:var(--raio);overflow:hidden;aspect-ratio:4/3;background:#e8ecee}
-.gal img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
-.gal figure:hover img{transform:scale(1.05)}
+/* ---------- galeria ---------- */
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(228px,1fr));gap:15px;margin-top:2.4rem}
+.gal figure{border-radius:var(--raio);overflow:hidden;aspect-ratio:4/3;background:#e8ecee;box-shadow:var(--sombra-s)}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.16,1,.3,1)}
+.gal figure:hover img{transform:scale(1.07)}
 
-/* local */
-.local{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start;margin-top:2.2rem}
+/* ---------- local ---------- */
+.local{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;margin-top:2.4rem}
 @media(max-width:840px){.local{grid-template-columns:1fr}}
-.local iframe{width:100%;height:330px;border:0;border-radius:var(--raio)}
-.linha{display:flex;gap:.9rem;padding:.85rem 0;border-bottom:1px solid var(--linha);font-size:.97rem}
-.linha b{min-width:104px;font-weight:650}
-.linha a{color:var(--azul);text-decoration:none}
+.local iframe{width:100%;height:352px;border:0;border-radius:var(--raio);box-shadow:var(--sombra-s)}
+.linha{display:flex;gap:1rem;padding:.95rem 0;border-bottom:1px solid var(--linha);font-size:.97rem;align-items:flex-start}
+.linha b{min-width:104px;font-weight:650;flex:none}
+.linha a{color:var(--azul);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s}
+.linha a:hover{border-bottom-color:var(--azul)}
 
-/* faixa */
-.faixa{background:var(--azul);color:#fff;border-radius:22px;padding:clamp(32px,5vw,58px);text-align:center}
+/* ---------- faixa ---------- */
+.faixa{position:relative;overflow:hidden;background:linear-gradient(140deg,var(--azul) 0%,var(--azul-esc) 100%);
+ color:#fff;border-radius:26px;padding:clamp(36px,5.2vw,64px);text-align:center;box-shadow:var(--sombra-g)}
+.faixa::before{content:"";position:absolute;width:420px;height:420px;left:-140px;bottom:-220px;border-radius:50%;
+ background:rgba(255,255,255,.08)}
+.faixa > *{position:relative}
 .faixa h2{color:#fff}
-.faixa p{color:rgba(255,255,255,.8);margin:.9rem auto 0;max-width:54ch}
-.faixa .btn{margin-top:1.8rem;background:#fff;color:var(--azul)}
+.faixa p{color:rgba(255,255,255,.84);margin:1rem auto 0;max-width:54ch}
+.faixa .btn{margin-top:2rem;background:#fff;color:var(--azul)}
+.faixa .btn:hover{background:#f2fafb}
 
-footer{background:var(--tinta);color:rgba(255,255,255,.72);padding:52px 0 32px;margin-top:clamp(52px,7vw,88px)}
-footer .w{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:28px}
+footer{background:var(--tinta);color:rgba(255,255,255,.7);padding:60px 0 34px;margin-top:clamp(56px,7vw,92px)}
+footer .w{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:32px}
 @media(max-width:820px){footer .w{grid-template-columns:1fr}}
-footer strong{color:#fff;font-family:'Fraunces',serif;font-size:1.16rem;font-weight:600;display:block;margin-bottom:.7rem}
-footer a{color:rgba(255,255,255,.72);text-decoration:none}
+footer strong{color:#fff;font-family:'Fraunces',serif;font-size:1.18rem;font-weight:600;display:block;margin-bottom:.8rem}
+footer p{color:rgba(255,255,255,.7);font-size:.95rem;margin-bottom:.35rem}
+footer a{color:rgba(255,255,255,.7);text-decoration:none;transition:color .2s}
 footer a:hover{color:#fff}
-footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.14);margin-top:26px;padding-top:20px;font-size:.78rem;color:rgba(255,255,255,.5)}
-.flut{position:fixed;right:17px;bottom:17px;z-index:70;background:var(--zap);color:#fff;border-radius:999px;
- padding:.9rem 1.35rem;text-decoration:none;font-weight:650;font-size:.94rem;box-shadow:0 10px 28px rgba(0,0,0,.25)}
+footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.13);margin-top:28px;padding-top:22px;
+ font-size:.77rem;color:rgba(255,255,255,.45);line-height:1.6}
+
+.flut{position:fixed;right:18px;bottom:18px;z-index:70;background:var(--zap);color:#fff;border-radius:999px;
+ padding:.92rem 1.4rem;text-decoration:none;font-weight:650;font-size:.94rem;box-shadow:0 10px 30px rgba(31,170,84,.4);
+ display:inline-flex;align-items:center;gap:.5rem;
+ transform:translateY(120px);opacity:0;transition:transform .5s cubic-bezier(.16,1,.3,1),opacity .5s ease,background .2s}
+.flut.on{transform:none;opacity:1}
+.flut:hover{background:var(--zap-esc)}
+.flut svg{width:19px;height:19px}
+@media(max-width:520px){.flut span{display:none}.flut{padding:1rem;border-radius:50%}}
 </style>
 </head>
 <body>
 
-<header class="nav"><div class="w">
+<header class="nav" id="nav"><div class="w">
   <img src="https://jundiaiseguros.com.br/wp-content/uploads/2021/01/jundiaiseguros-1.png" alt="Jundiaí Corretora de Seguros">
   <nav>
     <a href="#solucoes">Soluções</a>
@@ -139,44 +234,51 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.14);margin
     <a href="#cotacao">Cotação</a>
     <a href="#contato">Contato</a>
   </nav>
-  <a class="btn zap" href="https://wa.me/5511996191801?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20fazer%20uma%20cota%C3%A7%C3%A3o.">Falar no WhatsApp</a>
+  <a class="btn zap" href="https://wa.me/5511996191801?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20fazer%20uma%20cota%C3%A7%C3%A3o.">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-1.7-.9-2.9-1.6-4-3.6-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.8.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.5-.3z"/><path d="M12 2A10 10 0 0 0 3.5 17.2L2 22l4.9-1.5A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .9.9-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+    Falar no WhatsApp
+  </a>
 </div></header>
 
 <section class="hero"><div class="w grid">
   <div>
-    <div class="selo"><span class="estrelas">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4,9 no Google &middot; 210 avaliações</div>
-    <h1>Mais de 20 anos cuidando de quem confia o patrimônio à gente</h1>
-    <p class="lead" style="margin-top:1.15rem">Corretora em Jundiaí para auto, vida, residencial, empresarial e consórcios. Trabalhamos com 10 seguradoras, comparamos as opções e ficamos do seu lado na hora que mais importa: o sinistro.</p>
-    <div class="ctas">
-      <a class="btn zap" href="https://wa.me/5511996191801?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20fazer%20uma%20cota%C3%A7%C3%A3o.">Chamar no WhatsApp</a>
+    <div class="selo rv"><span class="estrelas">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4,9 no Google &middot; 210 avaliações</div>
+    <h1 class="rv" data-d="1">Mais de 20 anos cuidando de quem confia o <span class="destaque">patrimônio</span> à gente</h1>
+    <p class="lead rv" data-d="2" style="margin-top:1.2rem">Corretora em Jundiaí para auto, vida, residencial, empresarial e consórcios. Trabalhamos com 10 seguradoras, comparamos as opções e ficamos do seu lado na hora que mais importa: o sinistro.</p>
+    <div class="ctas rv" data-d="3">
+      <a class="btn zap" href="https://wa.me/5511996191801?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20fazer%20uma%20cota%C3%A7%C3%A3o.">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 3.5 17.2L2 22l4.9-1.5A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .9.9-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+        Chamar no WhatsApp</a>
       <a class="btn ghost" href="#cotacao">Pedir cotação pelo site</a>
     </div>
-    <div class="confia">
-      <div><b>20+</b><span>anos de mercado</span></div>
-      <div><b>210</b><span>avaliações no Google</span></div>
-      <div><b>4,9</b><span>de nota média</span></div>
-      <div><b>10</b><span>seguradoras parceiras</span></div>
+    <div class="confia rv" data-d="4">
+      <div><b data-num="20" data-suf="+">20+</b><span>anos de mercado</span></div>
+      <div><b data-num="210">210</b><span>avaliações no Google</span></div>
+      <div><b data-num="4,9">4,9</b><span>de nota média</span></div>
+      <div><b data-num="10">10</b><span>seguradoras parceiras</span></div>
     </div>
   </div>
-  <div class="foto">
-    <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl0DFigEfvQWgnEdQtZLIjZ4dfbucuEQdMuxB5Hj9T18crL_Bp08xju2lRG7AQQv0NR3E0SyptMBqkchZnPeTl1MPlS2Smu_ZexaPU2iUo7wDUZ7ZFtfZF22rPAUydkVa2-JJSUrQ=w1400-h1050-k-no" alt="Fachada da Jundiaí Corretora de Seguros na Avenida João Benatti" loading="eager">
+  <div class="moldura rv" data-d="2">
+    <div class="foto" id="fotoHero">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl0DFigEfvQWgnEdQtZLIjZ4dfbucuEQdMuxB5Hj9T18crL_Bp08xju2lRG7AQQv0NR3E0SyptMBqkchZnPeTl1MPlS2Smu_ZexaPU2iUo7wDUZ7ZFtfZF22rPAUydkVa2-JJSUrQ=w1400-h1050-k-no" alt="Fachada da Jundiaí Corretora de Seguros na Avenida João Benatti" loading="eager">
+    </div>
   </div>
 </div></section>
 
-<section class="sec" id="avaliacoes"><div class="w">
-  <div class="olho">O que dizem nossos clientes</div>
-  <h2>4,9 de média, com 210 avaliações no Google</h2>
-  <p class="lead" style="margin-top:.9rem">Nota pública e verificável. Repare no que os clientes citam: honestidade, disponibilidade na hora do problema e rapidez de resposta.</p>
+<section class="sec creme" id="avaliacoes"><div class="w">
+  <div class="olho rv">O que dizem nossos clientes</div>
+  <h2 class="rv" data-d="1">4,9 de média, com 210 avaliações no Google</h2>
+  <p class="lead rv" data-d="2" style="margin-top:.95rem">Nota pública e verificável. Repare no que os clientes citam: honestidade, disponibilidade na hora do problema e rapidez de resposta.</p>
   <div class="provas">
-    <div class="prova"><p>&ldquo;Honestidade, atendimento e prestação de serviço de primeira linha.&rdquo;</p><div class="fonte">Avaliação no Google</div></div>
-    <div class="prova"><p>&ldquo;Parceria de longa data e disponibilidade no suporte nos momentos que precisei.&rdquo;</p><div class="fonte">Avaliação no Google</div></div>
-    <div class="prova"><p>&ldquo;Super atenciosos, respondem rápido, meu carro e moto estão assegurados com eles.&rdquo;</p><div class="fonte">Avaliação no Google</div></div>
+    <div class="prova rv" data-d="1"><div class="est">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>&ldquo;Honestidade, atendimento e prestação de serviço de primeira linha.&rdquo;</p><div class="fonte">Avaliação no Google</div></div>
+    <div class="prova rv" data-d="2"><div class="est">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>&ldquo;Parceria de longa data e disponibilidade no suporte nos momentos que precisei.&rdquo;</p><div class="fonte">Avaliação no Google</div></div>
+    <div class="prova rv" data-d="3"><div class="est">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>&ldquo;Super atenciosos, respondem rápido, meu carro e moto estão assegurados com eles.&rdquo;</p><div class="fonte">Avaliação no Google</div></div>
   </div>
 </div></section>
 
-<section class="sec" id="cotacao" style="padding-top:0"><div class="w">
-  <div class="cotacao">
-    <div class="olho" style="color:#7fd4e6">Cotação sem compromisso</div>
+<section class="sec" id="cotacao"><div class="w">
+  <div class="cotacao rv">
+    <div class="olho">Cotação sem compromisso</div>
     <h2>Conte o que você quer proteger</h2>
     <p>Responda em menos de um minuto. A gente compara as seguradoras e volta com as opções. Se preferir, chame direto no WhatsApp.</p>
     <form id="fcot">
@@ -197,69 +299,65 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.14);margin
         <div class="campo"><label for="fone">Telefone ou WhatsApp</label><input id="fone" placeholder="(11) 90000-0000" required></div>
         <div class="campo full"><label for="obs">Algum detalhe que ajude (opcional)</label><input id="obs" placeholder="Ex.: modelo e ano do carro, tipo de imóvel"></div>
       </div>
-      <button class="btn zap" type="submit" style="margin-top:1.5rem">Enviar e falar com um corretor</button>
+      <button class="btn zap" type="submit" style="margin-top:1.6rem">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 3.5 17.2L2 22l4.9-1.5A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .9.9-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+        Enviar e falar com um corretor</button>
       <p class="aviso">Ao enviar, abrimos o WhatsApp com seus dados já preenchidos. Nenhum dado é armazenado nesta página.</p>
     </form>
   </div>
 </div></section>
 
 <section class="sec" id="solucoes" style="padding-top:0"><div class="w">
-  <div class="olho">Soluções</div>
-  <h2>O que a gente protege</h2>
+  <div class="olho rv">Soluções</div>
+  <h2 class="rv" data-d="1">O que a gente protege</h2>
   <div class="cards">
-    <a class="card" href="https://wa.me/5511996191801?text=Ol%C3%A1!%20Quero%20cotar%20seguro%20para%20ve%C3%ADculo.">
+    <a class="card rv" data-d="1" href="https://wa.me/5511996191801?text=Ol%C3%A1!%20Quero%20cotar%20seguro%20para%20ve%C3%ADculo.">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M5 17a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm18 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM3 17v-4l2-5h14l2 5v4"/></svg></div>
       <h3>Veículos</h3>
       <p>Seguro de carro e moto, além de consórcio para quem está planejando a troca. Comparamos as seguradoras e explicamos o que muda entre as coberturas.</p>
-      <span class="mais">Cotar seguro de veículo &rarr;</span></a>
-    <a class="card" href="https://wa.me/5511996191801?text=Ol%C3%A1!%20Quero%20cotar%20seguro%20de%20vida.">
+      <span class="mais">Cotar seguro de veículo <span>&rarr;</span></span></a>
+    <a class="card rv" data-d="2" href="https://wa.me/5511996191801?text=Ol%C3%A1!%20Quero%20cotar%20seguro%20de%20vida.">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 6.6a5 5 0 0 0-7.1 0L12 8.3l-1.7-1.7a5 5 0 1 0-7.1 7.1L12 22l8.8-8.3a5 5 0 0 0 0-7.1z"/></svg></div>
       <h3>Você e sua família</h3>
       <p>Vida, acidentes pessoais e previdência. A proteção que continua fazendo diferença justamente quando você não pode mais cuidar de tudo.</p>
-      <span class="mais">Falar sobre proteção pessoal &rarr;</span></a>
-    <a class="card" href="https://wa.me/5511996191801?text=Ol%C3%A1!%20Quero%20cotar%20seguro%20residencial%20ou%20cons%C3%B3rcio%20de%20im%C3%B3vel.">
+      <span class="mais">Falar sobre proteção pessoal <span>&rarr;</span></span></a>
+    <a class="card rv" data-d="3" href="https://wa.me/5511996191801?text=Ol%C3%A1!%20Quero%20cotar%20seguro%20residencial%20ou%20cons%C3%B3rcio%20de%20im%C3%B3vel.">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V21H3z"/><path d="M9 21v-6h6v6"/></svg></div>
       <h3>Imóveis</h3>
       <p>Seguro residencial para o que você já conquistou, e consórcio de imóvel para o que ainda está no plano.</p>
-      <span class="mais">Cotar imóvel ou consórcio &rarr;</span></a>
-    <a class="card" href="https://wa.me/5511996191801?text=Ol%C3%A1!%20Quero%20cotar%20seguro%20empresarial.">
+      <span class="mais">Cotar imóvel ou consórcio <span>&rarr;</span></span></a>
+    <a class="card rv" data-d="4" href="https://wa.me/5511996191801?text=Ol%C3%A1!%20Quero%20cotar%20seguro%20empresarial.">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V7l7-4v18M10 21h11V11h-11"/><path d="M14 15h3M14 18h3"/></svg></div>
       <h3>Empresas</h3>
       <p>Proteção patrimonial, frota e coberturas empresariais. Um parceiro para acionar quando o problema aparece, sem você precisar entender de apólice.</p>
-      <span class="mais">Falar sobre seguro empresarial &rarr;</span></a>
+      <span class="mais">Falar sobre seguro empresarial <span>&rarr;</span></span></a>
   </div>
 </div></section>
 
-<section class="sec" id="seguradoras" style="padding-top:0"><div class="w">
-  <div class="olho">Seguradoras parceiras</div>
-  <h2>Comparamos, você escolhe</h2>
-  <p class="lead" style="margin-top:.9rem">Não trabalhamos com uma seguradora só. São 10 parceiras, o que permite comparar preço e cobertura antes de você decidir.</p>
-  <div class="segs">
-    <figure><img src="https://jundiaiseguros.com.br/wp-content/uploads/2021/01/porto_seguro.png" alt="Porto Seguro" loading="lazy"></figure>
-    <figure><img src="https://jundiaiseguros.com.br/wp-content/uploads/2021/01/bradesco.png" alt="Bradesco Seguros" loading="lazy"></figure>
-    <figure><img src="https://jundiaiseguros.com.br/wp-content/uploads/2021/01/itau.png" alt="Itaú" loading="lazy"></figure>
-    <figure><img src="https://jundiaiseguros.com.br/wp-content/uploads/2021/01/mapfre-1.png" alt="Mapfre" loading="lazy"></figure>
-    <figure><img src="https://jundiaiseguros.com.br/wp-content/uploads/2021/01/liberty.png" alt="Liberty Seguros" loading="lazy"></figure>
-    <figure><img src="https://jundiaiseguros.com.br/wp-content/uploads/2021/01/hdi.png" alt="HDI Seguros" loading="lazy"></figure>
-    <figure><img src="https://jundiaiseguros.com.br/wp-content/uploads/2021/01/chubb.png" alt="Chubb" loading="lazy"></figure>
-    <figure><img src="https://jundiaiseguros.com.br/wp-content/uploads/2021/01/generali.png" alt="Generali" loading="lazy"></figure>
-    <figure><img src="https://jundiaiseguros.com.br/wp-content/uploads/2021/01/icatu.png" alt="Icatu Seguros" loading="lazy"></figure>
-    <figure><img src="https://jundiaiseguros.com.br/wp-content/uploads/2021/01/excelsior.png" alt="Excelsior Seguros" loading="lazy"></figure>
-  </div>
-</div></section>
+<section class="sec creme" id="seguradoras"><div class="w">
+  <div class="olho rv">Seguradoras parceiras</div>
+  <h2 class="rv" data-d="1">Comparamos, você escolhe</h2>
+  <p class="lead rv" data-d="2" style="margin-top:.95rem">Não trabalhamos com uma seguradora só. São 10 parceiras, o que permite comparar preço e cobertura antes de você decidir.</p>
+</div>
+<div class="marquee rv" data-d="3" id="mq"><div class="marquee__faixa" id="faixa"></div></div>
+</section>
 
-<section class="sec" style="padding-top:0"><div class="w">
-  <div class="olho">A corretora</div>
-  <h2>Onde a gente atende</h2>
-  <p class="lead" style="margin-top:.9rem">Escritório próprio na Avenida João Benatti, no Jardim Petrópolis, perto do Jundiaí Shopping. Atendimento presencial de segunda a sexta.</p>
+<section class="sec"><div class="w">
+  <div class="olho rv">A corretora</div>
+  <h2 class="rv" data-d="1">Onde a gente atende</h2>
+  <p class="lead rv" data-d="2" style="margin-top:.95rem">Escritório próprio na Avenida João Benatti, no Jardim Petrópolis, perto do Jundiaí Shopping. Atendimento presencial de segunda a sexta.</p>
   <div class="gal">
-    <figure><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk3FFw8i7O1XHuXpPYrEA_QwAB-thiVJhnKUHIQQz_52Il6nHMW0dBa0755U-mKjf9bJGmHziu1BK5DAazXTNkeIW3GfbxotRGf48RSYFd0AuWUpQzRJhLHOJC8xn22DPiCQkQT=w1000-h750-k-no" alt="Fachada da corretora" loading="lazy"></figure>
-    <figure><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWli_NhZt5E33GQNqFlIEdcTYz_JQ0ffpEfi2OJ7SdbDkBd-e_0BlOSRh6dhPQbHxakrjDdEcU4aQQe4I7j6rJCe6n_L1HtIK58lPg2CmYzOtwHxm2i_6NLdA2tgDnD6wV1dI2tj=w1000-h750-k-no" alt="Recepção da corretora" loading="lazy"></figure>
-    <figure><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn4KweiJ6d-cM2Cl113Mwmah8ZC8Fzhm0gZ7mX1iM0h2YaYXEBiVbMp_rWkNiIcWjCpv7p93WleNXygmL8J2-N4JfRu3vLBgUlW3IiwFPeW3zSZT3dEdomQXGwA-4o4GqJB5qXQ=w1000-h750-k-no" alt="Interior do escritório" loading="lazy"></figure>
+    <figure class="rv" data-d="1"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk3FFw8i7O1XHuXpPYrEA_QwAB-thiVJhnKUHIQQz_52Il6nHMW0dBa0755U-mKjf9bJGmHziu1BK5DAazXTNkeIW3GfbxotRGf48RSYFd0AuWUpQzRJhLHOJC8xn22DPiCQkQT=w1000-h750-k-no" alt="Fachada da corretora" loading="lazy"></figure>
+    <figure class="rv" data-d="2"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWli_NhZt5E33GQNqFlIEdcTYz_JQ0ffpEfi2OJ7SdbDkBd-e_0BlOSRh6dhPQbHxakrjDdEcU4aQQe4I7j6rJCe6n_L1HtIK58lPg2CmYzOtwHxm2i_6NLdA2tgDnD6wV1dI2tj=w1000-h750-k-no" alt="Recepção da corretora" loading="lazy"></figure>
+    <figure class="rv" data-d="3"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn4KweiJ6d-cM2Cl113Mwmah8ZC8Fzhm0gZ7mX1iM0h2YaYXEBiVbMp_rWkNiIcWjCpv7p93WleNXygmL8J2-N4JfRu3vLBgUlW3IiwFPeW3zSZT3dEdomQXGwA-4o4GqJB5qXQ=w1000-h750-k-no" alt="Interior do escritório" loading="lazy"></figure>
   </div>
 </div></section>
 
-<section class="sec" id="contato" style="padding-top:0"><div class="w">
-  <div class="olho">Contato</div>
-  <h2>Jundiaí, SP</h2>
+<section class="sec creme" id="contato" style="padding-top:clamp(48px,6vw,84px)"><div class="w">
+  <div class="olho rv">Contato</div>
+  <h2 class="rv" data-d="1">Jundiaí, SP</h2>
   <div class="local">
-    <div>
+    <div class="rv" data-d="2">
       <div class="linha"><b>Endereço</b><span>Av. João Benatti, 18 &ndash; Jardim Petrópolis, Jundiaí &ndash; SP, 13207-600<br><small style="color:var(--suave)">Próximo ao Jundiaí Shopping</small></span></div>
       <div class="linha"><b>Telefone</b><a href="tel:1145214050">(11) 4521-4050</a></div>
       <div class="linha"><b>WhatsApp</b><a href="https://wa.me/5511996191801">(11) 99619-1801</a></div>
@@ -267,11 +365,11 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.14);margin
       <div class="linha"><b>Horário</b><span>Segunda a sexta, até 17h30</span></div>
       <div class="linha"><b>Redes</b><span><a href="https://www.instagram.com/jundiaiseguros" target="_blank" rel="noopener">Instagram</a> &nbsp;·&nbsp; <a href="https://www.facebook.com/jundiaisegurosoficial" target="_blank" rel="noopener">Facebook</a></span></div>
     </div>
-    <iframe src="https://maps.google.com/maps?q=Av.%20Jo%C3%A3o%20Benatti%2C%2018%20-%20Jardim%20Petr%C3%B3polis%2C%20Jundia%C3%AD%20-%20SP%2C%2013207-600&output=embed" loading="lazy" title="Mapa da Jundiaí Corretora de Seguros"></iframe>
+    <iframe class="rv" data-d="3" src="https://maps.google.com/maps?q=Av.%20Jo%C3%A3o%20Benatti%2C%2018%20-%20Jardim%20Petr%C3%B3polis%2C%20Jundia%C3%AD%20-%20SP%2C%2013207-600&output=embed" loading="lazy" title="Mapa da Jundiaí Corretora de Seguros"></iframe>
   </div>
 </div></section>
 
-<section class="sec" style="padding-top:0"><div class="w"><div class="faixa">
+<section class="sec" style="padding-top:clamp(48px,6vw,84px)"><div class="w"><div class="faixa rv">
   <h2>Vamos comparar as opções para você?</h2>
   <p>Conte o que quer proteger. A gente cota nas seguradoras parceiras e volta com as alternativas, sem compromisso.</p>
   <a class="btn" href="#cotacao">Pedir minha cotação</a>
@@ -280,8 +378,8 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.14);margin
 <footer><div class="w">
   <div>
     <strong>Jundiaí Corretora de Seguros</strong>
-    <p style="margin-bottom:.5rem">Av. João Benatti, 18 &ndash; Jardim Petrópolis<br>Jundiaí &ndash; SP, 13207-600</p>
-    <p>4,9 no Google &middot; 210 avaliações</p>
+    <p>Av. João Benatti, 18 &ndash; Jardim Petrópolis<br>Jundiaí &ndash; SP, 13207-600</p>
+    <p style="margin-top:.7rem">4,9 no Google &middot; 210 avaliações</p>
   </div>
   <div>
     <strong>Contato</strong>
@@ -302,24 +400,98 @@ footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.14);margin
   </div>
 </div></footer>
 
-<a class="flut" href="https://wa.me/5511996191801?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20fazer%20uma%20cota%C3%A7%C3%A3o.">Falar no WhatsApp</a>
+<a class="flut" id="flut" href="https://wa.me/5511996191801?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20fazer%20uma%20cota%C3%A7%C3%A3o.">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 3.5 17.2L2 22l4.9-1.5A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .9.9-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+  <span>Falar no WhatsApp</span></a>
 
 <script>
-// O formulario monta a mensagem e abre o WhatsApp com tudo preenchido.
-// Funciona sem servidor: a corretora recebe o pedido estruturado, nao um "oi".
-document.getElementById('fcot').addEventListener('submit', function (e) {
-  e.preventDefault();
-  var tipo = document.getElementById('tipo').value;
-  var nome = document.getElementById('nome').value.trim();
-  var fone = document.getElementById('fone').value.trim();
-  var obs  = document.getElementById('obs').value.trim();
-  var msg = 'Olá! Vim pelo site e quero uma cotação.\n\n'
-          + 'O que quero segurar: ' + tipo + '\n'
-          + 'Nome: ' + nome + '\n'
-          + 'Telefone: ' + fone;
-  if (obs) msg += '\nDetalhes: ' + obs;
-  window.open('https://wa.me/5511996191801?text=' + encodeURIComponent(msg), '_blank');
-});
+(function () {
+  var reduz = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // ---- seguradoras: monta a faixa duplicada do marquee ----
+  var base = 'https://jundiaiseguros.com.br/wp-content/uploads/2021/01/';
+  var segs = [['porto_seguro','Porto Seguro'],['bradesco','Bradesco Seguros'],['itau','Itaú'],
+              ['mapfre-1','Mapfre'],['liberty','Liberty Seguros'],['hdi','HDI Seguros'],
+              ['chubb','Chubb'],['generali','Generali'],['icatu','Icatu Seguros'],['excelsior','Excelsior Seguros']];
+  var faixa = document.getElementById('faixa');
+  if (faixa) {
+    var html = '';
+    for (var v = 0; v < 2; v++) {                 // duplica para o loop nao ter emenda
+      for (var i = 0; i < segs.length; i++) {
+        html += '<figure><img src="' + base + segs[i][0] + '.png" alt="' + segs[i][1] +
+                '" loading="lazy"' + (v ? ' aria-hidden="true"' : '') + '></figure>';
+      }
+    }
+    faixa.innerHTML = html;
+  }
+
+  // ---- revelar ao rolar ----
+  var alvos = document.querySelectorAll('.rv');
+  if (reduz || !('IntersectionObserver' in window)) {
+    alvos.forEach(function (el) { el.classList.add('on'); });
+  } else {
+    var io = new IntersectionObserver(function (ents) {
+      ents.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: .12 });
+    alvos.forEach(function (el) { io.observe(el); });
+    var hero = document.getElementById('fotoHero');
+    if (hero) requestAnimationFrame(function () { hero.classList.add('on'); });
+  }
+
+  // ---- contadores ----
+  // O HTML ja traz o valor final. So zera se a animacao for mesmo rodar,
+  // para a pagina nunca aparecer com numero zerado se o JS falhar.
+  if (!reduz && 'IntersectionObserver' in window) {
+    var nums = document.querySelectorAll('[data-num]');
+    var ioN = new IntersectionObserver(function (ents) {
+      ents.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        ioN.unobserve(e.target);
+        var el = e.target, bruto = el.getAttribute('data-num'), suf = el.getAttribute('data-suf') || '';
+        var dec = bruto.indexOf(',') > -1;
+        var alvo = parseFloat(bruto.replace(',', '.'));
+        var t0 = null, dur = 1100;
+        function passo(t) {
+          if (!t0) t0 = t;
+          var p = Math.min((t - t0) / dur, 1);
+          var e2 = 1 - Math.pow(1 - p, 3);
+          var v = alvo * e2;
+          el.textContent = (dec ? v.toFixed(1).replace('.', ',') : Math.round(v)) + suf;
+          if (p < 1) requestAnimationFrame(passo);
+        }
+        requestAnimationFrame(passo);
+      });
+    }, { threshold: .6 });
+    nums.forEach(function (n) { ioN.observe(n); });
+  }
+
+  // ---- nav com estado ao rolar ----
+  var nav = document.getElementById('nav'), flut = document.getElementById('flut');
+  function aoRolar() {
+    var y = window.scrollY;
+    nav.classList.toggle('fix', y > 24);
+    flut.classList.toggle('on', y > 520);
+  }
+  aoRolar();
+  window.addEventListener('scroll', aoRolar, { passive: true });
+
+  // ---- formulario monta a mensagem e abre o WhatsApp preenchido ----
+  document.getElementById('fcot').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var tipo = document.getElementById('tipo').value;
+    var nome = document.getElementById('nome').value.trim();
+    var fone = document.getElementById('fone').value.trim();
+    var obs  = document.getElementById('obs').value.trim();
+    var msg = 'Olá! Vim pelo site e quero uma cotação.\n\n'
+            + 'O que quero segurar: ' + tipo + '\n'
+            + 'Nome: ' + nome + '\n'
+            + 'Telefone: ' + fone;
+    if (obs) msg += '\nDetalhes: ' + obs;
+    window.open('https://wa.me/5511996191801?text=' + encodeURIComponent(msg), '_blank');
+  });
+})();
 </script>
 </body>
 </html>
