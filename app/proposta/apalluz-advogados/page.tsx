@@ -77,6 +77,8 @@ const PLANS = [
       "Toda a operação de roteiro, edição, legendas e publicação do Essencial",
       "BÔNUS: Landing page institucional de uma página, com implantação incluída",
       "Organização de bio, link de contato e até 4 destaques institucionais",
+      "BÔNUS: Gestão de anúncios na Meta (Instagram e Facebook)",
+      "Reunião mensal para leitura de resultados",
     ],
     limit: "Sem gestão de anúncios. Primeiro, organizar e medir a base.",
     cta: "Quero este plano",
@@ -93,12 +95,12 @@ const PLANS = [
       "8 reels editados a partir dos vídeos que você enviar",
       "8 artes ou carrosséis, além dos reels",
       "Toda a estrutura institucional e a mensuração do Autoridade e contato",
-      "BÔNUS: Gestão de anúncios na Meta (Instagram e Facebook)",
+      "BÔNUS: Gestão de anúncios na Meta (Instagram e Facebook) e campanhas de pesquisa no Google (Google Ads)",
       "Implantação ou revisão do Perfil da Empresa no Google, se elegível e validado",
       "Revisão de criativos e ajustes semanais de campanha",
       "Reunião mensal com leitura conjunta de conteúdo e mídia",
     ],
-    limit: "Verba de mídia recomendada de pelo menos R$ 10/dia, paga diretamente à Meta.",
+    limit: "Verba de mídia recomendada de pelo menos R$ 10/dia (Meta) + verba inicial Google, pagas às plataformas.",
     cta: "Conversar sobre expansão",
   },
 ];
@@ -240,6 +242,7 @@ export default function PropostaApalluz() {
                       "Roteiros para você gravar, com orientação remota",
                       "BÔNUS: Landing page institucional com acesso ao contato",
                       "Bio, organização de destaques e acesso ao contato",
+                      "BÔNUS: Gestão de anúncios na Meta",
                       "Publicação, leitura de dados e reunião mensal",
                     ].map((item) => <li key={item}><Check width={20} height={20} aria-hidden="true" /><span>{item}</span></li>)}
                   </ul>
