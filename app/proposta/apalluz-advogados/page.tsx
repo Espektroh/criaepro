@@ -55,7 +55,6 @@ const PLANS = [
     items: [
       "4 reels editados a partir dos vídeos que você enviar",
       "4 artes ou carrosséis, além dos reels",
-      "8 telas de stories adaptadas dos conteúdos do mês",
       "Pautas, roteiros e orientação remota de gravação",
       "Legendas, capas, agendamento e publicação no Instagram",
       "Ajuste inicial da bio e do link para seu contato profissional",
@@ -75,12 +74,9 @@ const PLANS = [
     items: [
       "6 reels editados a partir dos vídeos que você enviar",
       "6 artes ou carrosséis, além dos reels",
-      "12 telas de stories adaptadas dos conteúdos do mês",
       "Toda a operação de roteiro, edição, legendas e publicação do Essencial",
-      "Landing page institucional de uma página, com implantação incluída",
+      "BÔNUS: Landing page institucional de uma página, com implantação incluída",
       "Organização de bio, link de contato e até 4 destaques institucionais",
-      "Implantação ou revisão do Perfil da Empresa no Google, se elegível e validado",
-      "Mensuração de cliques para contato e reunião mensal de até 30 minutos",
     ],
     limit: "Sem gestão de anúncios. Primeiro, organizar e medir a base.",
     cta: "Quero este plano",
@@ -96,13 +92,13 @@ const PLANS = [
     items: [
       "8 reels editados a partir dos vídeos que você enviar",
       "8 artes ou carrosséis, além dos reels",
-      "16 telas de stories adaptadas dos conteúdos do mês",
       "Toda a estrutura institucional e a mensuração do Autoridade e contato",
-      "Gestão de 1 campanha de pesquisa no Google, com até 2 grupos de anúncios",
-      "Revisão de termos de busca e ajustes semanais de campanha",
-      "Reunião mensal de até 45 minutos com leitura conjunta de conteúdo e mídia",
+      "BÔNUS: Gestão de anúncios na Meta (Instagram e Facebook)",
+      "Implantação ou revisão do Perfil da Empresa no Google, se elegível e validado",
+      "Revisão de criativos e ajustes semanais de campanha",
+      "Reunião mensal com leitura conjunta de conteúdo e mídia",
     ],
-    limit: "Verba de mídia separada: sugestão inicial de R$ 600/mês, paga diretamente ao Google. Total nesse cenário: R$ 2.790/mês.",
+    limit: "Verba de mídia recomendada de pelo menos R$ 10/dia, paga diretamente à Meta.",
     cta: "Conversar sobre expansão",
   },
 ];
@@ -241,10 +237,9 @@ export default function PropostaApalluz() {
                   <ul className={shared.recoItems}>
                     {[
                       "6 reels editados + 6 artes ou carrosséis por mês",
-                      "12 telas de stories derivadas do conteúdo",
                       "Roteiros para você gravar, com orientação remota",
-                      "Landing page institucional com acesso ao contato",
-                      "Bio, destaques e presença no Google, quando elegível",
+                      "BÔNUS: Landing page institucional com acesso ao contato",
+                      "Bio, organização de destaques e acesso ao contato",
                       "Publicação, leitura de dados e reunião mensal",
                     ].map((item) => <li key={item}><Check width={20} height={20} aria-hidden="true" /><span>{item}</span></li>)}
                   </ul>
