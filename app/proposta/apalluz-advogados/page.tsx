@@ -88,7 +88,7 @@ const PLANS = [
       "<strong>BÔNUS: Gestão de anúncios na Meta (Instagram e Facebook)</strong>",
 
     ],
-    limit: "Sem gestão de anúncios. Primeiro, organizar e medir a base.",
+    limit: "Verba de mídia recomendada de pelo menos R$ 10/dia (Meta) paga à plataforma.",
     cta: "Quero este plano",
   },
   {
@@ -283,8 +283,7 @@ export default function PropostaApalluz() {
                   <p className={styles.volume}>{plan.volume}</p>
                   <ul className={shared.planItems}>{plan.items.map((item) => <li key={item}><Check width={17} height={17} aria-hidden="true" /><span dangerouslySetInnerHTML={{ __html: item }} /></li>)}</ul>
                   <p className={styles.planLimit}>{plan.limit}</p>
-                  <p className={styles.captureNote}>Você grava. A CRIAE edita.</p>
-                  <a href={planContact(plan.name)} target="_blank" rel="noopener noreferrer" className={`btn ${plan.recommended ? "btn--accent" : "btn--primary"} ${shared.planCta}`}>{plan.cta}<ArrowRight aria-hidden="true" /></a>
+                                    <a href={planContact(plan.name)} target="_blank" rel="noopener noreferrer" className={`btn ${plan.recommended ? "btn--accent" : "btn--primary"} ${shared.planCta}`}>{plan.cta}<ArrowRight aria-hidden="true" /></a>
                 </article>
               ))}
             </div>
