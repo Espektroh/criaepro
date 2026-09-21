@@ -49,7 +49,7 @@ const PLANS = [
     name: "Conteúdo essencial",
     badge: "Uma rotina mais simples",
     forWho: "Para manter o Instagram ativo com edição profissional e um escopo enxuto.",
-    price: "R$ 990",
+    price: "R$ 1.250",
     volume: "8 publicações no feed por mês",
     recommended: false,
     items: [
@@ -69,7 +69,7 @@ const PLANS = [
     name: "Autoridade e contato",
     badge: "Nossa recomendação",
     forWho: "Para conectar o conteúdo que você já faz a uma presença profissional e a um caminho claro de contato.",
-    price: "R$ 1.490",
+    price: "R$ 1.600",
     volume: "12 publicações no feed por mês",
     recommended: true,
     items: [
@@ -233,8 +233,8 @@ export default function PropostaApalluz() {
                   <span className={shared.recoTag}>Nossa recomendação</span>
                   <h2 id="reco-titulo" className={shared.recoTitle}>Autoridade e contato.<br /><span className={shared.hl}>Mais que editar. Conectar.</span></h2>
                   <p className={shared.recoDesc}>Você já aparece em vídeo e explica assuntos relevantes. Por isso, nossa recomendação reúne produção contínua, uma apresentação profissional e um caminho claro para quem precisa falar com o escritório.</p>
-                  <div className={styles.recoPrice}><strong>R$ 1.490</strong><span>por mês</span></div>
-                  <p className={styles.delta}>R$ 290 a mais que o investimento mensal informado.</p>
+                  <div className={styles.recoPrice}><strong>R$ 1.600</strong><span>por mês</span></div>
+                  <p className={styles.delta}>R$ 400 a mais que o investimento mensal informado.</p>
                   <a href={planContact("Autoridade e contato")} target="_blank" rel="noopener noreferrer" className="btn btn--accent">Conversar sobre este plano <ArrowRight aria-hidden="true" /></a>
                 </div>
                 <div className={styles.recoRight}>
