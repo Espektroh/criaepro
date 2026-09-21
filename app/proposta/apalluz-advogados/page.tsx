@@ -58,7 +58,7 @@ const PLANS = [
       "Pautas, roteiros e orientação remota de gravação",
       "Legendas, capas, agendamento e publicação no Instagram",
       "Ajuste inicial da bio e do link para seu contato profissional",
-      "Relatório mensal de conteúdo e cliques disponíveis",
+      "Relatório Mensal",
     ],
     limit: "Sem landing page, gestão do Google ou anúncios.",
     cta: "Escolher o essencial",
@@ -72,13 +72,21 @@ const PLANS = [
     volume: "12 publicações no feed por mês",
     recommended: true,
     items: [
+
       "6 reels editados a partir dos vídeos que você enviar",
+
       "6 artes ou carrosséis, além dos reels",
+
       "Toda a operação de roteiro, edição, legendas e publicação do Essencial",
-      "BÔNUS: Landing page institucional de uma página, com implantação incluída",
+
       "Organização de bio, link de contato e até 4 destaques institucionais",
-      "BÔNUS: Gestão de anúncios na Meta (Instagram e Facebook)",
-      "Reunião mensal para leitura de resultados",
+
+      "Reunião Mensal",
+
+      "<strong>BÔNUS: Landing page institucional de uma página, com implantação incluída</strong>",
+
+      "<strong>BÔNUS: Gestão de anúncios na Meta (Instagram e Facebook)</strong>",
+
     ],
     limit: "Sem gestão de anúncios. Primeiro, organizar e medir a base.",
     cta: "Quero este plano",
@@ -92,13 +100,21 @@ const PLANS = [
     volume: "16 publicações no feed por mês",
     recommended: false,
     items: [
+
       "8 reels editados a partir dos vídeos que você enviar",
+
       "8 artes ou carrosséis, além dos reels",
+
       "Toda a estrutura institucional e a mensuração do Autoridade e contato",
-      "BÔNUS: Gestão de anúncios na Meta (Instagram e Facebook) e campanhas de pesquisa no Google (Google Ads)",
+
       "Implantação ou revisão do Perfil da Empresa no Google, se elegível e validado",
+
       "Revisão de criativos e ajustes semanais de campanha",
-      "Reunião mensal com leitura conjunta de conteúdo e mídia",
+
+      "Reunião Mensal",
+
+      "<strong>BÔNUS: Gestão de anúncios na Meta (Instagram e Facebook) e campanhas de pesquisa no Google (Google Ads)</strong>",
+
     ],
     limit: "Verba de mídia recomendada de pelo menos R$ 10/dia (Meta) + verba inicial Google, pagas às plataformas.",
     cta: "Conversar sobre expansão",
@@ -238,13 +254,13 @@ export default function PropostaApalluz() {
                 <div className={styles.recoRight}>
                   <ul className={shared.recoItems}>
                     {[
-                      "6 reels editados + 6 artes ou carrosséis por mês",
-                      "Roteiros para você gravar, com orientação remota",
-                      "BÔNUS: Landing page institucional com acesso ao contato",
-                      "Bio, organização de destaques e acesso ao contato",
-                      "BÔNUS: Gestão de anúncios na Meta",
-                      "Publicação, leitura de dados e reunião mensal",
-                    ].map((item) => <li key={item}><Check width={20} height={20} aria-hidden="true" /><span>{item}</span></li>)}
+  "6 reels editados + 6 artes ou carrosséis por mês",
+  "Roteiros para você gravar, com orientação remota",
+  "Bio, organização de destaques e acesso ao contato",
+  "Publicação, leitura de dados e Reunião Mensal",
+  "<strong>BÔNUS: Landing page institucional com acesso ao contato</strong>",
+  "<strong>BÔNUS: Gestão de anúncios na Meta</strong>",
+].map((item) => <li key={item}><Check width={20} height={20} aria-hidden="true" /><span dangerouslySetInnerHTML={{ __html: item }} /></li>)}
                   </ul>
                   <p className={styles.darkNote}>Não sugerimos começar aumentando a verba de anúncios. Primeiro, organizamos o conteúdo, o destino do visitante e a mensuração.</p>
                   <p className={styles.darkNote}>A comparação usa apenas a mensalidade que você informou. Não pressupõe escopos equivalentes ao fornecedor atual nem inclui custos de viagem.</p>
@@ -265,7 +281,7 @@ export default function PropostaApalluz() {
                   <p className={shared.planFor}>{plan.forWho}</p>
                   <div className={shared.priceBlock}><p className={shared.priceNow}>{plan.price}</p><p className={shared.priceUnit}>por mês · implantação incluída</p></div>
                   <p className={styles.volume}>{plan.volume}</p>
-                  <ul className={shared.planItems}>{plan.items.map((item) => <li key={item}><Check width={17} height={17} aria-hidden="true" /><span>{item}</span></li>)}</ul>
+                  <ul className={shared.planItems}>{plan.items.map((item) => <li key={item}><Check width={17} height={17} aria-hidden="true" /><span dangerouslySetInnerHTML={{ __html: item }} /></li>)}</ul>
                   <p className={styles.planLimit}>{plan.limit}</p>
                   <p className={styles.captureNote}>Você grava. A CRIAE edita.</p>
                   <a href={planContact(plan.name)} target="_blank" rel="noopener noreferrer" className={`btn ${plan.recommended ? "btn--accent" : "btn--primary"} ${shared.planCta}`}>{plan.cta}<ArrowRight aria-hidden="true" /></a>
